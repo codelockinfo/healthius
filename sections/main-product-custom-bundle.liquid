@@ -156,28 +156,12 @@
   <div class="cartcolumn">
     <div class="box-header">
         <div class="box-header-title">Add More & Save!</div>
-        {% comment %} <div class="range-input">
-            <input type="range" min='0' max = "100" value="0" step="10">
+        <div class="range-input">
+            <input type="range" min='0' max = "100" value="0" step="20">
             <div class="value">
-                 <div></div>
+                 <div class="margin-top"></div>
              </div>
-            </div>  {% endcomment %}
-        {% comment %} <div class="step-container d-flex justify-content-between">
-            <div class="step-circle" onclick="displayStep(1)">1</div>
-            <div class="step-circle" onclick="displayStep(2)">2</div>
-          </div> {% endcomment %}
-          {% comment %} <div class="container-fluid">
-            <br /><br />
-            <ul class="list-unstyled multi-steps">
-              <li id="step-1" class="is-active"><div class="progress-bar progress-bar--success">
-            <div class="progress-bar__bar"></div></li>
-              <li id="step-2"><div class="progress-bar progress-bar--success">
-            <div class="progress-bar__bar"></div></li>
-              <li id="step-3"><div class="progress-bar progress-bar--success">
-            <div class="progress-bar__bar"></div></li>
-              <li id="step-4"></li>
-            </ul>
-          </div> {% endcomment %}
+            </div> 
     </div>
     <div class="box-summary"> </div>
     <div class="box-footer">
@@ -1756,7 +1740,7 @@
 <script>
     $(document).ready(function(){
         console.log("ddsdsd");
-        
+      
         $(".product-quantity__plus").on("click",function(){
             $eachqty = 0;
             $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
@@ -1775,7 +1759,12 @@
                 console.log($('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val());
                 $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
             }
-
+            let rangeInput = document.querySelector(".range-input input");
+            let step = parseFloat(rangeInput.step);
+            let total = step*$eachqty;
+            $('.range-input input').val(total);
+            $('.range-input input[value="' + total + '"]').trigger('click');
+            
         });
         
         
@@ -1794,10 +1783,13 @@
                 $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
             }else{
                 console.log("else");
-                console.log($('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val());
                 $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
             }
-
+            let rangeInput = document.querySelector(".range-input input");
+            let step = parseFloat(rangeInput.step);
+            let total = step*$eachqty;
+            $('.range-input input').val(total);
+            $('.range-input input[value="' + total + '"]').trigger('click');
         });
         
         $(".addButton").on("click",function(){
@@ -1806,6 +1798,7 @@
             $(this).closest(".container-box").find(".product-quantity").addClass("show");
             $html = $(this).closest(".productsimage").html();
             $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
+           
         });
     });
 </script>
