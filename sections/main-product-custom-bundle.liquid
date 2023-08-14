@@ -13,15 +13,9 @@
         <div class="imagecolumn">
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 sm:gap-8">
                     {% for option in product.options_with_values %}
-                        {% comment %} <product-variants 
-                            data-variants="{{ product.options_with_values.size }}"
-                            data-hide-variants="true"
-                            data-url="{{ product.url }}" data-id="{{ section.id }}"
-                            {% unless product.has_only_default_variant %} data-has-variants {% endunless %}
-                        >  {% endcomment %}
                         {%- for value in option.values -%}
                             <div class="productsimage">
-                            <div class="container-box">
+                            <div class="container-box" data-summery-index="{{ forloop.index }}">
                                 <div>
                                     {% assign selected_variant = product.selected_variant %}
                                     {% for variant in product.variants %}
@@ -31,7 +25,7 @@
                                     {% endfor %}
                                     <img src="{{ selected_variant.image.src | img_url: 'medium' }}" alt="{{ selected_variant.title }}" />
                                 </div>
-                                <div>
+                                <div class="cartbox-title">
                                     <h3 class="variant-title">{{ value | escape }}</h3>
                                 </div>
                                 <div class="flex justify-center">
@@ -42,7 +36,6 @@
                             </div>
                         </div>
                         {%- endfor -%}
-                        {% comment %} </product-variants> {% endcomment %}
                     {% endfor %}
             </div>
         </div>
@@ -162,10 +155,12 @@
 
   <div class="cartcolumn">
     <div class="box-header">
-        <div>Add More & Save!</div>
+        <div class="box-header-title">Add More & Save!</div>
     </div>
     <div class="box-summary"> </div>
-    <div class="box-footer"></div>
+    <div class="box-footer">
+        <button class="button button--large button--solid"> Please Select At Least 16 Meals </button>
+    </div>
   </div>
 	{% comment %} <div class="product-text remove-empty-space">
 
@@ -1742,23 +1737,47 @@
         
         $(".product-quantity__plus").on("click",function(){
             $eachqty = 0;
-            console.log("product-quantity__plus");
             $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
             $.each($(".productQty .product-quantity__selector"), function() {
                 $eachqty += parseInt($(this).val());
             });
             $eachqty++;
             $html = $(this).closest(".container-box").html();
+            $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
             console.log($html);
             console.log($variantQty);
             if($variantQty == 1){
                 $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
-                {% comment %} $('.product-gallery__media[data-summery-index="' + $summeryindex + '"] .quantity-selector').val(qty); {% endcomment %}
             }else{
-                {% comment %} $('.product-gallery__media[data-summery-index="' + $summeryindex + '"] .quantity-selector').val(qty); {% endcomment %}
+                console.log("else");
+                console.log($('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val());
+                $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
             }
 
         });
+        
+        
+        $(".product-quantity__minus").on("click",function(){
+            $eachqty = 0;
+            $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
+            $.each($(".productQty .product-quantity__selector"), function() {
+                $eachqty += parseInt($(this).val());
+            });
+            $eachqty++;
+            $html = $(this).closest(".container-box").html();
+            $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+            console.log($html);
+            console.log($variantQty);
+            if($variantQty == 1){
+                $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
+            }else{
+                console.log("else");
+                console.log($('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val());
+                $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+            }
+
+        });
+        
         $(".addButton").on("click",function(){
             console.log("addButton  click");
             $(this).css("display","none");
