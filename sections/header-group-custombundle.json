@@ -1,0 +1,33 @@
+{
+    "type": "header",
+    "name": "t:sections.refactor_words.labels.header_group",
+    "sections": {
+      "header": {
+        "type": "header-custombundle",
+        "blocks": {
+          "store": {
+            "type": "store-selector",
+            "settings": {
+              
+            }
+          },
+          "info": {
+            "type": "info",
+            "settings": {
+              "caption": "Useful info",
+              "title": "Important link",
+              "link": "",
+              "icon": "delivery"
+            }
+          }
+        },
+        "block_order": [
+          "store",
+          "info"
+        ]
+      }
+    },
+    "order": [
+      "header"
+    ]
+  }
