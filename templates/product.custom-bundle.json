@@ -18,6 +18,55 @@
         "remove_margin": false
       }
     },
+    "c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3": {
+      "type": "featured-bundle-collection",
+      "blocks": {
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "54a3563b-bb01-4dfd-bfec-ec0a8ce7187e": {
+          "type": "add_button",
+          "settings": {
+            "button_title": "Add",
+            "show_quantity_selector": true
+          }
+        },
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-quick_buy-1": {
+          "type": "quick_buy",
+          "disabled": true,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1",
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1",
+        "54a3563b-bb01-4dfd-bfec-ec0a8ce7187e",
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-quick_buy-1"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "show_view_all": false,
+        "section_heading_layout": "section-heading--left",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2 grid-tiny-1",
+        "products_number": 16,
+        "collection": "all",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "main": {
       "type": "main-product-custom-bundle",
       "blocks": {
@@ -92,6 +141,7 @@
         "empty_space_3",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "gallery_style": "slider",
         "gallery_ratio": "natural",
@@ -142,6 +192,7 @@
   },
   "order": [
     "169215873675e9cea1",
+    "c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3",
     "main",
     "product-recommendations"
   ]
