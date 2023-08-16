@@ -173,6 +173,7 @@
     "product_card_show_secondary_image": false,
     "product_card_text_alignment": "center",
     "product_card_text_size": "large",
+    "product_card_button_style": "solid",
     "product_icon_1_image": "",
     "product_icon_1_label": "",
     "cart_free_shipping": false,
