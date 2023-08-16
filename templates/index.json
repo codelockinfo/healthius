@@ -195,140 +195,6 @@
         "seo_h_tag": "span"
       }
     },
-    "165406738229739f4d": {
-      "type": "promotion-cards",
-      "blocks": {
-        "16540673826052f668-0": {
-          "type": "card",
-          "settings": {
-            "caption": "",
-            "title": "Emphasize a collection",
-            "subtitle": "",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "#f4ede1",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#e1e1e1",
-            "color_shadow_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "16540673826052f668-1": {
-          "type": "card",
-          "settings": {
-            "caption": "Show a product",
-            "title": "Superfoods",
-            "subtitle": "",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "#f4e5e5",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#e1e1e1",
-            "color_shadow_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "16540673826052f668-2": {
-          "type": "card",
-          "settings": {
-            "caption": "",
-            "title": "Write your story",
-            "subtitle": "",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "#e5edf1",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#e1e1e1",
-            "color_shadow_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "16540673826052f668-0",
-        "16540673826052f668-1",
-        "16540673826052f668-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "Promotion cards",
-        "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "layout": "grid-3 grid-lap-1",
-        "image_aspect_ratio": "1",
-        "text_alignment": "text-align--horizontal-left",
-        "caption_size": "large",
-        "title_size": "h3",
-        "subtitle_size": "regular",
-        "button_size": "large",
-        "button_style": "outline",
-        "section_background_color": "#5e9c2b",
-        "section_heading_color": "#ffffff",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
-    "16551304148266b5a5": {
-      "type": "rich-text",
-      "blocks": {
-        "1655130414988486bd-0": {
-          "type": "title",
-          "settings": {
-            "title": "About us",
-            "title_size": "h2",
-            "seo_h_tag": "h2"
-          }
-        },
-        "1655130414988486bd-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Write a big, bold statement about your brand. Catch your visitors attention by using some additional images with your products or store.<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "1655130414988486bd-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "link": "",
-            "button_size": "large",
-            "button_style": "outline"
-          }
-        }
-      },
-      "block_order": [
-        "1655130414988486bd-0",
-        "1655130414988486bd-1",
-        "1655130414988486bd-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_position": "top",
-        "height": "regular",
-        "image_crop": false,
-        "text_alignment": "horizontal-center",
-        "is_fullwidth": true,
-        "section_background_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "color_background_main": "#e1e0d7",
-        "color_text_main": "rgba(0,0,0,0)",
-        "color_accent_main": "rgba(0,0,0,0)",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "color_hide_borders": false,
-        "color_hide_shadow": false
-      }
-    },
     "16551074833cdf378e": {
       "type": "media-with-text-overlay",
       "blocks": {
@@ -361,17 +227,50 @@
             "color_hide_shadow": false,
             "seo_h_tag": "h3"
           }
+        },
+        "9ee5df28-5301-4d47-b84b-8b30518befa0": {
+          "type": "image",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
+          "type": "image",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
         }
       },
       "block_order": [
         "16551074836af554cd-0",
-        "16551074836af554cd-1"
+        "16551074836af554cd-1",
+        "9ee5df28-5301-4d47-b84b-8b30518befa0",
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "subheading": "",
         "section_heading_layout": "section-heading--left",
-        "layout": "grid-2 grid-lap-1",
+        "layout": "grid-3 grid-lap-1",
         "height": "regular",
         "alignment": "horizontal-left align-content--vertical-bottom",
         "width": "60%",
@@ -569,20 +468,31 @@
             "link": "",
             "seo_h_tag": "h3"
           }
+        },
+        "d332ebc1-4150-46df-85de-43502d8d5c72": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
         }
       },
       "block_order": [
         "1655970985e1e8c596-0",
         "1655970985e1e8c596-1",
-        "1655970985e1e8c596-2"
+        "1655970985e1e8c596-2",
+        "d332ebc1-4150-46df-85de-43502d8d5c72"
       ],
       "settings": {
         "heading": "",
         "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "style": "slider",
-        "layout": "grid-3 grid-lap-2",
-        "border_radius": 200,
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": false,
@@ -777,8 +687,6 @@
     "1653646142d6a7c886",
     "featured-collection",
     "1654161920efe5f084",
-    "165406738229739f4d",
-    "16551304148266b5a5",
     "16551074833cdf378e",
     "16546982542e923b5a",
     "165407625224b5d2af",
