@@ -1,40 +1,113 @@
 {{ 'component-product-item.css' | asset_url | stylesheet_tag }}
-
+{{ 'section-main-product-custombundle.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-bundle.js' | asset_url }}" defer></script>
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
 
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
 
-  <div>
+  <div class="custom-bundle">
 
     {%- if section.settings.style == 'slider' -%}
       <css-slider
         data-options='{
-                                                                                          "selector": ".product-item",
-                                                                                          "indexNav": true,
-                                                                                          "groupCells": true,
-                                                                                          "navigationDOM": "<span class=\"css-slider-button css-slider-prev\" style=\"display:none\"><svg fill=\"none\" height=\"13\" viewBox=\"0 0 8 13\" width=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#000\" ><path d=\"m7.91419 1.41431-6.48529 6.48528-1.4142102-1.41422 6.4852802-6.48527702z\"/><path d=\"m6.48528 12.9849-6.48528027-6.48532 1.41421027-1.41421 6.48528 6.48523z\"/></g></svg></span><span class=\"css-slider-button css-slider-next\" style=\"display:none\"><svg width=\"9\" height=\"13\" viewBox=\"0 0 9 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.914169 11.5857L7.39945 5.10041L8.81367 6.51463L2.32838 12.9999L0.914169 11.5857Z\" fill=\"black\"/><path d=\"M2.34307 0.0151367L8.82835 6.50042L7.41414 7.91463L0.928857 1.42935L2.34307 0.0151367Z\" fill=\"black\"/></svg></span>"
-                                                                                        }'
+                      "selector": ".product-item container-box",
+                      "indexNav": true,
+                      "groupCells": true,
+                      "navigationDOM": "<span class=\"css-slider-button css-slider-prev\" style=\"display:none\"><svg fill=\"none\" height=\"13\" viewBox=\"0 0 8 13\" width=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#000\" ><path d=\"m7.91419 1.41431-6.48529 6.48528-1.4142102-1.41422 6.4852802-6.48527702z\"/><path d=\"m6.48528 12.9849-6.48528027-6.48532 1.41421027-1.41421 6.48528 6.48523z\"/></g></svg></span><span class=\"css-slider-button css-slider-next\" style=\"display:none\"><svg width=\"9\" height=\"13\" viewBox=\"0 0 9 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.914169 11.5857L7.39945 5.10041L8.81367 6.51463L2.32838 12.9999L0.914169 11.5857Z\" fill=\"black\"/><path d=\"M2.34307 0.0151367L8.82835 6.50042L7.41414 7.91463L0.928857 1.42935L2.34307 0.0151367Z\" fill=\"black\"/></svg></span>"
+                    }'
         class="css-slider css-slider--bottom-navigation"
         id="css-slider-{{ section.id }}">
         {%- render 'custom-shadow', section_id: section.id -%}
       {%- endif -%}
 
-      <div class="grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
+      <div class="main-custombundle grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
 
         {%- liquid
           if section.settings.collection != blank
             for product in collections[section.settings.collection].products limit: section.settings.products_number
-              render 'product-item', product: product, product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
+              render 'product-item', class:"container-box productsimage",product: product, product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
             endfor
           else 
             for i in (1..section.settings.products_number)
-              render 'product-item', blank_product: true, section_blocks: section.blocks, index: forloop.index
+              render 'product-item', class:"container-box", blank_product: true, section_blocks: section.blocks, index: forloop.index
             endfor
           endif
         -%}
 
       </div>
-
+      <div class="cartcolumn">
+        <div class="box-header">
+            <div class="box-header-title">Add More & Save!</div>
+                <div class="range-input">
+                  <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
+                  <div class="value">
+                     <div class="margin-top"></div>
+                    </div>
+                  </div> 
+                </div>
+                <div class="box-summary" id="cartSummary"> </div>
+                <div class="box-footer">
+                  <button class="button button--large button--solid"> 90$ Left to checkout</button>
+                  {% comment %} {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                
+                    <template>
+                      <input type="hidden" name="id" value="{{ current_variant.id }}">
+                    </template>
+                    <script>
+                      document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
+                    </script>
+                
+                    {%- liquid
+                      if product.gift_card? and block.settings.show_gift_card_recipient
+                        render 'gift-card-recipent-form', product: product
+                      endif
+                    -%}
+                
+                    <div class="product__cart-functions">
+                
+                      <div class="flex-buttons">
+                
+                        {%- liquid 
+                          if block.settings.show_quantity_selector
+                            render 'product-quantity', variant: current_variant, id: section.id
+                          endif
+                        -%}
+                
+                        <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader {% unless current_variant.available %} disabled {% endunless %}" data-js-product-add-to-cart>
+                          <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
+                            {%- liquid
+                              if current_variant.available
+                                unless block.settings.show_preorder
+                                  echo '90$ Left to checkout'
+                                else
+                                  echo 'products.page.preorder_button' | t
+                                endunless
+                              else
+                                echo 'products.page.inventory.sold_out_variant' | t
+                              endif
+                            -%}
+                          </span>
+                          <span class="button__preloader">
+                            <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
+                          </span>
+                        </button>
+                
+                        {%- liquid
+                          if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
+                            echo form | payment_button
+                          endif
+                        -%}
+                
+                      </div>
+                      
+                    </div>
+                
+                  {%- endform -%} {% endcomment %}
+                </div>
+              </div>
+          </div>
+        </div>
       {%- if section.settings.layout == 'slider' -%}
       </css-slider>
     {%- endif -%}
@@ -97,6 +170,12 @@
             "id": "button_title",
             "label": "t:sections.local-extra-words.sections.product-card.blocks.text.settings.text.button_heading",
             "default": "default"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_quantity_selector",
+            "label": "t:sections.main-product.blocks.buy_buttons.settings.show_quantity_selector.label",
+            "default": true
           }
         ]
       }, {
