@@ -450,6 +450,15 @@
             "text": "<h5>Mexican Hot Chocolate<\/h5>",
             "text_size": "regular"
           }
+        },
+        "141d1dfe-a547-4a2b-aba9-e57f2d43fd65": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe Now",
+            "link": "\/",
+            "button_size": "regular",
+            "button_style": "solid"
+          }
         }
       },
       "block_order": [
@@ -459,7 +468,8 @@
         "6069e524-2a40-4f5e-85a9-c20b550c6218",
         "7dca3abc-2964-48d8-bca1-1c1544816432",
         "eeee3f58-1f11-49bf-9795-c912cd151543",
-        "4787c2a6-e7f7-41aa-b8e0-5f742c4734d2"
+        "4787c2a6-e7f7-41aa-b8e0-5f742c4734d2",
+        "141d1dfe-a547-4a2b-aba9-e57f2d43fd65"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/subex-blue_8.webp",
