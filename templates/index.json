@@ -288,62 +288,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "16546982542e923b5a": {
-      "type": "featured-product",
-      "blocks": {
-        "16546982534861ca3b-1": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "16546982534861ca3b-0": {
-          "type": "title",
-          "settings": {
-            "seo_h_tag": "h2"
-          }
-        },
-        "16546982534861ca3b-4": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "16546982534861ca3b-2": {
-          "type": "variant_picker",
-          "settings": {
-            "variants_style": "radio",
-            "show_quantities": "no"
-          }
-        },
-        "16546982534861ca3b-3": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_price": true,
-            "show_quantity_selector": true,
-            "show_preorder": false,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": false
-          }
-        }
-      },
-      "block_order": [
-        "16546982534861ca3b-1",
-        "16546982534861ca3b-0",
-        "16546982534861ca3b-4",
-        "16546982534861ca3b-2",
-        "16546982534861ca3b-3"
-      ],
-      "settings": {
-        "product": "",
-        "gallery_ratio": "natural",
-        "gallery_fit": false,
-        "show_border": false,
-        "gallery_card_design": false,
-        "gallery_padding": 0,
-        "gallery_pagination": "dots",
-        "enable_zoom": true,
-        "enable_video_looping": false
-      }
-    },
     "165407625224b5d2af": {
       "type": "rich-text",
       "blocks": {
@@ -400,46 +344,6 @@
         "color_shadow_main": "rgba(0,0,0,0)",
         "color_hide_borders": true,
         "color_hide_shadow": false
-      }
-    },
-    "16551212489c663a1e": {
-      "type": "featured-collection",
-      "blocks": {
-        "1655121248aee0f086-0": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "1655121248aee0f086-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "1655121248aee0f086-2": {
-          "type": "quick_buy",
-          "disabled": true,
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "1655121248aee0f086-0",
-        "1655121248aee0f086-1",
-        "1655121248aee0f086-2"
-      ],
-      "settings": {
-        "heading": "Featured collection",
-        "subheading": "",
-        "show_view_all": true,
-        "section_heading_layout": "section-heading--left",
-        "style": "slider",
-        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
-        "products_number": 8,
-        "collection": "",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
       }
     },
     "165650871288cb3c80": {
@@ -623,6 +527,66 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
+    },
+    "71efc0f4-4264-48af-8019-7383c2c36784": {
+      "type": "text-columns-images",
+      "blocks": {
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-fruity-cereal_2x_d1732ab6-0384-4f2a-8b89-66339ef05b7a.webp",
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Returns",
+            "caption": "Show how much time customers have for testing your products",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3": {
+          "type": "image",
+          "settings": {
+            "title": "Pickup",
+            "caption": "Let your customers know about local pickup",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4": {
+          "type": "image",
+          "settings": {
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
+      ],
+      "settings": {
+        "heading": "You’ll Forget It’s Better For You.",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -631,13 +595,12 @@
     "featured-collection",
     "1654161920efe5f084",
     "16551074833cdf378e",
-    "16546982542e923b5a",
     "165407625224b5d2af",
-    "16551212489c663a1e",
     "165650871288cb3c80",
     "16551127939786a43a",
     "16553621956de397b6",
     "1657094048f07fb2a2",
-    "1655112847aaa4cc50"
+    "1655112847aaa4cc50",
+    "71efc0f4-4264-48af-8019-7383c2c36784"
   ]
 }
