@@ -257,7 +257,7 @@
         "border_radius": 42,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "span"
       }
     },
