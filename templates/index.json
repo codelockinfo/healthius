@@ -627,7 +627,8 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-3": {
           "type": "image",
           "settings": {
-            "title": "",
+            "image": "shopify:\/\/shop_images\/ing11.webp",
+            "title": "Cardamom",
             "caption": "",
             "link": "",
             "seo_h_tag": "h3"
