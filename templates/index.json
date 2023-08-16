@@ -201,7 +201,7 @@
         "16551074836af554cd-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-fruity-cereal_2x_d1732ab6-0384-4f2a-8b89-66339ef05b7a.webp",
+            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
             "caption": "",
             "title": "",
             "subtitle": "",
@@ -216,6 +216,7 @@
         },
         "16551074836af554cd-1": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
             "caption": "",
@@ -232,6 +233,7 @@
         },
         "9ee5df28-5301-4d47-b84b-8b30518befa0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
             "caption": "",
@@ -269,7 +271,6 @@
         "9ee5df28-5301-4d47-b84b-8b30518befa0",
         "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "subheading": "",
