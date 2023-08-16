@@ -599,6 +599,7 @@
         },
         "172b02f7-5dd0-4f86-ad37-8798ee5a2b6f": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
             "text_size": "regular"
@@ -607,26 +608,27 @@
         "c1d5ae26-2111-436b-bb61-35182146254d": {
           "type": "text",
           "settings": {
-            "text": "<h4>You Decide The Next Flavor.<\/h4>",
+            "text": "<h4>Still Think This Is Weird?<br\/>You’re Not Alone.<\/h4>",
             "text_size": "large"
           }
         },
         "1ae0b0e6-1df8-40b7-9665-601fff10ec09": {
           "type": "text",
           "settings": {
-            "text": "<p>Subscribers taste test a <strong>free in-development flavor<\/strong> each month. Your input lets us know if we should release it, tweak the recipe, or ditch it all together.<\/p>",
+            "text": "<p>3 out of 4 people who try Oats Overnight for the first time decide to order.<\/p>",
             "text_size": "regular"
           }
         },
         "eb0b64fc-f353-4591-b215-12e8e3dc7a14": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
         "89218c60-8eff-474d-872f-bb29521e5b80": {
           "type": "text",
           "settings": {
-            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
+            "text": "<p>*statistical data from September 2019<\/p>",
             "text_size": "regular"
           }
         },
@@ -640,8 +642,8 @@
         "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
           "type": "button",
           "settings": {
-            "button_label": "Subscribe Now",
-            "link": "\/",
+            "button_label": "Click To Watch",
+            "link": "https:\/\/youtu.be\/Btt-nmDfw3U",
             "button_size": "regular",
             "button_style": "solid"
           }
