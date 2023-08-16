@@ -68,36 +68,33 @@ $(document).on("click", ".productsimage .card__image", function(e) {
       thisObj.quickViewModal.show();
   }
 });
+
 $(document).on("click", ".product-quantity__plus", function() {
   console.log("quantity__plus");
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
     console.log($variantQty);
+    $var_id = $(this).closest(".productsimage").data("variant");
     $html = $(this).closest(".productsimage").html();
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     if ($variantQty == 1) {
         $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
     } else {
-        $('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+        // $('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+        $(".main-custombundle div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQty);
+        $(".box-summary div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQty);
     }
     getcartTotalQty();
 });
 
-$(document).on("click", ".productsimage .card__image", function(e) {
-console.log("card__image");
-e.preventDefault();
-
- $(this).closest(".container-box").find(".quick-add-to-cart .button").trigger("click");
-});
-$(document).on("click", ".product-quantity__minus", function(e) {
-  e.preventDefault();
-
+$(document).on("click", ".product-quantity__minus", function() {
   console.log("quantity__minus");
-  $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
-  $(this).closest(".productQty").find(".product-quantity__selector").val($variantQty);
+    $variantQtyMinus = $(this).closest(".productQty").find(".product-quantity__selector").val();
+    console.log($variantQtyMinus);
+    $var_id = $(this).closest(".productsimage").data("variant");
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
-    $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
-    console.log($variantQty);
-    if ($variantQty == 1) {
+    $(".main-custombundle div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQtyMinus);
+    $(".box-summary div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQtyMinus);
+    if ($variantQtyMinus == 1) {
         $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
         $(this).closest(".productQty").css("display","none");
         $(this).closest(".container-box").find(".addButton ").css("display","block");
@@ -151,10 +148,11 @@ $(document).ready(function() {
     set_lineitems_onload();
     $(".addButton").on("click", function() {
         console.log("addButton  click");
+        $var_id = $(this).closest(".productsimage").data("variant");
         $(this).css("display", "none");
         $(this).closest(".container-box").find(".product-quantity").addClass("show");
         $html = $(this).closest(".productsimage").html();
-        $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
+        $(".box-summary").append("<div class='productsimage' data-variant='"+$var_id+"'>" + $html + "</div>");
         getcartTotalQty();
     });
 
@@ -168,14 +166,14 @@ $(document).ready(function() {
         for (var i = 0; i < itemArray.length; i++) {
           var product_item = itemArray[i].trim();
           var product_item_qty = itemQtyArray[i].trim();
-          console.log(product_item);
-          console.log(product_item_qty);
           $("div[data-variant='"+product_item+"']").find(".product-quantity").addClass("show");
+          $("div[data-variant='"+product_item+"']").find(".productQty .qty-minus").removeClass('disabled');
           $("div[data-variant='"+product_item+"']").find(".addButton").css("display", "none");
-          var setInputQty  = $("div[data-variant='"+product_item+"']").find("product-quantity");
-          setInputQty.find(".product-quantity__selector").val(product_item_qty);
-          $getHtml = $(".productsimage[data-variant='"+product_item+"']").html();
+          $("div[data-variant='"+product_item+"']").find(".productQty .product-quantity__selector").val(product_item_qty);
+          $getHtml = $(".main-custombundle div[data-variant='"+product_item+"']").html();
           $(".box-summary").append("<div class='productsimage' data-variant='"+product_item+"'>" + $getHtml + "</div>");
+          $(".box-summary div[data-variant='"+product_item+"']").find(".productQty .product-quantity__selector").val(product_item_qty);
+          $(".box-summary div[data-variant='"+product_item+"']").find(".productQty .qty-minus").removeClass('disabled');
         }
       } 
       getcartTotalQty();
@@ -233,7 +231,7 @@ function getcartTotalQty() {
     }else{
       $(".addToCart").attr("disabled","disabled"); 
       $(".addToCart").css("cursor","not-allowed");  
-      $remain_amount = "$"+$remain_amount+"Left to ";
+      $remain_amount = "$"+$remain_amount+" Left to ";
     }
     $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
     return cartTotQty;
