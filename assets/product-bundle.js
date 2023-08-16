@@ -228,7 +228,7 @@ function getcartTotalQty() {
     
     if($remain_amount < 1){
       $remain_amount = '';
-      $(".addToCart").attr("disabled",""); 
+      $(".addToCart").prop('disabled', false);
       $(".addToCart").css("cursor","pointer"); 
     }else{
       $(".addToCart").attr("disabled","disabled"); 
