@@ -401,124 +401,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "165407625224b5d2af": {
-      "type": "rich-text",
-      "blocks": {
-        "1654076252f525bcb1-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Up to 50% discount<\/strong><\/p>",
-            "text_size": "regular"
-          }
-        },
-        "1654076252f525bcb1-0": {
-          "type": "title",
-          "settings": {
-            "title": "About our products",
-            "title_size": "h1",
-            "seo_h_tag": "h2"
-          }
-        },
-        "4055a9b7-fa9d-4a7a-b5e0-d052561d6f9c": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Write a big, bold statement about your brand. Catch your visitors attention by using some additional images with your products or store.<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "1654076252f525bcb1-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "link": "",
-            "button_size": "large",
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "1654076252f525bcb1-1",
-        "1654076252f525bcb1-0",
-        "4055a9b7-fa9d-4a7a-b5e0-d052561d6f9c",
-        "1654076252f525bcb1-2"
-      ],
-      "settings": {
-        "image_position": "right",
-        "height": "large",
-        "image_crop": true,
-        "text_alignment": "horizontal-left",
-        "is_fullwidth": true,
-        "section_background_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "color_background_main": "#e7e7e7",
-        "color_text_main": "rgba(0,0,0,0)",
-        "color_accent_main": "rgba(0,0,0,0)",
-        "color_borders_main": "#e1e1e1",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "color_hide_borders": true,
-        "color_hide_shadow": false
-      }
-    },
-    "16551127939786a43a": {
-      "type": "blog-posts",
-      "blocks": {
-        "165511279388d6ad87-0": {
-          "type": "info",
-          "settings": {
-            "show_date": true,
-            "show_author": false,
-            "show_comments_number": false
-          }
-        },
-        "165511279388d6ad87-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "6d7d92cc-64fe-4f89-9974-bb98f18308a0": {
-          "type": "summary",
-          "disabled": true,
-          "settings": {
-            "excerpt_limit": 20
-          }
-        }
-      },
-      "block_order": [
-        "165511279388d6ad87-0",
-        "165511279388d6ad87-1",
-        "6d7d92cc-64fe-4f89-9974-bb98f18308a0"
-      ],
-      "settings": {
-        "title": "Blog posts",
-        "subheading": "",
-        "show_view_all": true,
-        "section_heading_layout": "section-heading--left",
-        "blog": "news",
-        "emphasize_first": true,
-        "blog_show_image": true,
-        "image_aspect_ratio": "1.33333",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
-    "1655112847aaa4cc50": {
-      "type": "newsletter",
-      "settings": {
-        "show_icon": true,
-        "title": "Sign up for our newsletter",
-        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-        "color_background_main": "#000000",
-        "color_text_main": "#ffffff",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
       "type": "rich-text",
       "blocks": {
@@ -577,7 +459,7 @@
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-desktop__2_4a720f9a-6d6e-4aa4-b922-d691356bd3b2.webp",
+        "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
         "image_position": "left",
         "height": "regular",
         "image_crop": true,
@@ -593,6 +475,22 @@
         "color_hide_borders": true,
         "color_hide_shadow": false
       }
+    },
+    "1655112847aaa4cc50": {
+      "type": "newsletter",
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up for our newsletter",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "color_background_main": "#000000",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -603,9 +501,7 @@
     "1654161920efe5f084",
     "16551074833cdf378e",
     "71efc0f4-4264-48af-8019-7383c2c36784",
-    "165407625224b5d2af",
-    "16551127939786a43a",
-    "1655112847aaa4cc50",
-    "4be7c59f-c8d3-4792-a2c0-217eac7db2b5"
+    "4be7c59f-c8d3-4792-a2c0-217eac7db2b5",
+    "1655112847aaa4cc50"
   ]
 }
