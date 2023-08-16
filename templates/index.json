@@ -113,15 +113,6 @@
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
       "type": "rich-text",
       "blocks": {
-        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1": {
-          "type": "title",
-          "disabled": true,
-          "settings": {
-            "title": "Step 1",
-            "title_size": "h3",
-            "seo_h_tag": "span"
-          }
-        },
         "8194c222-8b40-44b7-93ef-c1e20b43627f": {
           "type": "text",
           "settings": {
@@ -136,13 +127,9 @@
             "text_size": "regular"
           }
         },
-        "90dc92dc-776f-4003-99d8-0995ac0b464a": {
-          "type": "title",
-          "disabled": true,
+        "59685708-d492-4513-93b1-13b6a3821291": {
+          "type": "space",
           "settings": {
-            "title": "Step 2",
-            "title_size": "h3",
-            "seo_h_tag": "span"
           }
         },
         "e1cd5787-4929-4de9-b425-fdb0c8a80bfe": {
@@ -157,6 +144,11 @@
           "settings": {
             "text": "<p>Toss it in the fridge before bed.<\/p>",
             "text_size": "regular"
+          }
+        },
+        "84056f0c-4abd-42db-933b-88ba3965068e": {
+          "type": "space",
+          "settings": {
           }
         },
         "1744bc8e-a675-4a34-9f10-cffbcdfa49c8": {
@@ -184,12 +176,12 @@
         }
       },
       "block_order": [
-        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1",
         "8194c222-8b40-44b7-93ef-c1e20b43627f",
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1",
-        "90dc92dc-776f-4003-99d8-0995ac0b464a",
+        "59685708-d492-4513-93b1-13b6a3821291",
         "e1cd5787-4929-4de9-b425-fdb0c8a80bfe",
         "cc4c0340-0e75-480b-b1a4-a0864483b593",
+        "84056f0c-4abd-42db-933b-88ba3965068e",
         "1744bc8e-a675-4a34-9f10-cffbcdfa49c8",
         "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
