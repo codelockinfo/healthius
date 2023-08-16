@@ -201,9 +201,10 @@
         "16551074836af554cd-0": {
           "type": "image",
           "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
+            "image": "shopify:\/\/shop_images\/comparison-fruity-cereal_2x_d1732ab6-0384-4f2a-8b89-66339ef05b7a.webp",
+            "caption": "",
+            "title": "",
+            "subtitle": "",
             "link": "",
             "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
@@ -216,9 +217,10 @@
         "16551074836af554cd-1": {
           "type": "image",
           "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
+            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
+            "caption": "",
+            "title": "",
+            "subtitle": "",
             "link": "",
             "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
@@ -231,11 +233,12 @@
         "9ee5df28-5301-4d47-b84b-8b30518befa0": {
           "type": "image",
           "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
+            "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
+            "caption": "",
+            "title": "",
+            "subtitle": "",
             "link": "",
-            "button_label": "Show more",
+            "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_text_main": "rgba(0,0,0,0)",
             "color_hide_borders": false,
@@ -245,6 +248,7 @@
         },
         "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "caption": "Introducing",
             "title": "Your best promotion yet",
@@ -265,7 +269,6 @@
         "9ee5df28-5301-4d47-b84b-8b30518befa0",
         "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
       ],
-      "disabled": true,
       "settings": {
         "heading": "",
         "subheading": "",
@@ -339,66 +342,6 @@
         "gallery_pagination": "dots",
         "enable_zoom": true,
         "enable_video_looping": false
-      }
-    },
-    "165597098555c514a4": {
-      "type": "text-columns-images",
-      "blocks": {
-        "1655970985e1e8c596-0": {
-          "type": "image",
-          "settings": {
-            "title": "Shipping",
-            "caption": "Useful information about your shipping details",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1655970985e1e8c596-1": {
-          "type": "image",
-          "settings": {
-            "title": "Returns",
-            "caption": "Show how much time customers have for testing your products",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1655970985e1e8c596-2": {
-          "type": "image",
-          "settings": {
-            "title": "Pickup",
-            "caption": "Let your customers know about local pickup",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "d332ebc1-4150-46df-85de-43502d8d5c72": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
-            "title": "",
-            "caption": "",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "1655970985e1e8c596-0",
-        "1655970985e1e8c596-1",
-        "1655970985e1e8c596-2",
-        "d332ebc1-4150-46df-85de-43502d8d5c72"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "style": "grid",
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "border_radius": 0,
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
       }
     },
     "165407625224b5d2af": {
@@ -689,7 +632,6 @@
     "1654161920efe5f084",
     "16551074833cdf378e",
     "16546982542e923b5a",
-    "165597098555c514a4",
     "165407625224b5d2af",
     "16551212489c663a1e",
     "165650871288cb3c80",
