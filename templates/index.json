@@ -607,8 +607,8 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-1": {
           "type": "image",
           "settings": {
-            "title": "Shipping",
-            "caption": "Useful information about your shipping details",
+            "title": "",
+            "caption": "",
             "link": "",
             "seo_h_tag": "h3"
           }
@@ -616,8 +616,8 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-2": {
           "type": "image",
           "settings": {
-            "title": "Returns",
-            "caption": "Show how much time customers have for testing your products",
+            "title": "",
+            "caption": "",
             "link": "",
             "seo_h_tag": "h3"
           }
@@ -625,8 +625,8 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-3": {
           "type": "image",
           "settings": {
-            "title": "Pickup",
-            "caption": "Let your customers know about local pickup",
+            "title": "",
+            "caption": "",
             "link": "",
             "seo_h_tag": "h3"
           }
@@ -634,8 +634,35 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-4": {
           "type": "image",
           "settings": {
-            "title": "Brand",
-            "caption": "Write your brand story and journey",
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "5eb0eb2d-02e6-462a-ad1d-8070f1a7a7ee": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "6e56a304-dcbd-457f-a65c-414957c125ff": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1ea89140-2c8b-497e-8990-9ac8476f8e93": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "caption": "",
             "link": "",
             "seo_h_tag": "h3"
           }
@@ -645,7 +672,10 @@
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-1",
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-2",
         "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-3",
-        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-4"
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-4",
+        "5eb0eb2d-02e6-462a-ad1d-8070f1a7a7ee",
+        "6e56a304-dcbd-457f-a65c-414957c125ff",
+        "1ea89140-2c8b-497e-8990-9ac8476f8e93"
       ],
       "settings": {
         "heading": "...And More Ingredients Than You Feel Like Buying.",
