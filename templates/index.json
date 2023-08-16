@@ -537,16 +537,6 @@
             "text_size": "regular"
           }
         },
-        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-button-1": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Show more",
-            "link": "",
-            "button_size": "large",
-            "button_style": "outline"
-          }
-        },
         "90dc92dc-776f-4003-99d8-0995ac0b464a": {
           "type": "title",
           "settings": {
@@ -554,13 +544,20 @@
             "title_size": "h3",
             "seo_h_tag": "span"
           }
+        },
+        "cc4c0340-0e75-480b-b1a4-a0864483b593": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Toss it in the fridge before bed.<\/p>",
+            "text_size": "regular"
+          }
         }
       },
       "block_order": [
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1",
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1",
-        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-button-1",
-        "90dc92dc-776f-4003-99d8-0995ac0b464a"
+        "90dc92dc-776f-4003-99d8-0995ac0b464a",
+        "cc4c0340-0e75-480b-b1a4-a0864483b593"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-desktop__2_4a720f9a-6d6e-4aa4-b922-d691356bd3b2.webp",
