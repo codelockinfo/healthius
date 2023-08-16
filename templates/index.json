@@ -119,52 +119,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "1655121489db318f96": {
-      "type": "shop-the-look",
-      "blocks": {
-        "1655121489da0fd0f2-0": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "1655121489da0fd0f2-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "ffd8f1c9-28ad-4008-a0c2-02d31f483ede": {
-          "type": "rating",
-          "settings": {
-            "reviews_app": "default"
-          }
-        },
-        "1655121489da0fd0f2-2": {
-          "type": "quick_buy",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "1655121489da0fd0f2-0",
-        "1655121489da0fd0f2-1",
-        "ffd8f1c9-28ad-4008-a0c2-02d31f483ede",
-        "1655121489da0fd0f2-2"
-      ],
-      "settings": {
-        "heading": "Shop the look",
-        "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "product_list": [
-          "",
-          ""
-        ],
-        "color_background_main": "#efefef",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_hide_borders": true,
-        "color_hide_shadow": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "165406738229739f4d": {
       "type": "promotion-cards",
       "blocks": {
@@ -246,82 +200,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "16541619272fee0e4e": {
-      "type": "collection-list",
-      "blocks": {
-        "ee5b7fe5-b950-43ab-bcf9-9f2a564e8c74": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "4fd20197-57e5-4687-8996-e9875ddf993f": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "74d1d8df-2b25-4fd0-aafa-d887747b7fc1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "ed3e6d73-9210-4605-8cd0-18ae029e2fff": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "16541619273bcea29e-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "0326ab2b-e4f9-4301-922a-e2e8241f8662": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "b61dc1b1-e696-4dca-a9cb-861c88e95be5": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "c84d42d5-b256-44a8-9c2f-9d37ae4012d1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "ee5b7fe5-b950-43ab-bcf9-9f2a564e8c74",
-        "4fd20197-57e5-4687-8996-e9875ddf993f",
-        "74d1d8df-2b25-4fd0-aafa-d887747b7fc1",
-        "ed3e6d73-9210-4605-8cd0-18ae029e2fff",
-        "16541619273bcea29e-1",
-        "0326ab2b-e4f9-4301-922a-e2e8241f8662",
-        "b61dc1b1-e696-4dca-a9cb-861c88e95be5",
-        "c84d42d5-b256-44a8-9c2f-9d37ae4012d1"
-      ],
-      "settings": {
-        "heading": "Collection list",
-        "subheading": "",
-        "show_view_all": true,
-        "section_heading_layout": "section-heading--left",
-        "style": "slider",
-        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
-        "image_aspect_ratio": "1",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "16551304148266b5a5": {
       "type": "rich-text",
       "blocks": {
@@ -379,9 +257,9 @@
         "1654161920f21316cf-0": {
           "type": "image",
           "settings": {
-            "icon": "delivery",
-            "title": "Shipping",
-            "caption": "Useful information about your shipping details",
+            "icon": "star",
+            "title": "34,540,000",
+            "caption": "MEALS ENJOYED",
             "link": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_icons_main": "rgba(0,0,0,0)",
@@ -391,9 +269,9 @@
         "1654161920f21316cf-1": {
           "type": "image",
           "settings": {
-            "icon": "time-limit",
-            "title": "Returns",
-            "caption": "Show how much time customers have for testing your products",
+            "icon": "star",
+            "title": "1,076,000",
+            "caption": "HAPPY CUSTOMERS",
             "link": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_icons_main": "rgba(0,0,0,0)",
@@ -414,6 +292,7 @@
         },
         "1654161920f21316cf-3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "icon": "tree",
             "title": "Brand",
@@ -432,11 +311,11 @@
         "1654161920f21316cf-3"
       ],
       "settings": {
-        "heading": "Text columns with icons",
+        "heading": "",
         "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "style": "slider",
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2",
         "border_radius": 200,
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
@@ -891,9 +770,7 @@
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "1653646142d6a7c886",
     "featured-collection",
-    "1655121489db318f96",
     "165406738229739f4d",
-    "16541619272fee0e4e",
     "16551304148266b5a5",
     "1654161920efe5f084",
     "16551074833cdf378e",
