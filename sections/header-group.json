@@ -52,7 +52,7 @@
       "settings": {
         "logo_height": 45,
         "main_linklist": "main-menu",
-        "show_search": true,
+        "show_search": false,
         "sticky_header": true,
         "select_header_actions_on_mobile": "show_on_homepage",
         "show_header_actions": true,
