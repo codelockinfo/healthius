@@ -70,7 +70,6 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 });
 $(document).on("click", ".product-quantity__plus", function() {
   console.log("quantity__plus");
-  alert("ddd");
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
     console.log($variantQty);
     $html = $(this).closest(".productsimage").html();
@@ -229,9 +228,11 @@ function getcartTotalQty() {
     
     if($remain_amount < 1){
       $remain_amount = '';
+      $(".addToCart").attr("disabled",""); 
+      $(".addToCart").css("cursor","pointer"); 
+    }else{
       $(".addToCart").attr("disabled","disabled"); 
       $(".addToCart").css("cursor","not-allowed");  
-    }else{
       $remain_amount = "$"+$remain_amount+"Left to ";
     }
     $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
