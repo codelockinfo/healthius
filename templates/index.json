@@ -469,7 +469,7 @@
         "text_alignment": "horizontal-left",
         "is_fullwidth": false,
         "section_background_color": "#f9f7ee",
-        "remove_margin": false,
+        "remove_margin": true,
         "color_background_main": "#f9f7ee",
         "color_text_main": "rgba(0,0,0,0)",
         "color_accent_main": "rgba(0,0,0,0)",
