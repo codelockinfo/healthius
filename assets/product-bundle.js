@@ -73,7 +73,7 @@ $(document).on("click", ".product-quantity__plus", function() {
   console.log("quantity__plus");
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
     console.log($variantQty);
-    $html = $(this).closest(".container-box").html();
+    $html = $(this).closest(".productsimage").html();
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     if ($variantQty == 1) {
         $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
@@ -94,8 +94,6 @@ $(document).on("click", ".product-quantity__minus", function(e) {
 
   console.log("quantity__minus");
   $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
-  console.log($variantQty);
-  
   $(this).closest(".productQty").find(".product-quantity__selector").val($variantQty);
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
@@ -171,12 +169,13 @@ $(document).ready(function() {
         for (var i = 0; i < itemArray.length; i++) {
           var product_item = itemArray[i].trim();
           var product_item_qty = itemQtyArray[i].trim();
+          console.log(product_item);
           console.log(product_item_qty);
           $("div[data-variant='"+product_item+"']").find(".product-quantity").addClass("show");
           $("div[data-variant='"+product_item+"']").find(".addButton").css("display", "none");
           var setInputQty  = $("div[data-variant='"+product_item+"']").find("product-quantity");
           setInputQty.find(".product-quantity__selector").val(product_item_qty);
-          $getHtml = $("div[data-variant='"+product_item+"']").html();
+          $getHtml = $(".productsimage[data-variant='"+product_item+"']").html();
           $(".box-summary").append("<div class='productsimage' data-variant='"+product_item+"'>" + $getHtml + "</div>");
         }
       } 
