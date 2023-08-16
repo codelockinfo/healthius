@@ -667,7 +667,8 @@
         "1ea89140-2c8b-497e-8990-9ac8476f8e93": {
           "type": "image",
           "settings": {
-            "title": "",
+            "image": "shopify:\/\/shop_images\/salt.webp",
+            "title": "Himalayan Pink Salt",
             "caption": "",
             "link": "",
             "seo_h_tag": "h3"
