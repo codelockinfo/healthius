@@ -14,27 +14,29 @@
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 sm:gap-8">
                     {% for option in product.options_with_values %}
                         {%- for value in option.values -%}
-                            <div class="productsimage">
-                            <div class="container-box" data-summery-index="{{ forloop.index }}">
+
+                          {% assign selected_variant = product.selected_variant %}
+                          {% for variant in product.variants %}
+                          {% if variant.title contains value and variant.image %}
+                              {% assign selected_variant = variant %}
+                          {% endif %}
+                          {% endfor %}
+
+                            <div class="productsimage" data-variant="{{selected_variant.id}}">
+                              <div class="container-box" data-summery-index="{{ forloop.index }}">
                                 <div>
-                                    {% assign selected_variant = product.selected_variant %}
-                                    {% for variant in product.variants %}
-                                    {% if variant.title contains value and variant.image %}
-                                        {% assign selected_variant = variant %}
-                                    {% endif %}
-                                    {% endfor %}
                                     <img src="{{ selected_variant.image.src | img_url: 'medium' }}" alt="{{ selected_variant.title }}" />
                                 </div>
                                 <div class="cartbox-title">
-                                    <h3 class="variant-title">{{ value | escape }}</h3>
+                                    <h3 class="variant-title" data-id="{{selected_variant.id}}">{{ value | escape }}</h3>
                                 </div>
                                 <div class="flex justify-center">
                                     <button role="button" aria-label="Add Green Apple Cinnamon" class="addButton add-button button button-primary small" data-gtm-action="add flavor" data-gtm-label="Green Apple Cinnamon"><span> + Add </span></button>
                                     {% render 'product-quantity-custom-bundle', variant: current_variant, id: section.id %}
                                 </div>
                                 <p></p>
+                              </div>
                             </div>
-                        </div>
                         {%- endfor -%}
                     {% endfor %}
             </div>
@@ -157,13 +159,13 @@
     <div class="box-header">
         <div class="box-header-title">Add More & Save!</div>
         <div class="range-input">
-            <input type="range" min='0' max = "100" value="0" step="20">
+            <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
             <div class="value">
                  <div class="margin-top"></div>
              </div>
             </div> 
     </div>
-    <div class="box-summary"> </div>
+    <div class="box-summary" id="cartSummary"> </div>
     <div class="box-footer">
         <button class="button button--large button--solid"> 90$ Left to checkout</button>
     </div>
@@ -1738,67 +1740,108 @@
   }
 {% endschema %}
 <script>
-    $(document).ready(function(){
-        console.log("ddsdsd");
-      
-        $(".product-quantity__plus").on("click",function(){
-            $eachqty = 0;
-            $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
-            $.each($(".productQty .product-quantity__selector"), function() {
-                $eachqty += parseInt($(this).val());
-            });
-            $eachqty++;
-            $html = $(this).closest(".container-box").html();
-            $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
-            console.log($html);
-            console.log($variantQty);
-            if($variantQty == 1){
-                $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
-            }else{
-                console.log("else");
-                console.log($('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val());
-                $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
-            }
-            let rangeInput = document.querySelector(".range-input input");
-            let step = parseFloat(rangeInput.step);
-            let total = step*$eachqty;
-            $('.range-input input').val(total);
-            $('.range-input input[value="' + total + '"]').trigger('click');
-            
-        });
-        
-        
-        $(".product-quantity__minus").on("click",function(){
-            $eachqty = 0;
-            $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
-            $.each($(".productQty .product-quantity__selector"), function() {
-                $eachqty += parseInt($(this).val());
-            });
-            $eachqty++;
-            $html = $(this).closest(".container-box").html();
-            $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
-            console.log($html);
-            console.log($variantQty);
-            if($variantQty == 1){
-                $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
-            }else{
-                console.log("else");
-                $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
-            }
-            let rangeInput = document.querySelector(".range-input input");
-            let step = parseFloat(rangeInput.step);
-            let total = step*$eachqty;
-            $('.range-input input').val(total);
-            $('.range-input input[value="' + total + '"]').trigger('click');
-        });
-        
-        $(".addButton").on("click",function(){
-            console.log("addButton  click");
-            $(this).css("display","none");
-            $(this).closest(".container-box").find(".product-quantity").addClass("show");
-            $html = $(this).closest(".productsimage").html();
-            $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
-           
-        });
+
+$(document).on("click", ".product-quantity__plus", function() {
+    $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
+    $html = $(this).closest(".container-box").html();
+    $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+    if ($variantQty == 1) {
+        $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
+    } else {
+        $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+    }
+    getcartTotalQty();
+});
+
+$(document).on("click", ".product-quantity__minus", function() {
+    $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
+    $html = $(this).closest(".container-box").html();
+    $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+    $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+    if ($variantQty == 1) {
+        $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
+    } else {
+        console.log("else");
+    }
+    getcartTotalQty();
+});
+
+$(document).ready(function() {
+    set_lineitems_onload();
+    $(".addButton").on("click", function() {
+        console.log("addButton  click");
+        $(this).css("display", "none");
+        $(this).closest(".container-box").find(".product-quantity").addClass("show");
+        $html = $(this).closest(".productsimage").html();
+        $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
+        getcartTotalQty();
     });
+
+    function set_lineitems_onload(){
+      var selected_item = getCookie("variantids");
+      var variant_qty = getCookie("variant_qty");
+      if (selected_item) {
+        var delimiter = ",";
+        var itemArray = selected_item.split(delimiter);
+        var itemQtyArray = variant_qty.split(delimiter);
+        for (var i = 0; i < itemArray.length; i++) {
+          var product_item = itemArray[i].trim();
+          var product_item_qty = itemQtyArray[i].trim();
+          console.log(product_item_qty);
+          $("div[data-variant='"+product_item+"']").find(".product-quantity").addClass("show");
+          $("div[data-variant='"+product_item+"']").find(".addButton").css("display", "none");
+          var setInputQty  = $("div[data-variant='"+product_item+"']").find("product-quantity");
+          setInputQty.find(".product-quantity__selector").val(product_item_qty);
+          $getHtml = $("div[data-variant='"+product_item+"']").html();
+          $(".box-summary").append("<div class='productsimage' data-variant='"+product_item+"'>" + $getHtml + "</div>");
+        }
+      } 
+      getcartTotalQty();
+    }
+});
+
+function setCookie(name, value, daysToExpire) {
+  var date = new Date();
+  date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+  var expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + "; " + expires + "; path=/";
+}
+
+function getCookie(name) {
+  var cookieName = name + "=";
+  var cookieArray = document.cookie.split(';');
+  for (var i = 0; i < cookieArray.length; i++) {
+      var cookie = cookieArray[i].trim();
+      if (cookie.indexOf(cookieName) === 0) {
+          return cookie.substring(cookieName.length, cookie.length);
+      }
+  }
+  return null;
+}
+
+
+var selected_items = [];
+var selected_item_qty = [];
+function getcartTotalQty() {
+    var cartTotQty = 0;
+    $.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
+        cartTotQty += parseInt($(this).val());
+        $currentVarQty = $(this).val();
+        var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
+        var checkExistingVal = $.inArray(varId, selected_items);
+        if (checkExistingVal !== -1) {
+          selected_items[checkExistingVal] = varId;
+          selected_item_qty[checkExistingVal] = $currentVarQty;
+        }else{
+          selected_items.push(varId);
+          selected_item_qty.push($currentVarQty);
+        }
+        setCookie("variantids", selected_items , 7);
+        setCookie("variant_qty", selected_item_qty , 7);
+    });
+    var productPrice = $("#rangeSlider").attr("step");
+    var pro_price = cartTotQty * parseInt(productPrice);
+    $("#rangeSlider").val(pro_price);
+    return cartTotQty;
+}
 </script>
