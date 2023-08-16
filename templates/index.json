@@ -279,7 +279,7 @@
         "height": "regular",
         "alignment": "horizontal-left align-content--vertical-middle",
         "width": "60%",
-        "caption_size": "small",
+        "caption_size": "large",
         "title_size": "h3",
         "subtitle_size": "regular",
         "button_size": "regular",
