@@ -551,13 +551,22 @@
             "text": "<p>Toss it in the fridge before bed.<\/p>",
             "text_size": "regular"
           }
+        },
+        "1744bc8e-a675-4a34-9f10-cffbcdfa49c8": {
+          "type": "title",
+          "settings": {
+            "title": "Step 3",
+            "title_size": "h3",
+            "seo_h_tag": "h3"
+          }
         }
       },
       "block_order": [
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1",
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1",
         "90dc92dc-776f-4003-99d8-0995ac0b464a",
-        "cc4c0340-0e75-480b-b1a4-a0864483b593"
+        "cc4c0340-0e75-480b-b1a4-a0864483b593",
+        "1744bc8e-a675-4a34-9f10-cffbcdfa49c8"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-desktop__2_4a720f9a-6d6e-4aa4-b922-d691356bd3b2.webp",
