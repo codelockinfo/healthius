@@ -121,6 +121,13 @@
             "seo_h_tag": "span"
           }
         },
+        "8194c222-8b40-44b7-93ef-c1e20b43627f": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Step 2<\/h5>",
+            "text_size": "regular"
+          }
+        },
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1": {
           "type": "text",
           "settings": {
@@ -136,6 +143,13 @@
             "seo_h_tag": "span"
           }
         },
+        "e1cd5787-4929-4de9-b425-fdb0c8a80bfe": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Step 3<\/h5>",
+            "text_size": "regular"
+          }
+        },
         "cc4c0340-0e75-480b-b1a4-a0864483b593": {
           "type": "text",
           "settings": {
@@ -145,10 +159,18 @@
         },
         "1744bc8e-a675-4a34-9f10-cffbcdfa49c8": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "Step 3",
             "title_size": "h3",
             "seo_h_tag": "h3"
+          }
+        },
+        "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Step 1<\/h5>",
+            "text_size": "regular"
           }
         },
         "a4f6113b-5786-4836-b086-691fed0de6b7": {
@@ -161,10 +183,13 @@
       },
       "block_order": [
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1",
+        "8194c222-8b40-44b7-93ef-c1e20b43627f",
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1",
         "90dc92dc-776f-4003-99d8-0995ac0b464a",
+        "e1cd5787-4929-4de9-b425-fdb0c8a80bfe",
         "cc4c0340-0e75-480b-b1a4-a0864483b593",
         "1744bc8e-a675-4a34-9f10-cffbcdfa49c8",
+        "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
       "settings": {
