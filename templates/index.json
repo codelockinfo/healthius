@@ -413,10 +413,15 @@
             "text_size": "regular"
           }
         },
+        "7dca3abc-2964-48d8-bca1-1c1544816432": {
+          "type": "space",
+          "settings": {
+          }
+        },
         "eeee3f58-1f11-49bf-9795-c912cd151543": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>THIS MONTH'S FLAVOR<\/strong><\/p>",
+            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
             "text_size": "regular"
           }
         },
@@ -433,6 +438,7 @@
         "71d208b8-dcc2-4b72-9d96-020f3e697c60",
         "1da44260-3ad3-4c26-8a70-3e8be20ea27b",
         "6069e524-2a40-4f5e-85a9-c20b550c6218",
+        "7dca3abc-2964-48d8-bca1-1c1544816432",
         "eeee3f58-1f11-49bf-9795-c912cd151543",
         "4787c2a6-e7f7-41aa-b8e0-5f742c4734d2"
       ],
