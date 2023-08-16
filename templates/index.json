@@ -380,6 +380,82 @@
         "color_hide_shadow": true
       }
     },
+    "abf507c1-a90c-4c07-ae4f-ce8d66af1e42": {
+      "type": "rich-text",
+      "blocks": {
+        "97dbcda5-a006-47f4-861c-778d941c8e84": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "TRY IN-DEVELOPMENT FLAVORS",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "71d208b8-dcc2-4b72-9d96-020f3e697c60": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec": {
+          "type": "title",
+          "settings": {
+            "title": "You Decide The Next Flavor.",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "1da44260-3ad3-4c26-8a70-3e8be20ea27b": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>You Decide The Next Flavor.<\/h4>",
+            "text_size": "regular"
+          }
+        },
+        "fa0772ea-6b1b-439d-95fe-0e03123e0475": {
+          "type": "title",
+          "settings": {
+            "title": "Step 3",
+            "title_size": "h3",
+            "seo_h_tag": "h3"
+          }
+        },
+        "6069e524-2a40-4f5e-85a9-c20b550c6218": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grab-and-go. Wake. Shake. Enjoy.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "97dbcda5-a006-47f4-861c-778d941c8e84",
+        "71d208b8-dcc2-4b72-9d96-020f3e697c60",
+        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec",
+        "1da44260-3ad3-4c26-8a70-3e8be20ea27b",
+        "fa0772ea-6b1b-439d-95fe-0e03123e0475",
+        "6069e524-2a40-4f5e-85a9-c20b550c6218"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/subex-blue_8.webp",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "#f9f7ee",
+        "remove_margin": false,
+        "color_background_main": "#f9f7ee",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
+    },
     "1655112847aaa4cc50": {
       "type": "newsletter",
       "settings": {
@@ -501,6 +577,7 @@
     "1654161920efe5f084",
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "1653646142d6a7c886",
+    "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
     "1655112847aaa4cc50",
     "16551074833cdf378e"
   ]
