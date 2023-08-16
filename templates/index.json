@@ -46,65 +46,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "cc8bc9c0-a46b-4bf3-ab3b-56f967506a1e": {
-      "type": "media-with-text-overlay",
-      "blocks": {
-        "7705a8d3-9db9-41af-bbe9-850d10ae7960": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-desktop__2_4a720f9a-6d6e-4aa4-b922-d691356bd3b2.webp",
-            "video": "shopify:\/\/files\/videos\/14bfdd8aea064163984d32f7b21d736a.mp4",
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "#000000",
-            "color_text_main": "#ffffff",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "48be58f4-3208-4643-b0b4-90cc63cd02bb": {
-          "type": "image",
-          "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "7705a8d3-9db9-41af-bbe9-850d10ae7960",
-        "48be58f4-3208-4643-b0b4-90cc63cd02bb"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "layout": "grid-2 grid-lap-1",
-        "height": "large",
-        "alignment": "horizontal-left align-content--vertical-middle",
-        "width": "60%",
-        "caption_size": "small",
-        "title_size": "h2",
-        "subtitle_size": "regular",
-        "button_size": "regular",
-        "button_style": "solid",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": true,
-        "seo_h_tag": "h2"
-      }
-    },
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
       "type": "video",
       "disabled": true,
@@ -581,7 +522,6 @@
   },
   "order": [
     "165650871288cb3c80",
-    "cc8bc9c0-a46b-4bf3-ab3b-56f967506a1e",
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "1653646142d6a7c886",
     "featured-collection",
