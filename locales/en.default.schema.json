@@ -1025,6 +1025,7 @@
         },
         "product-card": {
           "blocks": {
+            "add_buton":" Add Button",
             "price": "Price",
             "title": "Title",
             "vendor": "Vendor",
@@ -1033,7 +1034,8 @@
               "info": "Use a dynamic source to highlight a unique attribute by creating a product metafield. [Learn more](https://shopify-support.krownthemes.com/article/641-collection-page-product-grids#dynamic-text)",
               "settings": {
                 "text": {
-                  "label": "Label metafield"
+                  "label": "Label metafield",
+                  "button_heading":" Add "
                 },
                 "size": {
                   "label": "Text size",

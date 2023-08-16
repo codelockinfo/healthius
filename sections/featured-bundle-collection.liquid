@@ -9,11 +9,11 @@
     {%- if section.settings.style == 'slider' -%}
       <css-slider
         data-options='{
-                    "selector": ".product-item",
-                    "indexNav": true,
-                    "groupCells": true,
-                    "navigationDOM": "<span class=\"css-slider-button css-slider-prev\" style=\"display:none\"><svg fill=\"none\" height=\"13\" viewBox=\"0 0 8 13\" width=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#000\" ><path d=\"m7.91419 1.41431-6.48529 6.48528-1.4142102-1.41422 6.4852802-6.48527702z\"/><path d=\"m6.48528 12.9849-6.48528027-6.48532 1.41421027-1.41421 6.48528 6.48523z\"/></g></svg></span><span class=\"css-slider-button css-slider-next\" style=\"display:none\"><svg width=\"9\" height=\"13\" viewBox=\"0 0 9 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.914169 11.5857L7.39945 5.10041L8.81367 6.51463L2.32838 12.9999L0.914169 11.5857Z\" fill=\"black\"/><path d=\"M2.34307 0.0151367L8.82835 6.50042L7.41414 7.91463L0.928857 1.42935L2.34307 0.0151367Z\" fill=\"black\"/></svg></span>"
-                  }'
+                                                                                          "selector": ".product-item",
+                                                                                          "indexNav": true,
+                                                                                          "groupCells": true,
+                                                                                          "navigationDOM": "<span class=\"css-slider-button css-slider-prev\" style=\"display:none\"><svg fill=\"none\" height=\"13\" viewBox=\"0 0 8 13\" width=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#000\" ><path d=\"m7.91419 1.41431-6.48529 6.48528-1.4142102-1.41422 6.4852802-6.48527702z\"/><path d=\"m6.48528 12.9849-6.48528027-6.48532 1.41421027-1.41421 6.48528 6.48523z\"/></g></svg></span><span class=\"css-slider-button css-slider-next\" style=\"display:none\"><svg width=\"9\" height=\"13\" viewBox=\"0 0 9 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.914169 11.5857L7.39945 5.10041L8.81367 6.51463L2.32838 12.9999L0.914169 11.5857Z\" fill=\"black\"/><path d=\"M2.34307 0.0151367L8.82835 6.50042L7.41414 7.91463L0.928857 1.42935L2.34307 0.0151367Z\" fill=\"black\"/></svg></span>"
+                                                                                        }'
         class="css-slider css-slider--bottom-navigation"
         id="css-slider-{{ section.id }}">
         {%- render 'custom-shadow', section_id: section.id -%}
@@ -88,6 +88,18 @@
         "limit": 1
       },
       {
+        "type": "add_button",
+        "name": "t:sections.local-extra-words.sections.product-card.blocks.add_buton",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_title",
+            "label": "t:sections.local-extra-words.sections.product-card.blocks.text.settings.text.button_heading",
+            "default": "default"
+          }
+        ]
+      }, {
         "type": "vendor",
         "name": "t:sections.local-extra-words.sections.product-card.blocks.vendor",
         "limit": 1

@@ -201,6 +201,10 @@
             </div>
           {%- endif -%}
 
+        {%- when 'add_button' -%}
+        
+            {%- render 'add-bundle-button', setting:block.settings -%}
+
         {%- when 'rating' -%}
           <div 
             class="product-item__ratings"
