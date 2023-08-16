@@ -657,7 +657,8 @@
         "6e56a304-dcbd-457f-a65c-414957c125ff": {
           "type": "image",
           "settings": {
-            "title": "",
+            "image": "shopify:\/\/shop_images\/IMG12.webp",
+            "title": "Hemp Heart",
             "caption": "",
             "link": "",
             "seo_h_tag": "h3"
