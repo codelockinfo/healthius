@@ -184,11 +184,11 @@
         "section_heading_layout": "section-heading--center",
         "style": "grid",
         "layout": "grid-3 grid-lap-2",
-        "border_radius": 200,
+        "border_radius": 42,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
+        "remove_margin": true,
+        "seo_h_tag": "span"
       }
     },
     "165406738229739f4d": {
