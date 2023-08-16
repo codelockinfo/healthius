@@ -281,9 +281,9 @@
         "1654161920f21316cf-2": {
           "type": "image",
           "settings": {
-            "icon": "store",
-            "title": "Pickup",
-            "caption": "Let your customers know about local pickup",
+            "icon": "time-limit",
+            "title": "690,800,000",
+            "caption": "MORNING MINUTES SAVED",
             "link": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_icons_main": "rgba(0,0,0,0)",
