@@ -119,6 +119,78 @@
         "seo_h_tag": "h2"
       }
     },
+    "1654161920efe5f084": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "1654161920f21316cf-0": {
+          "type": "image",
+          "settings": {
+            "icon": "dinner",
+            "title": "34,540,000",
+            "caption": "MEALS ENJOYED",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-1": {
+          "type": "image",
+          "settings": {
+            "icon": "wallet",
+            "title": "1,076,000",
+            "caption": "HAPPY CUSTOMERS",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-2": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "title": "690,800,000",
+            "caption": "MORNING MINUTES SAVED",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "icon": "tree",
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "1654161920f21316cf-0",
+        "1654161920f21316cf-1",
+        "1654161920f21316cf-2",
+        "1654161920f21316cf-3"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "#5e9c2b",
+        "section_heading_color": "#ffffff",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "165406738229739f4d": {
       "type": "promotion-cards",
       "blocks": {
@@ -249,78 +321,6 @@
         "color_shadow_main": "rgba(0,0,0,0)",
         "color_hide_borders": false,
         "color_hide_shadow": false
-      }
-    },
-    "1654161920efe5f084": {
-      "type": "text-columns-icons",
-      "blocks": {
-        "1654161920f21316cf-0": {
-          "type": "image",
-          "settings": {
-            "icon": "dinner",
-            "title": "34,540,000",
-            "caption": "MEALS ENJOYED",
-            "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-1": {
-          "type": "image",
-          "settings": {
-            "icon": "wallet",
-            "title": "1,076,000",
-            "caption": "HAPPY CUSTOMERS",
-            "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-2": {
-          "type": "image",
-          "settings": {
-            "icon": "time-limit",
-            "title": "690,800,000",
-            "caption": "MORNING MINUTES SAVED",
-            "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-3": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "icon": "tree",
-            "title": "Brand",
-            "caption": "Write your brand story and journey",
-            "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "1654161920f21316cf-0",
-        "1654161920f21316cf-1",
-        "1654161920f21316cf-2",
-        "1654161920f21316cf-3"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "style": "grid",
-        "layout": "grid-3 grid-lap-2",
-        "border_radius": 200,
-        "section_background_color": "#5e9c2b",
-        "section_heading_color": "#ffffff",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
       }
     },
     "16551074833cdf378e": {
@@ -770,9 +770,9 @@
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "1653646142d6a7c886",
     "featured-collection",
+    "1654161920efe5f084",
     "165406738229739f4d",
     "16551304148266b5a5",
-    "1654161920efe5f084",
     "16551074833cdf378e",
     "16546982542e923b5a",
     "165407625224b5d2af",
