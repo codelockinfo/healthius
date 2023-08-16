@@ -172,6 +172,9 @@
     "product_icon_1_image": "",
     "product_icon_1_label": "",
     "cart_free_shipping": false,
+    "social_facebook": "https:\/\/www.facebook.com\/shopify",
+    "social_instagram": "https:\/\/instagram.com\/shopify",
+    "social_tiktok": "https:\/\/www.tiktok.com\/@shopify",
     "sections": {
       "popups": {
         "type": "popups",

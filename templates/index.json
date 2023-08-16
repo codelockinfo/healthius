@@ -1,5 +1,15 @@
 {
   "sections": {
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
+      "type": "video",
+      "settings": {
+        "title": "Oatmeal Reimagined.",
+        "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
+        "section_heading_layout": "section-heading--left",
+        "video": "",
+        "seo_h_tag": "h2"
+      }
+    },
     "1653646142d6a7c886": {
       "type": "slideshow",
       "blocks": {
@@ -89,10 +99,10 @@
         "0732fb3a-f464-4724-9427-62214bde5409"
       ],
       "settings": {
-        "heading": "Featured collection",
-        "subheading": "",
+        "heading": "Never Get Bored.",
+        "subheading": "With new flavors rolling out all the time, you’ll actually look forward to breakfast.",
         "show_view_all": true,
-        "section_heading_layout": "section-heading--left",
+        "section_heading_layout": "section-heading--center",
         "style": "slider",
         "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
         "products_number": 8,
@@ -773,16 +783,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
-      "type": "video",
-      "settings": {
-        "title": "Video",
-        "subtitle": "Video description",
-        "section_heading_layout": "section-heading--left",
-        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "seo_h_tag": "h2"
-      }
-    },
     "16553621956de397b6": {
       "type": "testimonials",
       "blocks": {
@@ -882,6 +882,7 @@
     }
   },
   "order": [
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "1653646142d6a7c886",
     "featured-collection",
     "1655121489db318f96",
@@ -896,7 +897,6 @@
     "165597098555c514a4",
     "165650871288cb3c80",
     "16551127939786a43a",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "16553621956de397b6",
     "1657094048f07fb2a2",
     "1655112847aaa4cc50"
