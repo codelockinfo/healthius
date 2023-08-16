@@ -187,7 +187,7 @@
         "border_radius": 42,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
-        "remove_margin": true,
+        "remove_margin": false,
         "seo_h_tag": "span"
       }
     },
@@ -254,6 +254,7 @@
         "16540673826052f668-1",
         "16540673826052f668-2"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Promotion cards",
         "subheading": "",
