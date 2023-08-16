@@ -115,6 +115,7 @@
       "blocks": {
         "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "Step 1",
             "title_size": "h3",
@@ -137,6 +138,7 @@
         },
         "90dc92dc-776f-4003-99d8-0995ac0b464a": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "Step 2",
             "title_size": "h3",
