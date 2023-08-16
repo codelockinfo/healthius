@@ -1,5 +1,4 @@
 $(document).on("click", ".productsimage .card__image", function(e) {
-console.log("GRREERR");
   var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
   e.preventDefault();
   if (!thisObj.quickViewModal) {
@@ -71,6 +70,7 @@ console.log("GRREERR");
 });
 $(document).on("click", ".product-quantity__plus", function() {
   console.log("quantity__plus");
+  alert("ddd");
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
     console.log($variantQty);
     $html = $(this).closest(".productsimage").html();
@@ -225,5 +225,15 @@ function getcartTotalQty() {
     var productPrice = $("#rangeSlider").attr("step");
     var pro_price = cartTotQty * parseInt(productPrice);
     $("#rangeSlider").val(pro_price);
+    $remain_amount = 90-pro_price;
+    
+    if($remain_amount < 1){
+      $remain_amount = '';
+      $(".addToCart").attr("disabled","disabled"); 
+      $(".addToCart").css("cursor","not-allowed");  
+    }else{
+      $remain_amount = "$"+$remain_amount+"Left to ";
+    }
+    $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
     return cartTotQty;
 }
