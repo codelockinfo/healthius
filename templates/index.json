@@ -35,14 +35,14 @@
         "height": "large",
         "alignment": "horizontal-left align-content--vertical-middle",
         "width": "60%",
-        "caption_size": "large",
-        "title_size": "h1",
+        "caption_size": "small",
+        "title_size": "h2",
         "subtitle_size": "regular",
-        "button_size": "large",
+        "button_size": "regular",
         "button_style": "solid",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "h2"
       }
     },
