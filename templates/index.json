@@ -2,11 +2,12 @@
   "sections": {
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "title": "Oatmeal Reimagined.",
         "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
         "section_heading_layout": "section-heading--left",
-        "video": "https:\/\/www.youtube.com\/watch?v=nqye02H_H6I&ab_channel=RelaxingTree",
+        "video": "",
         "seo_h_tag": "h2"
       }
     },
@@ -16,6 +17,8 @@
         "1653646142fd3f3126-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/HERO_main_2_6e4d8f5b-69d4-41fa-9abd-234c6dfa6756.webp",
+            "mobile_image": "shopify:\/\/shop_images\/HERO_main_1_bb5a1d51-e731-4132-8c2d-24f909f05736.webp",
             "caption": "Showcase your best products",
             "title": "Welcome to our store",
             "link": "",
