@@ -21,8 +21,8 @@
             "mobile_image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
             "caption": "Include some awesome images",
             "title": "Write about yourself",
-            "link": "",
-            "button_label": "Learn more",
+            "link": "shopify:\/\/collections\/all",
+            "button_label": "Shop Now",
             "color_background_main": "rgba(0,0,0,0)",
             "color_text_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
