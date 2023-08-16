@@ -277,7 +277,7 @@
         "section_heading_layout": "section-heading--left",
         "layout": "grid-1",
         "height": "regular",
-        "alignment": "horizontal-left align-content--vertical-bottom",
+        "alignment": "horizontal-left align-content--vertical-middle",
         "width": "60%",
         "caption_size": "small",
         "title_size": "h3",
