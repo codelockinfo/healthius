@@ -1,12 +1,84 @@
+$(document).on("click", ".productsimage .card__image", function(e) {
+console.log("GRREERR");
+  var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
+  e.preventDefault();
+  if (!thisObj.quickViewModal) {
+      const target = e.currentTarget;
+      target.classList.add('working');
+      fetch(`${target.getAttribute('href')}${ target.getAttribute('href').includes('?') ? '&' : '?' }view=quick-view`)
+          .then(response => response.text())
+          .then(text => {
 
+              const quickViewHTML = new DOMParser().parseFromString(text, 'text/html').querySelector('#product-quick-view');
+
+              // create modal w content
+
+              const quickViewContainer = document.createElement('div');
+              quickViewContainer.innerHTML = `<modal-box id="modal-${target.dataset.id}"	
+              class="modal modal--product" 
+              data-options='{
+                "enabled": false,
+                "showOnce": false,
+                "blockTabNavigation": true
+              }'
+              tabindex="-1" role="dialog" aria-modal="true" 
+            >
+              <div class="container--medium">
+                <div class="modal-content">
+                  <button class="modal-close" data-js-close data-js-first-focus style="position:absolute;margin:0;top:0;right:0">${window.KROWN.settings.symbols.close}</button>
+                </div>
+              </div>
+              <span class="modal-background" data-js-close></span>
+            </modal-box>`;
+
+              thisObj.quickViewModal = quickViewContainer.querySelector('modal-box');
+              document.body.appendChild(thisObj.quickViewModal);
+
+              thisObj.quickViewModal.querySelector('.modal-content').innerHTML = quickViewHTML.innerHTML;
+
+              if (!window.productPageScripts) {
+
+                  const scripts = thisObj.quickViewModal.querySelectorAll('script');
+                  scripts.forEach(elm => {
+                      const script = document.createElement('script');
+                      script.src = elm.src;
+                      document.body.append(script);
+                      window.productPageScripts = true;
+                  })
+
+              }
+
+              thisObj.quickViewModal.querySelector('.product-quick-view__close').addEventListener('click', () => {
+                  thisObj.quickViewModal.hide();
+              });
+
+              if (thisObj.quickViewModal.querySelector('[data-js-product-form]')) {
+                  thisObj.quickViewModal.querySelector('[data-js-product-form]').addEventListener('add-to-cart', () => {
+                      thisObj.quickViewModal.hide();
+                  });
+              }
+
+              setTimeout(() => {
+                  thisObj.quickViewModal.show();
+                  target.classList.remove('working');
+              }, 250);
+
+          });
+
+  } else {
+      thisObj.quickViewModal.show();
+  }
+});
 $(document).on("click", ".product-quantity__plus", function() {
+  console.log("quantity__plus");
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
+    console.log($variantQty);
     $html = $(this).closest(".container-box").html();
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     if ($variantQty == 1) {
         $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
     } else {
-        $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+        $('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
     }
     getcartTotalQty();
 });
@@ -17,13 +89,21 @@ e.preventDefault();
 
  $(this).closest(".container-box").find(".quick-add-to-cart .button").trigger("click");
 });
-$(document).on("click", ".product-quantity__minus", function() {
-    $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
-    $html = $(this).closest(".container-box").html();
+$(document).on("click", ".product-quantity__minus", function(e) {
+  e.preventDefault();
+
+  console.log("quantity__minus");
+  $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
+  console.log($variantQty);
+  
+  $(this).closest(".productQty").find(".product-quantity__selector").val($variantQty);
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     $('.container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+    console.log($variantQty);
     if ($variantQty == 1) {
         $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
+        $(this).closest(".productQty").css("display","none");
+        $(this).closest(".container-box").find(".addButton ").css("display","block");
     } else {
         console.log("else");
     }
@@ -31,6 +111,46 @@ $(document).on("click", ".product-quantity__minus", function() {
 });
 
 $(document).ready(function() {
+    $('.addToCart').click(function(e) {
+      e.preventDefault();
+      var PRODUCT_ID  = $(this).closest(".bundle_product").find(".product_variant_id").val();
+      var selected_product_items = [];
+      $.each($("#cartSummary .productsimage"), function() {
+          $currentVarQty = $(this).find(".product-quantity__selector").val();
+          var $currentvartitle = $(this).find(".variant-title").html();
+          $perticular_propertie = $currentVarQty +"*"+ $currentvartitle;
+          selected_product_items.push($perticular_propertie);
+      });
+
+
+      // Convert the array to an object
+      const objectItems = {};
+      $.each(selected_product_items, function(index, item) {
+        objectItems[index] = item;
+      });
+
+      $finalproperties = objectItems;
+      $.ajax({
+        url: '/cart/add.js',
+        dataType: 'json',
+        type: 'POST',
+        data: {
+          id: PRODUCT_ID,
+          quantity: 1,
+          properties:$finalproperties
+        },
+        success: function(response) {
+          // Handle the success response here
+          console.log(response);
+          window.location.href = '/checkout';
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          // Handle the error here
+          console.log('Error:', textStatus, errorThrown);
+        }
+      });
+    });
+  
     set_lineitems_onload();
     $(".addButton").on("click", function() {
         console.log("addButton  click");
