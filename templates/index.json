@@ -600,6 +600,65 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
+    },
+    "b6123daa-cd49-4bf1-8024-dff92c0f6786": {
+      "type": "text-columns-images",
+      "blocks": {
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Shipping",
+            "caption": "Useful information about your shipping details",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Returns",
+            "caption": "Show how much time customers have for testing your products",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-3": {
+          "type": "image",
+          "settings": {
+            "title": "Pickup",
+            "caption": "Let your customers know about local pickup",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-4": {
+          "type": "image",
+          "settings": {
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-1",
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-2",
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-3",
+        "template--20487105741081__b6123daa-cd49-4bf1-8024-dff92c0f6786-image-4"
+      ],
+      "settings": {
+        "heading": "...And More Ingredients Than You Feel Like Buying.",
+        "subheading": "Let's be real, you're not going to the store for these.",
+        "section_heading_layout": "section-heading--center",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "#f4f6f1",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -612,6 +671,7 @@
     "1653646142d6a7c886",
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
     "1655112847aaa4cc50",
-    "16551074833cdf378e"
+    "16551074833cdf378e",
+    "b6123daa-cd49-4bf1-8024-dff92c0f6786"
   ]
 }
