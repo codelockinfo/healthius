@@ -518,6 +518,57 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
+    },
+    "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Talk about your brand",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements or welcome customers to your store.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Show more",
+            "link": "",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-title-1",
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-text-1",
+        "template--20487105741081__4be7c59f-c8d3-4792-a2c0-217eac7db2b5-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-desktop__2_4a720f9a-6d6e-4aa4-b922-d691356bd3b2.webp",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "#f9f7ee",
+        "remove_margin": false,
+        "color_background_main": "#f9f7ee",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
     }
   },
   "order": [
@@ -530,6 +581,7 @@
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "165407625224b5d2af",
     "16551127939786a43a",
-    "1655112847aaa4cc50"
+    "1655112847aaa4cc50",
+    "4be7c59f-c8d3-4792-a2c0-217eac7db2b5"
   ]
 }
