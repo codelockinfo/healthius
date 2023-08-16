@@ -588,23 +588,6 @@
     "cd11c812-58de-40ef-974d-cc93e50b29a5": {
       "type": "rich-text",
       "blocks": {
-        "fca982fe-8a4f-4c93-9f72-bb4038a40315": {
-          "type": "title",
-          "disabled": true,
-          "settings": {
-            "title": "TRY IN-DEVELOPMENT FLAVORS",
-            "title_size": "h3",
-            "seo_h_tag": "span"
-          }
-        },
-        "172b02f7-5dd0-4f86-ad37-8798ee5a2b6f": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
-            "text_size": "regular"
-          }
-        },
         "c1d5ae26-2111-436b-bb61-35182146254d": {
           "type": "text",
           "settings": {
@@ -619,23 +602,10 @@
             "text_size": "regular"
           }
         },
-        "eb0b64fc-f353-4591-b215-12e8e3dc7a14": {
-          "type": "space",
-          "disabled": true,
-          "settings": {
-          }
-        },
         "89218c60-8eff-474d-872f-bb29521e5b80": {
           "type": "text",
           "settings": {
             "text": "<p>*statistical data from September 2019<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "bbb1cd8b-cfe2-42b8-ac0a-92b031163655": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Mexican Hot Chocolate<\/h5>",
             "text_size": "regular"
           }
         },
@@ -650,13 +620,9 @@
         }
       },
       "block_order": [
-        "fca982fe-8a4f-4c93-9f72-bb4038a40315",
-        "172b02f7-5dd0-4f86-ad37-8798ee5a2b6f",
         "c1d5ae26-2111-436b-bb61-35182146254d",
         "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
-        "eb0b64fc-f353-4591-b215-12e8e3dc7a14",
         "89218c60-8eff-474d-872f-bb29521e5b80",
-        "bbb1cd8b-cfe2-42b8-ac0a-92b031163655",
         "4112dd14-ae6c-4cb7-9a20-397997ae63ae"
       ],
       "settings": {
@@ -666,7 +632,7 @@
         "image_crop": true,
         "text_alignment": "horizontal-left",
         "is_fullwidth": true,
-        "section_background_color": "#f9f7ee",
+        "section_background_color": "#f23b3d",
         "remove_margin": true,
         "color_background_main": "#f23b3d",
         "color_text_main": "#ffffff",
