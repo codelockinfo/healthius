@@ -585,6 +585,96 @@
         "seo_h_tag": "h2"
       }
     },
+    "cd11c812-58de-40ef-974d-cc93e50b29a5": {
+      "type": "rich-text",
+      "blocks": {
+        "fca982fe-8a4f-4c93-9f72-bb4038a40315": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "TRY IN-DEVELOPMENT FLAVORS",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "172b02f7-5dd0-4f86-ad37-8798ee5a2b6f": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "c1d5ae26-2111-436b-bb61-35182146254d": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>You Decide The Next Flavor.<\/h4>",
+            "text_size": "large"
+          }
+        },
+        "1ae0b0e6-1df8-40b7-9665-601fff10ec09": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribers taste test a <strong>free in-development flavor<\/strong> each month. Your input lets us know if we should release it, tweak the recipe, or ditch it all together.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "eb0b64fc-f353-4591-b215-12e8e3dc7a14": {
+          "type": "space",
+          "settings": {
+          }
+        },
+        "89218c60-8eff-474d-872f-bb29521e5b80": {
+          "type": "text",
+          "settings": {
+            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "bbb1cd8b-cfe2-42b8-ac0a-92b031163655": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Mexican Hot Chocolate<\/h5>",
+            "text_size": "regular"
+          }
+        },
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe Now",
+            "link": "\/",
+            "button_size": "regular",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "fca982fe-8a4f-4c93-9f72-bb4038a40315",
+        "172b02f7-5dd0-4f86-ad37-8798ee5a2b6f",
+        "c1d5ae26-2111-436b-bb61-35182146254d",
+        "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
+        "eb0b64fc-f353-4591-b215-12e8e3dc7a14",
+        "89218c60-8eff-474d-872f-bb29521e5b80",
+        "bbb1cd8b-cfe2-42b8-ac0a-92b031163655",
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_19d29f61-7bca-4ad6-ad5b-988e851d1273.webp",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": true,
+        "section_background_color": "#f9f7ee",
+        "remove_margin": true,
+        "color_background_main": "#f23b3d",
+        "color_text_main": "#ffffff",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
+    },
     "1655112847aaa4cc50": {
       "type": "newsletter",
       "settings": {
@@ -708,6 +798,7 @@
     "1653646142d6a7c886",
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
+    "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "1655112847aaa4cc50",
     "16551074833cdf378e"
   ]
