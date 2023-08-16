@@ -1,5 +1,51 @@
 {
   "sections": {
+    "165650871288cb3c80": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "1656508712d3848f85-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HERO_main_1_bb5a1d51-e731-4132-8c2d-24f909f05736.webp",
+            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "#000000",
+            "color_text_main": "#ffffff",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "1656508712d3848f85-0"
+      ],
+      "custom_css": [
+        ".container--large {max-width: 100%; padding: 0; margin: 0;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-1",
+        "height": "large",
+        "alignment": "horizontal-left align-content--vertical-middle",
+        "width": "60%",
+        "caption_size": "large",
+        "title_size": "h1",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "solid",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
       "type": "video",
       "disabled": true,
@@ -412,49 +458,6 @@
         "color_hide_shadow": false
       }
     },
-    "165650871288cb3c80": {
-      "type": "media-with-text-overlay",
-      "blocks": {
-        "1656508712d3848f85-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/HERO_main_1_bb5a1d51-e731-4132-8c2d-24f909f05736.webp",
-            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "#000000",
-            "color_text_main": "#ffffff",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "1656508712d3848f85-0"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "layout": "grid-1",
-        "height": "large",
-        "alignment": "horizontal-left align-content--vertical-middle",
-        "width": "60%",
-        "caption_size": "large",
-        "title_size": "h1",
-        "subtitle_size": "regular",
-        "button_size": "large",
-        "button_style": "solid",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "16551127939786a43a": {
       "type": "blog-posts",
       "blocks": {
@@ -598,6 +601,7 @@
     }
   },
   "order": [
+    "165650871288cb3c80",
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "1653646142d6a7c886",
     "featured-collection",
@@ -605,7 +609,6 @@
     "16551074833cdf378e",
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "165407625224b5d2af",
-    "165650871288cb3c80",
     "16551127939786a43a",
     "16553621956de397b6",
     "1657094048f07fb2a2",
