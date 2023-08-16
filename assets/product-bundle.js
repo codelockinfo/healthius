@@ -11,6 +11,12 @@ $(document).on("click", ".product-quantity__plus", function() {
     getcartTotalQty();
 });
 
+$(document).on("click", ".productsimage .card__image", function(e) {
+console.log("card__image");
+e.preventDefault();
+
+ $(this).closest(".container-box").find(".quick-add-to-cart .button").trigger("click");
+});
 $(document).on("click", ".product-quantity__minus", function() {
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
     $html = $(this).closest(".container-box").html();

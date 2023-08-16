@@ -20,16 +20,16 @@
         {%- render 'custom-shadow', section_id: section.id -%}
       {%- endif -%}
 
-      <div class="main-custombundle grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
+      <div class="main-custombundle  grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
 
         {%- liquid
           if section.settings.collection != blank
             for product in collections[section.settings.collection].products limit: section.settings.products_number
-              render 'product-item', class:"container-box productsimage",product: product, product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
+              render 'bundle-product-item',product: product, product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
             endfor
           else 
             for i in (1..section.settings.products_number)
-              render 'product-item', class:"container-box", blank_product: true, section_blocks: section.blocks, index: forloop.index
+              render 'bundle-product-item', class:"container-box", blank_product: true, section_blocks: section.blocks, index: forloop.index
             endfor
           endif
         -%}
