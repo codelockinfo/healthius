@@ -288,6 +288,69 @@
         "seo_h_tag": "h2"
       }
     },
+    "71efc0f4-4264-48af-8019-7383c2c36784": {
+      "type": "text-columns-images",
+      "blocks": {
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-fruity-cereal_2x_d1732ab6-0384-4f2a-8b89-66339ef05b7a.webp",
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
+            "title": "Returns",
+            "caption": "Show how much time customers have for testing your products",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
+            "title": "Pickup",
+            "caption": "Let your customers know about local pickup",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-cinnamon-roll_2x_b6bc4c58-6120-4ace-85fb-9fa430e9839b.webp",
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
+      ],
+      "settings": {
+        "heading": "You’ll Forget It’s Better For You.",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "165407625224b5d2af": {
       "type": "rich-text",
       "blocks": {
@@ -527,66 +590,6 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
-    },
-    "71efc0f4-4264-48af-8019-7383c2c36784": {
-      "type": "text-columns-images",
-      "blocks": {
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-fruity-cereal_2x_d1732ab6-0384-4f2a-8b89-66339ef05b7a.webp",
-            "title": "",
-            "caption": "",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2": {
-          "type": "image",
-          "settings": {
-            "title": "Returns",
-            "caption": "Show how much time customers have for testing your products",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3": {
-          "type": "image",
-          "settings": {
-            "title": "Pickup",
-            "caption": "Let your customers know about local pickup",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4": {
-          "type": "image",
-          "settings": {
-            "title": "Brand",
-            "caption": "Write your brand story and journey",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1",
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3",
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
-      ],
-      "settings": {
-        "heading": "You’ll Forget It’s Better For You.",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "style": "grid",
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "border_radius": 0,
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
     }
   },
   "order": [
@@ -595,12 +598,12 @@
     "featured-collection",
     "1654161920efe5f084",
     "16551074833cdf378e",
+    "71efc0f4-4264-48af-8019-7383c2c36784",
     "165407625224b5d2af",
     "165650871288cb3c80",
     "16551127939786a43a",
     "16553621956de397b6",
     "1657094048f07fb2a2",
-    "1655112847aaa4cc50",
-    "71efc0f4-4264-48af-8019-7383c2c36784"
+    "1655112847aaa4cc50"
   ]
 }
