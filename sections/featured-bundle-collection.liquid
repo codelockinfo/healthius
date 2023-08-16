@@ -47,7 +47,7 @@
                 </div>
                 <div class="box-summary" id="cartSummary"> </div>
                 <div class="box-footer">
-                  <button class="button button--large button--solid"> 90$ Left to checkout</button>
+                  {% comment %} <button class="button button--large button--solid"> 90$ Left to checkout</button> {% endcomment %}
                   {%- assign product_form_id = 'product-form-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 
