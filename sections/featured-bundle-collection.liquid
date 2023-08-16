@@ -48,44 +48,23 @@
                 <div class="box-summary" id="cartSummary"> </div>
                 <div class="box-footer">
                   <button class="button button--large button--solid"> 90$ Left to checkout</button>
-                  {% comment %} {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                  {%- assign product_form_id = 'product-form-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 
                     <template>
-                      <input type="hidden" name="id" value="{{ current_variant.id }}">
+                      <input type="hidden" name="id" value="{{ product_variant.id }}">
                     </template>
                     <script>
                       document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
-                    </script>
-                
-                    {%- liquid
-                      if product.gift_card? and block.settings.show_gift_card_recipient
-                        render 'gift-card-recipent-form', product: product
-                      endif
-                    -%}
-                
+                    </script>                
                     <div class="product__cart-functions">
                 
                       <div class="flex-buttons">
                 
-                        {%- liquid 
-                          if block.settings.show_quantity_selector
-                            render 'product-quantity', variant: current_variant, id: section.id
-                          endif
-                        -%}
-                
-                        <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader {% unless current_variant.available %} disabled {% endunless %}" data-js-product-add-to-cart>
+                        <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                           <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
                             {%- liquid
-                              if current_variant.available
-                                unless block.settings.show_preorder
                                   echo '90$ Left to checkout'
-                                else
-                                  echo 'products.page.preorder_button' | t
-                                endunless
-                              else
-                                echo 'products.page.inventory.sold_out_variant' | t
-                              endif
                             -%}
                           </span>
                           <span class="button__preloader">
@@ -103,7 +82,7 @@
                       
                     </div>
                 
-                  {%- endform -%} {% endcomment %}
+                  {%- endform -%}
                 </div>
               </div>
           </div>
