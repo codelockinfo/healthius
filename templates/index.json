@@ -311,6 +311,7 @@
         "1655130414988486bd-1",
         "1655130414988486bd-2"
       ],
+      "disabled": true,
       "settings": {
         "image_position": "top",
         "height": "regular",
