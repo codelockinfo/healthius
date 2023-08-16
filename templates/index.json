@@ -130,7 +130,7 @@
             "caption": "MEALS ENJOYED",
             "link": "",
             "color_background_main": "#5e9c2b",
-            "color_icons_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#ffffff",
             "seo_h_tag": "h3"
           }
         },
@@ -142,7 +142,7 @@
             "caption": "HAPPY CUSTOMERS",
             "link": "",
             "color_background_main": "#5e9c2b",
-            "color_icons_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#ffffff",
             "seo_h_tag": "h3"
           }
         },
@@ -154,7 +154,7 @@
             "caption": "MORNING MINUTES SAVED",
             "link": "",
             "color_background_main": "#5e9c2b",
-            "color_icons_main": "rgba(0,0,0,0)",
+            "color_icons_main": "#ffffff",
             "seo_h_tag": "h3"
           }
         },
@@ -184,11 +184,11 @@
         "section_heading_layout": "section-heading--center",
         "style": "grid",
         "layout": "grid-3 grid-lap-2",
-        "border_radius": 200,
+        "border_radius": 42,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
         "remove_margin": false,
-        "seo_h_tag": "h2"
+        "seo_h_tag": "span"
       }
     },
     "165406738229739f4d": {
@@ -254,6 +254,7 @@
         "16540673826052f668-1",
         "16540673826052f668-2"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Promotion cards",
         "subheading": "",
@@ -266,8 +267,8 @@
         "subtitle_size": "regular",
         "button_size": "large",
         "button_style": "outline",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
+        "section_background_color": "#5e9c2b",
+        "section_heading_color": "#ffffff",
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
