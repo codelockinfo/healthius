@@ -362,8 +362,8 @@
         "1653646142fd3f3126-0"
       ],
       "settings": {
-        "desktop_height": "80vh",
-        "mobile_height": "60vh",
+        "desktop_height": "60vh",
+        "mobile_height": "50vh",
         "is_auto_height": false,
         "autorotate_enable": false,
         "autorotate_interval": 5,
