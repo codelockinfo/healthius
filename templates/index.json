@@ -92,6 +92,7 @@
         },
         "0732fb3a-f464-4724-9427-62214bde5409": {
           "type": "local_availability",
+          "disabled": true,
           "settings": {
           }
         }
