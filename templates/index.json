@@ -301,19 +301,20 @@
             "seo_h_tag": "h3"
           }
         },
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2": {
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
+            "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
             "title": "",
             "caption": "",
             "link": "",
             "seo_h_tag": "h3"
           }
         },
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3": {
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
             "title": "",
             "caption": "",
             "link": "",
@@ -333,8 +334,8 @@
       },
       "block_order": [
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-1",
-        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-3",
+        "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
       ],
       "settings": {
