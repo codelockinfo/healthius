@@ -275,7 +275,7 @@
         "heading": "",
         "subheading": "",
         "section_heading_layout": "section-heading--left",
-        "layout": "grid-3 grid-lap-1",
+        "layout": "grid-1",
         "height": "regular",
         "alignment": "horizontal-left align-content--vertical-bottom",
         "width": "60%",
