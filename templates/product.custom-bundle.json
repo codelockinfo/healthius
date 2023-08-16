@@ -1,26 +1,30 @@
 {
   "sections": {
+    "169215873675e9cea1": {
+      "type": "apps",
+      "blocks": {
+        "ac215494-9936-4845-8ab5-c0a2ebd0adec": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "dummy-product-1"
+          }
+        }
+      },
+      "block_order": [
+        "ac215494-9936-4845-8ab5-c0a2ebd0adec"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
     "main": {
       "type": "main-product-custom-bundle",
       "blocks": {
         "vendor": {
           "type": "vendor",
           "settings": {
-          }
-        },
-        "empty_space_1": {
-          "type": "space",
-          "settings": {
-          }
-        },
-        "empty_space_2": {
-          "type": "space",
-          "settings": {
-          }
-        },
-        "empty_space_3": {
-          "type": "space",
-          "settings": {
+            "text_size": "text-size--regular"
           }
         },
         "title": {
@@ -36,18 +40,37 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
+            "variants_style": "radio",
             "show_quantities": "no"
+          }
+        },
+        "empty_space_1": {
+          "type": "space",
+          "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "show_price": true,
             "show_quantity_selector": true,
-            "show_dynamic_checkout": true
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "empty_space_2": {
+          "type": "space",
+          "settings": {
           }
         },
         "description": {
           "type": "description",
+          "settings": {
+          }
+        },
+        "empty_space_3": {
+          "type": "space",
           "settings": {
           }
         },
@@ -71,6 +94,11 @@
       ],
       "settings": {
         "gallery_style": "slider",
+        "gallery_ratio": "natural",
+        "gallery_fit": false,
+        "show_border": false,
+        "gallery_card_design": false,
+        "gallery_padding": 0,
         "gallery_pagination": "dots",
         "enable_zoom": true,
         "enable_video_looping": false
@@ -101,11 +129,19 @@
         "quick_buy"
       ],
       "settings": {
-        "heading": "You may also like"
+        "heading": "You may also like",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 4,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false
       }
     }
   },
   "order": [
+    "169215873675e9cea1",
     "main",
     "product-recommendations"
   ]
