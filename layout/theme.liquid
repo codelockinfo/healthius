@@ -122,7 +122,9 @@
   <main id="main" class="main-content 
     {% if settings.product_card_align_buy %} main-content--align-product-items {% endif %}
   ">
+  {% unless product.handle == "dummy-product-1" %}
     {%- render 'breadcrumb' -%}
+  {% endunless %}
     {{ content_for_layout }}
   </main>
   {% unless product.handle == "dummy-product-1" %}

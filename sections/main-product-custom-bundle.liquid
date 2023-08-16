@@ -162,18 +162,74 @@
             <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
             <div class="value">
                  <div class="margin-top"></div>
-             </div>
-            </div> 
-    </div>
-    <div class="box-summary" id="cartSummary"> </div>
-    <div class="box-footer">
-        <button class="button button--large button--solid"> 90$ Left to checkout</button>
-    </div>
-  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="box-summary" id="cartSummary"> </div>
+            <div class="box-footer">
+              {% comment %} <button class="button button--large button--solid"> 90$ Left to checkout</button> {% endcomment %}
+              {%- assign product_form_id = 'product-form-' | append: section.id -%}
+              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            
+                <template>
+                  <input type="hidden" name="id" value="{{ current_variant.id }}">
+                </template>
+                <script>
+                  document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
+                </script>
+            
+                {%- liquid
+                  if product.gift_card? and block.settings.show_gift_card_recipient
+                    render 'gift-card-recipent-form', product: product
+                  endif
+                -%}
+            
+                <div class="product__cart-functions">
+            
+                  <div class="flex-buttons">
+            
+                    {%- liquid 
+                      if block.settings.show_quantity_selector
+                        render 'product-quantity', variant: current_variant, id: section.id
+                      endif
+                    -%}
+            
+                    <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader {% unless current_variant.available %} disabled {% endunless %}" data-js-product-add-to-cart>
+                      <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
+                        {%- liquid
+                          if current_variant.available
+                            unless block.settings.show_preorder
+                              echo '90$ Left to checkout'
+                            else
+                              echo 'products.page.preorder_button' | t
+                            endunless
+                          else
+                            echo 'products.page.inventory.sold_out_variant' | t
+                          endif
+                        -%}
+                      </span>
+                      <span class="button__preloader">
+                        <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
+                      </span>
+                    </button>
+            
+                    {%- liquid
+                      if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
+                        echo form | payment_button
+                      endif
+                    -%}
+            
+                  </div>
+                  
+                </div>
+            
+              {%- endform -%}
+            </div>
+          </div>
+
 	{% comment %} <div class="product-text remove-empty-space">
-
-    {%- assign product_form_id = 'product-form-' | append: section.id -%}
-
+    
+    
     {%- for block in section.blocks -%}
       {%- case block.type -%}
 
@@ -544,61 +600,6 @@
               {% if settings.cart_action == 'overlay' %} data-ajax-cart data-js-product-form {% endif %}
             >
               
-              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-
-                <template>
-                  <input type="hidden" name="id" value="{{ current_variant.id }}">
-                </template>
-                <script>
-                  document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
-                </script>
-
-                {%- liquid
-                  if product.gift_card? and block.settings.show_gift_card_recipient
-                    render 'gift-card-recipent-form', product: product
-                  endif
-                -%}
-
-                <div class="product__cart-functions">
-
-                  <div class="flex-buttons">
-
-                    {%- liquid 
-                      if block.settings.show_quantity_selector
-                        render 'product-quantity', variant: current_variant, id: section.id
-                      endif
-                    -%}
-
-                    <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader {% unless current_variant.available %} disabled {% endunless %}" data-js-product-add-to-cart>
-                      <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
-                        {%- liquid
-                          if current_variant.available
-                            unless block.settings.show_preorder
-                              echo 'products.page.add_to_cart_button' | t
-                            else
-                              echo 'products.page.preorder_button' | t
-                            endunless
-                          else
-                            echo 'products.page.inventory.sold_out_variant' | t
-                          endif
-                        -%}
-                      </span>
-                      <span class="button__preloader">
-                        <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
-                      </span>
-                    </button>
-
-                    {%- liquid
-                      if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
-                        echo form | payment_button
-                      endif
-                    -%}
-
-                  </div>
-                  
-                </div>
-
-              {%- endform -%}
 
             </product-form>
 
