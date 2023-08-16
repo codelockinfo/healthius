@@ -317,8 +317,8 @@
         "style": "grid",
         "layout": "grid-3 grid-lap-2",
         "border_radius": 200,
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
+        "section_background_color": "#5e9c2b",
+        "section_heading_color": "#ffffff",
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
