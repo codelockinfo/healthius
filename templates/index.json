@@ -341,6 +341,66 @@
         "enable_video_looping": false
       }
     },
+    "165597098555c514a4": {
+      "type": "text-columns-images",
+      "blocks": {
+        "1655970985e1e8c596-0": {
+          "type": "image",
+          "settings": {
+            "title": "Shipping",
+            "caption": "Useful information about your shipping details",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1655970985e1e8c596-1": {
+          "type": "image",
+          "settings": {
+            "title": "Returns",
+            "caption": "Show how much time customers have for testing your products",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1655970985e1e8c596-2": {
+          "type": "image",
+          "settings": {
+            "title": "Pickup",
+            "caption": "Let your customers know about local pickup",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "d332ebc1-4150-46df-85de-43502d8d5c72": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
+            "title": "",
+            "caption": "",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "1655970985e1e8c596-0",
+        "1655970985e1e8c596-1",
+        "1655970985e1e8c596-2",
+        "d332ebc1-4150-46df-85de-43502d8d5c72"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "165407625224b5d2af": {
       "type": "rich-text",
       "blocks": {
@@ -433,66 +493,6 @@
         "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
         "products_number": 8,
         "collection": "",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
-    "165597098555c514a4": {
-      "type": "text-columns-images",
-      "blocks": {
-        "1655970985e1e8c596-0": {
-          "type": "image",
-          "settings": {
-            "title": "Shipping",
-            "caption": "Useful information about your shipping details",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1655970985e1e8c596-1": {
-          "type": "image",
-          "settings": {
-            "title": "Returns",
-            "caption": "Show how much time customers have for testing your products",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1655970985e1e8c596-2": {
-          "type": "image",
-          "settings": {
-            "title": "Pickup",
-            "caption": "Let your customers know about local pickup",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        },
-        "d332ebc1-4150-46df-85de-43502d8d5c72": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
-            "title": "",
-            "caption": "",
-            "link": "",
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "1655970985e1e8c596-0",
-        "1655970985e1e8c596-1",
-        "1655970985e1e8c596-2",
-        "d332ebc1-4150-46df-85de-43502d8d5c72"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "style": "grid",
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "border_radius": 0,
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": false,
@@ -689,9 +689,9 @@
     "1654161920efe5f084",
     "16551074833cdf378e",
     "16546982542e923b5a",
+    "165597098555c514a4",
     "165407625224b5d2af",
     "16551212489c663a1e",
-    "165597098555c514a4",
     "165650871288cb3c80",
     "16551127939786a43a",
     "16553621956de397b6",
