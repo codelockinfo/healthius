@@ -21,8 +21,8 @@
             "mobile_image": "shopify:\/\/shop_images\/HERO_main_1_bb5a1d51-e731-4132-8c2d-24f909f05736.webp",
             "caption": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
             "title": "Oatmeal Reimagined.",
-            "link": "",
-            "button_label": "Learn more",
+            "link": "shopify:\/\/collections\/all",
+            "button_label": "Shop Now",
             "color_background_main": "rgba(0,0,0,0)",
             "color_text_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
