@@ -178,6 +178,7 @@
         "title",
         "quick_buy"
       ],
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "subheading": "",
