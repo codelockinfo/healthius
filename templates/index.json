@@ -502,87 +502,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "16553621956de397b6": {
-      "type": "testimonials",
-      "blocks": {
-        "16553621951e01132c-0": {
-          "type": "testimonial",
-          "settings": {
-            "author_name": "Author",
-            "author_title": "Customer",
-            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
-          }
-        },
-        "16553621951e01132c-1": {
-          "type": "testimonial",
-          "settings": {
-            "author_name": "Author",
-            "author_title": "Customer",
-            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "16553621951e01132c-0",
-        "16553621951e01132c-1"
-      ],
-      "settings": {
-        "heading": "Testimonials",
-        "subheading": "What our clients say",
-        "section_heading_layout": "section-heading--left",
-        "quote_font": "crimson_text_i4",
-        "quote_font_size": 34,
-        "quote_line_height": 1.1,
-        "content_alignment": "center",
-        "color_background_main": "#ebebe5",
-        "color_text_main": "#000000",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "color_hide_borders": true,
-        "color_hide_shadow": false,
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
-    "1657094048f07fb2a2": {
-      "type": "marquee",
-      "blocks": {
-        "16570940482780d791-0": {
-          "type": "text",
-          "settings": {
-            "marquee_text": "Write a big bold statement about your brand!"
-          }
-        },
-        "17541091-3633-48b6-97e0-ca55f3bf4a9f": {
-          "type": "text",
-          "settings": {
-            "marquee_text": "Introduce your latest promotions."
-          }
-        },
-        "2700ac00-9546-48d7-aa54-ea44248ca2d8": {
-          "type": "text",
-          "settings": {
-            "marquee_text": "Default scrolling text. Lorem ipsum texturum marquee tamet"
-          }
-        }
-      },
-      "block_order": [
-        "16570940482780d791-0",
-        "17541091-3633-48b6-97e0-ca55f3bf4a9f",
-        "2700ac00-9546-48d7-aa54-ea44248ca2d8"
-      ],
-      "settings": {
-        "scroll_direction": "left",
-        "speed": 150,
-        "pause_on_hover": true,
-        "remove_top_margin": false,
-        "remove_bottom_margin": false,
-        "color_background_main": "#f4ecf4",
-        "color_text_main": "#000000"
-      }
-    },
     "1655112847aaa4cc50": {
       "type": "newsletter",
       "settings": {
@@ -610,8 +529,6 @@
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "165407625224b5d2af",
     "16551127939786a43a",
-    "16553621956de397b6",
-    "1657094048f07fb2a2",
     "1655112847aaa4cc50"
   ]
 }
