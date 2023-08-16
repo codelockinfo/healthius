@@ -399,19 +399,20 @@
             "text_size": "regular"
           }
         },
-        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec": {
-          "type": "title",
-          "settings": {
-            "title": "You Decide The Next Flavor.",
-            "title_size": "h3",
-            "seo_h_tag": "span"
-          }
-        },
         "1da44260-3ad3-4c26-8a70-3e8be20ea27b": {
           "type": "text",
           "settings": {
             "text": "<h4>You Decide The Next Flavor.<\/h4>",
-            "text_size": "regular"
+            "text_size": "large"
+          }
+        },
+        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "You Decide The Next Flavor.",
+            "title_size": "h3",
+            "seo_h_tag": "span"
           }
         },
         "fa0772ea-6b1b-439d-95fe-0e03123e0475": {
@@ -433,8 +434,8 @@
       "block_order": [
         "97dbcda5-a006-47f4-861c-778d941c8e84",
         "71d208b8-dcc2-4b72-9d96-020f3e697c60",
-        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec",
         "1da44260-3ad3-4c26-8a70-3e8be20ea27b",
+        "03202c82-1c4d-4048-9dcf-b5272ad1a9ec",
         "fa0772ea-6b1b-439d-95fe-0e03123e0475",
         "6069e524-2a40-4f5e-85a9-c20b550c6218"
       ],
