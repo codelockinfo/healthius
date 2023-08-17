@@ -2,7 +2,7 @@
 {% assign bundle_min = 0 %}
 {% assign bundle_max = 12 %}
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-
+    <script src="{{ 'bundle.js' | asset_url }}" defer></script>
 <product-page 
   id="product-{{ section.id }}" 
   class="container container--large container--vertical-space-small grid grid--layout grid--gap-xlarge grid-2 grid-lap-1 grid--no-stretch main-product" 
