@@ -531,9 +531,9 @@ class: 'installment caption-large' -%}
                                                                 <button id="bundle-add-to-cart" type="submit" name="add" class="product-form__submit button button--full-width {% if
                                                                     block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}" disabled>
                                                                     {%- if product.selected_or_first_available_variant.available -%}
-                                                                        {{ 'products.product.add_to_cart' | t }}
+                                                                        {{ 'products.page.add_to_cart_button' | t }}
                                                                     {%- else -%}
-                                                                        {{ 'products.product.sold_out' | t }}
+                                                                        {{ 'products.page.inventory.sold_out_variant' | t }}
                                                                     {%- endif -%}
                                                                 </button>
                                                             </div>
