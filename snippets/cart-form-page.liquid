@@ -1,4 +1,5 @@
 {% assign bundles_displayed = '' | split:',' %}
+{% assign bundle_price = 0 %}
 
 <cart-form id="AjaxCartForm">
 
@@ -186,7 +187,7 @@
 	</form>
 
 	<span class="cart__count hidden" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
-	<span class="cart__total hidden" aria-hidden="true" data-cart-total>{{ cart.total_price | money }}</span>
+	<span class="cart__total hidden price price--end" aria-hidden="true" data-cart-total>{{ bundle_price | money }}</span>
 
 </cart-form>
 
