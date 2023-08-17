@@ -22,29 +22,16 @@
             "rb_builder_radius": "4"
           }
         },
-        "fd0fbb20-9f6d-4ce7-8f69-bbd0b59e9156": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/bundles-widget\/371eed76-0b44-4869-9813-730372ea378e",
+        "fa563d1a-698a-4d47-9212-ae572f42faaa": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
-            "product": "{{product}}",
-            "rb_theme_color": "#83c63a",
-            "rb_theme_text": "#ffffff",
-            "rb_theme_other_text": "#1d1d1d",
-            "rb_theme_bg": "#ffffff",
-            "rb_text_size": "14px",
-            "rb_spacing_width": 1300,
-            "rb_spacing_margins": "15px",
-            "rb_buttons_size": "15px",
-            "rb_buttons_corners": "4",
-            "rb_builder_items_per_row_ns": 3,
-            "rb_builder_items_per_row": "1",
-            "rb_builder_aspect_ratio": "100%",
-            "rb_builder_radius": "4"
+            "product": "{{product}}"
           }
         }
       },
       "block_order": [
         "9b6fe8ce-fc7b-4d53-a03a-a49915b539b2",
-        "fd0fbb20-9f6d-4ce7-8f69-bbd0b59e9156"
+        "fa563d1a-698a-4d47-9212-ae572f42faaa"
       ],
       "custom_css": [
 
