@@ -319,10 +319,17 @@
           <h1 class="product__title h2" {{ block.shopify_attributes }}>{{ product.title | escape }}</h1>
 
         {%- when 'price' -%}
+                                        <div class="no-js-hidden bundle-price price--large" id="price-{{ section.id }}"></div>
+                                        <div class="bundle-qty">
+                                            Items:
+                                            <span class="current-qty">0</span>
+                                            of
+                                            {{ bundle_max }}
+                                        </div>
 
-          <div class="text-size--xlarge" {{ block.shopify_attributes }} data-js-product-price-compact>
+          {% comment %} <div class="text-size--xlarge" {{ block.shopify_attributes }} data-js-product-price-compact>
             {%- render 'product-price', variant: current_variant, target: current_variant -%}
-          </div>
+          </div> {% endcomment %}
 
         {%- when 'tax_info' -%}
 
