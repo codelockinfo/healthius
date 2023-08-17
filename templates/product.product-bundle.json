@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "product-bundle",
       "blocks": {
         "vendor": {
           "type": "vendor",
