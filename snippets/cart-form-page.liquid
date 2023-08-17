@@ -1,3 +1,5 @@
+{% assign bundles_displayed = '' | split:',' %}
+
 <cart-form id="AjaxCartForm">
 
 	<form action="{{ routes.cart_url }}" method="post" novalidate class="cart__form {% if cart.item_count == 0 %} cart--empty {% endif %}" id="cart">
