@@ -292,11 +292,13 @@ Bundle = {
     // Initialization function to register all click handlers
     // Registers each grid item's minus button
     $("body").on("click", ".bundle .minus", function () {
+      console.log("minus");
       var item = $(this).closest(".bundle-item");
       Bundle.Utils.updateBundleQuantity(item, -1);
     });
     // Registers each grid item's plus button
     $("body").on("click", ".bundle .plus", function () {
+      console.log("plus");
       var item = $(this).closest(".bundle-item");
       Bundle.Utils.updateBundleQuantity(item, 1);
     });
