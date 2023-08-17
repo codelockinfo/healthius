@@ -323,3 +323,37 @@ Bundle = {
 };
 // Call the init() function to register click handlers
 Bundle.init();
+removeBundleItems : function (bundle_id) {
+    // Removes all bundle items from cart when user clicks remove on cart page
+    // Get current cart contents
+    jQuery.getJSON('/cart.js', function (cart) {
+        // Create the data object for the cart update AJAX call
+        // Loop through each cart item
+        // If the item's bundle id matches the id passed in, add the
+        // cart item key along with a quantity of 0 to the data object
+        let bundle_items = [];
+        let qty = 0;
+        let data = {
+            updates: {}
+        };
+        cart
+            .items
+            .forEach((item, i) => {
+                if (item.properties.bundle_id && item.properties.bundle_id == bundle_id) {
+                    data.updates[item.key] = 0;
+                }
+            })
+            // API call to update the cart contents and set the
+            // bundle item quantities to 0
+            $
+            .ajax({
+                type: 'POST',
+                url: '/cart/update.js',
+                data: data,
+                dataType: 'json',
+                success: function () {
+                    window.location.href = '/cart';
+                }
+            });
+    });
+}
