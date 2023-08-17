@@ -512,85 +512,34 @@
 
           </product-variants>
 
-        <!-- {%- when 'buy_buttons' -%}
+                                              {%- form 'product', product, data-productid: product.id, id: 'product-form-installment',
+class: 'installment caption-large' -%}
+                                            <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+                                                {{ form | payment_terms }}{%- endform -%}
+                                            {%- when 'description' -%}
+                                                {%- if product.description != blank -%}
+                                                    <div class="product__description rte">
+                                                        {{ product.description }}
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- when 'buy_buttons' -%}
+                                                <product-form class="product-form">
+                                                    {%- form 'product', product, data-productid: product.id, id: product_form_id, class:
+'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                                        <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+                                                            <div class="product-form__buttons bundle-add-to-cart">
+                                                                <button id="bundle-add-to-cart" type="submit" name="add" class="product-form__submit button button--full-width {% if
+                                                                    block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}" disabled>
+                                                                    {%- if product.selected_or_first_available_variant.available -%}
+                                                                        {{ 'products.product.add_to_cart' | t }}
+                                                                    {%- else -%}
+                                                                        {{ 'products.product.sold_out' | t }}
+                                                                    {%- endif -%}
+                                                                </button>
+                                                            </div>
+                                                        {%- endform -%}
+                                                    </product-form>
 
-          <div class="product-actions" {{ block.shopify_attributes }}>
-
-            <div data-js-product-price-extended 
-              {% unless block.settings.show_price %} style="display:none" {% endunless %}
-            >
-              {%- render 'product-price', variant: current_variant, target: current_variant, text_size_class: 'text-size--heading', show_saving: true -%}
-            </div>
-
-            <product-form 
-              id="add-to-cart-{{ section.id }}" class="product-form"
-              {% if settings.cart_action == 'overlay' %} data-ajax-cart data-js-product-form {% endif %}
-            >
-              
-              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-
-                <template>
-                  <input type="hidden" name="id" value="{{ current_variant.id }}">
-                </template>
-                <script>
-                  document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
-                </script>
-
-                {%- liquid
-                  if product.gift_card? and block.settings.show_gift_card_recipient
-                    render 'gift-card-recipent-form', product: product
-                  endif
-                -%}
-
-                <div class="product__cart-functions">
-
-                  <div class="flex-buttons">
-
-                    {%- liquid 
-                      if block.settings.show_quantity_selector
-                        render 'product-quantity', variant: current_variant, id: section.id
-                      endif
-                    -%}
-
-                    <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader {% unless current_variant.available %} disabled {% endunless %}" data-js-product-add-to-cart>
-                      <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
-                        {%- liquid
-                          if current_variant.available
-                            unless block.settings.show_preorder
-                              echo 'products.page.add_to_cart_button' | t
-                            else
-                              echo 'products.page.preorder_button' | t
-                            endunless
-                          else
-                            echo 'products.page.inventory.sold_out_variant' | t
-                          endif
-                        -%}
-                      </span>
-                      <span class="button__preloader">
-                        <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
-                      </span>
-                    </button>
-
-                    {%- liquid
-                      if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
-                        echo form | payment_button
-                      endif
-                    -%}
-
-                  </div>
-                  
-                </div>
-
-              {%- endform -%}
-
-            </product-form>
-
-            {%- form 'product', product, id: 'product-form-installment' -%}
-              <input type="hidden" name="id" value="{{ current_variant.id }}">
-              {{ form | payment_terms }}
-            {%- endform -%}
-
-          </div> -->
 
         {%- when 'collapsible_tab' -%}
 
