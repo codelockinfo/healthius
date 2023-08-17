@@ -28,7 +28,7 @@
       ],
       "settings": {
         "full_width": false,
-        "remove_margin": false
+        "remove_margin": true
       }
     },
     "main": {
