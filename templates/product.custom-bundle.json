@@ -5,6 +5,7 @@
       "blocks": {
         "ac215494-9936-4845-8ab5-c0a2ebd0adec": {
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
             "product": "dummy-product-1"
           }
