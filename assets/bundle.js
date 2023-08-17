@@ -1,3 +1,4 @@
+console.log("bundle j scalling ");
 Bundle = {
   Defaults: {
     // Convenience functions to reference various important divs within the build.
