@@ -27,7 +27,7 @@
         "9b6fe8ce-fc7b-4d53-a03a-a49915b539b2"
       ],
       "custom_css": [
-        ".hidden {display: block!impoertant;}"
+        ".hide,.hidden {display: block!impoertant;}"
       ],
       "settings": {
         "full_width": false,
