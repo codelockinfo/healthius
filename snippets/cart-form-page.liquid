@@ -15,8 +15,13 @@
 					</div>
                   
 					{%- for item in cart.items -%}
-
-						<div id="item-{{ item.id }}" class="cart-form-item" data-title="{{ item.product.title | escape }} {%- unless item.product.has_only_default_variant -%} ({{ item.variant.title | escape }}) {%- endunless -%}" data-id="{{ item.key }}" data-qty="{{ item.quantity }}" data-product-id="{{ item.product.id }}" data-js-cart-item>
+                      {%- if item.properties['bundle_id'] -%}
+                            {%- unless bundles_displayed contains item.properties['bundle_id'] -%}
+                                {%- assign bundles_displayed = item.properties['bundle_id'] | concat: bundles_displayed -%}
+                                {%- render 'cart-item-bundle', item: item, cart: cart, current_bundle_id:item.properties['bundle_id'] -%}
+                            {%- endunless -%}
+                        {%- else -%}
+    						<div id="item-{{ item.id }}" class="cart-form-item" data-title="{{ item.product.title | escape }} {%- unless item.product.has_only_default_variant -%} ({{ item.variant.title | escape }}) {%- endunless -%}" data-id="{{ item.key }}" data-qty="{{ item.quantity }}" data-product-id="{{ item.product.id }}" data-js-cart-item>
 
 							<div class="cart-item__product-info cart-form-item--layout">
 
@@ -150,7 +155,7 @@
 							</div>
 
 						</div>
-
+                        {% endif %}
 					{%- endfor -%}
 
 				{%- else -%}
