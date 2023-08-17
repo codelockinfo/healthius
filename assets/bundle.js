@@ -292,7 +292,7 @@ Bundle = {
   init: function () {
     // Initialization function to register all click handlers
     // Registers each grid item's minus button
-    $("body").on("click", ".bundle .minus", function () {
+    $("body").on("click", ".bundle-item-selector .minus", function () {
       console.log("minus");
       var item = $(this).closest(".bundle-item");
       Bundle.Utils.updateBundleQuantity(item, -1);
