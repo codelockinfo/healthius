@@ -1,5 +1,4 @@
-{% assign bundle_min = 0 %}
-{% assign bundle_max = 12 %}
+
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
 <product-page 
@@ -10,27 +9,6 @@
 >
 
   {%- assign current_variant = product.selected_or_first_available_variant -%}
-                            {% for variant in product.variants %}
-                                <div class="grid__item bundle-product-grid-item">
-                                    <div class="grid bundle-item" data-variant-id="{{ variant.id }}" data-qty="0">
-                                        <img src="{{ variant.image.src | img_url: '200x200' }}" alt="{{ variant.title }}" class="bundle_img">
-                                            <div class="h3">{{ variant.title }}</div>
-                                            {% if variant.available == false %}
-                                                <span class="h6 block">Out of stock</span>
-                                            {% else %}
-                                                <div class="bundle-item-selector">
-                                                    <span class="minus">
-                                                        <button class="btn" disabled>-</button>
-                                                    </span>
-                                                    <span class="bundle_quantity">0</span>
-                                                    <span class="plus">
-                                                        <button class="btn">+</button>
-                                                    </span>
-                                                </div>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                {% endfor %}
 
   <div class="product-gallery product-gallery--{{ section.settings.gallery_style }}" data-js-product-gallery>
 
