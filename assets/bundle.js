@@ -297,7 +297,7 @@ Bundle = {
       Bundle.Utils.updateBundleQuantity(item, -1);
     });
     // Registers each grid item's plus button
-    $("body").on("click", ".bundle .plus", function () {
+    $(document).on("click", ".bundle .plus", function () {
       console.log("plus");
       var item = $(this).closest(".bundle-item");
       Bundle.Utils.updateBundleQuantity(item, 1);
