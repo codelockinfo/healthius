@@ -119,7 +119,8 @@
 														<a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
 													{%- else -%}
 														<span>{{ p.last }}</span>
-													{%- endif -%}
+													{%- endif 
+                                                    {%- if property.last != blank and property_first_char != '_' and property.first != 'bundle_id' -%}
 												</span>
 											{%- endif -%}
 										{%- endfor -%}
