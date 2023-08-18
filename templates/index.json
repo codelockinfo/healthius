@@ -264,7 +264,8 @@
       ],
       "custom_css": [
         ".card__icon-size--large {width: 110px; height: 100px;}",
-        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}"
+        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}",
+        ".text-animation--underline{color:#fff}"
       ],
       "settings": {
         "heading": "",
