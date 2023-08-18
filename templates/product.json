@@ -95,7 +95,7 @@
       "settings": {
         "gallery_style": "slider",
         "gallery_ratio": "natural",
-        "gallery_fit": false,
+        "gallery_fit": true,
         "show_border": false,
         "gallery_card_design": false,
         "gallery_padding": 0,
