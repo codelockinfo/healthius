@@ -904,9 +904,9 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image-with-text_2_78a9c08d-7860-4d3e-bc54-02166e29f5ef.webp",
-            "caption": "",
-            "title": "",
-            "subtitle": "",
+            "caption": "Whole grain",
+            "title": "Bakery",
+            "subtitle": "Limited Availability",
             "link": "",
             "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
@@ -919,10 +919,10 @@
         "9ee5df28-5301-4d47-b84b-8b30518befa0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
-            "caption": "",
-            "title": "",
-            "subtitle": "",
+            "image": "shopify:\/\/shop_images\/image-with-text-_1_b4855ca5-7846-4df8-a74d-b854765b0e48.webp",
+            "caption": "Hand-picked",
+            "title": "Fruits & Vegetables",
+            "subtitle": "Limited Availability",
             "link": "",
             "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
