@@ -628,8 +628,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_19d29f61-7bca-4ad6-ad5b-988e851d1273.webp",
         "image_position": "right",
-        "height": "small",
-        "image_crop": true,
+        "height": "regular",
+        "image_crop": false,
         "text_alignment": "horizontal-left",
         "is_fullwidth": true,
         "section_background_color": "#f23b3d",
