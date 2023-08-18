@@ -162,7 +162,7 @@
             "title": "Gluten-Free",
             "caption": "Only whole foods that don't contain gluten",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "color_background_main": "#ece7d9",
             "color_icons_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
           }
@@ -175,7 +175,7 @@
             "title": "Paleo",
             "caption": "Ancient ingredients, modern flavors",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "color_background_main": "#d4e4de",
             "color_icons_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
           }
@@ -188,7 +188,7 @@
             "title": "Keto",
             "caption": "Good fats served in flavor-forward food",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "color_background_main": "#e9d6d6",
             "color_icons_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
           }
