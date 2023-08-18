@@ -150,7 +150,7 @@
             "title": "Vegan",
             "caption": "Plant based goodness",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "color_background_main": "#d8e9d3",
             "color_icons_main": "rgba(0,0,0,0)",
             "seo_h_tag": "h3"
           }
