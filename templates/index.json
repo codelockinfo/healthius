@@ -973,7 +973,8 @@
           "settings": {
             "author_name": "JANE BROTHER",
             "author_title": "Customer",
-            "quote": "<p>I recently visited Lively Wines for the first time and was blown away by the selection and prices. The staff was incredibly helpful and guided me through the process of finding the perfect wine for my dinner party. I will definitely be back!<\/p>"
+            "quote": "<p>I recently visited Lively Wines for the first time and was blown away by the selection and prices. The staff was incredibly helpful and guided me through the process of finding the perfect wine for my dinner party. I will definitely be back!<\/p>",
+            "image": "shopify:\/\/shop_images\/testimonial_1.png"
           }
         }
       },
