@@ -829,7 +829,7 @@
         "subheading": "You don't even have to return it.",
         "section_heading_layout": "section-heading--center",
         "layout": "grid-3 grid-lap-1",
-        "image_aspect_ratio": "1.33333",
+        "image_aspect_ratio": "1",
         "text_alignment": "text-align--center",
         "caption_size": "large",
         "title_size": "h3",
