@@ -851,7 +851,8 @@
         "product_list": [
           "neapolitan-pizza",
           "noodle-salad",
-          "cookies-cream"
+          "cookies-cream",
+          "developer"
         ],
         "color_background_main": "#efefef",
         "color_borders_main": "#ffffff",
