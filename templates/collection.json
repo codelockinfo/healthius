@@ -46,10 +46,27 @@
         "enable_filtering": true,
         "enable_sorting": true
       }
+    },
+    "443af95e-c50d-4f80-a71b-ae04f2302fed": {
+      "type": "newsletter",
+      "settings": {
+        "show_icon": true,
+        "title": "Your best promotion yet",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements or welcome customers to your store.<\/p>",
+        "color_background_main": "#1d1d1d",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "443af95e-c50d-4f80-a71b-ae04f2302fed"
   ]
 }
