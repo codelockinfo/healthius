@@ -10,16 +10,16 @@
           "settings": {
             "title": "Just Meats",
             "size": "h4",
-            "content": "<p>Write your store's tagline.<\/p>",
-            "show_social_icons": true,
+            "content": "",
+            "show_social_icons": false,
             "enable_follow_on_shop": true
           }
         },
         "menu-1": {
           "type": "menu",
           "settings": {
-            "title": "Quick links",
-            "menu": "footer"
+            "title": "Explore",
+            "menu": "explore"
           }
         },
         "text-2": {
