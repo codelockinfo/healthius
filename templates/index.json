@@ -646,6 +646,180 @@
         "color_hide_shadow": false
       }
     },
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/static.money_pro.svg",
+            "caption": "100% Money Back Guarantee",
+            "title": "",
+            "subtitle": "If it comes to this, we'll be sad to see you go. And lightning-fast with your refund.",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/static.customer.svg",
+            "caption": "World Class Customer Service",
+            "title": "",
+            "subtitle": "They're real humans, they’re quick, and they actually like talking to you.",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/static.swap.svg",
+            "caption": "Love it OR Swap it Guarantee",
+            "title": "",
+            "subtitle": "If you’re not wild about a flavor, we’ll swap it with something you love at no additional cost.",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "#000000",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3"
+      ],
+      "settings": {
+        "heading": "And If You Don't Like It, We'll Refund You.",
+        "subheading": "You don't even have to return it.",
+        "section_heading_layout": "section-heading--center",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "large",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "#f4f6f1",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "9306b087-b2c3-4e15-b9af-115ea0cace19": {
+      "type": "rich-text",
+      "blocks": {
+        "6598306e-4381-4930-a0b1-22a6894401c6": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "TRY IN-DEVELOPMENT FLAVORS",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "52f533b2-8912-4da9-ab59-397e318c53a6": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "877553da-8a43-4953-a209-eb1426c11dfc": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>You Decide The Next Flavor.<\/h4>",
+            "text_size": "large"
+          }
+        },
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribers taste test a <strong>free in-development flavor<\/strong> each month. Your input lets us know if we should release it, tweak the recipe, or ditch it all together.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2": {
+          "type": "space",
+          "settings": {
+          }
+        },
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93": {
+          "type": "text",
+          "settings": {
+            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Mexican Hot Chocolate<\/h5>",
+            "text_size": "regular"
+          }
+        },
+        "b218169c-fb1a-420f-bffc-187037e26d48": {
+          "type": "button",
+          "settings": {
+            "button_label": "Subscribe Now",
+            "link": "\/",
+            "button_size": "regular",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "6598306e-4381-4930-a0b1-22a6894401c6",
+        "52f533b2-8912-4da9-ab59-397e318c53a6",
+        "877553da-8a43-4953-a209-eb1426c11dfc",
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9",
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2",
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93",
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8",
+        "b218169c-fb1a-420f-bffc-187037e26d48"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/subex-blue_8.webp",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "#ffffff",
+        "remove_margin": true,
+        "color_background_main": "#ffffff",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
+    },
     "1655112847aaa4cc50": {
       "type": "newsletter",
       "settings": {
@@ -757,90 +931,6 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
-    },
-    "e9e19c9a-6e50-42da-8e5a-06c980a11e92": {
-      "type": "promotion-cards",
-      "blocks": {
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
-          "type": "card",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/static.money_pro.svg",
-            "caption": "100% Money Back Guarantee",
-            "title": "",
-            "subtitle": "If it comes to this, we'll be sad to see you go. And lightning-fast with your refund.",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#eaeaea",
-            "color_shadow_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
-          "type": "card",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/static.customer.svg",
-            "caption": "World Class Customer Service",
-            "title": "",
-            "subtitle": "They're real humans, they’re quick, and they actually like talking to you.",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#eaeaea",
-            "color_shadow_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
-          "type": "card",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/static.swap.svg",
-            "caption": "Love it OR Swap it Guarantee",
-            "title": "",
-            "subtitle": "If you’re not wild about a flavor, we’ll swap it with something you love at no additional cost.",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
-            "color_borders_main": "#eaeaea",
-            "color_shadow_main": "#000000",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1",
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2",
-        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3"
-      ],
-      "settings": {
-        "heading": "And If You Don't Like It, We'll Refund You.",
-        "subheading": "You don't even have to return it.",
-        "section_heading_layout": "section-heading--center",
-        "layout": "grid-3 grid-lap-1",
-        "image_aspect_ratio": "1",
-        "text_alignment": "text-align--center",
-        "caption_size": "large",
-        "title_size": "h3",
-        "subtitle_size": "regular",
-        "button_size": "large",
-        "button_style": "outline",
-        "section_background_color": "#f4f6f1",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": true,
-        "seo_h_tag": "h2"
-      }
     }
   },
   "order": [
@@ -854,8 +944,9 @@
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
+    "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "1655112847aaa4cc50",
-    "16551074833cdf378e",
-    "e9e19c9a-6e50-42da-8e5a-06c980a11e92"
+    "16551074833cdf378e"
   ]
 }
