@@ -982,7 +982,7 @@
         "text_alignment": "horizontal-left",
         "is_fullwidth": true,
         "section_background_color": "#83c63a",
-        "remove_margin": true,
+        "remove_margin": false,
         "color_background_main": "#A36754",
         "color_text_main": "#ffffff",
         "color_accent_main": "rgba(0,0,0,0)",
