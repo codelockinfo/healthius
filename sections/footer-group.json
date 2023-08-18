@@ -58,6 +58,9 @@
         "f853a3ae-8161-4e17-b94a-3082a09fe704",
         "text-2"
       ],
+      "custom_css": [
+        ".footer-item__menu a {border-bottom: none;}"
+      ],
       "settings": {
         "layout": "grid-4 grid-portable-2 grid-lap-1",
         "show_locale_selector": true,
