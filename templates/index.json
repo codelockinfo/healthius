@@ -988,7 +988,7 @@
         "image_aspect_ratio": "1.33333",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "h2"
       }
     },
