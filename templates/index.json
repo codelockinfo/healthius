@@ -577,6 +577,101 @@
         "color_hide_shadow": false
       }
     },
+    "9306b087-b2c3-4e15-b9af-115ea0cace19": {
+      "type": "rich-text",
+      "blocks": {
+        "6598306e-4381-4930-a0b1-22a6894401c6": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "TRY IN-DEVELOPMENT FLAVORS",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "52f533b2-8912-4da9-ab59-397e318c53a6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "877553da-8a43-4953-a209-eb1426c11dfc": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>If You Want Something Done Right…<\/h3>",
+            "text_size": "large"
+          }
+        },
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Did you know that most food companies outsource… making the food? We keep manufacturing in-house by leveraging a direct relationship with farmers and suppliers. The result is a safe, quality product you and your family will love.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2": {
+          "type": "space",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5>Mexican Hot Chocolate<\/h5>",
+            "text_size": "regular"
+          }
+        },
+        "b218169c-fb1a-420f-bffc-187037e26d48": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Subscribe Now",
+            "link": "\/",
+            "button_size": "regular",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "6598306e-4381-4930-a0b1-22a6894401c6",
+        "52f533b2-8912-4da9-ab59-397e318c53a6",
+        "877553da-8a43-4953-a209-eb1426c11dfc",
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9",
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2",
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93",
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8",
+        "b218169c-fb1a-420f-bffc-187037e26d48"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/If_You_Want_Something_Done_Right_Homepage_Image_1.webp",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "#ffffff",
+        "remove_margin": true,
+        "color_background_main": "#ffffff",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
+    },
     "5f836522-8ce1-49cd-b33f-4f302f35911e": {
       "type": "shop-the-look",
       "blocks": {
@@ -715,67 +810,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "cd11c812-58de-40ef-974d-cc93e50b29a5": {
-      "type": "rich-text",
-      "blocks": {
-        "c1d5ae26-2111-436b-bb61-35182146254d": {
-          "type": "text",
-          "settings": {
-            "text": "<h4>Still Think This Is Weird?<br\/>You’re Not Alone.<\/h4>",
-            "text_size": "large"
-          }
-        },
-        "1ae0b0e6-1df8-40b7-9665-601fff10ec09": {
-          "type": "text",
-          "settings": {
-            "text": "<p>3 out of 4 people who try Oats Overnight for the first time decide to order.<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
-          "type": "button",
-          "settings": {
-            "button_label": "Click To Watch",
-            "link": "https:\/\/youtu.be\/Btt-nmDfw3U",
-            "button_size": "regular",
-            "button_style": "outline"
-          }
-        },
-        "89218c60-8eff-474d-872f-bb29521e5b80": {
-          "type": "text",
-          "settings": {
-            "text": "<p>*statistical data from September 2019<\/p>",
-            "text_size": "regular"
-          }
-        }
-      },
-      "block_order": [
-        "c1d5ae26-2111-436b-bb61-35182146254d",
-        "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
-        "4112dd14-ae6c-4cb7-9a20-397997ae63ae",
-        "89218c60-8eff-474d-872f-bb29521e5b80"
-      ],
-      "custom_css": [
-        ".container--fullwidth {padding: 0;}"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_5ccc2b39-9b80-4622-83c9-d63b9bfd3fc5-removebg-preview.png",
-        "image_position": "right",
-        "height": "small",
-        "image_crop": false,
-        "text_alignment": "horizontal-left",
-        "is_fullwidth": true,
-        "section_background_color": "#83c63a",
-        "remove_margin": true,
-        "color_background_main": "#A36754",
-        "color_text_main": "#ffffff",
-        "color_accent_main": "rgba(0,0,0,0)",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "color_hide_borders": true,
-        "color_hide_shadow": false
-      }
-    },
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92": {
       "type": "promotion-cards",
       "blocks": {
@@ -861,101 +895,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "9306b087-b2c3-4e15-b9af-115ea0cace19": {
-      "type": "rich-text",
-      "blocks": {
-        "6598306e-4381-4930-a0b1-22a6894401c6": {
-          "type": "title",
-          "disabled": true,
-          "settings": {
-            "title": "TRY IN-DEVELOPMENT FLAVORS",
-            "title_size": "h3",
-            "seo_h_tag": "span"
-          }
-        },
-        "52f533b2-8912-4da9-ab59-397e318c53a6": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
-            "text_size": "regular"
-          }
-        },
-        "877553da-8a43-4953-a209-eb1426c11dfc": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>If You Want Something Done Right…<\/h3>",
-            "text_size": "large"
-          }
-        },
-        "7f5d9831-15d5-42b5-b74f-c17ce29943a9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Did you know that most food companies outsource… making the food? We keep manufacturing in-house by leveraging a direct relationship with farmers and suppliers. The result is a safe, quality product you and your family will love.<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2": {
-          "type": "space",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "68e97d1f-1097-40b7-86aa-aa2a68cebc93": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
-            "text_size": "regular"
-          }
-        },
-        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h5>Mexican Hot Chocolate<\/h5>",
-            "text_size": "regular"
-          }
-        },
-        "b218169c-fb1a-420f-bffc-187037e26d48": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Subscribe Now",
-            "link": "\/",
-            "button_size": "regular",
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "6598306e-4381-4930-a0b1-22a6894401c6",
-        "52f533b2-8912-4da9-ab59-397e318c53a6",
-        "877553da-8a43-4953-a209-eb1426c11dfc",
-        "7f5d9831-15d5-42b5-b74f-c17ce29943a9",
-        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2",
-        "68e97d1f-1097-40b7-86aa-aa2a68cebc93",
-        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8",
-        "b218169c-fb1a-420f-bffc-187037e26d48"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/If_You_Want_Something_Done_Right_Homepage_Image_1.webp",
-        "image_position": "right",
-        "height": "small",
-        "image_crop": true,
-        "text_alignment": "horizontal-left",
-        "is_fullwidth": false,
-        "section_background_color": "#ffffff",
-        "remove_margin": true,
-        "color_background_main": "#ffffff",
-        "color_text_main": "rgba(0,0,0,0)",
-        "color_accent_main": "rgba(0,0,0,0)",
-        "color_borders_main": "rgba(0,0,0,0)",
-        "color_shadow_main": "rgba(0,0,0,0)",
-        "color_hide_borders": true,
-        "color_hide_shadow": false
-      }
-    },
     "18cc743b-02db-4fcf-885c-0c2453bdcfb0": {
       "type": "blog-posts",
       "blocks": {
@@ -990,6 +929,67 @@
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
         "seo_h_tag": "h2"
+      }
+    },
+    "cd11c812-58de-40ef-974d-cc93e50b29a5": {
+      "type": "rich-text",
+      "blocks": {
+        "c1d5ae26-2111-436b-bb61-35182146254d": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Still Think This Is Weird?<br\/>You’re Not Alone.<\/h4>",
+            "text_size": "large"
+          }
+        },
+        "1ae0b0e6-1df8-40b7-9665-601fff10ec09": {
+          "type": "text",
+          "settings": {
+            "text": "<p>3 out of 4 people who try Oats Overnight for the first time decide to order.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
+          "type": "button",
+          "settings": {
+            "button_label": "Click To Watch",
+            "link": "https:\/\/youtu.be\/Btt-nmDfw3U",
+            "button_size": "regular",
+            "button_style": "outline"
+          }
+        },
+        "89218c60-8eff-474d-872f-bb29521e5b80": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*statistical data from September 2019<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "c1d5ae26-2111-436b-bb61-35182146254d",
+        "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae",
+        "89218c60-8eff-474d-872f-bb29521e5b80"
+      ],
+      "custom_css": [
+        ".container--fullwidth {padding: 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_5ccc2b39-9b80-4622-83c9-d63b9bfd3fc5-removebg-preview.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": true,
+        "section_background_color": "#83c63a",
+        "remove_margin": true,
+        "color_background_main": "#A36754",
+        "color_text_main": "#ffffff",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
       }
     },
     "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0": {
@@ -1078,12 +1078,12 @@
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "1653646142d6a7c886",
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
+    "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "5f836522-8ce1-49cd-b33f-4f302f35911e",
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
-    "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
-    "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "18cc743b-02db-4fcf-885c-0c2453bdcfb0",
+    "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0",
     "1655112847aaa4cc50",
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
