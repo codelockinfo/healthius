@@ -625,6 +625,9 @@
         "89218c60-8eff-474d-872f-bb29521e5b80",
         "4112dd14-ae6c-4cb7-9a20-397997ae63ae"
       ],
+      "custom_css": [
+        ".container--fullwidth {padding: 0;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_19d29f61-7bca-4ad6-ad5b-988e851d1273.webp",
         "image_position": "right",
