@@ -985,6 +985,42 @@
         "video": "",
         "seo_h_tag": "h2"
       }
+    },
+    "18cc743b-02db-4fcf-885c-0c2453bdcfb0": {
+      "type": "blog-posts",
+      "blocks": {
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-info-1": {
+          "type": "info",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comments_number": false
+          }
+        },
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-info-1",
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-title-1"
+      ],
+      "settings": {
+        "title": "Latest Articles",
+        "subheading": "Showcase your best products",
+        "show_view_all": true,
+        "section_heading_layout": "section-heading--left",
+        "blog": "news",
+        "emphasize_first": true,
+        "blog_show_image": true,
+        "image_aspect_ratio": "1.33333",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -1002,6 +1038,7 @@
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
     "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "1655112847aaa4cc50",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
+    "18cc743b-02db-4fcf-885c-0c2453bdcfb0"
   ]
 }
