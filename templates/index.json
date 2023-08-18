@@ -711,7 +711,7 @@
         "border_radius": 200,
         "section_background_color": "#f4f6f1",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": true,
+        "remove_margin": false,
         "seo_h_tag": "h2"
       }
     },
