@@ -46,17 +46,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "title": "Oatmeal Reimagined.",
-        "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
-        "section_heading_layout": "section-heading--left",
-        "video": "",
-        "seo_h_tag": "h2"
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "blocks": {
@@ -937,11 +926,21 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
+    },
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "title": "Oatmeal Reimagined.",
+        "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
+        "section_heading_layout": "section-heading--left",
+        "video": "",
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
     "165650871288cb3c80",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "featured-collection",
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5",
     "1654161920efe5f084",
@@ -953,6 +952,7 @@
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
     "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "1655112847aaa4cc50",
-    "16551074833cdf378e"
+    "16551074833cdf378e",
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
   ]
 }
