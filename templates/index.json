@@ -602,13 +602,6 @@
             "text_size": "regular"
           }
         },
-        "89218c60-8eff-474d-872f-bb29521e5b80": {
-          "type": "text",
-          "settings": {
-            "text": "<p>*statistical data from September 2019<\/p>",
-            "text_size": "regular"
-          }
-        },
         "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
           "type": "button",
           "settings": {
@@ -617,13 +610,20 @@
             "button_size": "regular",
             "button_style": "solid"
           }
+        },
+        "89218c60-8eff-474d-872f-bb29521e5b80": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*statistical data from September 2019<\/p>",
+            "text_size": "regular"
+          }
         }
       },
       "block_order": [
         "c1d5ae26-2111-436b-bb61-35182146254d",
         "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
-        "89218c60-8eff-474d-872f-bb29521e5b80",
-        "4112dd14-ae6c-4cb7-9a20-397997ae63ae"
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae",
+        "89218c60-8eff-474d-872f-bb29521e5b80"
       ],
       "custom_css": [
         ".container--fullwidth {padding: 0;}"
