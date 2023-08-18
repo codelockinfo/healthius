@@ -956,6 +956,51 @@
         "color_hide_shadow": false
       }
     },
+    "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "JOHN SMITH",
+            "author_title": "Happy Customer",
+            "quote": "<p>I have been a customer of Lively Wines for years and have always been impressed with the quality and variety of wines they offer. The staff is knowledgeable and always willing to help me find the perfect bottle for any occasion.<\/p>",
+            "image": "shopify:\/\/shop_images\/static.customer.svg"
+          }
+        },
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Author",
+            "author_title": "Customer",
+            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-1",
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-2"
+      ],
+      "settings": {
+        "heading": "Testimonials",
+        "subheading": "What others say after meeting us",
+        "section_heading_layout": "section-heading--left",
+        "quote_font": "serif",
+        "quote_font_size": 32,
+        "quote_line_height": 1.1,
+        "content_alignment": "left",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "18cc743b-02db-4fcf-885c-0c2453bdcfb0": {
       "type": "blog-posts",
       "blocks": {
@@ -1037,6 +1082,7 @@
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
     "9306b087-b2c3-4e15-b9af-115ea0cace19",
+    "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0",
     "18cc743b-02db-4fcf-885c-0c2453bdcfb0",
     "1655112847aaa4cc50",
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
