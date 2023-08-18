@@ -201,10 +201,10 @@
         "template--20487105937689__781bf0b7-6da5-408e-97e3-987b84ec7d37-image-4"
       ],
       "settings": {
-        "heading": "Text columns with icon",
-        "subheading": "Share your best offers",
-        "section_heading_layout": "section-heading--left",
-        "style": "slider",
+        "heading": "#e9d6d6",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
         "layout": "grid-4 grid-portable-3 grid-lap-2",
         "border_radius": 200,
         "section_background_color": "rgba(0,0,0,0)",
