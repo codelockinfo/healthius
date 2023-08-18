@@ -74,7 +74,7 @@
             "heading": "Nutritional information",
             "content": "<p>Amount per serving% Daily Value *<strong>Energy <\/strong>8g 10%<strong>Total Fat <\/strong>8g 10% Saturated Fat 1g<strong>5%<\/strong> Trans Fat 0g<strong>Cholesterol <\/strong>0mg<strong>0%Total Carbohydrate <\/strong>37g<strong>13%<\/strong> Dietary Fiber 4g<strong>14%<\/strong> Sugars 10g<strong>Potasium <\/strong>160mg<strong>7%Protein <\/strong>3g<\/p>",
             "page": "",
-            "hide_block_if": true
+            "hide_block_if": false
           }
         }
       },
@@ -99,7 +99,7 @@
         "show_border": false,
         "gallery_card_design": false,
         "gallery_padding": 0,
-        "gallery_pagination": "dots",
+        "gallery_pagination": "thumbnails",
         "enable_zoom": true,
         "enable_video_looping": false
       }
