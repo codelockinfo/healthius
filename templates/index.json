@@ -118,6 +118,7 @@
         },
         "59685708-d492-4513-93b1-13b6a3821291": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
@@ -137,6 +138,7 @@
         },
         "84056f0c-4abd-42db-933b-88ba3965068e": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
