@@ -29,6 +29,17 @@
             "menu": "learn-more"
           }
         },
+        "f853a3ae-8161-4e17-b94a-3082a09fe704": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "CONTACT",
+            "size": "h4",
+            "content": "<p> support@oatsovernight.com <\/p>",
+            "show_social_icons": false,
+            "enable_follow_on_shop": true
+          }
+        },
         "text-2": {
           "type": "text",
           "settings": {
@@ -44,13 +55,14 @@
         "text-1",
         "menu-1",
         "menu-2",
+        "f853a3ae-8161-4e17-b94a-3082a09fe704",
         "text-2"
       ],
       "settings": {
         "layout": "grid-4 grid-portable-2 grid-lap-1",
         "show_locale_selector": true,
         "show_country_selector": true,
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "h4"
       }
     }
