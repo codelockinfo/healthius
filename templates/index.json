@@ -383,7 +383,7 @@
         "text_size": "regular",
         "title_size": "h3",
         "button_size": "regular",
-        "button_style": "solid",
+        "button_style": "outline",
         "is_fullwidth": true,
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
@@ -450,7 +450,7 @@
             "button_label": "Subscribe Now",
             "link": "\/",
             "button_size": "regular",
-            "button_style": "solid"
+            "button_style": "outline"
           }
         }
       },
