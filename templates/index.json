@@ -944,6 +944,45 @@
         "video": "",
         "seo_h_tag": "h2"
       }
+    },
+    "5f836522-8ce1-49cd-b33f-4f302f35911e": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1"
+      ],
+      "settings": {
+        "heading": "Shop Fresh Food",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "image": "shopify:\/\/shop_images\/fresh_food_5ed4c2ea-d46c-4d9d-9e25-6cd9a62119d5.webp",
+        "product_list": [
+
+        ],
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -960,6 +999,7 @@
     "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "1655112847aaa4cc50",
     "16551074833cdf378e",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
+    "5f836522-8ce1-49cd-b33f-4f302f35911e"
   ]
 }
