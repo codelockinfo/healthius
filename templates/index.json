@@ -322,6 +322,7 @@
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
       ],
+      "disabled": true,
       "settings": {
         "heading": "You’ll Forget It’s Better For You.",
         "subheading": "",
@@ -644,17 +645,17 @@
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/static.money_pro.svg",
-            "caption": "100% Money Back Guarantee",
-            "title": "",
-            "subtitle": "If it comes to this, we'll be sad to see you go. And lightning-fast with your refund.",
+            "image": "shopify:\/\/shop_images\/promo_pure_7c759baf-9767-4fc0-bee1-99e0ad3d0a9c.webp",
+            "caption": "Collection",
+            "title": "Pure Organic",
+            "subtitle": "",
             "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "button_label": "Show More",
+            "color_background_main": "#e4eff4",
             "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
+            "color_accent_main": "#83c63a",
             "color_borders_main": "#eaeaea",
-            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "#e1e1e1",
             "color_hide_borders": false,
             "color_hide_shadow": false,
             "seo_h_tag": "h3"
@@ -663,17 +664,17 @@
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/static.customer.svg",
-            "caption": "World Class Customer Service",
-            "title": "",
-            "subtitle": "They're real humans, they’re quick, and they actually like talking to you.",
+            "image": "shopify:\/\/shop_images\/promo_bread_27dc722f-4f6d-4b81-b75d-542077a4156a.webp",
+            "caption": "Fresh everyday",
+            "title": "Finest Bread",
+            "subtitle": "",
             "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
+            "button_label": "Show More",
+            "color_background_main": "#f6f0e0",
             "color_text_main": "rgba(0,0,0,0)",
-            "color_accent_main": "rgba(0,0,0,0)",
+            "color_accent_main": "#83c63a",
             "color_borders_main": "#eaeaea",
-            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "#e1e1e1",
             "color_hide_borders": false,
             "color_hide_shadow": false,
             "seo_h_tag": "h3"
@@ -681,6 +682,7 @@
         },
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/static.swap.svg",
             "caption": "Love it OR Swap it Guarantee",
@@ -708,7 +710,7 @@
         "heading": "And If You Don't Like It, We'll Refund You.",
         "subheading": "You don't even have to return it.",
         "section_heading_layout": "section-heading--center",
-        "layout": "grid-3 grid-lap-1",
+        "layout": "grid-2 grid-lap-1",
         "image_aspect_ratio": "1",
         "text_alignment": "text-align--center",
         "caption_size": "large",
@@ -716,7 +718,7 @@
         "subtitle_size": "regular",
         "button_size": "large",
         "button_style": "outline",
-        "section_background_color": "#f4f6f1",
+        "section_background_color": "#ffffff",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
         "seo_h_tag": "h2"
