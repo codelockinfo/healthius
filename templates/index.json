@@ -99,6 +99,100 @@
         "seo_h_tag": "h2"
       }
     },
+    "16551074833cdf378e": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "16551074836af554cd-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
+            "caption": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
+            "title": "Oatmeal Reimagined.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections",
+            "button_label": "Shop Now",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "16551074836af554cd-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-with-text_2_78a9c08d-7860-4d3e-bc54-02166e29f5ef.webp",
+            "caption": "Whole grain",
+            "title": "Bakery",
+            "subtitle": "Limited Availability",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "9ee5df28-5301-4d47-b84b-8b30518befa0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-with-text-_1_b4855ca5-7846-4df8-a74d-b854765b0e48.webp",
+            "caption": "Hand-picked",
+            "title": "Fruits & Vegetables",
+            "subtitle": "Limited Availability",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "16551074836af554cd-0",
+        "16551074836af554cd-1",
+        "9ee5df28-5301-4d47-b84b-8b30518befa0",
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-2 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-middle",
+        "width": "60%",
+        "caption_size": "large",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "regular",
+        "button_style": "solid",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
       "type": "rich-text",
       "blocks": {
@@ -177,6 +271,7 @@
         "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
         "image_position": "left",
@@ -268,7 +363,7 @@
         "border_radius": 0,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
-        "remove_margin": true,
+        "remove_margin": false,
         "seo_h_tag": "span"
       }
     },
@@ -880,100 +975,6 @@
         "seo_h_tag": "h2"
       }
     },
-    "16551074833cdf378e": {
-      "type": "media-with-text-overlay",
-      "blocks": {
-        "16551074836af554cd-0": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
-            "caption": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
-            "title": "Oatmeal Reimagined.",
-            "subtitle": "",
-            "link": "shopify:\/\/collections",
-            "button_label": "Shop Now",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "16551074836af554cd-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image-with-text_2_78a9c08d-7860-4d3e-bc54-02166e29f5ef.webp",
-            "caption": "Whole grain",
-            "title": "Bakery",
-            "subtitle": "Limited Availability",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "9ee5df28-5301-4d47-b84b-8b30518befa0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image-with-text-_1_b4855ca5-7846-4df8-a74d-b854765b0e48.webp",
-            "caption": "Hand-picked",
-            "title": "Fruits & Vegetables",
-            "subtitle": "Limited Availability",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "16551074836af554cd-0",
-        "16551074836af554cd-1",
-        "9ee5df28-5301-4d47-b84b-8b30518befa0",
-        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--left",
-        "layout": "grid-2 grid-lap-1",
-        "height": "regular",
-        "alignment": "horizontal-left align-content--vertical-middle",
-        "width": "60%",
-        "caption_size": "large",
-        "title_size": "h3",
-        "subtitle_size": "regular",
-        "button_size": "regular",
-        "button_style": "solid",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
-      }
-    },
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
       "type": "video",
       "disabled": true,
@@ -989,6 +990,7 @@
   "order": [
     "165650871288cb3c80",
     "featured-collection",
+    "16551074833cdf378e",
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5",
     "1654161920efe5f084",
     "71efc0f4-4264-48af-8019-7383c2c36784",
@@ -1000,7 +1002,6 @@
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
     "9306b087-b2c3-4e15-b9af-115ea0cace19",
     "1655112847aaa4cc50",
-    "16551074833cdf378e",
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
   ]
 }
