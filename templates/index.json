@@ -39,7 +39,7 @@
         "title_size": "h2",
         "subtitle_size": "regular",
         "button_size": "regular",
-        "button_style": "solid",
+        "button_style": "outline",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
