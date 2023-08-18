@@ -210,21 +210,9 @@
         "1654161920f21316cf-0": {
           "type": "image",
           "settings": {
-            "icon": "dinner",
-            "title": "34,540,000",
-            "caption": "MEALS ENJOYED",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-1": {
-          "type": "image",
-          "settings": {
-            "icon": "wallet",
-            "title": "1,076,000",
-            "caption": "HAPPY CUSTOMERS",
+            "icon": "shipping-truck",
+            "title": "Shipping",
+            "caption": "Get your products delivered right to your doorstep with our reliable shipping services.",
             "link": "",
             "color_background_main": "#5e9c2b",
             "color_icons_main": "#ffffff",
@@ -235,8 +223,20 @@
           "type": "image",
           "settings": {
             "icon": "time-limit",
-            "title": "690,800,000",
-            "caption": "MORNING MINUTES SAVED",
+            "title": "Returns",
+            "caption": "Hassle-free returns process to ensure your satisfaction with our products.",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-1": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "title": "1,076,000",
+            "caption": "HAPPY CUSTOMERS",
             "link": "",
             "color_background_main": "#5e9c2b",
             "color_icons_main": "#ffffff",
@@ -258,8 +258,8 @@
       },
       "block_order": [
         "1654161920f21316cf-0",
-        "1654161920f21316cf-1",
         "1654161920f21316cf-2",
+        "1654161920f21316cf-1",
         "1654161920f21316cf-3"
       ],
       "custom_css": [
