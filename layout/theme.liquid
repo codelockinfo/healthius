@@ -322,5 +322,10 @@
 
 </body>
 </html>
-{{ page.title }}?????
-{{ page.name }}?????
+{% if  template.name contains "index" %}
+  <style>
+    .main-footer{
+          margin-top: 0;
+    }
+  </style>
+{%  endif %}
