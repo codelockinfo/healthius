@@ -764,11 +764,12 @@
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/static.money_pro.svg",
             "caption": "100% Money Back Guarantee",
             "title": "",
-            "subtitle": "Write about it",
+            "subtitle": "If it comes to this, we'll be sad to see you go. And lightning-fast with your refund.",
             "link": "",
-            "button_label": "Show more",
+            "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_text_main": "rgba(0,0,0,0)",
             "color_accent_main": "rgba(0,0,0,0)",
@@ -782,6 +783,7 @@
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/static.customer.svg",
             "caption": "Introducing",
             "title": "Your best promotion yet",
             "subtitle": "Write about it",
@@ -800,11 +802,12 @@
         "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
           "type": "card",
           "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
+            "image": "shopify:\/\/shop_images\/static.swap.svg",
+            "caption": "Love it OR Swap it Guarantee",
+            "title": "",
+            "subtitle": "If you’re not wild about a flavor, we’ll swap it with something you love at no additional cost.",
             "link": "",
-            "button_label": "Show more",
+            "button_label": "",
             "color_background_main": "rgba(0,0,0,0)",
             "color_text_main": "rgba(0,0,0,0)",
             "color_accent_main": "rgba(0,0,0,0)",
@@ -828,7 +831,7 @@
         "layout": "grid-3 grid-lap-1",
         "image_aspect_ratio": "1",
         "text_alignment": "text-align--center",
-        "caption_size": "regular",
+        "caption_size": "large",
         "title_size": "h3",
         "subtitle_size": "regular",
         "button_size": "large",
