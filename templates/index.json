@@ -245,7 +245,6 @@
         },
         "1654161920f21316cf-3": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "icon": "tree",
             "title": "Brand",
@@ -272,7 +271,7 @@
         "subheading": "",
         "section_heading_layout": "section-heading--center",
         "style": "grid",
-        "layout": "grid-3 grid-lap-2",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
         "border_radius": 42,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
