@@ -829,15 +829,15 @@
       "type": "newsletter",
       "settings": {
         "show_icon": true,
-        "title": "Sign up for our newsletter",
-        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "title": "Special Offers, Flavor Releases, and More.",
+        "text": "<p>Get the inside scoop on sneak previews, flash discounts, and exclusive flavor access. Plus, scandalous oatmeal pics.<\/p>",
         "color_background_main": "#000000",
         "color_text_main": "#ffffff",
-        "color_borders_main": "rgba(0,0,0,0)",
+        "color_borders_main": "#ffffff",
         "color_shadow_main": "rgba(0,0,0,0)",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "h2"
       }
     },
