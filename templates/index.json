@@ -744,6 +744,7 @@
         },
         "52f533b2-8912-4da9-ab59-397e318c53a6": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
             "text_size": "regular"
@@ -752,24 +753,26 @@
         "877553da-8a43-4953-a209-eb1426c11dfc": {
           "type": "text",
           "settings": {
-            "text": "<h4>You Decide The Next Flavor.<\/h4>",
+            "text": "<h3>If You Want Something Done Right…<\/h3>",
             "text_size": "large"
           }
         },
         "7f5d9831-15d5-42b5-b74f-c17ce29943a9": {
           "type": "text",
           "settings": {
-            "text": "<p>Subscribers taste test a <strong>free in-development flavor<\/strong> each month. Your input lets us know if we should release it, tweak the recipe, or ditch it all together.<\/p>",
+            "text": "<p>Did you know that most food companies outsource… making the food? We keep manufacturing in-house by leveraging a direct relationship with farmers and suppliers. The result is a safe, quality product you and your family will love.<\/p>",
             "text_size": "regular"
           }
         },
         "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
         "68e97d1f-1097-40b7-86aa-aa2a68cebc93": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>THIS MONTH'S FLAVOR<\/p>",
             "text_size": "regular"
@@ -777,6 +780,7 @@
         },
         "40a9a6c0-bd59-4c2e-9386-bd983624a7d8": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<h5>Mexican Hot Chocolate<\/h5>",
             "text_size": "regular"
@@ -784,6 +788,7 @@
         },
         "b218169c-fb1a-420f-bffc-187037e26d48": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Subscribe Now",
             "link": "\/",
