@@ -99,6 +99,48 @@
         "seo_h_tag": "h2"
       }
     },
+    "5f836522-8ce1-49cd-b33f-4f302f35911e": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1"
+      ],
+      "settings": {
+        "heading": "Shop Fresh Food",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "image": "shopify:\/\/shop_images\/fresh_food_5ed4c2ea-d46c-4d9d-9e25-6cd9a62119d5.webp",
+        "product_list": [
+          "neapolitan-pizza",
+          "noodle-salad",
+          "cookies-cream",
+          "developer"
+        ],
+        "color_background_main": "#efefef",
+        "color_borders_main": "#ffffff",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
       "type": "rich-text",
       "blocks": {
@@ -177,6 +219,7 @@
         "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
         "image_position": "left",
@@ -193,83 +236,6 @@
         "color_shadow_main": "rgba(0,0,0,0)",
         "color_hide_borders": true,
         "color_hide_shadow": false
-      }
-    },
-    "1654161920efe5f084": {
-      "type": "text-columns-icons",
-      "blocks": {
-        "1654161920f21316cf-0": {
-          "type": "image",
-          "settings": {
-            "icon": "shipping-truck",
-            "title": "Shipping",
-            "caption": "Get your products delivered right to your doorstep with our reliable shipping services.",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-2": {
-          "type": "image",
-          "settings": {
-            "icon": "time-limit",
-            "title": "Returns",
-            "caption": "Hassle-free returns process to ensure your satisfaction with our products.",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-1": {
-          "type": "image",
-          "settings": {
-            "icon": "store",
-            "title": "Pickup",
-            "caption": "Convenient option to collect your purchases from our store at your preferred time.",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-3": {
-          "type": "image",
-          "settings": {
-            "icon": "coffee-beans",
-            "title": "Brand",
-            "caption": "Write your brand story and journey",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "1654161920f21316cf-0",
-        "1654161920f21316cf-2",
-        "1654161920f21316cf-1",
-        "1654161920f21316cf-3"
-      ],
-      "custom_css": [
-        ".card__icon-size--large {width: 110px; height: 100px;}",
-        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}",
-        ".text-animation--underline {color: #fff;}",
-        ".text-size--small {color: #fff; opacity: 1;}"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "style": "grid",
-        "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "border_radius": 0,
-        "section_background_color": "#5e9c2b",
-        "section_heading_color": "#ffffff",
-        "remove_margin": true,
-        "seo_h_tag": "span"
       }
     },
     "71efc0f4-4264-48af-8019-7383c2c36784": {
@@ -392,6 +358,83 @@
         "color_hide_shadow": true
       }
     },
+    "1654161920efe5f084": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "1654161920f21316cf-0": {
+          "type": "image",
+          "settings": {
+            "icon": "shipping-truck",
+            "title": "Shipping",
+            "caption": "Get your products delivered right to your doorstep with our reliable shipping services.",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-2": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "title": "Returns",
+            "caption": "Hassle-free returns process to ensure your satisfaction with our products.",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-1": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "title": "Pickup",
+            "caption": "Convenient option to collect your purchases from our store at your preferred time.",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-3": {
+          "type": "image",
+          "settings": {
+            "icon": "coffee-beans",
+            "title": "Brand",
+            "caption": "Write your brand story and journey",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "1654161920f21316cf-0",
+        "1654161920f21316cf-2",
+        "1654161920f21316cf-1",
+        "1654161920f21316cf-3"
+      ],
+      "custom_css": [
+        ".card__icon-size--large {width: 110px; height: 100px;}",
+        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}",
+        ".text-animation--underline {color: #fff;}",
+        ".text-size--small {color: #fff; opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "#5e9c2b",
+        "section_heading_color": "#ffffff",
+        "remove_margin": true,
+        "seo_h_tag": "span"
+      }
+    },
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42": {
       "type": "rich-text",
       "blocks": {
@@ -480,48 +523,6 @@
         "color_shadow_main": "rgba(0,0,0,0)",
         "color_hide_borders": true,
         "color_hide_shadow": false
-      }
-    },
-    "5f836522-8ce1-49cd-b33f-4f302f35911e": {
-      "type": "shop-the-look",
-      "blocks": {
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1": {
-          "type": "quick_buy",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1",
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1",
-        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1"
-      ],
-      "settings": {
-        "heading": "Shop Fresh Food",
-        "subheading": "",
-        "section_heading_layout": "section-heading--center",
-        "image": "shopify:\/\/shop_images\/fresh_food_5ed4c2ea-d46c-4d9d-9e25-6cd9a62119d5.webp",
-        "product_list": [
-          "neapolitan-pizza",
-          "noodle-salad",
-          "cookies-cream",
-          "developer"
-        ],
-        "color_background_main": "#efefef",
-        "color_borders_main": "#ffffff",
-        "color_hide_borders": false,
-        "color_hide_shadow": false,
-        "seo_h_tag": "h2"
       }
     },
     "b6123daa-cd49-4bf1-8024-dff92c0f6786": {
@@ -991,12 +992,12 @@
   "order": [
     "165650871288cb3c80",
     "featured-collection",
+    "5f836522-8ce1-49cd-b33f-4f302f35911e",
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5",
-    "1654161920efe5f084",
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "1653646142d6a7c886",
+    "1654161920efe5f084",
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
-    "5f836522-8ce1-49cd-b33f-4f302f35911e",
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
