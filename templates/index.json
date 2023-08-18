@@ -810,7 +810,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/If_You_Want_Something_Done_Right_Homepage_Image_1.webp",
         "image_position": "right",
-        "height": "regular",
+        "height": "small",
         "image_crop": true,
         "text_alignment": "horizontal-left",
         "is_fullwidth": false,
