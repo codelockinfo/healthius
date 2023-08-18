@@ -849,7 +849,9 @@
         "section_heading_layout": "section-heading--center",
         "image": "shopify:\/\/shop_images\/fresh_food_5ed4c2ea-d46c-4d9d-9e25-6cd9a62119d5.webp",
         "product_list": [
-
+          "neapolitan-pizza",
+          "noodle-salad",
+          "cookies-cream"
         ],
         "color_background_main": "#efefef",
         "color_borders_main": "#ffffff",
