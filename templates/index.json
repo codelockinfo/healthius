@@ -272,7 +272,7 @@
         "section_heading_layout": "section-heading--center",
         "style": "grid",
         "layout": "grid-4 grid-portable-3 grid-lap-2",
-        "border_radius": 42,
+        "border_radius": 0,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
         "remove_margin": true,
