@@ -759,7 +759,7 @@
         ".container--fullwidth {padding: 0;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_19d29f61-7bca-4ad6-ad5b-988e851d1273.webp",
+        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_5ccc2b39-9b80-4622-83c9-d63b9bfd3fc5-removebg-preview.png",
         "image_position": "right",
         "height": "small",
         "image_crop": false,
@@ -767,7 +767,7 @@
         "is_fullwidth": true,
         "section_background_color": "#83c63a",
         "remove_margin": true,
-        "color_background_main": "#83c63a",
+        "color_background_main": "#A36754",
         "color_text_main": "#ffffff",
         "color_accent_main": "rgba(0,0,0,0)",
         "color_borders_main": "rgba(0,0,0,0)",
