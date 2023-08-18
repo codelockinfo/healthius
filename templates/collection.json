@@ -1,1 +1,55 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{}},"product-grid":{"type":"main-collection-product-grid","blocks":{"price":{"type":"price","settings":{}},"title":{"type":"title","settings":{}},"quick_buy":{"type":"quick_buy","settings":{}}},"block_order":["price","title","quick_buy"],"settings":{}}},"order":["banner","product-grid"]}
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "settings": {
+          }
+        },
+        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a": {
+          "type": "icons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "title",
+        "quick_buy",
+        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a"
+      ],
+      "settings": {
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}
