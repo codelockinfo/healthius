@@ -28,6 +28,7 @@
         },
         "empty_space_1": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
@@ -66,6 +67,15 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "8fe6af90-ff4e-4338-b2c4-61de493da438": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Nutritional information",
+            "content": "<p>Amount per serving% Daily Value *<strong>Energy <\/strong>8g 10%<strong>Total Fat <\/strong>8g 10% Saturated Fat 1g<strong>5%<\/strong> Trans Fat 0g<strong>Cholesterol <\/strong>0mg<strong>0%Total Carbohydrate <\/strong>37g<strong>13%<\/strong> Dietary Fiber 4g<strong>14%<\/strong> Sugars 10g<strong>Potasium <\/strong>160mg<strong>7%Protein <\/strong>3g<\/p>",
+            "page": "",
+            "hide_block_if": false
+          }
         }
       },
       "block_order": [
@@ -79,7 +89,8 @@
         "description",
         "empty_space_3",
         "share",
-        "2b73546f-0e39-441d-8a96-6d76e79fa54b"
+        "2b73546f-0e39-441d-8a96-6d76e79fa54b",
+        "8fe6af90-ff4e-4338-b2c4-61de493da438"
       ],
       "settings": {
         "gallery_style": "slider",
