@@ -65,7 +65,7 @@
         "layout": "grid-4 grid-portable-2 grid-lap-1",
         "show_locale_selector": true,
         "show_country_selector": true,
-        "remove_margin": true,
+        "remove_margin": false,
         "seo_h_tag": "h4"
       }
     }

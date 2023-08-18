@@ -49,6 +49,7 @@
     },
     "443af95e-c50d-4f80-a71b-ae04f2302fed": {
       "type": "newsletter",
+      "disabled": true,
       "custom_css": [
         ".container--large {max-width: 100%; padding: 0;}"
       ],
