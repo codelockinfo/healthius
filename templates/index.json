@@ -246,12 +246,12 @@
         "1654161920f21316cf-3": {
           "type": "image",
           "settings": {
-            "icon": "tree",
+            "icon": "coffee-beans",
             "title": "Brand",
             "caption": "Write your brand story and journey",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
             "seo_h_tag": "h3"
           }
         }
