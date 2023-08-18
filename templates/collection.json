@@ -23,13 +23,13 @@
           "settings": {
           }
         },
-        "quick_buy": {
-          "type": "quick_buy",
+        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a": {
+          "type": "icons",
           "settings": {
           }
         },
-        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a": {
-          "type": "icons",
+        "quick_buy": {
+          "type": "quick_buy",
           "settings": {
           }
         }
@@ -37,8 +37,8 @@
       "block_order": [
         "price",
         "title",
-        "quick_buy",
-        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a"
+        "fce0f11e-b3fe-4189-bc0c-4a84d0e4017a",
+        "quick_buy"
       ],
       "settings": {
         "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
