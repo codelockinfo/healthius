@@ -757,6 +757,87 @@
         "remove_margin": false,
         "seo_h_tag": "h2"
       }
+    },
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
+          "type": "card",
+          "settings": {
+            "caption": "100% Money Back Guarantee",
+            "title": "",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
+          "type": "card",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
+          "type": "card",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3"
+      ],
+      "settings": {
+        "heading": "And If You Don't Like It, We'll Refund You.",
+        "subheading": "You don't even have to return it.",
+        "section_heading_layout": "section-heading--center",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "#f4f6f1",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -771,6 +852,7 @@
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "1655112847aaa4cc50",
-    "16551074833cdf378e"
+    "16551074833cdf378e",
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92"
   ]
 }
