@@ -12,7 +12,7 @@
             "title": "Your best promotion yet",
             "subtitle": "",
             "link": "",
-            "button_label": "Show more",
+            "button_label": "Shop Now",
             "color_background_main": "#000000",
             "color_text_main": "#ffffff",
             "color_hide_borders": true,
@@ -39,21 +39,10 @@
         "title_size": "h2",
         "subtitle_size": "regular",
         "button_size": "regular",
-        "button_style": "solid",
+        "button_style": "outline",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
-        "seo_h_tag": "h2"
-      }
-    },
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "title": "Oatmeal Reimagined.",
-        "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
-        "section_heading_layout": "section-heading--left",
-        "video": "",
         "seo_h_tag": "h2"
       }
     },
@@ -110,6 +99,100 @@
         "seo_h_tag": "h2"
       }
     },
+    "16551074833cdf378e": {
+      "type": "media-with-text-overlay",
+      "blocks": {
+        "16551074836af554cd-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
+            "caption": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
+            "title": "Oatmeal Reimagined.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections",
+            "button_label": "Shop Now",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "16551074836af554cd-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-with-text_2_78a9c08d-7860-4d3e-bc54-02166e29f5ef.webp",
+            "caption": "Whole grain",
+            "title": "Bakery",
+            "subtitle": "Limited Availability",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "9ee5df28-5301-4d47-b84b-8b30518befa0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-with-text-_1_b4855ca5-7846-4df8-a74d-b854765b0e48.webp",
+            "caption": "Hand-picked",
+            "title": "Fruits & Vegetables",
+            "subtitle": "Limited Availability",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "subtitle": "Write about it",
+            "link": "",
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "16551074836af554cd-0",
+        "16551074836af554cd-1",
+        "9ee5df28-5301-4d47-b84b-8b30518befa0",
+        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-2 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-middle",
+        "width": "60%",
+        "caption_size": "large",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "regular",
+        "button_style": "solid",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5": {
       "type": "rich-text",
       "blocks": {
@@ -129,6 +212,7 @@
         },
         "59685708-d492-4513-93b1-13b6a3821291": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
@@ -148,6 +232,7 @@
         },
         "84056f0c-4abd-42db-933b-88ba3965068e": {
           "type": "space",
+          "disabled": true,
           "settings": {
           }
         },
@@ -186,6 +271,7 @@
         "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
         "image_position": "left",
@@ -210,21 +296,9 @@
         "1654161920f21316cf-0": {
           "type": "image",
           "settings": {
-            "icon": "dinner",
-            "title": "34,540,000",
-            "caption": "MEALS ENJOYED",
-            "link": "",
-            "color_background_main": "#5e9c2b",
-            "color_icons_main": "#ffffff",
-            "seo_h_tag": "h3"
-          }
-        },
-        "1654161920f21316cf-1": {
-          "type": "image",
-          "settings": {
-            "icon": "wallet",
-            "title": "1,076,000",
-            "caption": "HAPPY CUSTOMERS",
+            "icon": "shipping-truck",
+            "title": "Shipping",
+            "caption": "Get your products delivered right to your doorstep with our reliable shipping services.",
             "link": "",
             "color_background_main": "#5e9c2b",
             "color_icons_main": "#ffffff",
@@ -235,8 +309,20 @@
           "type": "image",
           "settings": {
             "icon": "time-limit",
-            "title": "690,800,000",
-            "caption": "MORNING MINUTES SAVED",
+            "title": "Returns",
+            "caption": "Hassle-free returns process to ensure your satisfaction with our products.",
+            "link": "",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
+            "seo_h_tag": "h3"
+          }
+        },
+        "1654161920f21316cf-1": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "title": "Pickup",
+            "caption": "Convenient option to collect your purchases from our store at your preferred time.",
             "link": "",
             "color_background_main": "#5e9c2b",
             "color_icons_main": "#ffffff",
@@ -245,38 +331,39 @@
         },
         "1654161920f21316cf-3": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "icon": "tree",
+            "icon": "coffee-beans",
             "title": "Brand",
             "caption": "Write your brand story and journey",
             "link": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_icons_main": "rgba(0,0,0,0)",
+            "color_background_main": "#5e9c2b",
+            "color_icons_main": "#ffffff",
             "seo_h_tag": "h3"
           }
         }
       },
       "block_order": [
         "1654161920f21316cf-0",
-        "1654161920f21316cf-1",
         "1654161920f21316cf-2",
+        "1654161920f21316cf-1",
         "1654161920f21316cf-3"
       ],
       "custom_css": [
         ".card__icon-size--large {width: 110px; height: 100px;}",
-        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}"
+        ".container--has-background {padding-top: 10px; padding-bottom: 10px;}",
+        ".text-animation--underline {color: #fff;}",
+        ".text-size--small {color: #fff; opacity: 1;}"
       ],
       "settings": {
         "heading": "",
         "subheading": "",
         "section_heading_layout": "section-heading--center",
         "style": "grid",
-        "layout": "grid-3 grid-lap-2",
-        "border_radius": 42,
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
         "section_background_color": "#5e9c2b",
         "section_heading_color": "#ffffff",
-        "remove_margin": true,
+        "remove_margin": false,
         "seo_h_tag": "span"
       }
     },
@@ -330,6 +417,7 @@
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
       ],
+      "disabled": true,
       "settings": {
         "heading": "You’ll Forget It’s Better For You.",
         "subheading": "",
@@ -390,11 +478,11 @@
         "text_size": "regular",
         "title_size": "h3",
         "button_size": "regular",
-        "button_style": "solid",
+        "button_style": "outline",
         "is_fullwidth": true,
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "remove_margin": true,
         "color_hide_borders": false,
         "color_hide_shadow": true
       }
@@ -457,7 +545,7 @@
             "button_label": "Subscribe Now",
             "link": "\/",
             "button_size": "regular",
-            "button_style": "solid"
+            "button_style": "outline"
           }
         }
       },
@@ -487,6 +575,143 @@
         "color_shadow_main": "rgba(0,0,0,0)",
         "color_hide_borders": true,
         "color_hide_shadow": false
+      }
+    },
+    "9306b087-b2c3-4e15-b9af-115ea0cace19": {
+      "type": "rich-text",
+      "blocks": {
+        "6598306e-4381-4930-a0b1-22a6894401c6": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "TRY IN-DEVELOPMENT FLAVORS",
+            "title_size": "h3",
+            "seo_h_tag": "span"
+          }
+        },
+        "52f533b2-8912-4da9-ab59-397e318c53a6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>TRY IN-DEVELOPMENT FLAVORS<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "877553da-8a43-4953-a209-eb1426c11dfc": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>If You Want Something Done Right…<\/h3>",
+            "text_size": "large"
+          }
+        },
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Did you know that most food companies outsource… making the food? We keep manufacturing in-house by leveraging a direct relationship with farmers and suppliers. The result is a safe, quality product you and your family will love.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2": {
+          "type": "space",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>THIS MONTH'S FLAVOR<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5>Mexican Hot Chocolate<\/h5>",
+            "text_size": "regular"
+          }
+        },
+        "b218169c-fb1a-420f-bffc-187037e26d48": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Subscribe Now",
+            "link": "\/",
+            "button_size": "regular",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "6598306e-4381-4930-a0b1-22a6894401c6",
+        "52f533b2-8912-4da9-ab59-397e318c53a6",
+        "877553da-8a43-4953-a209-eb1426c11dfc",
+        "7f5d9831-15d5-42b5-b74f-c17ce29943a9",
+        "1a55d59a-2fd9-4b53-bcb9-e2a6978dd3d2",
+        "68e97d1f-1097-40b7-86aa-aa2a68cebc93",
+        "40a9a6c0-bd59-4c2e-9386-bd983624a7d8",
+        "b218169c-fb1a-420f-bffc-187037e26d48"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/If_You_Want_Something_Done_Right_Homepage_Image_1.webp",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "#ffffff",
+        "remove_margin": true,
+        "color_background_main": "#ffffff",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": false
+      }
+    },
+    "5f836522-8ce1-49cd-b33f-4f302f35911e": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-price-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-title-1",
+        "template--20487105741081__5f836522-8ce1-49cd-b33f-4f302f35911e-quick_buy-1"
+      ],
+      "settings": {
+        "heading": "Shop Fresh Food",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "image": "shopify:\/\/shop_images\/fresh_food_5ed4c2ea-d46c-4d9d-9e25-6cd9a62119d5.webp",
+        "product_list": [
+          "neapolitan-pizza",
+          "noodle-salad",
+          "cookies-cream",
+          "developer"
+        ],
+        "color_background_main": "#efefef",
+        "color_borders_main": "#ffffff",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "seo_h_tag": "h2"
       }
     },
     "b6123daa-cd49-4bf1-8024-dff92c0f6786": {
@@ -581,6 +806,127 @@
         "border_radius": 200,
         "section_background_color": "#f4f6f1",
         "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/promo_pure_7c759baf-9767-4fc0-bee1-99e0ad3d0a9c.webp",
+            "caption": "Collection",
+            "title": "Pure Organic",
+            "subtitle": "",
+            "link": "",
+            "button_label": "Show More",
+            "color_background_main": "#e4eff4",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "#83c63a",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "#e1e1e1",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/promo_bread_27dc722f-4f6d-4b81-b75d-542077a4156a.webp",
+            "caption": "Fresh everyday",
+            "title": "Finest Bread",
+            "subtitle": "",
+            "link": "",
+            "button_label": "Show More",
+            "color_background_main": "#f6f0e0",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "#83c63a",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "#e1e1e1",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/static.swap.svg",
+            "caption": "Love it OR Swap it Guarantee",
+            "title": "",
+            "subtitle": "If you’re not wild about a flavor, we’ll swap it with something you love at no additional cost.",
+            "link": "",
+            "button_label": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "#eaeaea",
+            "color_shadow_main": "#000000",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-1",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-2",
+        "template--20487105741081__e9e19c9a-6e50-42da-8e5a-06c980a11e92-card-3"
+      ],
+      "settings": {
+        "heading": "Hot Deals!",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "layout": "grid-2 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "large",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "#ffffff",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "18cc743b-02db-4fcf-885c-0c2453bdcfb0": {
+      "type": "blog-posts",
+      "blocks": {
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-info-1": {
+          "type": "info",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comments_number": false
+          }
+        },
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-info-1",
+        "template--20487105741081__18cc743b-02db-4fcf-885c-0c2453bdcfb0-title-1"
+      ],
+      "settings": {
+        "title": "Latest Articles",
+        "subheading": "Showcase your best products",
+        "show_view_all": true,
+        "section_heading_layout": "section-heading--left",
+        "blog": "news",
+        "emphasize_first": true,
+        "blog_show_image": true,
+        "image_aspect_ratio": "1.33333",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
         "seo_h_tag": "h2"
       }
@@ -602,39 +948,42 @@
             "text_size": "regular"
           }
         },
-        "89218c60-8eff-474d-872f-bb29521e5b80": {
-          "type": "text",
-          "settings": {
-            "text": "<p>*statistical data from September 2019<\/p>",
-            "text_size": "regular"
-          }
-        },
         "4112dd14-ae6c-4cb7-9a20-397997ae63ae": {
           "type": "button",
           "settings": {
             "button_label": "Click To Watch",
             "link": "https:\/\/youtu.be\/Btt-nmDfw3U",
             "button_size": "regular",
-            "button_style": "solid"
+            "button_style": "outline"
+          }
+        },
+        "89218c60-8eff-474d-872f-bb29521e5b80": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*statistical data from September 2019<\/p>",
+            "text_size": "regular"
           }
         }
       },
       "block_order": [
         "c1d5ae26-2111-436b-bb61-35182146254d",
         "1ae0b0e6-1df8-40b7-9665-601fff10ec09",
-        "89218c60-8eff-474d-872f-bb29521e5b80",
-        "4112dd14-ae6c-4cb7-9a20-397997ae63ae"
+        "4112dd14-ae6c-4cb7-9a20-397997ae63ae",
+        "89218c60-8eff-474d-872f-bb29521e5b80"
+      ],
+      "custom_css": [
+        ".container--fullwidth {padding: 0;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_19d29f61-7bca-4ad6-ad5b-988e851d1273.webp",
+        "image": "shopify:\/\/shop_images\/VIDEO-PLACE2_5ccc2b39-9b80-4622-83c9-d63b9bfd3fc5-removebg-preview.png",
         "image_position": "right",
-        "height": "regular",
-        "image_crop": true,
+        "height": "small",
+        "image_crop": false,
         "text_alignment": "horizontal-left",
         "is_fullwidth": true,
-        "section_background_color": "#f23b3d",
-        "remove_margin": true,
-        "color_background_main": "#f23b3d",
+        "section_background_color": "#83c63a",
+        "remove_margin": false,
+        "color_background_main": "#a36754",
         "color_text_main": "#ffffff",
         "color_accent_main": "rgba(0,0,0,0)",
         "color_borders_main": "rgba(0,0,0,0)",
@@ -643,15 +992,64 @@
         "color_hide_shadow": false
       }
     },
+    "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "JOHN SMITH",
+            "author_title": "Happy Customer",
+            "quote": "<p>I have been a customer of Lively Wines for years and have always been impressed with the quality and variety of wines they offer. The staff is knowledgeable and always willing to help me find the perfect bottle for any occasion.<\/p>",
+            "image": "shopify:\/\/shop_images\/static.customer.svg"
+          }
+        },
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "JANE BROTHER",
+            "author_title": "Customer",
+            "quote": "<p>I recently visited Lively Wines for the first time and was blown away by the selection and prices. The staff was incredibly helpful and guided me through the process of finding the perfect wine for my dinner party. I will definitely be back!<\/p>",
+            "image": "shopify:\/\/shop_images\/testimonial_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-1",
+        "template--20487105741081__76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0-testimonial-2"
+      ],
+      "settings": {
+        "heading": "Testimonials",
+        "subheading": "What others say after meeting us",
+        "section_heading_layout": "section-heading--left",
+        "quote_font": "sans-serif",
+        "quote_font_size": 32,
+        "quote_line_height": 1.1,
+        "content_alignment": "left",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
     "1655112847aaa4cc50": {
       "type": "newsletter",
+      "custom_css": [
+        ".container--large {max-width: 100%; padding: 0;}"
+      ],
       "settings": {
         "show_icon": true,
-        "title": "Sign up for our newsletter",
-        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "title": "Special Offers, Flavor Releases, and More.",
+        "text": "<p>Get the inside scoop on sneak previews, flash discounts, and exclusive flavor access. Plus, scandalous oatmeal pics.<\/p>",
         "color_background_main": "#000000",
         "color_text_main": "#ffffff",
-        "color_borders_main": "rgba(0,0,0,0)",
+        "color_borders_main": "#ffffff",
         "color_shadow_main": "rgba(0,0,0,0)",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
@@ -659,115 +1057,35 @@
         "seo_h_tag": "h2"
       }
     },
-    "16551074833cdf378e": {
-      "type": "media-with-text-overlay",
-      "blocks": {
-        "16551074836af554cd-0": {
-          "type": "image",
-          "settings": {
-            "video": "shopify:\/\/files\/videos\/ac980c79d67f41249036f816fcf8e808.mp4",
-            "caption": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
-            "title": "Oatmeal Reimagined.",
-            "subtitle": "",
-            "link": "shopify:\/\/collections",
-            "button_label": "Shop Now",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "16551074836af554cd-1": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-breakfast_2x_27015d33-0997-4562-ae2d-42002fac9e56.webp",
-            "caption": "",
-            "title": "",
-            "subtitle": "",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": true,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "9ee5df28-5301-4d47-b84b-8b30518befa0": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/comparison-frapp_2x_a64b9237-90e4-481f-aef7-b3952255488b.webp",
-            "caption": "",
-            "title": "",
-            "subtitle": "",
-            "link": "",
-            "button_label": "",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        },
-        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "caption": "Introducing",
-            "title": "Your best promotion yet",
-            "subtitle": "Write about it",
-            "link": "",
-            "button_label": "Show more",
-            "color_background_main": "rgba(0,0,0,0)",
-            "color_text_main": "rgba(0,0,0,0)",
-            "color_hide_borders": false,
-            "color_hide_shadow": false,
-            "seo_h_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "16551074836af554cd-0",
-        "16551074836af554cd-1",
-        "9ee5df28-5301-4d47-b84b-8b30518befa0",
-        "d6c08f6f-c2c5-4f2e-aefd-e87902e66006"
-      ],
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
+      "type": "video",
       "disabled": true,
       "settings": {
-        "heading": "",
-        "subheading": "",
+        "title": "Oatmeal Reimagined.",
+        "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
         "section_heading_layout": "section-heading--left",
-        "layout": "grid-1",
-        "height": "regular",
-        "alignment": "horizontal-left align-content--vertical-middle",
-        "width": "60%",
-        "caption_size": "large",
-        "title_size": "h3",
-        "subtitle_size": "regular",
-        "button_size": "regular",
-        "button_style": "solid",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "video": "",
         "seo_h_tag": "h2"
       }
     }
   },
   "order": [
     "165650871288cb3c80",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
     "featured-collection",
+    "16551074833cdf378e",
     "4be7c59f-c8d3-4792-a2c0-217eac7db2b5",
     "1654161920efe5f084",
     "71efc0f4-4264-48af-8019-7383c2c36784",
     "1653646142d6a7c886",
     "abf507c1-a90c-4c07-ae4f-ce8d66af1e42",
+    "9306b087-b2c3-4e15-b9af-115ea0cace19",
+    "5f836522-8ce1-49cd-b33f-4f302f35911e",
     "b6123daa-cd49-4bf1-8024-dff92c0f6786",
+    "e9e19c9a-6e50-42da-8e5a-06c980a11e92",
+    "18cc743b-02db-4fcf-885c-0c2453bdcfb0",
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
+    "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0",
     "1655112847aaa4cc50",
-    "16551074833cdf378e"
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
   ]
 }

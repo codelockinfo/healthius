@@ -1,3 +1,6 @@
+{% assign bundles_displayed = '' | split:',' %}
+{% assign bundle_price = 0 %}
+
 <cart-form id="AjaxCartForm">
 
 	<form action="{{ routes.cart_url }}" method="post" novalidate class="cart__form {% if cart.item_count == 0 %} cart--empty {% endif %}" id="cart">
@@ -11,9 +14,15 @@
 						<span>{{ 'cart.table.quantity' | t }}</span>
 						<span class="text-align--right">{{ 'cart.table.total' | t }}</span>
 					</div>
+                  
 					{%- for item in cart.items -%}
-
-						<div id="item-{{ item.id }}" class="cart-form-item" data-title="{{ item.product.title | escape }} {%- unless item.product.has_only_default_variant -%} ({{ item.variant.title | escape }}) {%- endunless -%}" data-id="{{ item.key }}" data-qty="{{ item.quantity }}" data-product-id="{{ item.product.id }}" data-js-cart-item>
+                      {%- if item.properties['bundle_id'] -%}
+                            {%- unless bundles_displayed contains item.properties['bundle_id'] -%}
+                                {%- assign bundles_displayed = item.properties['bundle_id'] | concat: bundles_displayed -%}
+                                {%- render 'cart-item-bundle', item: item, cart: cart, current_bundle_id:item.properties['bundle_id'] -%}
+                            {%- endunless -%}
+                        {%- else -%}
+    						<div id="item-{{ item.id }}" class="cart-form-item" data-title="{{ item.product.title | escape }} {%- unless item.product.has_only_default_variant -%} ({{ item.variant.title | escape }}) {%- endunless -%}" data-id="{{ item.key }}" data-qty="{{ item.quantity }}" data-product-id="{{ item.product.id }}" data-js-cart-item>
 
 							<div class="cart-item__product-info cart-form-item--layout">
 
@@ -72,11 +81,20 @@
 									</a>
 
 									{%- unless item.product.has_only_default_variant -%}
-											{%- for option in item.options_with_values -%}
+											<!-- {%- for option in item.options_with_values -%}
 												<span class="cart-item__variant text-size--small text-color--opacity">
 													{{ option.name }}: {{ option.value }}
 												</span>
-											{%- endfor -%}
+											{%- endfor -%} -->
+                                  {%- for item in cart.items -%}
+    {%- if item.properties['bundle_id'] == current_bundle_id -%}
+        <div class="product-option">
+            <dt>{{ item.variant.title }}:
+            </dt>
+            <dd>{{ item.quantity }}</dd>
+        </div>
+    {%- endif -%}
+{%- endfor -%}
 									{%- endunless -%}
 
 									{%- if item.selling_plan_allocation -%}
@@ -102,7 +120,8 @@
 														<a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
 													{%- else -%}
 														<span>{{ p.last }}</span>
-													{%- endif -%}
+													{%- endif 
+                                                    {%- if property.last != blank and property_first_char != '_' and property.first != 'bundle_id' -%}
 												</span>
 											{%- endif -%}
 										{%- endfor -%}
@@ -147,7 +166,7 @@
 							</div>
 
 						</div>
-
+                        {% endif %}
 					{%- endfor -%}
 
 				{%- else -%}
@@ -168,7 +187,7 @@
 	</form>
 
 	<span class="cart__count hidden" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
-	<span class="cart__total hidden" aria-hidden="true" data-cart-total>{{ cart.total_price | money }}</span>
+	<span class="cart__total hidden price price--end" aria-hidden="true" data-cart-total>{{ bundle_price | money }}</span>
 
 </cart-form>
 
