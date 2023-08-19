@@ -4,7 +4,16 @@
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
 
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
-
+  <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+    <!-- Filter options like checkboxes, dropdowns, etc. -->
+    <select id="product-filterselect">
+    <option value="/collections/all">All Flavors</option>
+    <option value="/collections/fruit-flavors">Fruit Flavors</option>
+    <option value="/collections/caffeinated">Caffeinated</option>
+    <option value="/collections/vegan" >Vegan</option>
+    <option value="/collections/whey-protein">Whey Protein</option>
+    </select>
+  </div>
   <div class="custom-bundle">
 
     {%- if section.settings.style == 'slider' -%}
@@ -20,7 +29,7 @@
         {%- render 'custom-shadow', section_id: section.id -%}
       {%- endif -%}
 
-      <div class="main-custombundle  grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
+      <div id="filtered-products" class="main-custombundle  grid {% if section.settings.style == 'slider' %} grid--slider {% else %} grid--layout {% endif %} {{ section.settings.layout }}">
 
         {%- liquid
           if section.settings.collection != blank
