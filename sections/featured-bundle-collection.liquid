@@ -55,6 +55,15 @@
                   </div> 
                 </div>
                 <div class="box-summary" id="cartSummary"> </div>
+                 <div class="box-giftproduct">
+                  {% if section.settings.product_list != blank %}
+                    {% assign  productgift = section.settings.product_list  %}
+                    <div class="maingiftproductitem">
+                    {%  render 'product-item-gift-product', product: productgift, section_blocks: section.blocks, index: forloop.index, layout: 'shop' %}
+                    </div>
+                    {% endif %}
+                      
+                </div> 
                 <div class="box-footer">
                   {% comment %} <button class="button button--large button--solid"> 90$ Left to checkout</button> {% endcomment %}
                   {% comment %} {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -373,7 +382,13 @@
         "type": "collection",
         "id": "collection",
         "label": "t:sections.featured-collection.settings.collection.label"
-      }, {
+      }, 
+      {
+        "type": "product",
+        "id": "product_list",
+        "label": "Add gift Product"
+      },
+      {
         "type": "header",
         "content": "t:local-march-update.labels.section_design"
       }, {

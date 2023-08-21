@@ -132,19 +132,27 @@ $(document).ready(function() {
     function getSelectedFilters() {
       // Implement this function to collect selected filter values
     }
-
+    $(".productSelect").change(function(){
+     $giftVariantid = $(this).find(":selected").val();
+      console.log($giftVariantid);  
+      $(this).attr("data-vid",$giftVariantid);
+  });
     $('.addToCart').click(function(e) {
       e.preventDefault();
+
+      $giftVariantid = $('.productSelect').attr("data-vid");
+      console.log($giftVariantid);
+      // $giftVariantid = $(".giftVariantid").val();
       var PRODUCT_ID  = $(this).closest(".bundle_product").find(".product_variant_id").val();
       var selected_product_items = [];
       $.each($("#cartSummary .productsimage"), function() {
-          $currentVarQty = $(this).find(".product-quantity__selector").val();
-          var $currentvartitle = $(this).find(".variant-title").html();
-          $perticular_propertie = $currentVarQty +"*"+ $currentvartitle;
-          selected_product_items.push($perticular_propertie);
+        $currentVarQty = $(this).find(".product-quantity__selector").val();
+        var $currentvartitle = $(this).find(".variant-title").html();
+        $perticular_propertie = $currentVarQty +"*"+ $currentvartitle;
+        selected_product_items.push($perticular_propertie);
       });
 
-
+      
       // Convert the array to an object
       const objectItems = {};
       $.each(selected_product_items, function(index, item) {
@@ -163,16 +171,35 @@ $(document).ready(function() {
         },
         success: function(response) {
           // Handle the success response here
+          addGiftproduct($giftVariantid);
           console.log(response);
-          window.location.href = '/checkout';
+          // window.location.href = '/checkout';
         },
         error: function(jqXHR, textStatus, errorThrown) {
-          // Handle the error here
           console.log('Error:', textStatus, errorThrown);
         }
       });
     });
-  
+    function addGiftproduct(giftVariantid){
+      console.log(giftVariantid);
+    $.ajax({
+      url: '/cart/add.js',
+      dataType: 'json',
+      type: 'POST',
+      data:  {
+        quantity: 1, // Adjust the quantity as needed
+        id: giftVariantid
+    },
+      success: function(response) {
+        // Handle the success response here
+        console.log(response);
+        window.location.href = '/checkout';
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log('Error:', textStatus, errorThrown);
+      }
+    });
+  }
     set_lineitems_onload();
     $(".addButton").on("click", function() {
         console.log("addButton  click");
@@ -289,10 +316,11 @@ function getcartTotalQty() {
         '</product-quantity>'+
       '</div><div class="product-item__badges text-size--xsmall"></div></div>'+
       '</div>';
-      $("#cartSummary").append($giftProduct);
+      $(".box-giftproduct").addClass("show");
+      // $("#cartSummary").append($giftProduct);
     }
     }else{
-      $(".giftProduct").html("");
+      $(".box-giftproduct").removeClass("show");
       $(".addToCart").attr("disabled","disabled"); 
       $(".addToCart").css("cursor","not-allowed");  
       $remain_amount = "$"+$remain_amount+" Left to ";
