@@ -7,7 +7,7 @@
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/bundles-widget\/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {
             "product": "{{product}}",
-            "rb_theme_color": "#00C09E",
+            "rb_theme_color": "#00c09e",
             "rb_theme_text": "#ffffff",
             "rb_theme_other_text": "#283965",
             "rb_theme_bg": "#ffffff",
@@ -105,7 +105,6 @@
         "empty_space_3",
         "share"
       ],
-      "disabled": true,
       "settings": {
         "gallery_style": "slider",
         "gallery_ratio": "natural",
