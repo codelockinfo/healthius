@@ -30,7 +30,7 @@
     margin-left: 0;
     padding-left: 0;
 }
-.box-summary .variant-title,.box-giftproduct .variant-title,.box-giftproduct .variant-label,.box-giftproduct .product-variant-value,.box-giftproduct .product-variant-container{
+.box-summary .variant-title,.box-giftproduct .variant-title,.box-giftproduct .variant-label,.box-giftproduct .product-variant-value,.box-giftproduct .product-variant-select{
     font-size: 14px;
 }
 .box-summary .product-item{

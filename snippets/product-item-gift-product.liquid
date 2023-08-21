@@ -53,7 +53,7 @@
           </a>
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {% comment %} <label for="Variants-{{ section.id }}" class="text-size--large" style="display:block;margin-bottom:.75rem">{{ 'products.page.variants' | t }}</label> {% endcomment %}
-          <select name="id" data-vid  id="Variants-{{ section.id }}" class="productSelect"
+          <select name="id" data-vid="{{ current_variant.id }}"  id="Variants-{{ section.id }}" class="product-variant-select productSelect"
             {% if product.has_only_default_variant %} style="display:none!important" {% endif %}
             form="{{ product_form_id }}"
           >
