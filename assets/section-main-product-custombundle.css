@@ -165,7 +165,6 @@
     border-bottom-right-radius: 10px;
 }
 .box-header{
-    border-bottom: none;
     padding: 1.25rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -361,3 +360,17 @@
        border: none;
     }
 }
+/* quick view css */
+.modal-content .product-actions .product-price,.modal-content .product-quantity,.modal-content  .product-variants,.modal-content .product__subtitle,.shopify-product-form shopify-payment-terms{
+    display:none !important;
+  }
+  .modal-content  .add-to-cart .button__text{
+    font-size: 18px;
+  }
+  .modal-content  .product__title{
+    font-size: 20px;
+  }
+  .modal-content  .product__description  .hide, .hidden{
+    display:block;
+  }
+  /* quick view css */
