@@ -46,16 +46,23 @@
       </div>
       <div class="cartcolumn">
         <div class="box-header">
-            <div class="box-header-title">Add More & Save!</div>
-                <div class="range-input">
-                  <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
-                  <div class="value">
-                     <div class="margin-top"></div>
-                    </div>
-                  </div> 
+                <div class="box-header-title">Add More & Save!</div>
+                <div class="progress-container">
+                    <div class="range-input">
+                      <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
+                       <div class="value">
+                        <div class="margin-top"></div>
+                       </div>
+                    </div> 
+                  <div class="containercircle containerCircle">
+                    <button class="circlebtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none" class="inline-block"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.75364 0.796137C1.40364 0.408427 0.836178 0.408427 0.486178 0.796137C0.136178 1.18385 0.136178 1.81245 0.486178 2.20016L5.6075 7.87328C5.9575 8.26099 6.52496 8.26099 6.87496 7.87328L11.9963 2.20016C12.3463 1.81245 12.3463 1.18385 11.9963 0.796138C11.6463 0.408428 11.0788 0.408428 10.7288 0.796138L6.23878 5.76996L1.75364 0.796137Z" fill="currentColor"></path></svg>
+                    </button>
+                  </div>
                 </div>
-                <div class="box-summary" id="cartSummary"> </div>
-                 <div class="box-giftproduct">
+                <div class="product-container">
+                  <div class="box-summary" id="cartSummary"> </div>
+                  <div class="box-giftproduct">
                   {% if section.settings.product_list != blank %}
                     {% assign  productgift = section.settings.product_list  %}
                     <div class="maingiftproductitem">
@@ -63,49 +70,9 @@
                     </div>
                     {% endif %}
                       
-                </div> 
+                  </div> 
+                </div>
                 <div class="box-footer">
-                  {% comment %} <button class="button button--large button--solid"> 90$ Left to checkout</button> {% endcomment %}
-                  {% comment %} {%- assign product_form_id = 'product-form-' | append: section.id -%}
-                  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                
-                    <template>
-                      <input type="hidden" name="id" value="{{ product_variant.id }}">
-                    </template>
-                    <script>
-                      document.getElementById('add-to-cart-{{ section.id }}').querySelector('form').append(document.getElementById('add-to-cart-{{ section.id }}').querySelector('template').content.cloneNode(true));
-                    </script>                
-                    <div class="product__cart-functions">
-                
-                      <div class="flex-buttons">
-                        {%- liquid 
-                          if block.settings.show_quantity_selector
-                            render 'product-quantity', variant: current_variant, id: section.id
-                          endif
-                        -%}
-                        <button type="submit" name="add" class="add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
-                          <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
-                            {%- liquid
-                                  echo '90$ Left to checkout'
-                            -%}
-                          </span>
-                          <span class="button__preloader">
-                            <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
-                          </span>
-                        </button>
-                
-                        {%- liquid
-                          if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
-                            echo form | payment_button
-                          endif
-                        -%}
-                
-                      </div>
-                      
-                    </div>
-                
-                  {%- endform -%} {% endcomment %}
-
                   {%- assign product_form_id = 'product-form-' | append: section.id -%}
                   {%- assign current_variant = product.selected_or_first_available_variant -%}
                     {%- form 'product', product, id: product_form_id, class: 'form bundle_product', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
@@ -140,15 +107,41 @@
                       </div>
                     {%- endform -%}
                 </div>
-              </div>
-          </div>
-        </div>
-      {%- if section.settings.layout == 'slider' -%}
-      </css-slider>
-    {%- endif -%}
+         </div>
+         <div class="cart-overlay">
+         </div>
+      </div>
+        {%- if section.settings.layout == 'slider' -%}
+         </css-slider>
+        {%- endif -%}
 
   </div>
-
+  <div class="cartcolumn stickycart">
+    <div class="stickycartbtn">
+      {%- assign product_form_id = 'product-form-' | append: section.id -%}
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+          <div class="">
+    
+            <div class="">
+              {%- liquid 
+                if block.settings.show_quantity_selector
+                  render 'product-quantity', variant: current_variant, id: section.id
+                endif
+              -%}
+              <button type="submit" name="add" class="stickyAddtocart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
+                <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
+                  {%- liquid
+                        echo 'Cart total should be at least $90'
+                  -%}
+                </span>
+                <span class="button__preloader">
+                  <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
+                </span>
+              </button>      
+            </div>
+          </div>
+    </div>
+  </div>
   {%- if section.settings.show_view_all and section.settings.section_heading_layout contains 'center' -%}
     <div class="gutter-top--large align-content align-content--horizontal-center">
       <a class="button button--outline button--regular" href="{{ collections[section.settings.collection].url }}">{{ 'collections.view_all_products' | t }}</a>

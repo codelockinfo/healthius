@@ -326,5 +326,13 @@ function getcartTotalQty() {
       $remain_amount = "$"+$remain_amount+" Left to ";
     }
     $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
+    $(".stickyAddtocart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
     return cartTotQty;
 }
+$(document).on("click",".stickycartbtn",function(){
+console.log("stocky btn click");
+$(".cartcolumn").addClass("active");
+});
+$(document).on("click",".containerCircle",function(){
+  $(".cartcolumn").removeClass("active");
+});
