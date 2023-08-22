@@ -4,7 +4,7 @@
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
 
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
-  <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+  {% comment %} <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
     <!-- Filter options like checkboxes, dropdowns, etc. -->
     <select id="product-filterselect">
     <option value="/collections/all">All Flavors</option>
@@ -13,6 +13,28 @@
     <option value="/collections/vegan" >Vegan</option>
     <option value="/collections/whey-protein">Whey Protein</option>
     </select>
+  </div> {% endcomment %}
+  <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+   <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
+    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles Or </br> Build Your Own</div></div>
+    
+    <ul class="filtertab">
+      <li><span class="tablisting active" value="/collections/all">All Flavors</span></li>
+      <li><span class="tablisting" value="/collections/fruit-flavors">Fruit Flavors</span></li>
+      <li><span class="tablisting" value="/collections/caffeinated">Caffeinated</span></li>
+      <li><span class="tablisting"  value="/collections/vegan">Vegan</span></li>
+      <li><span class="tablisting" value="/collections/whey-protein">Whey Protein</span></li>
+    </ul>
+    <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+      <!-- Filter options like checkboxes, dropdowns, etc. -->
+      <select id="product-filterselect">
+      <option value="/collections/all">All Flavors</option>
+      <option value="/collections/fruit-flavors">Fruit Flavors</option>
+      <option value="/collections/caffeinated">Caffeinated</option>
+      <option value="/collections/vegan" >Vegan</option>
+      <option value="/collections/whey-protein">Whey Protein</option>
+      </select>
+    </div> 
   </div>
   <div class="custom-bundle">
 

@@ -106,10 +106,27 @@ $(document).on("click", ".product-quantity__minus", function() {
 
 $(document).ready(function() {
 
-    const filterContainer = $("#product-filterselect");
-    filterContainer.on("change", function() {
+    const filterContainer = $(".tablisting");
+    filterContainer.on("click", function() {
+      const filterUrl = $(this).attr('value') // Update with your actual collection URL + filters
+      console.log(filterUrl);
+      $.get(filterUrl, function(data) {
+        var getHtml = $(data).find("#main-collection-product-grid").html();
+          $("#filtered-products .productsimage").css("display","none");
+          $eachProduct = $(data).find("#main-collection-product-grid .product-item.card");
+          console.log($eachProduct);
+          $($eachProduct).each(function() {
+            console.log($(this).attr('data-product'));
+            $eachProductId = $(this).attr('data-product');
+            $(".productsimage[data-product='"+ $eachProductId +"']").css("display","block");
+          });
+      }).fail(function(error) {
+        console.error("Error fetching products:", error);
+      });
+    });
+    const filterContainerselect = $("#product-filterselect");
+    filterContainerselect.on("change", function() {
       $selectValue = $(this).val();
-      $
       const selectedFilters = getSelectedFilters(); // Implement this function
       const filterUrl = $(this).val() // Update with your actual collection URL + filters
 
@@ -260,7 +277,9 @@ var selected_item_qty = [];
 function getcartTotalQty() {
     var cartTotQty = 0;
     $.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
+
         cartTotQty += parseInt($(this).val());
+
         $currentVarQty = $(this).val();
         var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
         var checkExistingVal = $.inArray(varId, selected_items);
