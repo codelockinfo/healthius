@@ -42,14 +42,13 @@
     "c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3": {
       "type": "featured-bundle-collection",
       "blocks": {
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1": {
-          "type": "price",
-          "disabled": true,
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1": {
+          "type": "title",
           "settings": {
           }
         },
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1": {
-          "type": "title",
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1": {
+          "type": "price",
           "settings": {
           }
         },
@@ -68,8 +67,8 @@
         }
       },
       "block_order": [
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1",
         "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1",
+        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1",
         "54a3563b-bb01-4dfd-bfec-ec0a8ce7187e",
         "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-quick_buy-1"
       ],
