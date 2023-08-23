@@ -75,6 +75,7 @@ $(document).on("click", ".product-quantity__plus", function() {
     console.log($variantQty);
     $var_id = $(this).closest(".productsimage").data("variant");
     $html = $(this).closest(".productsimage").html();
+    alert($variantQty);
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
     if ($variantQty == 1) {
         $(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
@@ -88,19 +89,42 @@ $(document).on("click", ".product-quantity__plus", function() {
 
 $(document).on("click", ".product-quantity__minus", function() {
   console.log("quantity__minus");
+
+    var selected_item = getCookie("variantids");
+    var variant_qty = getCookie("variant_qty");
+    var delimiter = ",";
+    var itemArray = selected_item.split(delimiter);
+    var itemQtyArray = variant_qty.split(delimiter);
+    $var_id = $(this).closest(".productsimage").data("variant");
     $variantQtyMinus = $(this).closest(".productQty").find(".product-quantity__selector").val();
     console.log($variantQtyMinus);
-    $var_id = $(this).closest(".productsimage").data("variant");
     $summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+    console.log(itemArray);
+    console.log($var_id);
+    console.log(itemArray.indexOf($var_id));
+    for (var i = 0; i < itemArray.length; i++) {
+        if($.trim($var_id) == itemArray[i].trim()){
+          if(itemQtyArray[i].trim() == $variantQtyMinus){
+            alert('0000');
+              $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
+              $(this).closest(".productQty").removeClass("show");
+              $(this).closest(".container-box").find(".addButton").css("display","block");
+              alert($var_id);
+              var indexToRemove = itemArray.indexOf($var_id);
+              alert(indexToRemove);
+                alert(i + "00");
+                itemArray.splice(i, 1);
+                itemQtyArray.splice(i, 1);
+                setCookie('variantids', itemArray, { path: '/' });
+                setCookie("variant_qty", itemQtyArray , { path: '/' });
+                
+          }
+        }
+      }
+
     $(".main-custombundle div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQtyMinus);
     $(".box-summary div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQtyMinus);
-    if ($variantQtyMinus == 1) {
-        $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
-        $(this).closest(".productQty").removeClass("show");
-        $(this).closest(".container-box").find(".addButton").css("display","block");
-    } else {
-        console.log("else");
-    }
+   
     getcartTotalQty();
 });
 
@@ -284,9 +308,12 @@ function getcartTotalQty() {
         cartTotQty += parseInt($(this).val());
         $currentVarQty = $(this).val();
         $price = $(this).closest(".productsimage").find(".product-price--original").data("price");
-        $Dataprice = ($price != "") ? $price.split("$") : 0 ;
-        $productPrices += $currentVarQty * parseInt($Dataprice[1]);
-        console.log($productPrices + "TP");
+        console.log($price);
+        $Dataprice = ($price != undefined) ? $price.split("$") :  0 ;
+        if($Dataprice != 0){
+          $productPrices += $currentVarQty * parseInt($Dataprice[1]);
+          console.log($productPrices + "TP");
+        }
 
         var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
         var checkExistingVal = $.inArray(varId, selected_items);

@@ -1,5 +1,5 @@
 {%- assign product_variant = product.selected_or_first_available_variant -%}
-<div class="productsimage"  data-summery-index="{{ index }}"   data-variant="{{ product_variant.id }}" data-product="{{ product.id }}">
+<div class="productsimage"  data-summery-index="{{ index }}"   data-variant="{{ product_variant.id }}" data-product="{{ product.id }}" data-price="{{ product.price | money }}">
 
 <div id="product-item-{{ product.id }}" class="product-item card container-box" data-js-product-item  data-variant="{{ product_variant.id }}" data-summery-index="{{ index }}">
 

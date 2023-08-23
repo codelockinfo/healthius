@@ -9,7 +9,7 @@ if ( typeof ProductQuantity !== 'function' ) {
 			const qty = this.querySelector('.qty-selector'),
 						qtyMinus = this.querySelector('.qty-minus'),
 						qtyPlus = this.querySelector('.qty-plus'),
-						qtyMin = qty.getAttribute('min') ? parseInt(qty.getAttribute('min')) : 1,
+						qtyMin = qty.getAttribute('min') ? parseInt(qty.getAttribute('min')) : 0,
 						qtyMax = qty.getAttribute('max') ? parseInt(qty.getAttribute('max')) : 999;
 
 			if ( parseInt(qty.value) - 1 < qtyMin ) {
