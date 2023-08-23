@@ -96,8 +96,8 @@ $(document).on("click", ".product-quantity__minus", function() {
     $(".box-summary div[data-variant='"+$var_id+"']").find('.product-quantity__selector').val($variantQtyMinus);
     if ($variantQtyMinus == 1) {
         $(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").html("");
-        $(this).closest(".productQty").css("display","none");
-        $(this).closest(".container-box").find(".addButton ").css("display","block");
+        $(this).closest(".productQty").removeClass("show");
+        $(this).closest(".container-box").find(".addButton").css("display","block");
     } else {
         console.log("else");
     }
@@ -275,12 +275,19 @@ function getCookie(name) {
 var selected_items = [];
 var selected_item_qty = [];
 function getcartTotalQty() {
-    var cartTotQty = 0;
+  var cartTotQty = 0;
+  var productPrice = 0;
+  var inputtotalrange  = 90;
+  $productPrices = 0;
     $.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
 
         cartTotQty += parseInt($(this).val());
-
         $currentVarQty = $(this).val();
+        $price = $(this).closest(".productsimage").find(".product-price--original").data("price");
+        $Dataprice = ($price != "") ? $price.split("$") : 0 ;
+        $productPrices += $currentVarQty * parseInt($Dataprice[1]);
+        console.log($productPrices + "TP");
+
         var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
         var checkExistingVal = $.inArray(varId, selected_items);
         if (checkExistingVal !== -1) {
@@ -293,10 +300,14 @@ function getcartTotalQty() {
         setCookie("variantids", selected_items , 7);
         setCookie("variant_qty", selected_item_qty , 7);
     });
-    var productPrice = $("#rangeSlider").attr("step");
-    var pro_price = cartTotQty * parseInt(productPrice);
-    $("#rangeSlider").val(pro_price);
-    $remain_amount = 90-pro_price;
+    // var productPrice = $("#rangeSlider").attr("step");
+    // var pro_price = cartTotQty * parseInt($productPrices);
+    if($productPrices < inputtotalrange ){
+      $("#rangeSlider").val($productPrices);
+    }else if($productPrices > inputtotalrange ){
+      $("#rangeSlider").val(inputtotalrange);
+    }
+    $remain_amount = inputtotalrange-$productPrices;
     
     if($remain_amount < 1){
       console.log("GIFTPRODUCT ADD");
@@ -304,48 +315,16 @@ function getcartTotalQty() {
       $(".addToCart").prop('disabled', false);
       $(".addToCart").css("cursor","pointer"); 
       if(!$(".productsimage").hasClass("giftProduct")){
-
-        $giftProduct = '<div class="productsimage giftProduct" data-variant="46329470026009">'+
-        
-        '<div id="product-item-8573113696537" class="product-item card container-box" data-js-product-item="" data-variant="46329470026009" data-summery-index="6"><div href="/collections/all/products/cookies-cream" class="card__image product-item__image   " style="padding-top:66.66666666666667%"><figure class="lazy-image product-item__image-figure product-item__image-figure--primary lazy-image--animation lazy-image--background lazy-image--fit lazyloaded" data-crop="true">'+
-      
-        '<img src="//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=480" alt="Cookies &amp; Cream" srcset="//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=240 240w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=360 360w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=420 420w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=480 480w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=640 640w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=840 840w,//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3.webp?v=1692160659&amp;width=1080 1080w" class="img" width="1200" height="800" data-ratio="" sizes="(max-width: 359px) calc(100vw - 30px), (max-width: 767px) calc((100vw - 50px) / 2),(max-width: 1280px) calc((100vw - 120px) / 3), 420px" loading="lazy">'+
-        
-      '</figure></div>'+
-      '<div class="imageforcart">'+
-      '<img src="//healthius-store.myshopify.com/cdn/shop/files/main-4up_1200x_af5c23d9-380c-4594-a20f-404c601263d3_medium.webp?v=1692160659" alt="">'+
-      '</div>'+
-      
-        '<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center"><a class="product-item__title" href="/collections/all/products/cookies-cream" title="Cookies &amp; Cream">'+
-                  '<div class="remove-line-height-space--small">'+
-                    '<span data-id="" class="variant-title text-animation--underline text-size--large text-line-height--small text-weight--bold text-animation--underline">Cookies &amp; Cream</span>'+
-                    '</div>'+
-                    '</a>'+
-                    '<button role="button" aria-label="Add Green Apple Cinnamon" class="addButton add-button button button-primary small" data-gtm-action="add flavor" data-gtm-label="Green Apple Cinnamon" style="display: none;">'+
-                    '<span>+Add</span>'+
-                    '</button><product-quantity class="productQty product-quantity show" data-js-product-quantity="">'+
-                    
-         '<button class="product-quantity__minus qty-minus no-js-hidden" aria-label="Decrease quantity" role="button" controls="qty-template--20487732265241__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3">-</button>'+
-        
-         '<label for="qty-template--20487732265241__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3" class="visually-hidden">Quantity</label>'+
-          '<input type="number" name="quantity" value="1" min="1" max="999" class="product-quantity__selector qty-selector text-size--xlarge" id="qty-template--20487732265241__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3">'+
-          
-          '<button class="product-quantity__plus qty-plus no-js-hidden" aria-label="Increase quantity" role="button" controls="qty-template--20487732265241__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3">+</button>'+
-          
-        '</product-quantity>'+
-      '</div><div class="product-item__badges text-size--xsmall"></div></div>'+
-      '</div>';
-      $(".box-giftproduct").addClass("show");
-      // $("#cartSummary").append($giftProduct);
-    }
+        $(".box-giftproduct").addClass("show");
+      }
     }else{
       $(".box-giftproduct").removeClass("show");
       $(".addToCart").attr("disabled","disabled"); 
       $(".addToCart").css("cursor","not-allowed");  
       $remain_amount = "$"+$remain_amount+" Left to ";
     }
-    $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
-    $(".stickyAddtocart").find("span").text($remain_amount+ " Checkout ($"+pro_price+")") ;
+    $(".addToCart").find("span").text($remain_amount+ " Checkout ($"+$productPrices+")") ;
+    $(".stickyAddtocart").find("span").text($remain_amount+ " Checkout ($"+$productPrices+")") ;
     return cartTotQty;
 }
 $(document).on("click",".stickycartbtn",function(){

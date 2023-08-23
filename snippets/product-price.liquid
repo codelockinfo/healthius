@@ -15,7 +15,7 @@
 
   {%- else -%}
 
-    <span class="product-price--original {{ text_size_class }}" data-js-product-price-original>{{ target.price | money }}</span>
+    <span class="product-price--original {{ text_size_class }}" data-js-product-price-original  data-price="{{ target.price | money }}">{{ target.price | money }}</span>
     
     <del class="product-price--compare" data-js-product-price-compare>
       {%- liquid 

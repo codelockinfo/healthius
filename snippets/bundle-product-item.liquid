@@ -59,176 +59,181 @@
 </div>
 
   <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}">
+    <div class="cartfontcontainer">
+      {%- for block in section_blocks -%}
+        {%- case block.type %}
 
-    {%- for block in section_blocks -%}
-      {%- case block.type %}
-
-        {%- when 'title' -%}
-          <a class="product-item__title" 
-            href="{{ product_url }}" title="{{ product.title | escape }}" 
-            {{ block.shopify_attributes }}
-          >
-            <div class="remove-line-height-space--small">
-              <span data-id="{{ product_variant.id }}" class="variant-title text-animation--underline text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold text-animation--underline">
-                {%- liquid 
-                  unless blank_product 
-                    echo product.title 
-                  else 
-                    echo 'general.onboarding.product_title' | t
-                  endunless
-                -%}
-              </span>
-            </div>
-          </a>
-
-        {%- when 'price' -%}
-          <div 
-            class="product-item__price text-size--large equalize-white-space" 
-            {{ block.shopify_attributes }}
-          >
-            <div class="remove-line-height-space">
-              {% unless blank_product %}
-                {%- render 'product-price', target: product, variant: product_variant, product_price_varies: product.price_varies -%}
-              {%- else -%}
-                {{ 9999 | money }}
-              {%- endunless -%}
-            </div>
-          </div>
-
-        {%- when 'text' -%}
-          <div 
-            class="product-item__text {{ block.settings.text_size }} text-line-height--medium equalize-white-space"
-            style="
-              {% if block.settings.text_color != 'rgba(0,0,0,0)' %} color: {{ block.settings.text_color }}; {% endif %}
-              {% if block.settings.text_transform %} text-transform: uppercase {% endif %}
-            " 
-            {{ block.shopify_attributes }}
-          >
-            {%- liquid
-              assign metafield_reference = block.settings.metafield
-              if metafield_reference != blank
-                assign metafield_keys = metafield_reference | split: '.'
-                assign metafield_value = product.metafields[metafield_keys[0]][metafield_keys[1]]
-                if metafield_value != blank
-                  echo metafield_value | prepend: '<div class="remove-line-height-space--medium">' | append: '</div>'
-                endif              
-              endif
-            -%}
-          </div>
-
-        {%- when 'icons' -%}
-          <div 
-            class="product-item__icons"
-            {{ block.shopify_attributes }}
-          >
-            {%- liquid
-
-              if settings.product_icon_1_image != blank or settings.product_icon_1_label != blank
-                assign image_metafield_keys = settings.product_icon_1_image | split: '.'
-                assign icon_1_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_1_label | split: '.'
-                assign icon_1_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_1_image, label: icon_1_image_label, style: 'tooltip'
-              endif
-
-              if settings.product_icon_2_image != blank or settings.product_icon_2_label != blank
-                assign image_metafield_keys = settings.product_icon_2_image | split: '.'
-                assign icon_2_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_2_label | split: '.'
-                assign icon_2_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_2_image, label: icon_2_image_label, style: 'tooltip'
-              endif
-
-              if settings.product_icon_3_image != blank or settings.product_icon_3_label != blank
-                assign image_metafield_keys = settings.product_icon_3_image | split: '.'
-                assign icon_3_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_3_label | split: '.'
-                assign icon_3_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_3_image, label: icon_3_image_label, style: 'tooltip'
-              endif
-
-              if settings.product_icon_4_image != blank or settings.product_icon_4_label != blank
-                assign image_metafield_keys = settings.product_icon_4_image | split: '.'
-                assign icon_4_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_4_label | split: '.'
-                assign icon_4_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_4_image, label: icon_4_image_label, style: 'tooltip'
-              endif
-
-              if settings.product_icon_5_image != blank or settings.product_icon_5_label != blank
-                assign image_metafield_keys = settings.product_icon_5_image | split: '.'
-                assign icon_5_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_5_label | split: '.'
-                assign icon_5_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_5_image, label: icon_5_image_label, style: 'tooltip'
-              endif
-
-              if settings.product_icon_6_image != blank or settings.product_icon_6_label != blank
-                assign image_metafield_keys = settings.product_icon_6_image | split: '.'
-                assign icon_6_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
-                assign label_metafield_keys = settings.product_icon_6_label | split: '.'
-                assign icon_6_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
-                render 'product-icon-label', icon: icon_6_image, label: icon_6_image_label, style: 'tooltip'
-              endif
-
-            -%}
-
-          </div>
-
-        {%- when 'vendor' -%}
-          <div 
-            class="product-item__vendor text-size--large text-color--opacity equalize-white-space" 
-            {{ block.shopify_attributes }}
-          >
-            <div class="remove-line-height-space">{{ product.vendor }}</div>
-          </div>
-
-        {%- when 'quick_buy' -%}
-          {%- if product.available -%}
-            {%- if settings.product_card_align_buy -%}
-              </div><div 
-                class="product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}" 
-                style="padding-top: 0;"
-              >
-            {%- endif -%}
-            <div 
-              class="product-item__quick-buy" 
+          {%- when 'title' -%}
+            <a class="product-item__title" 
+              href="{{ product_url }}" title="{{ product.title | escape }}" 
               {{ block.shopify_attributes }}
             >
-              {%- render 'quick-buy', product: product, button_classes: 'button--regular button--fullwidth', layout: layout -%}
+              <div class="remove-line-height-space--small marginbottomtitle">
+                <span data-id="{{ product_variant.id }}" class="variant-title text-animation--underline text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold text-animation--underline">
+                  {%- liquid 
+                    unless blank_product 
+                      echo product.title 
+                    else 
+                      echo 'general.onboarding.product_title' | t
+                    endunless
+                  -%}
+                </span>
+              </div>
+            </a>
+
+          {%- when 'price' -%}
+            <div 
+              class="product-item__price text-size--large equalize-white-space" 
+              {{ block.shopify_attributes }}
+            >
+              <div class="remove-line-height-space">
+                {% unless blank_product %}
+                  {%- render 'product-price', target: product, variant: product_variant, product_price_varies: product.price_varies -%}
+                {%- else -%}
+                  {{ 9999 | money }}
+                {%- endunless -%}
+              </div>
             </div>
-          {%- endif -%}
 
-        {%- when 'add_button' -%}
+          {%- when 'text' -%}
+            <div 
+              class="product-item__text {{ block.settings.text_size }} text-line-height--medium equalize-white-space"
+              style="
+                {% if block.settings.text_color != 'rgba(0,0,0,0)' %} color: {{ block.settings.text_color }}; {% endif %}
+                {% if block.settings.text_transform %} text-transform: uppercase {% endif %}
+              " 
+              {{ block.shopify_attributes }}
+            >
+              {%- liquid
+                assign metafield_reference = block.settings.metafield
+                if metafield_reference != blank
+                  assign metafield_keys = metafield_reference | split: '.'
+                  assign metafield_value = product.metafields[metafield_keys[0]][metafield_keys[1]]
+                  if metafield_value != blank
+                    echo metafield_value | prepend: '<div class="remove-line-height-space--medium">' | append: '</div>'
+                  endif              
+                endif
+              -%}
+            </div>
+
+          {%- when 'icons' -%}
+            <div 
+              class="product-item__icons"
+              {{ block.shopify_attributes }}
+            >
+              {%- liquid
+
+                if settings.product_icon_1_image != blank or settings.product_icon_1_label != blank
+                  assign image_metafield_keys = settings.product_icon_1_image | split: '.'
+                  assign icon_1_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_1_label | split: '.'
+                  assign icon_1_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_1_image, label: icon_1_image_label, style: 'tooltip'
+                endif
+
+                if settings.product_icon_2_image != blank or settings.product_icon_2_label != blank
+                  assign image_metafield_keys = settings.product_icon_2_image | split: '.'
+                  assign icon_2_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_2_label | split: '.'
+                  assign icon_2_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_2_image, label: icon_2_image_label, style: 'tooltip'
+                endif
+
+                if settings.product_icon_3_image != blank or settings.product_icon_3_label != blank
+                  assign image_metafield_keys = settings.product_icon_3_image | split: '.'
+                  assign icon_3_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_3_label | split: '.'
+                  assign icon_3_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_3_image, label: icon_3_image_label, style: 'tooltip'
+                endif
+
+                if settings.product_icon_4_image != blank or settings.product_icon_4_label != blank
+                  assign image_metafield_keys = settings.product_icon_4_image | split: '.'
+                  assign icon_4_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_4_label | split: '.'
+                  assign icon_4_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_4_image, label: icon_4_image_label, style: 'tooltip'
+                endif
+
+                if settings.product_icon_5_image != blank or settings.product_icon_5_label != blank
+                  assign image_metafield_keys = settings.product_icon_5_image | split: '.'
+                  assign icon_5_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_5_label | split: '.'
+                  assign icon_5_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_5_image, label: icon_5_image_label, style: 'tooltip'
+                endif
+
+                if settings.product_icon_6_image != blank or settings.product_icon_6_label != blank
+                  assign image_metafield_keys = settings.product_icon_6_image | split: '.'
+                  assign icon_6_image = product.metafields[image_metafield_keys[0]][image_metafield_keys[1]] | image_url
+                  assign label_metafield_keys = settings.product_icon_6_label | split: '.'
+                  assign icon_6_image_label = product.metafields[label_metafield_keys[0]][label_metafield_keys[1]]
+                  render 'product-icon-label', icon: icon_6_image, label: icon_6_image_label, style: 'tooltip'
+                endif
+
+              -%}
+
+            </div>
+
+          {%- when 'vendor' -%}
+            <div 
+              class="product-item__vendor text-size--large text-color--opacity equalize-white-space" 
+              {{ block.shopify_attributes }}
+            >
+              <div class="remove-line-height-space">{{ product.vendor }}</div>
+            </div>
+
+          {%- when 'quick_buy' -%}
+            {%- if product.available -%}
+              {%- if settings.product_card_align_buy -%}
+                </div><div 
+                  class="product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}" 
+                  style="padding-top: 0;"
+                >
+              {%- endif -%}
+              <div 
+                class="product-item__quick-buy" 
+                {{ block.shopify_attributes }}
+              >
+                {%- render 'quick-buy', product: product, button_classes: 'button--regular button--fullwidth', layout: layout -%}
+              </div>
+            {%- endif -%}
+
         
-            {%- render 'add-bundle-button', setting:block.settings -%}
+          {%- when 'rating' -%}
+            <div 
+              class="product-item__ratings"
+              {{ block.shopify_attributes }}
+            >
+              {%- render 'star-rating', vendor: block.settings.reviews_app, product: product, hide_no_reviews_on_mobile: true -%}
+            </div>
 
-        {%- when 'rating' -%}
-          <div 
-            class="product-item__ratings"
-            {{ block.shopify_attributes }}
-          >
-            {%- render 'star-rating', vendor: block.settings.reviews_app, product: product, hide_no_reviews_on_mobile: true -%}
-          </div>
+          {%- when 'local_availability' -%}
 
-        {%- when 'local_availability' -%}
+            <pickup-availability-compact
+              class="no-js-hidden product-item__local-availability text-size--xsmall"
+              data-base-url="{{ shop.url }}{{ routes.root_url }}"
+              data-variant-id="{{ product_variant.id }}"
+              data-has-only-default-variant="{{ product.has_only_default_variant }}"
+              data-id="{{ section.id }}"
+              {{ block.shopify_attributes }}
+            >
+              <span class="alert alert--note alert--circle alert--circle-loading">
+                {{ 'store_availability.compact_widget.checking_availability' | t }}
+              </span>
+            </pickup-availability-compact>
 
-          <pickup-availability-compact
-            class="no-js-hidden product-item__local-availability text-size--xsmall"
-            data-base-url="{{ shop.url }}{{ routes.root_url }}"
-            data-variant-id="{{ product_variant.id }}"
-            data-has-only-default-variant="{{ product.has_only_default_variant }}"
-            data-id="{{ section.id }}"
-            {{ block.shopify_attributes }}
-          >
-            <span class="alert alert--note alert--circle alert--circle-loading">
-              {{ 'store_availability.compact_widget.checking_availability' | t }}
-            </span>
-          </pickup-availability-compact>
-
-      {%- endcase %}
-    {%- endfor -%}
-
+        {%- endcase %}
+      {%- endfor -%}
+    </div>
+    <div>
+      {%- for block in section_blocks -%}
+        {%- case block.type %}
+          {%- when 'add_button' -%}
+           {%- render 'add-bundle-button', setting:block.settings -%}
+        {%- endcase %}
+      {%- endfor -%}
+    </div>
   </div>
 
   {%- liquid
