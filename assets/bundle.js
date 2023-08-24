@@ -5,24 +5,31 @@ Bundle = {
     // If you structure your HTML differently than our example build, you can alter these
     // functions to reference the correct divs.
     getBundleDiv: function () {
+      console.log("SETP 0");
       return $(".bundle");
     },
     getBundleGridDiv: function () {
-      return Bundle.Defaults.getBundleDiv().find(".bundle-grid");
+      console.log("SETP 1");
+      console.log("*********************");
+      return Bundle.Defaults.getBundleDiv();
     },
     getBundleDetailsDiv: function () {
+      console.log("SETP 2");
       return Bundle.Defaults.getBundleDiv().find(".bundle-details");
     },
     getAddToCartDiv: function () {
+      console.log("SETP 3");
       return $("#bundle-add-to-cart");
     },
     getWidget: function () {
+      console.log("SETP 4");
       return ReChargeWidget.getWidgets()[0];
     },
   },
   Utils: {
     // Utilty functions used throughout the rest of the build
     generateGuid: function () {
+      console.log("SETP 5");
       // Generates a unique guid to be used for the bundle_id
       return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
         /[xy]/g,
@@ -34,22 +41,29 @@ Bundle = {
       );
     },
     calculateBundleQuantity: function ($bundle) {
+      console.log("SETP 6");
       // Calculates the total number of items selected on the page.
       // Will loop through all grid items and sum up the total bundle
       // quantity based on the data-qty attribute of each variant.
       // 1.) $bundle = top level bundle div of the grid matrix
       var bundle_qty = 0;
-      $bundle.find(".bundle-item").each(function () {
+      console.log("*****************");
+      $bundle.find(".bundle-item").each(function (index) {
+        console.log(index);
+        console.log($(this).attr("data-qty"));
         bundle_qty += Number($(this).attr("data-qty"));
       });
+      console.log(bundle_qty + "..bundle_qty");
       return bundle_qty;
     },
     isSubscription: function (widget) {
+      console.log("SETP 7");
       // Determines whether the user has selected the One-time purchase
       // or Subscribe and Save option on the ReCharge widget
       return widget.subscriptionActive == true;
     },
     updateBundleQuantity: function ($item, increment) {
+      console.log("SETP 8");
       // Main function to handle quantity manipulation. Pass in the grid
       // item along with the quantity to increment or decrement. Then it will
       // determine the current and new item/bundle quantities. Then it checks
@@ -105,6 +119,7 @@ Bundle = {
       }
     },
     updatePrice: function () {
+      console.log("SETP 9");
       var widget = Bundle.Defaults.getWidget();
       var is_subscription = Bundle.Utils.isSubscription(widget);
       var $bundle = Bundle.Defaults.getBundleGridDiv();
@@ -123,6 +138,7 @@ Bundle = {
     // Requirement functions to determine whether the user is
     // performing an action that is forbidden
     isItemGreaterThanZero: function (qty) {
+      console.log("SETP 10");
       // Check that the item quantity doesn't fall below zero
       // 1.) qty = item quantity of the variant
       if (qty < 0) {
@@ -132,6 +148,7 @@ Bundle = {
       return true;
     },
     isBundleGreaterThanMin: function (qty, min) {
+      console.log("SETP 11");
       // Check that the bundle quantity doesn't fall below the minimum quantity
       // 1.) qty = total bundle quantity of the page
       // 2.) min = minimum value the bundle quantity can't fall below
@@ -142,6 +159,7 @@ Bundle = {
       return true;
     },
     isBundleLessThanMax: function (qty, max) {
+      console.log("SETP 12");
       // Check that the bundle quantity doesn't go above the maximum quantity
       // 1.) qty = total bundle quantity of the page
       // 2.) max = maximum value the bundle quantity can't rise above
@@ -152,12 +170,14 @@ Bundle = {
       return true;
     },
     isBundleEqualMax: function (qty, max) {
+      console.log("SETP 13");
       // Check that the bundle quantity is equal to the maximum quantity
       // 1.) qty = total bundle quantity of the page
       // 2.) max = maximum value the bundle quantity can't rise above
       return qty == max ? true : false;
     },
     isBundleEqualParam: function (qty, param) {
+      console.log("SETP 14");
       // Check that the bundle quantity is equal to param
       // 1.) qty = total bundle quantity of the page
       // 2.) param = value to compare qty against
@@ -167,6 +187,7 @@ Bundle = {
   Cart: {
     // Functions used when adding the bundle to the cart and removing a bundle from the cart
     processAddToCart: function () {
+      console.log("SETP 15");
       // Top level function tied to the Add to Cart button.
       // Function will check constraints to make sure we can
       // add the bundle to the cart, then it will generate
@@ -174,8 +195,10 @@ Bundle = {
       // Once added to cart, we redirect to the /cart page.
       // Get bundle parent, bundle max value, and total bundle quantity values
       var $bundle = Bundle.Defaults.getBundleGridDiv();
+      console.log($bundle + "..............");
       var qty = Bundle.Utils.calculateBundleQuantity($bundle);
       var bundle_max = Number($bundle.attr("data-bundle-max"));
+      console.log(bundle_max + "   ...bundle_max");
       // Ensure we can process the cart, and if not, break out of function
       if (!Bundle.Constraints.isBundleEqualMax(qty, bundle_max)) {
         console.log(
@@ -184,7 +207,7 @@ Bundle = {
         return;
       }
       //Generate the product array to pass to AJAX call
-      var widget = Bundle.Defaults.getWidget();
+      var widget = Bundle.Defaults.getWidget();   
       var items = Bundle.Cart.generateCart($bundle, widget);
       // Ensure there are items to add to cart, and if so, make
       // API call and redirect to /cart page
@@ -195,6 +218,8 @@ Bundle = {
       }
     },
     generateCart: function ($bundle, widget) {
+      console.log("SETP 16");
+      console.log(bundle);
       // Check that the bundle quantity is equal to param
       // 1.) $bundle = top level bundle div of the grid matrix
       // 2.) widget = the ReCharge widget object tied to the page
@@ -203,6 +228,7 @@ Bundle = {
       // bundle_id that we will pass to each product object as a
       // line item property to associate them to this bundle
       var bundle_id = Bundle.Utils.generateGuid();
+      console.log(bundle_id + ".....................");
       // Determine whether the user has the One-time purchase or
       // Subscribe & Save purchase type option selected. If Subscribe
       // & Save, generate the shipping interval unit_type and frequency
@@ -237,6 +263,7 @@ Bundle = {
       return cart;
     },
     processToCart: function (items) {
+      console.log("SETP 17");
       // Makes API call to add bundle items to cart. If the
       // call is successful, redirect to /cart page. If error,
       // display the error to the console.
@@ -258,6 +285,7 @@ Bundle = {
       });
     },
     removeBundleItems: function (bundle_id) {
+      console.log("SETP 18");
       // Removes all bundle items from cart when user clicks remove on cart page
       // Get current cart contents
       jQuery.getJSON("/cart.js", function (cart) {
@@ -292,7 +320,7 @@ Bundle = {
   init: function () {
     // Initialization function to register all click handlers
     // Registers each grid item's minus button
-    $("body").on("click", ".bundle .minus", function () {
+    $(document).on("click", ".bundle .minus", function () {
       console.log("minus");
       var item = $(this).closest(".bundle-item");
       Bundle.Utils.updateBundleQuantity(item, -1);
@@ -304,7 +332,7 @@ Bundle = {
       Bundle.Utils.updateBundleQuantity(item, 1);
     });
     // Registers the page's Add to Cart button
-    $("body").on("click", "#bundle-add-to-cart", function () {
+    $("body").on("click", "#bundle-add-to-cart", function (event) {
       event.preventDefault();
       Bundle.Cart.processAddToCart();
     });
@@ -321,39 +349,40 @@ Bundle = {
     });
   },
 };
+
 // Call the init() function to register click handlers
 Bundle.init();
-// removeBundleItems : function (bundle_id) {
-//     // Removes all bundle items from cart when user clicks remove on cart page
-//     // Get current cart contents
-//     jQuery.getJSON('/cart.js', function (cart) {
-//         // Create the data object for the cart update AJAX call
-//         // Loop through each cart item
-//         // If the item's bundle id matches the id passed in, add the
-//         // cart item key along with a quantity of 0 to the data object
-//         let bundle_items = [];
-//         let qty = 0;
-//         let data = {
-//             updates: {}
-//         };
-//         cart
-//             .items
-//             .forEach((item, i) => {
-//                 if (item.properties.bundle_id && item.properties.bundle_id == bundle_id) {
-//                     data.updates[item.key] = 0;
-//                 }
-//             })
-//             // API call to update the cart contents and set the
-//             // bundle item quantities to 0
-//             $
-//             .ajax({
-//                 type: 'POST',
-//                 url: '/cart/update.js',
-//                 data: data,
-//                 dataType: 'json',
-//                 success: function () {
-//                     window.location.href = '/cart';
-//                 }
-//             });
-//     });
-// }
+function removeBundleItems(bundle_id) {
+    // Removes all bundle items from cart when user clicks remove on cart page
+    // Get current cart contents
+    jQuery.getJSON('/cart.js', function (cart) {
+        // Create the data object for the cart update AJAX call
+        // Loop through each cart item
+        // If the item's bundle id matches the id passed in, add the
+        // cart item key along with a quantity of 0 to the data object
+        let bundle_items = [];
+        let qty = 0;
+        let data = {
+            updates: {}
+        };
+        cart
+            .items
+            .forEach((item, i) => {
+                if (item.properties.bundle_id && item.properties.bundle_id == bundle_id) {
+                    data.updates[item.key] = 0;
+                }
+            })
+            // API call to update the cart contents and set the
+            // bundle item quantities to 0
+            $
+            .ajax({
+                type: 'POST',
+                url: '/cart/update.js',
+                data: data,
+                dataType: 'json',
+                success: function () {
+                    window.location.href = '/cart';
+                }
+            });
+    });
+}

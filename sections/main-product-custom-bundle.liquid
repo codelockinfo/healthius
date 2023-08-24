@@ -1,10 +1,6 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-product-custombundle.css' | asset_url | stylesheet_tag }}
-{%- assign product_form_id = 'product-form-' | append: section.id -%}
-{%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-    <input type="hidden" name="id" value="{{ current_variant.id }}" 0000000>
-  {%- endform -%}
+
 <product-page 
   id="product-{{ section.id }}" 
   class="custom-bundle container container--large container--vertical-space-small grid  main-product" 
@@ -12,6 +8,7 @@
   data-availability="{{ product.available }}" 
 >
 
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
     <div class="main-custombundle">
         <div class="imagecolumn">
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 sm:gap-8">
@@ -161,9 +158,9 @@
   <div class="cartcolumn">
     <div class="box-header">
         <div class="box-header-title">Add More & Save!</div>
-            <div class="range-input">
-              <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
-              <div class="value">
+        <div class="range-input">
+            <input type="range" min='0' max = "140" value="0" step="20" id="rangeSlider">
+            <div class="value">
                  <div class="margin-top"></div>
                 </div>
               </div> 
@@ -229,8 +226,7 @@
               {%- endform -%}
             </div>
           </div>
-      </div>
-    </div>
+
 	{% comment %} <div class="product-text remove-empty-space">
     
     
@@ -1744,7 +1740,7 @@
     ]
   }
 {% endschema %}
-{% comment %} <script>
+<script>
 
 $(document).on("click", ".product-quantity__plus", function() {
     $variantQty = $(this).closest(".productQty").find(".product-quantity__selector").val();
@@ -1849,4 +1845,4 @@ function getcartTotalQty() {
     $("#rangeSlider").val(pro_price);
     return cartTotQty;
 }
-</script> {% endcomment %}
+</script>

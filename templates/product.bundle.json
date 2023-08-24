@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "product-bundle",
       "blocks": {
         "vendor": {
           "type": "vendor",
@@ -38,7 +38,7 @@
             "show_price": false,
             "show_quantity_selector": true,
             "show_preorder": false,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
         },

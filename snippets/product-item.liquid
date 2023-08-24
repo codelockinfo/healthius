@@ -1,6 +1,6 @@
 {%- assign product_variant = product.selected_or_first_available_variant -%}
 
-<div id="product-item-{{ product.id }}" class="product-item card {{class}}" data-js-product-item data-product="{{  product.id }}">
+<div id="product-item-{{ product.id }}" class="product-item card" data-js-product-item>
 
   {%- liquid
     
@@ -200,10 +200,6 @@
               {%- render 'quick-buy', product: product, button_classes: 'button--regular button--fullwidth', layout: layout -%}
             </div>
           {%- endif -%}
-
-        {%- when 'add_button' -%}
-        
-            {%- render 'add-bundle-button', setting:block.settings -%}
 
         {%- when 'rating' -%}
           <div 

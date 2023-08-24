@@ -8,84 +8,14 @@
           "settings": {
             "product": "dummy-product-1"
           }
-        },
-        "ec3f8457-c032-4730-aa4c-957be9f2fe4d": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/bundles-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "disabled": true,
-          "settings": {
-            "product": "developer",
-            "rb_theme_color": "#00c09e",
-            "rb_theme_text": "#ffffff",
-            "rb_theme_other_text": "#283965",
-            "rb_theme_bg": "#ffffff",
-            "rb_text_size": "16px",
-            "rb_spacing_width": 1220,
-            "rb_spacing_margins": "24px",
-            "rb_buttons_size": "15px",
-            "rb_buttons_corners": "4",
-            "rb_builder_items_per_row_ns": 3,
-            "rb_builder_items_per_row": "1",
-            "rb_builder_aspect_ratio": "133.33%",
-            "rb_builder_radius": "0"
-          }
         }
       },
       "block_order": [
-        "ac215494-9936-4845-8ab5-c0a2ebd0adec",
-        "ec3f8457-c032-4730-aa4c-957be9f2fe4d"
+        "ac215494-9936-4845-8ab5-c0a2ebd0adec"
       ],
       "settings": {
         "full_width": false,
         "remove_margin": false
-      }
-    },
-    "c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3": {
-      "type": "featured-bundle-collection",
-      "blocks": {
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "54a3563b-bb01-4dfd-bfec-ec0a8ce7187e": {
-          "type": "add_button",
-          "settings": {
-            "button_title": "Add",
-            "show_quantity_selector": true
-          }
-        },
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-quick_buy-1": {
-          "type": "quick_buy",
-          "disabled": true,
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-title-1",
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-price-1",
-        "54a3563b-bb01-4dfd-bfec-ec0a8ce7187e",
-        "template--20526003454233__c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3-quick_buy-1"
-      ],
-      "settings": {
-        "heading": "",
-        "subheading": "",
-        "show_view_all": false,
-        "section_heading_layout": "section-heading--left",
-        "style": "grid",
-        "layout": "grid-3 grid-lap-2 grid-tiny-1",
-        "products_number": 16,
-        "collection": "all",
-        "product_list": "copy-of-build-a-box1",
-        "section_background_color": "rgba(0,0,0,0)",
-        "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
-        "seo_h_tag": "h2"
       }
     },
     "main": {
@@ -162,7 +92,6 @@
         "empty_space_3",
         "share"
       ],
-      "disabled": true,
       "settings": {
         "gallery_style": "slider",
         "gallery_ratio": "natural",
@@ -199,7 +128,6 @@
         "title",
         "quick_buy"
       ],
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "subheading": "",
@@ -214,7 +142,6 @@
   },
   "order": [
     "169215873675e9cea1",
-    "c19ec86d-19d9-4f0d-a7f6-18cf3f231ce3",
     "main",
     "product-recommendations"
   ]
