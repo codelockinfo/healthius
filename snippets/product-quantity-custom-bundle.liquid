@@ -5,7 +5,7 @@
     </button>
   
     <label for="qty-{{ id }}" class="visually-hidden">{{ 'general.accessibility_labels.quantity' | t }}</label>
-    <input type="number" name="quantity" value="1" min="1" max="999" class="product-quantity__selector qty-selector text-size--xlarge" id="qty-{{ id }}">
+    <input type="number" name="quantity" value="1" min="1" max="999" class="product-quantity__selector qty-selector text-size--xlarge" id="qty-{{ id }}" readonly>
   
     <button class="product-quantity__plus qty-plus no-js-hidden" aria-label="{{ 'general.accessibility_labels.increase_quantity' | t }}" role="button" controls="qty-{{ id }}">
      +
