@@ -207,38 +207,91 @@
     font-size: 16px;
 }
 /* progressbar */
+.range-labels {
+    padding: 0;
+    list-style: none;
+}
+.range-labels li {
+    position: relative;
+    float: left;
+    width: 6%;
+    left: 11%;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
 
+}
+.range-labels li:nth-child(9),.range-labels li:nth-child(13){
+    opacity: 1;
+}
+.range-labels li::before {
+    position: absolute;
+    top: -29.5px;
+    right: 0;
+    content: "";
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background: #425B34;
+    border-radius: 50%;
+}
+.progress-container{
+    padding-bottom: 5%;
+}
+.range-slider__indicators{
+    top: 30px;
+    position: absolute;
+    width: 100%;
+}
+.range-slider__value{
+    position: absolute;
+}
 .range-input{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
+    position: relative;
   }
   .range-input input{
     -webkit-appearance: none;
     width: 100%;
     height: 15px;
-    /* background-color: #425B34; */
+    appearance: none;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #707070;
     padding: unset;
     pointer-events: none;
   }
-  .range-input input::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    /* background-color: #eee; */
-    border: 3px solid #016b21;
-    border-radius:50%;
-    outline: none;
-    background: #016b21;
+  .range-input input[type="range"]::-webkit-slider-runnable-track {
+      height: 20px;
+      background: #fff;
   }
   
+  .range-input input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 10px;
+    height: 20px;
+    left:-50px;
+    /* border: 3px solid #016b21; */
+    outline: none;
+    background: #016b21;
+    background-color: #016b21;
+    box-shadow: -50rem 0 5rem 20rem #425B34,
+                -40rem 0 5rem 30rem #425B34,
+                -30rem 0 2rem 25rem #425B34,
+                -25.5rem 0 0 25rem  #425B34;
+  }
+
   .range-input input::-webkit-slider-thumb:hover{
     background-color: #127512;
   }
   .range-input .value{
-    color: #4471ef;
     text-align: center;
     font-weight:600;
     line-height: 40px;
@@ -305,7 +358,7 @@
 }
 .filterlabel{
     font-size: 32px;
-    font-weight: 900;
+    font-weight: bold;
 }
 .tablisting{
     padding: 10px 20px;
@@ -473,6 +526,10 @@
     .range-input{
         width: 90%;
     }
+    .range-labels li{
+        width: 6.6%;
+        left: 8%;
+    }
     .containercircle{
         display: block;
         width: 10%;
@@ -547,7 +604,7 @@
     .filterlabel{
         /* width: 30%; */
         font-size: 20px;
-        font-weight: 600;
+        font-weight: bold;
     }
 }
 /* quick view css */

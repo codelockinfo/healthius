@@ -3,7 +3,6 @@
 
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
 
-  {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
   {% comment %} <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
     <!-- Filter options like checkboxes, dropdowns, etc. -->
     <select id="product-filterselect">
@@ -16,7 +15,7 @@
   </div> {% endcomment %}
   <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
    <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
-    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles Or </br> Build Your Own</div></div>
+    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div>
     
     <ul class="filtertab">
       <li><span class="tablisting active" value="/collections/all">All Flavors</span></li>
@@ -36,6 +35,7 @@
       </select>
     </div> 
   </div>
+  {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
   <div class="custom-bundle">
 
     {%- if section.settings.style == 'slider' -%}
@@ -70,12 +70,32 @@
         <div class="box-header">
                 <div class="box-header-title">ADD MORE AND EARN REWARDS</div>
                 <div class="progress-container">
+                  <div>
                     <div class="range-input">
-                      <input type="range" min='0' max = "90" value="0" step="10" id="rangeSlider">
-                       <div class="value">
+                      <div class="range-slider__indicators">
+                        <div class="range-slider__value range-slider__value--max"></div>
+                      </div>
+                      <input type="range" min='0' max="130" value="0" step="10" id="rangeSlider">
+                      <div class="value">
                         <div class="margin-top"></div>
                        </div>
                     </div> 
+                    <ul class="range-labels">
+                      <li class="active selected">$10</li>
+                      <li>$20</li>
+                      <li>$30</li>
+                      <li>$40</li>
+                      <li>$50</li>
+                      <li>$60</li>
+                      <li>$70</li>
+                      <li>$80</li>
+                      <li>$90</li>
+                      <li>$100</li>
+                      <li>$110</li>
+                      <li>$120</li>
+                      <li>$130</li>
+                    </ul>
+                  </div>
                   <div class="containercircle containerCircle">
                     <button class="circlebtn">
                       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none" class="inline-block"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.75364 0.796137C1.40364 0.408427 0.836178 0.408427 0.486178 0.796137C0.136178 1.18385 0.136178 1.81245 0.486178 2.20016L5.6075 7.87328C5.9575 8.26099 6.52496 8.26099 6.87496 7.87328L11.9963 2.20016C12.3463 1.81245 12.3463 1.18385 11.9963 0.796138C11.6463 0.408428 11.0788 0.408428 10.7288 0.796138L6.23878 5.76996L1.75364 0.796137Z" fill="currentColor"></path></svg>

@@ -103,6 +103,7 @@ $(document).ready(function() {
 			$(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
 		} else {
 			// $('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
+			$('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__minus').removeClass('disabled');
 			$(".main-custombundle div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val($variantQty);
 			$(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val($variantQty);
 		}
@@ -117,7 +118,7 @@ $(document).ready(function() {
 		var itemQtyArray = variant_qty.split(delimiter);
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$variantQtyMinus = $(this).closest(".productQty").find(".product-quantity__selector").val();
-		$summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+    		$summeryindex = $(this).closest(".container-box").attr('data-summery-index');
 		for (var i = 0; i < itemArray.length; i++) {
 			if ($.trim($var_id) == itemArray[i].trim()) {
 				if (itemQtyArray[i].trim() == $variantQtyMinus) {
@@ -240,7 +241,8 @@ $(document).ready(function() {
 		var selected_item_qty = [];
 		var cartTotQty = 0;
 		var productPrice = 0;
-		var inputtotalrange = 90;
+    var indicatore = 0;
+		var inputtotalrange = 130;
 		$productPrices = 0;
 		$.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
 
@@ -265,14 +267,22 @@ $(document).ready(function() {
 			}
 			setCookie("variantids", selected_items, 7);
 			setCookie("variant_qty", selected_item_qty, 7);
+
 		});
 		// var productPrice = $("#rangeSlider").attr("step");
 		// var pro_price = cartTotQty * parseInt($productPrices);
-		if ($productPrices < inputtotalrange) {
+    
+    indicatore = ($productPrices * 100)/inputtotalrange;
+		if ($productPrices <= inputtotalrange) {
 			$("#rangeSlider").val($productPrices);
+      $(".range-slider__indicators .range-slider__value").css("left",indicatore+"%");
 		} else if ($productPrices > inputtotalrange) {
-			$("#rangeSlider").val(inputtotalrange);
+      $("#rangeSlider").val(inputtotalrange);
+      $(".range-slider__indicators .range-slider__value").css("left","100%");
 		}
+    // do't remove this comment
+    // $(".range-slider__indicators .range-slider__value").html("$"+$productPrices);
+    // do't remove this comment
 		$remain_amount = inputtotalrange - $productPrices;
 
 		if ($remain_amount < 1) {
