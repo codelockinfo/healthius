@@ -414,6 +414,11 @@
 .box-summary .cartfontcontainer{
     width: 65%;
 }
+.stickycart .add-to-cart, .stickycart .stickycartbtn{
+    background: #862E1B;
+    color: #fff;
+    border: none;
+}
 /* New qty picker design */
 
 @media screen and (max-width: 1110px){
