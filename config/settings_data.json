@@ -154,17 +154,17 @@
     "menu_weight": "bolder",
     "color_background_header": "#ffffff",
     "color_text_header": "#1d1d1d",
-    "color_accent_header": "#425b34",
+    "color_accent_header": "#5e9c2b",
     "color_background_main": "#ffffff",
     "color_text_main": "#1d1d1d",
-    "color_accent_main": "#425b34",
+    "color_accent_main": "#5e9c2b",
     "color_background_cards": "#ffffff",
     "color_text_cards": "#1d1d1d",
-    "color_accent_cards": "#425b34",
+    "color_accent_cards": "#5e9c2b",
     "color_borders_cards": "#e1e1e1",
     "color_background_footer": "#ffffff",
     "color_text_footer": "#000000",
-    "color_accent_footer": "#425b34",
+    "color_accent_footer": "#5e9c2b",
     "grid_gap": 26,
     "border_radius_cards": 10,
     "border_width_buttons": 1,
@@ -247,24 +247,6 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {
-          "color_brand": "#467C99",
-          "contrast_color": "#FFFFFF",
-          "color_brand_secondary": "#467C99",
-          "corners": "8px",
-          "app_background": "#f9f8f4",
-          "app_container": 1200,
-          "app_vertical_padding": 32,
-          "images_aspect_ratio": "1",
-          "cards_background": "#FFFFFF",
-          "cards_border_color": "rgba(0,0,0,0)"
-        }
-      }
-    }
+    ]
   }
 }

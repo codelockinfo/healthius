@@ -93,10 +93,9 @@
   <noscript>
     <link rel="stylesheet" href="{{ 'theme-noscript.css' | asset_url }}">
   </noscript>
-  {% if product.handle == "dummy-product-1" %}
   <script src="{{ 'jquery.min.js' | asset_url }}"></script>
-  <script src="{{ 'product-bundle.js' | asset_url }}" defer></script>
-  {% endif%}
+  <script src="https://cdn.shopify.com/extensions/af7650f3-31fe-4dcf-b2e6-6f968a204974/1.42.0/assets/recharge-widget.js"></script>
+  <script src="{{ 'bundle.js' | asset_url }}" defer></script>
 </head>
 
 <body id="{{ page_title | handle }}" class="no-touchevents 
@@ -120,7 +119,7 @@
   {% endunless %}
 
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-  <script src="{{ 'component-product-form.js' | asset_url }}" defer></script>
+  {% comment %} <script src="{{ 'component-product-form.js' | asset_url }}" defer></script> {% endcomment %}
 
   <main id="main" class="main-content 
     {% if settings.product_card_align_buy %} main-content--align-product-items {% endif %}
@@ -336,5 +335,7 @@
 .product-item__image-figure,.lazy-image{
   margin: 0;
 }
-</style>
+<style>
 {%  endif %}
+<style>
+  </style>
