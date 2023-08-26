@@ -5,8 +5,22 @@
       "blocks": {
         "recharge-bundles-widget-block": {
           "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/bundles-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
-            "product": "{{ product }}"
+            "product": "{{ product }}",
+            "rb_theme_color": "#00C09E",
+            "rb_theme_text": "#ffffff",
+            "rb_theme_other_text": "#283965",
+            "rb_theme_bg": "#ffffff",
+            "rb_text_size": "16px",
+            "rb_spacing_width": 1220,
+            "rb_spacing_margins": "15px",
+            "rb_buttons_size": "15px",
+            "rb_buttons_corners": "4",
+            "rb_builder_items_per_row_ns": 4,
+            "rb_builder_items_per_row": "1",
+            "rb_builder_aspect_ratio": "100%",
+            "rb_builder_radius": "4"
           }
         }
       },
@@ -14,10 +28,65 @@
         "recharge-bundles-widget-block"
       ],
       "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "7d74e3c2-914c-46a3-889a-da1251a4f605": {
+      "type": "featured-bundle-collection",
+      "blocks": {
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-title-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1": {
+          "type": "quick_buy",
+          "settings": {
+          }
+        },
+        "fd149ccd-0e28-435d-9c21-174a47fd0a74": {
+          "type": "add_button",
+          "settings": {
+            "button_title": "default",
+            "show_quantity_selector": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1",
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-title-1",
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1",
+        "fd149ccd-0e28-435d-9c21-174a47fd0a74"
+      ],
+      "settings": {
+        "heading": "Featured collection",
+        "subheading": "Showcase your best products",
+        "show_view_all": true,
+        "section_heading_layout": "section-heading--left",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2 grid-tiny-1",
+        "products_number": 8,
+        "collection": "temp",
+        "collection1": "beef",
+        "collection2": "chicken",
+        "collection3": "pork",
+        "collection4": "",
+        "product_list": "",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
       }
     }
   },
   "order": [
-    "recharge-bundles-widget"
+    "recharge-bundles-widget",
+    "7d74e3c2-914c-46a3-889a-da1251a4f605"
   ]
 }
