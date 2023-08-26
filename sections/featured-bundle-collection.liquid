@@ -14,24 +14,28 @@
     </select>
   </div> {% endcomment %}
   <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
-   <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
-    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div>
-    
+   {% comment %} <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
+    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div> {% endcomment %}
+    {% assign collection =  section.settings.collection %}
+    {% assign collection1 =  section.settings.collection1 %}
+    {% assign collection2 =  section.settings.collection2 %}
+    {% assign collection3 =  section.settings.collection3 %}
+    {% assign collection4 =  section.settings.collection4 %}
     <ul class="filtertab">
-      <li><span class="tablisting active" value="/collections/all">All Flavors</span></li>
-      <li><span class="tablisting" value="/collections/fruit-flavors">Fruit Flavors</span></li>
-      <li><span class="tablisting" value="/collections/caffeinated">Caffeinated</span></li>
-      <li><span class="tablisting"  value="/collections/vegan">Vegan</span></li>
-      <li><span class="tablisting" value="/collections/whey-protein">Whey Protein</span></li>
+        {%  if collection != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
+        {%  if collection1 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
+        {%  if collection2 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
+        {%  if collection3 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
+        {%  if collection4 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
     </ul>
     <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
       <!-- Filter options like checkboxes, dropdowns, etc. -->
       <select id="product-filterselect">
-      <option value="/collections/all">All Flavors</option>
-      <option value="/collections/fruit-flavors">Fruit Flavors</option>
-      <option value="/collections/caffeinated">Caffeinated</option>
-      <option value="/collections/vegan" >Vegan</option>
-      <option value="/collections/whey-protein">Whey Protein</option>
+        {%  if collection != blank %}<option  value="{{ collections[collection].url }}"  data-collection-id="{{ collections[collection].id   }}">{{ collections[collection].title }} </option>{% endif %}
+        {%  if collection1 != blank %}<option  value="{{ collections[collection1].url }}"  data-collection-id="{{ collections[collection1].id   }}">{{ collections[collection1].title }}</option>{% endif %}
+        {%  if collection2 != blank %}<option  value="{{ collections[collection2].url }}"  data-collection-id="{{ collections[collection2].id   }}">{{ collections[collection2].title }}</option>{% endif %}
+        {%  if collection3 != blank %}<option  value="{{ collections[collection3].url }}"  data-collection-id="{{ collections[collection3].id   }}">{{ collections[collection3].title }}</option>{% endif %}
+        {%  if collection4 != blank %}<option value="{{ collections[collection4].url }}"  data-collection-id="{{ collections[collection4].id   }}">{{ collections[collection4].title }}</option>{% endif %}
       </select>
     </div> 
   </div>
@@ -418,6 +422,26 @@
         "id": "collection",
         "label": "t:sections.featured-collection.settings.collection.label"
       }, 
+      {
+        "type": "collection",
+        "id": "collection1",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      },
+      {
+        "type": "collection",
+        "id": "collection2",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      },
+      {
+        "type": "collection",
+        "id": "collection3",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      },
+      {
+        "type": "collection",
+        "id": "collection4",
+        "label": "t:sections.featured-collection.settings.collection.label"
+      },
       {
         "type": "product",
         "id": "product_list",
