@@ -355,7 +355,7 @@
     padding: 7px 0;
 }
 .filtertab{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
