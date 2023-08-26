@@ -15,30 +15,30 @@
         "menu-1": {
           "type": "menu",
           "settings": {
-            "title": "Explore",
-            "menu": "explore"
+            "title": "About Us",
+            "menu": "about-us"
           }
         },
         "menu-2": {
           "type": "menu",
           "settings": {
-            "title": "Learn More",
-            "menu": "learn-more"
+            "title": "Need Help?",
+            "menu": "need-help"
           }
         },
         "f853a3ae-8161-4e17-b94a-3082a09fe704": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "title": "CONTACT",
+            "title": "Contact Us",
             "size": "h4",
-            "content": "<p> support@oatsovernight.com <\/p>",
-            "show_social_icons": false,
+            "content": "<p>Phone: 1-535-659-2345 <\/p><p>Email:Support@quickfresh.com<\/p><p> Live Chat<\/p>",
+            "show_social_icons": true,
             "enable_follow_on_shop": true
           }
         },
         "text-2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "ARE YOU #TEAMOATS?",
             "size": "h5",
