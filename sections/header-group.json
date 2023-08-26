@@ -54,7 +54,7 @@
         "main_linklist": "menu",
         "show_search": true,
         "sticky_header": true,
-        "select_header_actions_on_mobile": "show_on_homepage",
+        "select_header_actions_on_mobile": "no",
         "show_header_actions": true,
         "show_locale_selector": true,
         "show_country_selector": true,
