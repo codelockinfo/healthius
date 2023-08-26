@@ -97,7 +97,9 @@
 
                 </{{ block.settings.seo_h_tag }}>
               {%- endunless -%}
-
+              {%- unless block.settings.subcaption == blank -%}
+              <span class="text-size--{{ section.settings.subtext_size }} increased-spacing">{{ block.settings.subcaption | escape }}</span>
+            {%- endunless -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="increased-spacing">
                   <a href="{{ block.settings.link | escape }}" class="button button--{{ section.settings.button_size }} button--{{ section.settings.button_style }}">{{ block.settings.button_label | escape }}</a>
@@ -350,6 +352,26 @@
     },
     {
       "type": "select",
+      "id": "subtext_size",
+      "label": "t:sections.local-extra-words.sections.slideshow.settings.subcaption_size",
+      "options": [
+        {
+          "value": "regular",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__1.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__2.label"
+        },
+        {
+          "value": "xlarge",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading_size.options__3.label"
+        }
+      ],
+      "default": "regular"
+    },
+    {
+      "type": "select",
       "id": "title_size",
       "label": "t:sections.rich-text.blocks.heading.settings.heading_size.label",
       "options": [
@@ -469,6 +491,12 @@
           "type": "text",
           "id": "caption",
           "label": "t:sections.local-extra-words.sections.headings.caption",
+          "default": "Introducing"
+        },
+        {
+          "type": "text",
+          "id": "subcaption",
+          "label": "t:sections.local-extra-words.sections.headings.subcaption",
           "default": "Introducing"
         },
         {

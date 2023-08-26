@@ -773,7 +773,8 @@
             "name": "Image"
           },
           "settings": {
-            "caption_size": "Caption size"
+            "caption_size": "Caption size",
+            "subcaption_size": "Subcaption size"
           }
         },
         "rich-text": {
@@ -986,6 +987,7 @@
           "title": "Title",
           "subtitle": "Subtitle",
           "caption": "Caption",
+          "subcaption": "Subcaption",
           "text_content": "Text content",
           "custom_colors": "Custom card design",
           "text_style": "Text style"
