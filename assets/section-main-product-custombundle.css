@@ -348,6 +348,12 @@
     display: flex;
     /* align-items: center; */
 }
+.mainboxli{
+    width: 150px;
+    background: #425B34;
+    text-align: center;
+    padding: 7px 0;
+}
 .filtertab{
     width: 70%;
     margin: 0 auto;
@@ -595,7 +601,7 @@
     }
     .customfilter {
         display: block;
-        width: 50%;
+        width: 100%;
         margin: 15px auto;
     }
     .filtertab{
