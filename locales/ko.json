@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "당신의 이메일",
       "signup_form_submit": "제출",
       "signup_form_success": "열기 직전에 이메일을 보내드리겠습니다!",
-      "admin_link_html": "매장 소유자이신가요? <a href=\"/admin\">여기에서 로그인</a>",
+      "admin_link_html": "매장 소유자이신가요? <a href=\"\/admin\">여기에서 로그인<\/a>",
       "password_link": "비밀번호를 사용하여 입장",
       "powered_by_shopify_html": "이 매장은 {{ shopify }} 에 의해 운영됩니다"
     },
@@ -140,7 +140,7 @@
     "sort_button": "분류",
     "sort_by_label": "다음으로 분류:",
     "to": "받는이",
-    "use_fewer_filters_html": "필터를 적게 사용하거나 <a class=\"{{ class }}\" href=\"{{ link }}\">전부 해제</a>하세요",
+    "use_fewer_filters_html": "필터를 적게 사용하거나 <a class=\"{{ class }}\" href=\"{{ link }}\">전부 해제<\/a>하세요",
     "view_all_products": "제품 모두 보기",
     "no_collections": "죄송합니다. 현재 이 상점에는 컬렉션이 없습니다.",
     "view_all_collections": "전체 컬렉션 보기"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "더 많은 리뷰 불러오는 중",
       "include_taxes": "세금 포함.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">배송비</a>는 체크아웃시 계산됩니다.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">배송비<\/a>는 체크아웃시 계산됩니다.",
       "view_in_space": "내 공간에서 보기",
       "view_in_space_label": "내 공간에서 보고, 증강 현실 창에서 제품을 불러옵니다",
       "sales_amount_html": "{{ amount }} 를 저장했습니다",
@@ -204,9 +204,9 @@
     "update": "카트 업데이트",
     "note": "주문 지시 사항",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "세금과 <a href=\"{{ link }}\">배송비</a>는 체크아웃시 계산됩니다",
+      "taxes_and_shipping_policy_at_checkout_html": "세금과 <a href=\"{{ link }}\">배송비<\/a>는 체크아웃시 계산됩니다",
       "taxes_included_but_shipping_at_checkout": "세금 포함, 배송비는 체크아웃시 계산됩니다",
-      "taxes_included_and_shipping_policy_html": "세금 포함. <a href=\"{{ link }}\">배송비</a>는 체크아웃시 계산됩니다.",
+      "taxes_included_and_shipping_policy_html": "세금 포함. <a href=\"{{ link }}\">배송비<\/a>는 체크아웃시 계산됩니다.",
       "taxes_and_shipping_at_checkout": "세금과 배송비는 체크아웃시 계산됩니다"
     },
     "empty": "현재 카트가 비어있습니다.",
@@ -371,9 +371,9 @@
         "company_label": "회사",
         "address_1_label": "주소 선 1",
         "address_2_label": "주소 선 2",
-        "city_label": "시/군/구",
+        "city_label": "시\/군\/구",
         "country_label": "국가",
-        "province_label": "시/도",
+        "province_label": "시\/도",
         "zip_label": "우편번호",
         "phone_label": "전화번호",
         "add_button": "주소 추가",
@@ -429,8 +429,8 @@
     "check_other_stores": "다른 상점에서 가능 여부 확인",
     "pick_up_available": "픽업 가능",
     "pick_up_currently_unavailable": "현재 픽업 불가",
-    "pick_up_available_at_html": "<strong>{{ location_name }}</strong>에서 픽업 가능",
-    "pick_up_unavailable_at_html": "<strong>{{ location_name }}</strong>에서 현재 픽업 불가",
+    "pick_up_available_at_html": "<strong>{{ location_name }}<\/strong>에서 픽업 가능",
+    "pick_up_unavailable_at_html": "<strong>{{ location_name }}<\/strong>에서 현재 픽업 불가",
     "invalid_location_address": "주소를 확인하려면 매장에 연락하세요",
     "refresh": "새로고침",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "이 제품은 어떤 매장에서도 픽업이 불가능합니다",
       "view_store_info": "매장 세부 사항",
       "check_other_stores": "다른 상점에서 가능 여부 확인"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
