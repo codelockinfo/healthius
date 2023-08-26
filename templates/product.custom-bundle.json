@@ -80,7 +80,7 @@
         "style": "grid",
         "layout": "grid-3 grid-lap-2 grid-tiny-1",
         "products_number": 16,
-        "collection": "all",
+        "collection": "beef",
         "product_list": "copy-of-build-a-box1",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
