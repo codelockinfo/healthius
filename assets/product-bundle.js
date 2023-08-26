@@ -64,6 +64,7 @@ $(document).ready(function() {
 	filterContainer.on("click", function() {
 		const filterUrl = $(this).attr('value') // Update with your actual collection URL + filters
 		$.get(filterUrl, function(data) {
+			console.log(data.__st);
 			$("#filtered-products .productsimage").css("display", "none");
 			$eachProduct = $(data).find("#main-collection-product-grid .product-item.card");
 			console.log($eachProduct);
@@ -143,43 +144,94 @@ $(document).ready(function() {
 		$(this).attr("data-vid", $giftVariantid);
 	});
 
+	// $('.addToCart').click(function(e) {
+	// 	e.preventDefault();
+	// 	$giftVariantid = $('.productSelect').attr("data-vid");
+	// 	var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+	// 	var selected_product_items = [];
+	// 	$.each($("#cartSummary .productsimage"), function() {
+	// 		$currentVarQty = $(this).find(".product-quantity__selector").val();
+	// 		var $currentvartitle = $(this).find(".variant-title").html();
+	// 		$perticular_propertie = $currentVarQty + "*" + $currentvartitle;
+	// 		selected_product_items.push($perticular_propertie);
+	// 	});
+
+	// 	const objectItems = {};
+	// 	$.each(selected_product_items, function(index, item) {
+	// 		objectItems[index] = item;
+	// 	});
+
+	// 	$finalproperties = objectItems;
+	// 	$.ajax({
+	// 		url: '/cart/add.js',
+	// 		dataType: 'json',
+	// 		type: 'POST',
+	// 		data: {
+	// 			id: PRODUCT_ID,
+	// 			quantity: 1,
+	// 			properties: $finalproperties
+	// 		},
+	// 		success: function(response) {
+	// 			removeCookie("variantids");
+	// 			removeCookie("variant_qty");
+	// 			addGiftproduct($giftVariantid);
+	// 		},
+	// 		error: function(jqXHR, textStatus, errorThrown) {
+	// 			console.log('Error:', textStatus, errorThrown);
+	// 		}
+	// 	});
+	// });
+	
 	$('.addToCart').click(function(e) {
-		e.preventDefault();
-		$giftVariantid = $('.productSelect').attr("data-vid");
-		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
-		var selected_product_items = [];
+
+	function recharge_checkout(){
+
 		$.each($("#cartSummary .productsimage"), function() {
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
+			var product_id = $(this).data("product");
+			var variant_id = $(this).data("variant");
+
 			var $currentvartitle = $(this).find(".variant-title").html();
 			$perticular_propertie = $currentVarQty + "*" + $currentvartitle;
 			selected_product_items.push($perticular_propertie);
 		});
 
-		const objectItems = {};
-		$.each(selected_product_items, function(index, item) {
-			objectItems[index] = item;
-		});
+		return false;
+		const bundle = {
+			externalProductId: "8619519803673",  // Bundle's Shopify Product ID
+			externalVariantId: "46590253531417",  // Bundle's Shopify Variant ID
+			selections: [{
+			  collectionId: "460465537305",  // Shopify Collection 1
+			  externalProductId: "8598449291545",  // Shopify Product ID 1
+			  externalVariantId: "46476104368409",  // Shopify Variant ID 1
+			  quantity: 2,
+			  sellingPlan: 689133191449  // Product Selling Plan ID
+			},
+			{
+			  collectionId: "460465537305",  // Shopify Collection 2
+			  externalProductId: "8598445130009",  // Shopify Product ID 2
+			  externalVariantId: "46476085264665", // Shopify Variant ID 2
+			  quantity: 1,
+			  sellingPlan: 689133453593 // Product Selling Plan ID
+			}]
+		  };
+		  
+		  const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+		  console.log(bundleItems);
+		  const cartData = { items: bundleItems };
+		  async () => {
 
-		$finalproperties = objectItems;
-		$.ajax({
-			url: '/cart/add.js',
-			dataType: 'json',
-			type: 'POST',
-			data: {
-				id: PRODUCT_ID,
-				quantity: 1,
-				properties: $finalproperties
-			},
-			success: function(response) {
-				removeCookie("variantids");
-				removeCookie("variant_qty");
-				addGiftproduct($giftVariantid);
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.log('Error:', textStatus, errorThrown);
+		  const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(cartData),
+			  });
 			}
-		});
-	});
+			
+			  window.location.href = '/checkout';
+
+	}
+});
 
 	function addGiftproduct(giftVariantid) {
 		console.log(giftVariantid);
@@ -206,10 +258,11 @@ $(document).ready(function() {
 	$(".addButton").on("click", function() {
 		console.log("addButton  click");
 		$var_id = $(this).closest(".productsimage").data("variant");
+		$product_id = $(this).closest(".productsimage").data("product");
 		$(this).css("display", "none");
 		$(this).closest(".container-box").find(".product-quantity").addClass("show");
 		$html = $(this).closest(".productsimage").html();
-		$(".box-summary").append("<div class='productsimage' data-variant='" + $var_id + "'>" + $html + "</div>");
+		$(".box-summary").append("<div class='productsimage' data-variant='" + $var_id + "' data-product='"+$product_id+"'>" + $html + "</div>");
 		getcartTotalQty();
 	});
 
@@ -227,8 +280,9 @@ $(document).ready(function() {
 				$("div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 				$("div[data-variant='" + product_item + "']").find(".addButton").css("display", "none");
 				$("div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
+				$product_id = $("div[data-variant='" + product_item + "']").data("product");
 				$getHtml = $(".main-custombundle div[data-variant='" + product_item + "']").html();
-				$(".box-summary").append("<div class='productsimage' data-variant='" + product_item + "'>" + $getHtml + "</div>");
+				$(".box-summary").append("<div class='productsimage' data-variant='" + product_item + "' data-product='"+$product_id+"'>" + $getHtml + "</div>");
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 			}

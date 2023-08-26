@@ -56,7 +56,7 @@
         {%- liquid
           if section.settings.collection != blank
             for product in collections[section.settings.collection].products limit: section.settings.products_number
-              render 'bundle-product-item',product: product, product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
+              render 'bundle-product-item',product: product,collection:collections[section.settings.collection], product_collection: collections[section.settings.collection], section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout
             endfor
           else 
             for i in (1..section.settings.products_number)
