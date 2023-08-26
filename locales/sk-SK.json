@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Váš e-mail",
       "signup_form_submit": "Odovzdať",
       "signup_form_success": "Hneď pred otvorením vám pošleme e-mail!",
-      "admin_link_html": "Ste majiteľ obchodu? <a href=\"/admin\">Tu sa prihláste</a>",
+      "admin_link_html": "Ste majiteľ obchodu? <a href=\"\/admin\">Tu sa prihláste<\/a>",
       "password_link": "Vstúpte pomocou hesla",
       "powered_by_shopify_html": "Tento obchod bude využívať technológiu {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Naspäť",
       "play_video": "Prehrať video",
       "language_dropdown_label": "Jazyk",
-      "country_dropdown_label": "Krajina/región",
+      "country_dropdown_label": "Krajina\/región",
       "quantity": "Množstvo",
       "price": {
         "regular": "Bežná cena",
@@ -140,7 +140,7 @@
     "sort_button": "Triediť",
     "sort_by_label": "Triediť podľa",
     "to": "Pre",
-    "use_fewer_filters_html": "Použite menej filtrov alebo <a class=\"{{ class }}\" href=\"{{ link }}\">vymažte všetky</a>",
+    "use_fewer_filters_html": "Použite menej filtrov alebo <a class=\"{{ class }}\" href=\"{{ link }}\">vymažte všetky<\/a>",
     "view_all_products": "Zobraziť všetky produkty",
     "no_collections": "Ľutujeme, v tomto obchode momentálne nie sú žiadne kolekcie.",
     "view_all_collections": "Zobraziť všetky kolekcie"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Načítavajú sa ďalšie recenzie",
       "include_taxes": "Vrátane dane.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Doprava</a> vypočítaná pri pokladni.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Doprava<\/a> vypočítaná pri pokladni.",
       "view_in_space": "Zobraziť vo svojom priestore",
       "view_in_space_label": "Zobraziť vo svojom priestore, načíta položku v okne rozšírenej reality",
       "sales_amount_html": "ušetríte {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Aktualizovať košík",
     "note": "Pokyny pre objednávku",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Dane a <a href=\"{{ link }}\">doprava</a> budú vypočítané pri pokladni",
+      "taxes_and_shipping_policy_at_checkout_html": "Dane a <a href=\"{{ link }}\">doprava<\/a> budú vypočítané pri pokladni",
       "taxes_included_but_shipping_at_checkout": "Vrátane dane a poštovné sa vypočíta pri pokladni",
-      "taxes_included_and_shipping_policy_html": "Vrátane dane. <a href=\"{{ link }}\">Doprava</a> vypočítaná pri pokladni.",
+      "taxes_included_and_shipping_policy_html": "Vrátane dane. <a href=\"{{ link }}\">Doprava<\/a> vypočítaná pri pokladni.",
       "taxes_and_shipping_at_checkout": "Dane a poštovné budú vypočítané pri pokladni"
     },
     "empty": "Váš košík je momentálne prázdny.",
@@ -429,8 +429,8 @@
     "check_other_stores": "Overte si dostupnosť v iných predajniach",
     "pick_up_available": "Odber možný",
     "pick_up_currently_unavailable": "Vyzdvihnutie momentálne nedostupné",
-    "pick_up_available_at_html": "Možnosť vyzdvihnutia na <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Vyzdvihnutie momentálne nie je k dispozícii na adrese <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Možnosť vyzdvihnutia na <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Vyzdvihnutie momentálne nie je k dispozícii na adrese <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Pre potvrdenie adresy kontaktujte obchod",
     "refresh": "Obnoviť",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Tento produkt nie je možné vyzdvihnúť v žiadnej predajni",
       "view_store_info": "Podrobnosti obchodu",
       "check_other_stores": "Overte si dostupnosť v iných predajniach"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
