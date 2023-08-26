@@ -864,7 +864,8 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
 .container--large {
   margin: 0 auto;
   width: 100%;
-  max-width: 1360px;
+  /* max-width: 1360px; */
+  max-width: 1450px;
   padding-inline-start: var(--gutter-container);
   padding-inline-end: var(--gutter-container);
 }
@@ -2382,3 +2383,66 @@ html[dir=rtl] .container--has-background:after, html[dir=rtl] .card__image svg, 
 html[dir=ltr] .container--has-background:after, html[dir=ltr] .card__image svg, .card__image html[dir=ltr] svg, html[dir=ltr] .card__image--background, html[dir=ltr] .card__image--with-overlay:after, html[dir=ltr] .lazy-image:not(.lazy-image--no-transition):before, html[dir=ltr] .lazy-image:not(.lazy-image--no-transition):after, html[dir=ltr] .svg-placeholder.svg-placeholder--background {
   left: 0;
 }
+/* custom header css  */
+.secondheader{
+  display: none;
+}
+.cursorpointer{
+  cursor: pointer;
+}
+.carttotal{
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background: var(--color-text-header);
+  color: var(--color-foreground-header);
+  font-weight: var(--font-weight-body-bold);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(9px / 16 * var(--base-body-size) + 0px);
+}
+.customheaderpadding.header__top {
+  padding-top: 15px;
+  padding-bottom: 12px;
+}
+.customheaderpadding .button--icon svg *{
+  stroke:none;
+}
+.button__icon .icon-account{
+  width: 18px;
+}
+.header-container .button.headerorderbtn{
+  background-color: #862E1B;
+  border-color: #862E1B;
+}
+#menu-item-account .icon-account{
+  width: 15px;
+}
+.paddingfooter{
+  padding: 10px;
+}
+@media screen and (max-width: 1023px){
+  .site-header .customheaderpadding  .mobile-cart-button {
+    display: none;
+  }
+  .site-header .customheaderpadding  .sideburger{
+    order: 2;
+  }
+  .site-header .customheaderpadding  .logo {
+    padding: 0;
+    justify-content: left;
+  }
+  .site-header .header-container {
+    background: #C5972D;
+  }
+}
+@media screen and (min-width: 1024px){
+  .customheaderpadding  .header-actions:not(:empty) {
+    grid-template-columns: 1fr auto auto auto;
+  }
+}
+/* custom header css  */

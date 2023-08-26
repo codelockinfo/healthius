@@ -20,7 +20,7 @@
 <main-header id="site-header" class="site-header" data-js-inert {% if section.settings.sticky_header %} data-sticky-header {% endif %}>
 
   <div class="header-container header-container--top {% if section.settings.show_search %} hide-border-on-portable {% endif %}">
-    <div class="header__top container--large">
+    <div class="customheaderpadding header__top container--large">
 
       <!-- logo -->
       
@@ -45,9 +45,14 @@
       <!-- header blocks -->
 
       <div class="header-actions header-actions--buttons {% if section.settings.show_search %} header-actions--show-search {% endif %} portable-hide">
-
+        <scrollable-navigation class="header-links">
+          {%- render 'site-nav', linklist: section.settings.main_linklist, blocks: section.blocks, type: 'classic' -%}
+        </scrollable-navigation>
+        <div>
+          <a class="button button--regular button--solid headerorderbtn" href="{{ section.settings.buttonurl }}">{{ section.settings.buttontext }}</a>
+        </div>
         {%- if section.settings.show_search -%}
-          <search-form style="position:relative">
+          {% comment %} <search-form style="position:relative">
             <div class="button button--outline button--icon button--outline-hover button--no-padding button--no-hover site-search-handle">
               <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: 'search' -%}</span>
               <form action="{{ routes.search_url }}" method="get" role="search" autocomplete="off">
@@ -62,22 +67,22 @@
             </div>
             <div class="search-results-overlay" id="search-results-overlay-desktop" onclick="this.classList.remove('active')" style="display:none"></div>
             <div class="search-results-container" data-js-search-results></div> 
-          </search-form>
+          </search-form> {% endcomment %}
         {%- endif -%}
 
         {%- if shop.customer_accounts_enabled -%}
           {%- if customer -%}
-            <a class="button button--outline button--icon" href="{{ routes.account_url }}">
+            <a class=" button--outline button--icon" href="{{ routes.account_url }}">
           {%- else -%}
-            <a class="button button--outline button--icon" href="{{ routes.account_login_url }}">
+            <a class=" button--outline button--icon" href="{{ routes.account_login_url }}">
           {%- endif -%}
             <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: 'account' -%}</span>
-            {{ 'general.breadcrumb.account' | t }}
+            {% comment %} {{ 'general.breadcrumb.account' | t }} {% endcomment %}
           </a>
         {%- endif -%}
         
         <a 
-          class="button button--solid button--icon no-js-hidden"
+          class="cursorpointer button--icon no-js-hidden"
           {% if settings.cart_action == 'overlay' and template != 'cart' %} 
             data-js-sidebar-handle aria-expanded="false" aria-controls="site-cart-sidebar" role="button"
           {% else %}
@@ -87,8 +92,8 @@
         >
           <span class="visually-hidden">{{ 'general.accessibility_labels.open_cart' | t }}</span>
           <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: 'cart' -%}</span>
-          <span data-header-cart-total aria-hidden="true">{{ cart.total_price | money }}</span>
-          <span data-header-cart-count aria-hidden="true" class="element--wrap-paranth">{{ cart.item_count }}</span>
+          {% comment %} <span data-header-cart-total aria-hidden="true">{{ cart.total_price | money }}</span> {% endcomment %}
+          <span data-header-cart-count aria-hidden="true" class="element--wrap-paranth carttotal">{{ cart.item_count }}</span>
         </a>
 
         <noscript>
@@ -105,7 +110,7 @@
 
       </div>
 
-      <button data-js-sidebar-handle class="mobile-menu-button hide portable-show" aria-expanded="false" aria-controls="site-menu-sidebar">
+      <button data-js-sidebar-handle class="sideburger mobile-menu-button hide portable-show" aria-expanded="false" aria-controls="site-menu-sidebar">
         <span class="visually-hidden">{{ 'general.accessibility_labels.open_menu' | t }}</span>
         {%- render 'theme-symbols', icon: 'burger' -%}
       </button>
@@ -206,7 +211,7 @@
 
   {%- endcapture -%}
 
-  <div class="header-container header-container--bottom {% if header_blocks == blank %} no-header-blocks {% endif %}
+  <div class="secondheader header-container header-container--bottom {% if header_blocks == blank %} no-header-blocks {% endif %}
     {% liquid
       if section.settings.select_header_actions_on_mobile == 'show_always' or template == 'index' and section.settings.select_header_actions_on_mobile == 'show_on_homepage'
         echo "show-header-actions-on-mobile"
@@ -316,6 +321,17 @@
         "id": "main_linklist",
         "label": "t:sections.split-extra-words.sections.header.settings.menu",
         "default": "main-menu"
+      },
+      {
+        "type": "text",
+        "id": "buttontext",
+        "label": "Button text",
+        "default": "Order Now"
+      },
+      {
+        "type": "url",
+        "id": "buttonurl",
+        "label": "Button link"
       },
       {
         "type": "checkbox",

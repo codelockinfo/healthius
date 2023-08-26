@@ -12,7 +12,7 @@
 {%- if section.blocks.size > 0 -%}
 
   <div class="container--large gutter-top--xlarge gutter-bottom--xlarge footer-top" data-js-inert>
-    <div class="grid grid--layout grid--gap-xlarge {{ section.settings.layout }}">
+    <div class="paddingfooter grid grid--layout grid--gap-xlarge {{ section.settings.layout }}">
       {%- for block in section.blocks -%}
 
         <div class="footer-item" {{ block.shopify_attributes }}>
@@ -110,14 +110,16 @@
   <div class="container--large gutter-top--regular gutter-bottom--regular rte">
 
     <span>
-      {{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name | escape }}</a>.
+
+      ©2023 JUST MEATS, All Rights Reserved
+      {% comment %} {{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name | escape }}</a>. {% endcomment %}
       {%- if section.settings.show_locale_selector or section.settings.show_country_selector -%}
-        <span class="powered-by-shopify">{{ powered_by_link }}</span>
+        {% comment %} <span class="powered-by-shopify">{{ powered_by_link }}</span> {% endcomment %}
       {%- endif -%}
     </span>
 
     {%- if section.settings.show_locale_selector == false and section.settings.show_country_selector == false -%}
-      <span class="powered-by-shopify">{{ powered_by_link }}</span>
+      {% comment %} <span class="powered-by-shopify">{{ powered_by_link }}</span> {% endcomment %}
     {%- else -%}
       {%- render 'localization-form', show_country_selector: section.settings.show_country_selector, show_locale_selector: section.settings.show_locale_selector, location: 'footer' -%}
     {%- endif -%}
