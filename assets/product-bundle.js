@@ -200,7 +200,7 @@ $(document).ready(function() {
 		console.log(PRODUCT_ID + " PRODUCT ID");
 		console.log(selling_plan_id);
 		
-		if(selling_plan_id !==  undefined){
+		if(selling_plan_id ==  undefined){
 			if(window.Recharge.widgets[meta.product.id] !== undefined){
 				var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
 				for(var i = 0; i < selling_plans.length; i++){
