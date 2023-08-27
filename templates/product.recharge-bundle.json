@@ -53,7 +53,7 @@
         "fd149ccd-0e28-435d-9c21-174a47fd0a74": {
           "type": "add_button",
           "settings": {
-            "button_title": "default",
+            "button_title": "ADD",
             "show_quantity_selector": true
           }
         }
@@ -65,17 +65,17 @@
         "fd149ccd-0e28-435d-9c21-174a47fd0a74"
       ],
       "settings": {
-        "heading": "Featured collection",
-        "subheading": "Showcase your best products",
-        "show_view_all": true,
+        "heading": "",
+        "subheading": "",
+        "show_view_all": false,
         "section_heading_layout": "section-heading--left",
         "style": "grid",
         "layout": "grid-3 grid-lap-2 grid-tiny-1",
         "products_number": 8,
-        "collection": "chicken",
-        "collection1": "caffeinated",
-        "collection2": "fruit-flavors",
-        "collection3": "vegan",
+        "collection": "temp",
+        "collection1": "beef",
+        "collection2": "brisket",
+        "collection3": "chicken",
         "collection4": "pork",
         "product_list": "",
         "section_background_color": "rgba(0,0,0,0)",
