@@ -186,7 +186,7 @@ $(document).ready(function() {
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
-		$giftVariantid = $('.productSelect').attr("data-vid");
+		$giftVariantid = $(".product_variant_id").val();
 		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
 		var bundle_product_arr = {};
 		var bundleObject = {
@@ -195,10 +195,11 @@ $(document).ready(function() {
 			selections: []
 		};
 		var static_frequancy = 15;
-		var selling_plan_id = $("#sellingPlan"+meta.product.id).val();
+		// var selling_plan_id = $("#sellingPlan"+meta.product.id).val();
+		var selling_plan_id = $( "input[name='selling_plan']").val();
 		console.log(meta.product.id + " MTEA PRODUCT");
 		console.log(PRODUCT_ID + " PRODUCT ID");
-		console.log(selling_plan_id);
+		console.log(selling_plan_id + " selling_plan_id");
 		
 		if(selling_plan_id ==  undefined){
 			if(window.Recharge.widgets[meta.product.id] !== undefined){
@@ -219,6 +220,8 @@ $(document).ready(function() {
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
 			var variant_id = $(this).data("variant");
+
+			console.log(variant_id);
 			var collection_id = $(this).data("collection");
 			var sellingplan_id = $(this).data("selling");
 
@@ -237,6 +240,7 @@ $(document).ready(function() {
 		});
 
 		const bundle = bundleObject;
+		console.log(bundle);
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 		console.log(bundleItems);
 		const cartData = { items: bundleItems };
@@ -286,7 +290,7 @@ $(document).ready(function() {
 		$(this).css("display", "none");
 		$(this).closest(".container-box").find(".product-quantity").addClass("show");
 		$html = $(this).closest(".productsimage").html();
-		$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + $var_id + "' data-product='"+$product_id+"' collection-id='"+$collection_id+"'>" + $html + "</div>");
+		$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + $var_id + "' data-product='"+$product_id+"' collection-id='"+$collection_id+"' data-collection='"+$collection_id+"'>" + $html + "</div>");
 		getcartTotalQty();
 	});
 
