@@ -196,7 +196,10 @@ $(document).ready(function() {
 		};
 		var static_frequancy = 15;
 		var selling_plan_id = $("#sellingPlan"+meta.product.id).val();
+		console.log(meta.product.id + " MTEA PRODUCT");
+		console.log(PRODUCT_ID + " PRODUCT ID");
 		console.log(selling_plan_id);
+		
 		if(selling_plan_id !==  undefined){
 			if(window.Recharge.widgets[meta.product.id] !== undefined){
 				var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
