@@ -67,7 +67,7 @@
       "settings": {
         "heading": "",
         "subheading": "",
-        "show_view_all": true,
+        "show_view_all": false,
         "section_heading_layout": "section-heading--left",
         "style": "grid",
         "layout": "grid-3 grid-lap-2 grid-tiny-1",
