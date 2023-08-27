@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "הדואר האלקטרוני שלך",
       "signup_form_submit": "שליחה",
       "signup_form_success": "נשלח לך דואר אלקטרוני ממש לפני שאנחנו פותחים!",
-      "admin_link_html": "האם אתם בעלי החנות? <a href=\"/admin\">היכנסו לחשבון כאן</a>\n",
+      "admin_link_html": "האם אתם בעלי החנות? <a href=\"\/admin\">היכנסו לחשבון כאן<\/a>\n",
       "password_link": "כניסה באמצעות סיסמה",
       "powered_by_shopify_html": "חנות זו תופעל באמצעות {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "אחורה",
       "play_video": "הפעל סרטון",
       "language_dropdown_label": "שפה",
-      "country_dropdown_label": "מדינה/אזור",
+      "country_dropdown_label": "מדינה\/אזור",
       "quantity": "כמות",
       "price": {
         "regular": "מחיר רגיל",
@@ -140,7 +140,7 @@
     "sort_button": "מיון",
     "sort_by_label": "מיון לפי:",
     "to": "ל-",
-    "use_fewer_filters_html": "השתמשו בפחות מסננים או <a class=\"{{ class }}\" href=\"{{ link }}\">נקו הכל</a>",
+    "use_fewer_filters_html": "השתמשו בפחות מסננים או <a class=\"{{ class }}\" href=\"{{ link }}\">נקו הכל<\/a>",
     "view_all_products": "צפייה בכל המוצרים",
     "no_collections": "אנו מצטערים, אין כרגע אוספים בחנות הזו.",
     "view_all_collections": "צפה בכל האוספים"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "טוען ביקורות נוספות",
       "include_taxes": "המס כלול.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">משלוח</a> מחושב בקופה.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">משלוח<\/a> מחושב בקופה.",
       "view_in_space": "צפו במרחב שלכם",
       "view_in_space_label": "צפו במרחב שלכם, הפריט ייטען בחלון מציאות רבודה",
       "sales_amount_html": "חסכת {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "עדכון עגלת קניות",
     "note": "הוראות הזמנה",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "מיסים ו-<a href=\"{{ link }}\">משלוח</a> מחושבים בקופה",
+      "taxes_and_shipping_policy_at_checkout_html": "מיסים ו-<a href=\"{{ link }}\">משלוח<\/a> מחושבים בקופה",
       "taxes_included_but_shipping_at_checkout": "המס כלול והמשלוח מחושב בקופה",
-      "taxes_included_and_shipping_policy_html": "המס כלול. <a href=\"{{ link }}\">משלוח</a> מחושב בקופה.",
+      "taxes_included_and_shipping_policy_html": "המס כלול. <a href=\"{{ link }}\">משלוח<\/a> מחושב בקופה.",
       "taxes_and_shipping_at_checkout": "מיסים ומשלוח מחושבים בקופה"
     },
     "empty": "עגלת הקניות שלך ריקה כרגע.",
@@ -429,8 +429,8 @@
     "check_other_stores": "בדיקת זמינות בחנויות אחרות",
     "pick_up_available": "האיסוף זמין",
     "pick_up_currently_unavailable": "האיסוף אינו זמין כרגע",
-    "pick_up_available_at_html": "האיסוף זמין ב-<strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "האיסוף כרגע אינו זמין ב-<strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "האיסוף זמין ב-<strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "האיסוף כרגע אינו זמין ב-<strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "צרו קשר עם החנות לאישור הכתובת",
     "refresh": "ריענון",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "מוצר זה אינו זמין לאיסוף באף חנות",
       "view_store_info": "פרטי החנות",
       "check_other_stores": "בדיקת זמינות בחנויות אחרות"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }

@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Ваша эл. почта",
       "signup_form_submit": "Отправить",
       "signup_form_success": "Мы отправим Вам эл. письмо прямо перед открытием!",
-      "admin_link_html": "Вы владелец магазина? <a href=\"/admin\">Войдите здесь</a>",
+      "admin_link_html": "Вы владелец магазина? <a href=\"\/admin\">Войдите здесь<\/a>",
       "password_link": "Войти при помощи пароля",
       "powered_by_shopify_html": "Этот магазин будет работать на {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Назад",
       "play_video": "Воспроизвести видео",
       "language_dropdown_label": "Язык",
-      "country_dropdown_label": "Страна/регион",
+      "country_dropdown_label": "Страна\/регион",
       "quantity": "Количество",
       "price": {
         "regular": "Стандартная цена",
@@ -140,7 +140,7 @@
     "sort_button": "Сортировать",
     "sort_by_label": "Сортировать по:",
     "to": "К",
-    "use_fewer_filters_html": "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>",
+    "use_fewer_filters_html": "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>",
     "view_all_products": "Просмотреть все товары",
     "no_collections": "Извините, в этом магазине сейчас нет коллекций.",
     "view_all_collections": "Посмотреть все коллекции"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Загрузка дополнительных отзывов",
       "include_taxes": "Налоговый сбор включен.",
-      "shipping_policy_html": "Стоимость <a href=\"{{ link }}\">доставки</a> подсчитывается при оформлении.",
+      "shipping_policy_html": "Стоимость <a href=\"{{ link }}\">доставки<\/a> подсчитывается при оформлении.",
       "view_in_space": "Посмотреть в своем помещении",
       "view_in_space_label": "При выборе просмотра в своем помещении товар загружается в окне дополненной реальности",
       "sales_amount_html": "вы экономите {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Обновить",
     "note": "Инструкции к заказу",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Налоги и стоимость <a href=\"{{ link }}\">доставки</a>, рассчитанные при оформлении заказа",
+      "taxes_and_shipping_policy_at_checkout_html": "Налоги и стоимость <a href=\"{{ link }}\">доставки<\/a>, рассчитанные при оформлении заказа",
       "taxes_included_but_shipping_at_checkout": "Сумма налога и стоимость доставки, рассчитанные при оформлении заказа",
-      "taxes_included_and_shipping_policy_html": "Налоги включены. <a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
+      "taxes_included_and_shipping_policy_html": "Налоги включены. <a href=\"{{ link }}\">Стоимость доставки<\/a> рассчитывается при оформлении заказа.",
       "taxes_and_shipping_at_checkout": "Налоги и стоимость доставки, рассчитанные при оформлении заказа"
     },
     "empty": "Ваша корзина сейчас пуста.",
@@ -429,8 +429,8 @@
     "check_other_stores": "Проверить наличие в других магазинах",
     "pick_up_available": "Доступен самовывоз",
     "pick_up_currently_unavailable": "Самовывоз сейчас недоступен",
-    "pick_up_available_at_html": "Самовывоз доступен по адресу <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Самовывоз в настоящее время недоступен по адресу <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Самовывоз доступен по адресу <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Самовывоз в настоящее время недоступен по адресу <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Свяжитесь с магазином, чтобы подтвердить адрес",
     "refresh": "Обновить",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Товар недоступен для самовывоза ни в одном магазине",
       "view_store_info": "Сведения о магазине",
       "check_other_stores": "Проверить наличие в других магазинах"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }

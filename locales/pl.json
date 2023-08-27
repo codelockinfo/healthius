@@ -19,7 +19,7 @@
     },
     "contact_form": {
       "title": "Napisz do nas",
-      "name_label": "Imię i nazwisko / Nazwa",
+      "name_label": "Imię i nazwisko \/ Nazwa",
       "email_label": "Adres e-mail",
       "phone_label": "Numer telefonu",
       "message_label": "Wiadomość:",
@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Twój adres e-mail",
       "signup_form_submit": "Prześlij",
       "signup_form_success": "Wyślemy Ci wiadomość e-mail tuż przed otwarciem!",
-      "admin_link_html": "Czy jesteś właścicielem sklepu? <a href=\"/admin\">Zaloguj się tutaj</a>",
+      "admin_link_html": "Czy jesteś właścicielem sklepu? <a href=\"\/admin\">Zaloguj się tutaj<\/a>",
       "password_link": "Wejdź za pomocą hasła",
       "powered_by_shopify_html": "Ten sklep będzie obsługiwany przez {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Wstecz",
       "play_video": "Odtwórz film",
       "language_dropdown_label": "Język",
-      "country_dropdown_label": "Kraj/region",
+      "country_dropdown_label": "Kraj\/region",
       "quantity": "Ilość",
       "price": {
         "regular": "Cena standardowa",
@@ -140,7 +140,7 @@
     "sort_button": "Sortuj",
     "sort_by_label": "Sortuj wg:",
     "to": "Do",
-    "use_fewer_filters_html": "Użyj mniejszej liczby filtrów lub <a class=\"{{ class }}\" href=\"{{ link }}\">wyczyść wszystko</a>",
+    "use_fewer_filters_html": "Użyj mniejszej liczby filtrów lub <a class=\"{{ class }}\" href=\"{{ link }}\">wyczyść wszystko<\/a>",
     "view_all_products": "Wyświetl wszystkie produkty",
     "no_collections": "Niestety, obecnie nie ma żadnych kolekcji w tym sklepie.",
     "view_all_collections": "Wyświetl wszystkie kolekcje"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Wczytuję więcej recenzji",
       "include_taxes": "Z wliczonym podatkiem.",
-      "shipping_policy_html": "Koszt <a href=\"{{ link }}\">wysyłki</a> obliczany jest przy finalizacji zamówienia.",
+      "shipping_policy_html": "Koszt <a href=\"{{ link }}\">wysyłki<\/a> obliczany jest przy finalizacji zamówienia.",
       "view_in_space": "Zobacz w swojej przestrzeni",
       "view_in_space_label": "Opcja „Zobacz w swojej przestrzeni” ładuje produkt w oknie rzeczywistości rozszerzonej",
       "sales_amount_html": "oszczędzasz {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Aktualizuj koszyk",
     "note": "Instrukcje dotyczące zamówienia",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Podatki i koszty <a href=\"{{ link }}\">wysyłki</a> obliczane przy realizacji zakupu",
+      "taxes_and_shipping_policy_at_checkout_html": "Podatki i koszty <a href=\"{{ link }}\">wysyłki<\/a> obliczane przy realizacji zakupu",
       "taxes_included_but_shipping_at_checkout": "Podatek wliczony w cenę i koszty wysyłki obliczone przy realizacji zakupu",
-      "taxes_included_and_shipping_policy_html": "Z wliczonym podatkiem. <a href=\"{{ link }}\">Koszt wysyłki</a> obliczony przy realizacji zakupu.",
+      "taxes_included_and_shipping_policy_html": "Z wliczonym podatkiem. <a href=\"{{ link }}\">Koszt wysyłki<\/a> obliczony przy realizacji zakupu.",
       "taxes_and_shipping_at_checkout": "Podatki i koszty wysyłki obliczane przy realizacji zakupu"
     },
     "empty": "Twój koszyk obecnie jest pusty.",
@@ -256,7 +256,7 @@
       "comment_posted": "Twój komentarz został pomyślnie opublikowany! Dziękujemy!",
       "no_comments_message": "Brak komentarzy do tego artykułu. Bądź pierwszą komentującą osobą!",
       "comments_form_title": "Zostaw komentarz",
-      "comments_form_name_label": "Imię i nazwisko / Nazwa",
+      "comments_form_name_label": "Imię i nazwisko \/ Nazwa",
       "comments_form_email_label": "Adres e-mail",
       "comments_form_message_label": "Wiadomość:",
       "comments_form_submit_label": "Przesyłanie komentarza",
@@ -373,7 +373,7 @@
         "address_2_label": "Linia adresu 2",
         "city_label": "Miejscowość",
         "country_label": "Kraj",
-        "province_label": "Województwo/prowincja",
+        "province_label": "Województwo\/prowincja",
         "zip_label": "Kod pocztowy",
         "phone_label": "Nr telefonu",
         "add_button": "Dodaj adres",
@@ -429,8 +429,8 @@
     "check_other_stores": "Sprawdź dostępność w innych sklepach",
     "pick_up_available": "Możliwy odbiór osobisty",
     "pick_up_currently_unavailable": "Odbiór osobisty jest obecnie niemożliwy",
-    "pick_up_available_at_html": "Odbiór osobisty możliwy w <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Odbiór osobisty jest obecnie niemożliwy w <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Odbiór osobisty możliwy w <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Odbiór osobisty jest obecnie niemożliwy w <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Skontaktuj się ze sklepem, by potwierdzić adres",
     "refresh": "Odśwież",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Ten produkt nie jest dostępny do odbioru w żadnym sklepie",
       "view_store_info": "Szczegóły sklepu",
       "check_other_stores": "Sprawdź dostępność w innych sklepach"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }

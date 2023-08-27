@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "お客様のメール",
       "signup_form_submit": "送信する",
       "signup_form_success": "開店の直前にメールでお知らせします",
-      "admin_link_html": "あなたはストアのオーナーですか？<a href=\"/admin\">ここからログイン</a>",
+      "admin_link_html": "あなたはストアのオーナーですか？<a href=\"\/admin\">ここからログイン<\/a>",
       "password_link": "パスワードを使用して入る",
       "powered_by_shopify_html": "このショップは {{ shopify }} を使用しています"
     },
@@ -82,7 +82,7 @@
       "back": "戻る",
       "play_video": "ビデオを再生する",
       "language_dropdown_label": "言語",
-      "country_dropdown_label": "国/地域",
+      "country_dropdown_label": "国\/地域",
       "quantity": "数量",
       "price": {
         "regular": "定価",
@@ -140,7 +140,7 @@
     "sort_button": "並べ替え",
     "sort_by_label": "並び順：",
     "to": "まで",
-    "use_fewer_filters_html": "フィルターの数を減らすか、<a class=\"{{ class }}\" href=\"{{ link }}\">すべてをクリア</a>してください",
+    "use_fewer_filters_html": "フィルターの数を減らすか、<a class=\"{{ class }}\" href=\"{{ link }}\">すべてをクリア<\/a>してください",
     "view_all_products": "すべての商品を表示",
     "no_collections": "申し訳ありませんが、現在このストアにはコレクションがありません。",
     "view_all_collections": "すべてのコレクションを表示する"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "さらにレビューを読み込んでいます",
       "include_taxes": "税込み。",
-      "shipping_policy_html": "<a href=\"{{ link }}\">送料</a>はチェックアウト時に計算されます。",
+      "shipping_policy_html": "<a href=\"{{ link }}\">送料<\/a>はチェックアウト時に計算されます。",
       "view_in_space": "お客様のスペースで表示する",
       "view_in_space_label": "お客様のスペースで表示し、拡張現実ウィンドウにアイテムを読み込む",
       "sales_amount_html": "{{ amount }}の割引が適用されます",
@@ -204,9 +204,9 @@
     "update": "アップデート",
     "note": "ご注文方法",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "税と<a href=\"{{ link }}\">配送料</a>は購入手続き時に計算されます",
+      "taxes_and_shipping_policy_at_checkout_html": "税と<a href=\"{{ link }}\">配送料<\/a>は購入手続き時に計算されます",
       "taxes_included_but_shipping_at_checkout": "税込みで、配送料は購入手続き時に計算されます",
-      "taxes_included_and_shipping_policy_html": "税込み。<a href=\"{{ link }}\">配送料</a>は購入手続き時に計算されます。",
+      "taxes_included_and_shipping_policy_html": "税込み。<a href=\"{{ link }}\">配送料<\/a>は購入手続き時に計算されます。",
       "taxes_and_shipping_at_checkout": "税と配送料は購入手続き時に計算されます"
     },
     "empty": "現在カートは空です。",
@@ -429,8 +429,8 @@
     "check_other_stores": "他のストアで在庫状況を確認する",
     "pick_up_available": "受け取り可能",
     "pick_up_currently_unavailable": "現在受け取りはできません",
-    "pick_up_available_at_html": "<strong>{{ location_name }}</strong> で店舗受取が利用できます",
-    "pick_up_unavailable_at_html": "現在、<strong>{{ location_name }}</strong> で店舗受取はできません",
+    "pick_up_available_at_html": "<strong>{{ location_name }}<\/strong> で店舗受取が利用できます",
+    "pick_up_unavailable_at_html": "現在、<strong>{{ location_name }}<\/strong> で店舗受取はできません",
     "invalid_location_address": "ストアに連絡して住所を確認する",
     "refresh": "リフレッシュ",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "この商品を受け取れるストアはありません",
       "view_store_info": "ストアの詳細",
       "check_other_stores": "他のストアの在庫状況を確認する"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }

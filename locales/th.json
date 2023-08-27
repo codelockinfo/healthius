@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "อีเมลของคุณ",
       "signup_form_submit": "ส่ง",
       "signup_form_success": "เราจะส่งอีเมลถึงคุณก่อนที่เราจะเปิดร้านนะ!",
-      "admin_link_html": "คุณเป็นเจ้าของร้านหรือไม่ <a href=\"/admin\">เข้าสู่ระบบที่นี่</a>",
+      "admin_link_html": "คุณเป็นเจ้าของร้านหรือไม่ <a href=\"\/admin\">เข้าสู่ระบบที่นี่<\/a>",
       "password_link": "เข้าโดยใช้รหัสผ่าน",
       "powered_by_shopify_html": "ร้านค้านี้จะถูกขับเคลื่อนโดย {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "กลับ",
       "play_video": "เล่นวิดีโอ",
       "language_dropdown_label": "ภาษา",
-      "country_dropdown_label": "ประเทศ/ภูมิภาค",
+      "country_dropdown_label": "ประเทศ\/ภูมิภาค",
       "quantity": "ปริมาณ",
       "price": {
         "regular": "ราคาปกติ",
@@ -140,7 +140,7 @@
     "sort_button": "เรียงลำดับ",
     "sort_by_label": "เรียงตาม:",
     "to": "ไปยัง",
-    "use_fewer_filters_html": "ใช้ตัวกรองน้อยลงหรือ <a class=\"{{ class }}\" href=\"{{ link }}\">ล้างทั้งหมด</a>",
+    "use_fewer_filters_html": "ใช้ตัวกรองน้อยลงหรือ <a class=\"{{ class }}\" href=\"{{ link }}\">ล้างทั้งหมด<\/a>",
     "view_all_products": "ดูผลิตภัณฑ์ทั้งหมด",
     "no_collections": "ขออภัย ขณะนี้ไม่มีคอลเลกชันในร้านค้านี้",
     "view_all_collections": "ดูคอลเลคชันทั้งหมด"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "กำลังโหลดรีวิวเพิ่มเติม",
       "include_taxes": "รวมภาษีแล้ว",
-      "shipping_policy_html": "<a href=\"{{ link }}\">การจัดส่ง</a> คำนวณเมื่อเช็กเอาต์",
+      "shipping_policy_html": "<a href=\"{{ link }}\">การจัดส่ง<\/a> คำนวณเมื่อเช็กเอาต์",
       "view_in_space": "ดูในพื้นที่ของคุณ",
       "view_in_space_label": "ดูในพื้นที่ของคุณ โหลดรายการในหน้าต่างความเป็นจริงส่วนขยาย",
       "sales_amount_html": "คุณประหยัดไป {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "อัปเดตรถเข็น",
     "note": "หมายเหตุเกี่ยวกับคำสั่งซื้อ",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "ระบบจะคำนวณภาษีและ<a href=\"{{ link }}\">ค่าจัดส่ง</a>ในขั้นตอนการชำระเงิน",
+      "taxes_and_shipping_policy_at_checkout_html": "ระบบจะคำนวณภาษีและ<a href=\"{{ link }}\">ค่าจัดส่ง<\/a>ในขั้นตอนการชำระเงิน",
       "taxes_included_but_shipping_at_checkout": "ระบบจะรวมภาษีและคำนวณค่าจัดส่งในขั้นตอนการชำระเงิน",
-      "taxes_included_and_shipping_policy_html": "รวมภาษีแล้ว <a href=\"{{ link }}\">ค่าจัดส่ง</a>ที่คิดคำนวณในระหว่างขั้นตอนการชำระเงิน",
+      "taxes_included_and_shipping_policy_html": "รวมภาษีแล้ว <a href=\"{{ link }}\">ค่าจัดส่ง<\/a>ที่คิดคำนวณในระหว่างขั้นตอนการชำระเงิน",
       "taxes_and_shipping_at_checkout": "ระบบจะคำนวณภาษีและค่าจัดส่งในขั้นตอนการชำระเงิน"
     },
     "empty": "ขณะนี้รถเข็นของคุณว่างเปล่า",
@@ -429,8 +429,8 @@
     "check_other_stores": "ตรวจสอบความพร้อมการให้บริการที่ร้านค้าอื่น ๆ",
     "pick_up_available": "มีจุดรับสินค้า",
     "pick_up_currently_unavailable": "ไม่มีจุดรับสินค้าในขณะนี้",
-    "pick_up_available_at_html": "มีจุดรับสินค้าที่ <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "ไม่มีจุดรับสินค้าในขณะนี้ที่ <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "มีจุดรับสินค้าที่ <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "ไม่มีจุดรับสินค้าในขณะนี้ที่ <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "ติดต่อร้านค้าเพื่อยืนยันที่อยู่",
     "refresh": "รีเฟรช",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "สินค้านี้ไม่มีให้บริการรับสินค้าที่ร้าน",
       "view_store_info": "รายละเอียดร้านค้า",
       "check_other_stores": "ตรวจสอบสินค้าในสต็อคของร้านอื่น"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
