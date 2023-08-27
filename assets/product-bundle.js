@@ -195,20 +195,22 @@ $(document).ready(function() {
 			selections: []
 		};
 		var static_frequancy = 15;
-		var selling_plan_id = '';
-
-		if(window.Recharge.widgets[meta.product.id] !== undefined){
-			var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
-			for(var i = 0; i < selling_plans.length; i++){
-				for(var j = 0; j < (selling_plans[i].selling_plans).length; j++ ){
+		var selling_plan_id = $("#sellingPlan"+meta.product.id).val();
+		console.log(selling_plan_id);
+		if(selling_plan_id !==  undefined){
+			if(window.Recharge.widgets[meta.product.id] !== undefined){
+				var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
+				for(var i = 0; i < selling_plans.length; i++){
+					for(var j = 0; j < (selling_plans[i].selling_plans).length; j++ ){
 						var selling_plan_details = selling_plans[i].selling_plans[j];
 						if(selling_plan_details.order_interval_frequency == static_frequancy){
 							selling_plan_id = selling_plan_details.selling_plan_id;
 						}
+					}
 				}
 			}
-
 		}
+
 		bundleObject.sellingPlan = selling_plan_id;
 		$.each($("#cartSummary .productsimage"), function() {
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
