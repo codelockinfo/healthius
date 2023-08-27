@@ -93,8 +93,8 @@
   <noscript>
     <link rel="stylesheet" href="{{ 'theme-noscript.css' | asset_url }}">
   </noscript>
-  {% if product.handle == "dummy-product-1" %}
-  <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+  {% if product.handle == "dummy-product-1" or product.handle == "fresh-bundle" %}
+  <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
   <script src="{{ 'product-bundle.js' | asset_url }}" defer></script>
   {% endif%}
 </head>

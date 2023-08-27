@@ -1,3 +1,4 @@
+console.log("onload js");
 $(document).on("click", ".productsimage .card__image", function(e) {
 	var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
 	e.preventDefault();
@@ -60,17 +61,18 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 });
 
 $(document).ready(function() {
-	const filterContainer = $(".tablisting");
+	const filterContainer = $(".mainboxli");
 	filterContainer.on("click", function() {
-		const filterUrl = $(this).attr('value') // Update with your actual collection URL + filters
-		$.get(filterUrl, function(data) {
-			console.log(data.__st);
+		var collection_id = $(this).data("collection-id");
+		const filterUrl = $(this).find(".tablisting").attr('value') // Update with your actual collection URL + filters
+		$.get(filterUrl, function(data) {			
 			$("#filtered-products .productsimage").css("display", "none");
 			$eachProduct = $(data).find("#main-collection-product-grid .product-item.card");
 			console.log($eachProduct);
 			$($eachProduct).each(function() {
 				console.log($(this).attr('data-product'));
 				$eachProductId = $(this).attr('data-product');
+				$(".productsimage[data-product='" + $eachProductId + "']").attr("data-collection",collection_id);
 				$(".productsimage[data-product='" + $eachProductId + "']").css("display", "block");
 			});
 		}).fail(function(error) {
@@ -183,55 +185,70 @@ $(document).ready(function() {
 	// });
 	
 	$('.addToCart').click(function(e) {
+		e.preventDefault();
+		$giftVariantid = $('.productSelect').attr("data-vid");
+		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+		var bundle_product_arr = {};
+		var bundleObject = {
+			externalProductId: PRODUCT_ID,
+			externalVariantId: $giftVariantid ,
+			selections: []
+		};
+		var static_frequancy = 15;
+		var selling_plan_id = '';
 
-	function recharge_checkout(){
+		if(window.Recharge.widgets[meta.product.id] !== undefined){
+			var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
+			for(var i = 0; i < selling_plans.length; i++){
+				for(var j = 0; j < (selling_plans[i].selling_plans).length; j++ ){
+						var selling_plan_details = selling_plans[i].selling_plans[j];
+						if(selling_plan_details.order_interval_frequency == static_frequancy){
+							selling_plan_id = selling_plan_details.selling_plan_id;
+						}
+				}
+			}
 
+		}
+		bundleObject.sellingPlan = selling_plan_id;
 		$.each($("#cartSummary .productsimage"), function() {
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
 			var variant_id = $(this).data("variant");
+			var collection_id = $(this).data("collection");
+			var sellingplan_id = $(this).data("selling");
 
-			var $currentvartitle = $(this).find(".variant-title").html();
-			$perticular_propertie = $currentVarQty + "*" + $currentvartitle;
-			selected_product_items.push($perticular_propertie);
+			var item_data = {
+				collectionId: collection_id,  // Example Shopify Collection
+        		externalProductId: product_id,  // Dynamic Product ID
+        		externalVariantId: variant_id,  // Dynamic Variant ID
+				quantity: $currentVarQty,  // Dynamic Quantity
+        		sellingPlan: sellingplan_id // Dynamic Selling Plan ID
+			}
+			bundleObject.selections.push(item_data);
+			
+			// var $currentvartitle = $(this).find(".variant-title").html();
+			// $perticular_propertie = $currentVarQty + "*" + $currentvartitle;
+			// selected_product_items.push($perticular_propertie);
 		});
 
-		return false;
-		const bundle = {
-			externalProductId: "8619519803673",  // Bundle's Shopify Product ID
-			externalVariantId: "46590253531417",  // Bundle's Shopify Variant ID
-			selections: [{
-			  collectionId: "460465537305",  // Shopify Collection 1
-			  externalProductId: "8598449291545",  // Shopify Product ID 1
-			  externalVariantId: "46476104368409",  // Shopify Variant ID 1
-			  quantity: 2,
-			  sellingPlan: 689133191449  // Product Selling Plan ID
-			},
-			{
-			  collectionId: "460465537305",  // Shopify Collection 2
-			  externalProductId: "8598445130009",  // Shopify Product ID 2
-			  externalVariantId: "46476085264665", // Shopify Variant ID 2
-			  quantity: 1,
-			  sellingPlan: 689133453593 // Product Selling Plan ID
-			}]
-		  };
-		  
-		  const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
-		  console.log(bundleItems);
-		  const cartData = { items: bundleItems };
-		  async () => {
+		const bundle = bundleObject;
+		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+		console.log(bundleItems);
+		const cartData = { items: bundleItems };
+		const asyncGetCall = async () => {
 
-		  const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(cartData),
 			  });
-			}
-			
+			  const data = await respons.json();
+			  console.log(data);
 			  window.location.href = '/checkout';
+			}
+			asyncGetCall();
 
-	}
-});
+	});
 
 	function addGiftproduct(giftVariantid) {
 		console.log(giftVariantid);
@@ -259,10 +276,12 @@ $(document).ready(function() {
 		console.log("addButton  click");
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$product_id = $(this).closest(".productsimage").data("product");
+		$selling_plan_id = $(this).closest(".productsimage").data("selling");
+		$collection_id = $(this).closest(".productsimage").data("collection");
 		$(this).css("display", "none");
 		$(this).closest(".container-box").find(".product-quantity").addClass("show");
 		$html = $(this).closest(".productsimage").html();
-		$(".box-summary").append("<div class='productsimage' data-variant='" + $var_id + "' data-product='"+$product_id+"'>" + $html + "</div>");
+		$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + $var_id + "' data-product='"+$product_id+"' collection-id='"+$collection_id+"'>" + $html + "</div>");
 		getcartTotalQty();
 	});
 
@@ -281,8 +300,10 @@ $(document).ready(function() {
 				$("div[data-variant='" + product_item + "']").find(".addButton").css("display", "none");
 				$("div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$product_id = $("div[data-variant='" + product_item + "']").data("product");
+				$collection_id = $("div[data-variant='" + product_item + "']").data("collection");
+				$selling_plan_id = $("div[data-variant='" + product_item + "']").data("selling");
 				$getHtml = $(".main-custombundle div[data-variant='" + product_item + "']").html();
-				$(".box-summary").append("<div class='productsimage' data-variant='" + product_item + "' data-product='"+$product_id+"'>" + $getHtml + "</div>");
+				$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + product_item + "' data-product='"+$product_id+"' data-collection='"+$collection_id+"'>" + $getHtml + "</div>");
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 			}
@@ -295,7 +316,7 @@ $(document).ready(function() {
 		var selected_item_qty = [];
 		var cartTotQty = 0;
 		var productPrice = 0;
-    var indicatore = 0;
+    	var indicatore = 0;
 		var inputtotalrange = 130;
 		$productPrices = 0;
 		$.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
@@ -304,7 +325,7 @@ $(document).ready(function() {
 			$currentVarQty = $(this).val();
 			$price = $(this).closest(".productsimage").find(".product-price--original").data("price");
 			console.log($price);
-			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
+			$Dataprice = ($price != undefined) ? $price.split("€") : 0;
 			if ($Dataprice != 0) {
 				$productPrices += $currentVarQty * parseInt($Dataprice[1]);
 				console.log($productPrices + "TP");
