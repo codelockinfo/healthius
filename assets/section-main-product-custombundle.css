@@ -680,7 +680,7 @@
     --tw-text-opacity: 1;
     font-size: 12px;
     top: -31px;
-    left: 38%;
+    /* left: 38%; */
     padding: 6px;
 }
 .deliverybox.hide{
@@ -767,9 +767,7 @@
     .frequentlyflex{
         display: none;
     }
-    .subscribename span{
-        left: 30%;
-    }
+    
 }
 .subscriptionlabel.active .disflex.justify-between{
     background-color: rgb(221 238 203 / 1);
@@ -792,4 +790,9 @@
     margin-right: 0.25rem;
     height: 0.75rem;
   }
+  .subscribename {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   /* cls015 end */
