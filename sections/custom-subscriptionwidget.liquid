@@ -10,11 +10,13 @@
           <div class="filterlabel">{{ section.settings.widgetheading }}</div>
         </div>
       </div>
+
       <div class="subscriptwidth">
         <div class="subscriptionlabel">
           <div class="subscribename">
             {{ section.settings.widgetlabel1 }}
             <span>{{ section.settings.widgetext1 }}</span>
+
           </div>
           <div class="disflex justify-between">
             <div class="distext">
@@ -31,12 +33,21 @@
             </div>
           </div>
         </div>
+
         <div class="subscriptionlabel sub-align">
           <div class="subscribename">
             {{ section.settings.widgetlabel2 }}
           </div>
+
         </div>
       </div>
+    </div>
+    <div class="deliverybox">
+      <span>{{ section.settings.deliverylabel }}</span>
+      <select>
+        <option>{{ section.settings.deliveryin15days }}</option>
+        <option>{{ section.settings.deliveryin30days }}</option>
+      </select>
     </div>
   </div>
 </div>
@@ -115,6 +126,21 @@
         "id": "widgetext5",
         "label": "Text5",
         "default": "Free New Flavor with Every Box"
+      }, {
+        "type": "text",
+        "id": "deliverylabel",
+        "label": "Delivery label",
+        "default": "Delivery"
+      }, {
+        "type": "text",
+        "id": "deliveryin15days",
+        "label": "Delivery value",
+        "default": "Delivery every 15 Days"
+      }, {
+        "type": "text",
+        "id": "deliveryin30days",
+        "label": "Delivery value",
+        "default": "Delivery every 30 Days"
       }, {
         "type": "select",
         "id": "seo_h_tag",
