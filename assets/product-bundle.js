@@ -223,7 +223,7 @@ $(document).ready(function() {
 
 			console.log(variant_id);
 			var collection_id = $(this).data("collection");
-			var sellingplan_id = $(this).data("selling");
+			var sellingplan_id = (selling_plan_id == '689131815193') ? $(this).data("selling15") : $(this).data("selling30");
 
 			var item_data = {
 				collectionId: collection_id,  // Example Shopify Collection
@@ -285,12 +285,13 @@ $(document).ready(function() {
 		console.log("addButton  click");
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$product_id = $(this).closest(".productsimage").data("product");
-		$selling_plan_id = $(this).closest(".productsimage").data("selling");
+		$selling_plan_15id = $(this).closest(".productsimage").data("selling15");
+		$selling_plan_30id = $(this).closest(".productsimage").data("selling30");
 		$collection_id = $(this).closest(".productsimage").data("collection");
 		$(this).css("display", "none");
 		$(this).closest(".container-box").find(".product-quantity").addClass("show");
 		$html = $(this).closest(".productsimage").html();
-		$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + $var_id + "' data-product='"+$product_id+"' collection-id='"+$collection_id+"' data-collection='"+$collection_id+"'>" + $html + "</div>");
+		$(".box-summary").append("<div class='productsimage' data-selling30='"+$selling_plan_30id+"' data-selling15='"+$selling_plan_15id+"' data-variant='" + $var_id + "' data-product='"+$product_id+"' collection-id='"+$collection_id+"' data-collection='"+$collection_id+"'>" + $html + "</div>");
 		getcartTotalQty();
 	});
 
@@ -310,9 +311,10 @@ $(document).ready(function() {
 				$("div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$product_id = $("div[data-variant='" + product_item + "']").data("product");
 				$collection_id = $("div[data-variant='" + product_item + "']").data("collection");
-				$selling_plan_id = $("div[data-variant='" + product_item + "']").data("selling");
+				$selling_plan_15id = $("div[data-variant='" + product_item + "']").data("selling15");
+				$selling_plan_30id = $("div[data-variant='" + product_item + "']").data("selling30");
 				$getHtml = $(".main-custombundle div[data-variant='" + product_item + "']").html();
-				$(".box-summary").append("<div class='productsimage' data-selling='"+$selling_plan_id+"' data-variant='" + product_item + "' data-product='"+$product_id+"' data-collection='"+$collection_id+"'>" + $getHtml + "</div>");
+				$(".box-summary").append("<div class='productsimage' data-selling30='"+$selling_plan_30id+"' data-selling15='"+$selling_plan_15id+"' data-variant='" + product_item + "' data-product='"+$product_id+"' data-collection='"+$collection_id+"'>" + $getHtml + "</div>");
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 			}
