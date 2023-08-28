@@ -1,0 +1,151 @@
+<div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+  {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
+  <div>
+    <div class="displayflex-subscription newcustomfilter">
+      <div>
+        <div class="seconfsection">
+          <span class="seconfsectiontext">1</span>
+        </div>
+        <div class="filterlabelmain">
+          <div class="filterlabel">{{ section.settings.widgetheading }}</div>
+        </div>
+      </div>
+      <div class="subscriptionlabel1">
+        <div>
+          {{ section.settings.widgetlabel1 }}
+          <span>{{ section.settings.widgetext1 }}</span>
+        </div>
+        <div>
+          <div>
+            <ul>
+              <li>{{ section.settings.widgetext2 }}</li>
+              <li>{{ section.settings.widgetext3 }}</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>{{ section.settings.widgetext4 }}</li>
+              <li>{{ section.settings.widgetext5 }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subscriptionlabel2">
+        <div>
+          {{ section.settings.widgetlabel2 }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Subscription widget",
+    "class": "subscription-widget",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:local-march-update.labels.heading"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:sections.local-extra-words.sections.headings.heading",
+        "default": "Get your meats now"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "t:sections.local-extra-words.sections.headings.subheading",
+        "default": "We guarantee you'll love it or your money back !"
+      },
+      {
+        "type": "select",
+        "id": "section_heading_layout",
+        "label": "t:sections.rich-text.settings.text_alignment.label",
+        "options": [
+          {
+            "value": "section-heading--left",
+            "label": "t:sections.rich-text.settings.text_alignment.options__1.label"
+          }, {
+            "value": "section-heading--center",
+            "label": "t:sections.rich-text.settings.text_alignment.options__2.label"
+          }
+        ],
+        "default": "section-heading--left"
+      }, {
+        "type": "text",
+        "id": "widgetheading",
+        "label": "Text",
+        "default": "Select frequency"
+      }, {
+        "type": "text",
+        "id": "widgetlabel1",
+        "label": "Label",
+        "default": "Subscribe & Save"
+      }, {
+        "type": "text",
+        "id": "widgetlabel2",
+        "label": "Label",
+        "default": "One Time"
+      }, {
+        "type": "text",
+        "id": "widgetext1",
+        "label": "Text1",
+        "default": "Save 25% on your first order "
+      }, {
+        "type": "text",
+        "id": "widgetext2",
+        "label": "Text2",
+        "default": "$15 Off First Order"
+      }, {
+        "type": "text",
+        "id": "widgetext3",
+        "label": "Text3",
+        "default": "5 Day Email Reminder - Cancel Anytime"
+      }, {
+        "type": "text",
+        "id": "widgetext4",
+        "label": "Text4",
+        "default": "$4 Off Future Orders"
+      }, {
+        "type": "text",
+        "id": "widgetext5",
+        "label": "Text5",
+        "default": "Free New Flavor with Every Box"
+      }, {
+        "type": "select",
+        "id": "seo_h_tag",
+        "label": "t:sections.refactor_words.seo.label",
+        "info": "t:sections.refactor_words.seo.info",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          }, {
+            "value": "span",
+            "label": "span"
+          }
+        ],
+        "default": "h2"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Subscription widget"
+      }
+    ]
+  }
+{% endschema %}
