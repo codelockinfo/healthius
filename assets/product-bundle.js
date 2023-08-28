@@ -186,7 +186,7 @@ $(document).ready(function() {
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
-		$giftVariantid = $(".product_variant_id").val();
+		$giftVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
 		var bundle_product_arr = {};
 		var bundleObject = {
@@ -252,15 +252,16 @@ $(document).ready(function() {
 				body: JSON.stringify(cartData),
 			  });
 			  const data = await respons.json();
-			  console.log(data);
-			  window.location.href = '/checkout';
+			if($giftVariantid !== undefined){
+				addGiftproduct($giftVariantid);
+			}else{
+				window.location.href = '/checkout';
 			}
+		}
 			asyncGetCall();
-
 	});
 
 	function addGiftproduct(giftVariantid) {
-		console.log(giftVariantid);
 		$.ajax({
 			url: '/cart/add.js',
 			dataType: 'json',

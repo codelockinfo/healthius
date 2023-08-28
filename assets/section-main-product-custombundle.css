@@ -678,11 +678,9 @@
     text-transform: uppercase;
     line-height: 1.5;
     --tw-text-opacity: 1;
-    -webkit-transform: translateX(-50%);
-    transform: translate(-50%);
     font-size: 12px;
     top: -31px;
-    right: 50px;
+    left: 38%;
     padding: 6px;
 }
 .deliverybox.hide{
@@ -715,7 +713,7 @@
     text-align: center;
     line-height: 1;
     outline-offset: 4px;
-    border: 1px solid #f3f4f6;
+    border: 3px solid #f3f4f6;
     /* --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(0 0 #0000, 0 0 #0000),var(0 0 #0000, 0 0 #0000),var(--tw-shadow); */
@@ -732,10 +730,11 @@
 }
 .distext ul li{
     display: flex;
-    font-size: .875rem;
-    line-height: 1.25rem;
     align-items: center;
     margin-bottom: 0.25rem;
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1rem;
 }
 .subscribename {
     cursor: pointer;
@@ -747,9 +746,50 @@
 .distext ul{
     padding: 3px 0;
 }
-@media (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .subscriptwidth{
         flex-wrap: wrap;
     }
+    .subscriptionlabel {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+    .subscriptionlabel.sub-align {
+        margin-top: 10px;
+    }
+    .disflex.justify-between {
+        max-width: 35rem;
+        margin: 0 auto;
+    }
 }
+@media screen and (max-width: 1024px) {
+    .frequentlyflex{
+        display: none;
+    }
+    .subscribename span{
+        left: 30%;
+    }
+}
+.subscriptionlabel.active .disflex.justify-between{
+    background-color: rgb(221 238 203 / 1);
+  }
+  .subscriptionlabel.active .subscribename span{
+    background-color:#83bf52;
+    color: rgb(255 255 255 / 1);
+  }
+  .subscriptionlabel.active .subscribename{
+    border-color: #83bf52;
+  
+  }
+  .subscriptionlabel.active .svgcolor{
+    color: #83bf52;
+  }
+  .svgcolor{
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+    width: 0.75rem;
+    margin-right: 0.25rem;
+    height: 0.75rem;
+  }
   /* cls015 end */
