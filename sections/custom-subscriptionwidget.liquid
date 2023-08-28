@@ -2,7 +2,7 @@
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
   <div>
     <div class="displayflex-subscription newcustomfilter">
-      <div>
+      <div class="frequentlyflex">
         <div class="seconfsection">
           <span class="seconfsectiontext">1</span>
         </div>
@@ -10,29 +10,31 @@
           <div class="filterlabel">{{ section.settings.widgetheading }}</div>
         </div>
       </div>
-      <div class="subscriptionlabel1">
-        <div>
-          {{ section.settings.widgetlabel1 }}
-          <span>{{ section.settings.widgetext1 }}</span>
-        </div>
-        <div>
-          <div>
-            <ul>
-              <li>{{ section.settings.widgetext2 }}</li>
-              <li>{{ section.settings.widgetext3 }}</li>
-            </ul>
+      <div class="subscriptwidth">
+        <div class="subscriptionlabel">
+          <div class="subscribename">
+            {{ section.settings.widgetlabel1 }}
+            <span>{{ section.settings.widgetext1 }}</span>
           </div>
-          <div>
-            <ul>
-              <li>{{ section.settings.widgetext4 }}</li>
-              <li>{{ section.settings.widgetext5 }}</li>
-            </ul>
+          <div class="disflex justify-between">
+            <div class="distext">
+              <ul>
+                <li>{{ section.settings.widgetext2 }}</li>
+                <li>{{ section.settings.widgetext3 }}</li>
+              </ul>
+            </div>
+            <div class="distext">
+              <ul>
+                <li>{{ section.settings.widgetext4 }}</li>
+                <li>{{ section.settings.widgetext5 }}</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="subscriptionlabel2">
-        <div>
-          {{ section.settings.widgetlabel2 }}
+        <div class="subscriptionlabel sub-align">
+          <div class="subscribename">
+            {{ section.settings.widgetlabel2 }}
+          </div>
         </div>
       </div>
     </div>
