@@ -53,7 +53,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
   {%- render 'head-variables', direction: direction -%}
 
   {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {% if product.handle == "dummy-product-1" %}
+  {% if product.handle == "dummy-product-1" or product.handle == "fresh-bundle"%}
     {{ 'custombundleproduct.css' | asset_url | stylesheet_tag }}
   {% endif %}
 	{{ content_for_header }}
