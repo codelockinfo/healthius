@@ -770,18 +770,18 @@
     
 }
 .subscriptionlabel.active .disflex.justify-between{
-    background-color: rgb(221 238 203 / 1);
-  }
+    background-color: #d5e1c9;
+}
   .subscriptionlabel.active .subscribename span{
-    background-color:#83bf52;
+    background-color:#425B34;
     color: rgb(255 255 255 / 1);
   }
   .subscriptionlabel.active .subscribename{
-    border-color: #83bf52;
+    border-color: #425B34;
   
   }
   .subscriptionlabel.active .svgcolor{
-    color: #83bf52;
+    color: #425B34;
   }
   .svgcolor{
     --tw-text-opacity: 1;
