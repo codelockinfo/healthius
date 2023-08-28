@@ -83,7 +83,8 @@
         "fd149ccd-0e28-435d-9c21-174a47fd0a74"
       ],
       "custom_css": [
-        ".productsimage .product-item {cursor: pointer;}"
+        ".productsimage .product-item {cursor: pointer;}",
+        ".giftProduct .product-item__quick-buy{display:none;}"
       ],
       "settings": {
         "heading": "",
