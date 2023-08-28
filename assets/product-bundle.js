@@ -398,6 +398,18 @@ $(document).ready(function() {
 		$(".cartcolumn").removeClass("active");
 	});
 });
+$(document).on("click",".subscriptionOption",function(){
+    console.log("CLICK");
+    $(this).addClass("active");
+    $(".onetimeOption").removeClass("active");
+    $(".deliverybox").removeClass("hide");
+});
+$(document).on("click",".onetimeOption",function(){
+    console.log("CLICK");
+    $(this).addClass("active");
+    $(".subscriptionOption").removeClass("active");
+    $(".deliverybox").addClass("hide");
+});
 
 function setCookie(name, value, daysToExpire) {
 	var date = new Date();
