@@ -399,14 +399,14 @@ $(document).ready(function() {
 });
 $(document).on("click",".subscriptionOption",function(){
     console.log("CLICK");
-    $(this).addClass("active");
-    $(".onetimeOption").removeClass("active");
+    $(this).closest(".subscriptionlabel").addClass("active");
+    $(".onetimeOption").closest(".subscriptionlabel").removeClass("active");
     $(".deliverybox").removeClass("hide");
 });
 $(document).on("click",".onetimeOption",function(){
     console.log("CLICK");
-    $(this).addClass("active");
-    $(".subscriptionOption").removeClass("active");
+    $(this).closest(".subscriptionlabel").addClass("active");
+    $(".subscriptionOption").closest(".subscriptionlabel").removeClass("active");
     $(".deliverybox").addClass("hide");
 });
 
