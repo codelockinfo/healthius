@@ -53,13 +53,13 @@
     "7d74e3c2-914c-46a3-889a-da1251a4f605": {
       "type": "featured-bundle-collection",
       "blocks": {
-        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1": {
-          "type": "price",
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-title-1": {
+          "type": "title",
           "settings": {
           }
         },
-        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-title-1": {
-          "type": "title",
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1": {
+          "type": "price",
           "settings": {
           }
         },
@@ -77,8 +77,8 @@
         }
       },
       "block_order": [
-        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1",
         "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-title-1",
+        "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-price-1",
         "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1",
         "fd149ccd-0e28-435d-9c21-174a47fd0a74"
       ],
@@ -89,7 +89,7 @@
         "section_heading_layout": "section-heading--left",
         "style": "grid",
         "layout": "grid-3 grid-lap-2 grid-tiny-1",
-        "products_number": 8,
+        "products_number": 16,
         "collection": "temp",
         "collection1": "beef",
         "collection2": "brisket",
