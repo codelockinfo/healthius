@@ -208,6 +208,7 @@
 }
 .subscription-widget .container--has-background{
     padding-top: 0;
+    padding-bottom: 0;
 }
 /* progressbar */
 .range-labels {
@@ -693,6 +694,12 @@
 }
 .deliverybox.hide{
     display: none;
+}
+.rc-button-group__options{
+    display: none !important;
+}
+ .rc-selling-plans.hide{
+      display: none !important;
   }
   .disflex{
     display: flex;

@@ -197,6 +197,8 @@ $(document).ready(function() {
 				}else{
 					onetimeAddtocart();
 				}
+			}else{
+				onetimeAddtocart();
 			}
 		});
 	});
@@ -482,6 +484,8 @@ $(document).ready(function() {
 		$(this).closest(".subscriptionlabel").addClass("active");
 		$(".onetimeOption").closest(".subscriptionlabel").removeClass("active");
 		$(".deliverybox").removeClass("hide");
+		$(".rc-selling-plans").removeClass("hide");
+
 		getcartTotalQty();
 	});
 	$(document).on("click",".onetimeOption",function(){
@@ -489,6 +493,7 @@ $(document).ready(function() {
 		$(this).closest(".subscriptionlabel").addClass("active");
 		$(".subscriptionOption").closest(".subscriptionlabel").removeClass("active");
 		$(".deliverybox").addClass("hide");
+		$(".rc-selling-plans").addClass("hide");
 		getcartTotalQty();
 	});
 });

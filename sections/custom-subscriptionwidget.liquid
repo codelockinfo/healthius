@@ -52,10 +52,12 @@
     </div>
     <div class="deliverybox">
     {% if section.settings.deliverylabel  != blank %} <span>{{ section.settings.deliverylabel }}</span>{% endif %}
+    {% if section.settings.deliveryin15days  != blank %}   
       <select>
-        {% if section.settings.deliveryin15days  != blank %} <option>{{ section.settings.deliveryin15days }}</option>{% endif %}
+        <option>{{ section.settings.deliveryin15days }}</option>
         {% if section.settings.deliveryin30days  != blank %} <option>{{ section.settings.deliveryin30days }}</option>{% endif %}
       </select>
+    {% endif %}
     </div>
   </div>
 </div>
