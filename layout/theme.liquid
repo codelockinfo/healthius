@@ -132,7 +132,7 @@
   <main id="main" class="main-content 
     {% if settings.product_card_align_buy %} main-content--align-product-items {% endif %}
   ">
-  {% unless product.handle == "dummy-product-1" %}
+  {% unless product.handle == "dummy-product-1"  or product.handle == "fresh-bundle"%}
     {%- render 'breadcrumb' -%}
   {% endunless %}
     {{ content_for_layout }}

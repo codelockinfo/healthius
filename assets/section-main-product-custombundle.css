@@ -165,7 +165,7 @@
 }
 .box-summary::-webkit-scrollbar-track
 {
-	border: 1px solid #425B34;
+	border: 1px solid #707070;
 	background-color: #F5F5F5;
 }
 
@@ -177,7 +177,7 @@
 
 .box-summary::-webkit-scrollbar-thumb
 {
-	background-color: #425B34;	
+	background-color: #1C7084;	
 }
 .box-header{
         border: 1px solid rgb(211 211 211);
@@ -200,7 +200,7 @@
 .box-header-title{
     text-align: center;
     padding: 1.25rem 0;
-    background: #425B34;
+    background: #131515;
     color: #fff;
 }
 .box-footer .button{
@@ -209,6 +209,12 @@
 .subscription-widget .container--has-background{
     padding-top: 0;
     padding-bottom: 0;
+}
+.subscription-widget .section-heading__title{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin-bottom: 0;
 }
 /* progressbar */
 .range-labels {
@@ -238,7 +244,7 @@
     margin: 0 auto;
     width: 20px;
     height: 20px;
-    background: #425B34;
+    background: #1C7084;
     border-radius: 50%;
 }
 .progress-container{
@@ -284,12 +290,18 @@
     left:-50px;
     /* border: 3px solid #016b21; */
     outline: none;
-    background: #016b21;
+    background: #1C7084;
+    background-color: #1C7084;
+    box-shadow: -50rem 0 5rem 20rem #1C7084,
+                -40rem 0 5rem 30rem #1C7084,
+                -30rem 0 2rem 25rem #1C7084,
+                -25.5rem 0 0 25rem  #1C7084;
+    /* background: #016b21;
     background-color: #016b21;
     box-shadow: -50rem 0 5rem 20rem #425B34,
                 -40rem 0 5rem 30rem #425B34,
                 -30rem 0 2rem 25rem #425B34,
-                -25.5rem 0 0 25rem  #425B34;
+                -25.5rem 0 0 25rem  #425B34; */
   }
 
   .range-input input::-webkit-slider-thumb:hover{
@@ -354,7 +366,7 @@
 }
 .mainboxli{
     width: 150px;
-    background: #425B34;
+    background: #862E1B;
     text-align: center;
     padding: 7px 0;
     margin-right: 10px;
@@ -371,15 +383,18 @@
 .filterlabel{
     /* font-size: 32px;
     font-weight: bold; */
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
 }
 .tablisting{
     /* padding: 10px 20px; */
     border: 1px solid transparent;
     color: #fff;
-    background: #425B34;
+    background: #862E1B;
     font-size: 16px;
     cursor: pointer;
-    font-weight: 600;
+    /* font-weight: 600; */
     /* border-radius: var(--border-radius-buttons); */
 }
 .newcustomfilter .seconfsection{
@@ -397,6 +412,7 @@
     border-radius: 40px;
     padding: 5px 0;
     font-weight: 900;
+    font-size: 22px;
 }
 .customfilter {
     display: none;
@@ -688,7 +704,7 @@
     line-height: 1.5;
     --tw-text-opacity: 1;
     font-size: 12px;
-    top: -31px;
+    top: -33px;
     /* left: 38%; */
     padding: 6px;
 }
@@ -700,6 +716,9 @@
 }
  .rc-selling-plans.hide{
       display: none !important;
+  }
+  .mount-app .container{
+    margin-top: 0 !important;
   }
   .disflex{
     display: flex;
@@ -720,7 +739,7 @@
     -ms-flex: 1 1 0%;
     flex: 1 1 0%;
     cursor: pointer;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     border-width: 2px;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -728,7 +747,8 @@
     text-align: center;
     line-height: 1;
     outline-offset: 4px;
-    border: 3px solid #f3f4f6;
+    /* border: 3px solid #f3f4f6; */
+    border: 3px solid #862E1B;
     /* --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(0 0 #0000, 0 0 #0000),var(0 0 #0000, 0 0 #0000),var(--tw-shadow); */
@@ -761,6 +781,10 @@
 .distext ul{
     padding: 3px 0;
 }
+.customborder{
+    border-top: 4px solid #131515;
+    opacity: 0.3;
+}
 @media screen and (max-width: 1024px) {
     .subscriptwidth{
         flex-wrap: wrap;
@@ -785,18 +809,19 @@
     
 }
 .subscriptionlabel.active .disflex.justify-between{
-    background-color: #d5e1c9;
+    background-color: #EBEAE9;
 }
   .subscriptionlabel.active .subscribename span{
-    background-color:#425B34;
+    background-color:#131515;
     color: rgb(255 255 255 / 1);
   }
   .subscriptionlabel.active .subscribename{
-    border-color: #425B34;
-  
+    border-color: #862E1B; 
+    background: #862E1B;
+    color: #fff;
   }
   .subscriptionlabel.active .svgcolor{
-    color: #425B34;
+    color: #131515;
   }
   .svgcolor{
     --tw-text-opacity: 1;
@@ -813,7 +838,7 @@
 .filterlabelmain {
     margin-top: 8px;
 }
-    @media only screen and (max-width: 1107px) and (min-width: 1023px){ 
+@media only screen and (max-width: 1107px) and (min-width: 1023px){ 
     .distext ul li{    
     font-size: 0.60rem;
     }
@@ -861,16 +886,21 @@
     border-radius: 40px;
     font-weight: 900;
     padding: 4px 10px;
+    font-size: 22px;
+    margin-bottom: 0;
 }
 .mount-css-slider .section-heading{
     display: block;
 }
 .mount-css-slider span.section-heading__subheading.text-size--large{
-font: normal normal bold 22px/30px Roboto;
+/* font: normal normal bold 22px/30px Roboto; */
 letter-spacing: 0px;
 color: #131515;
 opacity: 1;
-margin-left: 50px;
+text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+/* margin-left: 50px; */
 }
 .bundle_flex {
     display: flex;

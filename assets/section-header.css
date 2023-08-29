@@ -1019,6 +1019,8 @@ html[dir=rtl] .site-nav.style--classic .submenu.mega-menu {
   justify-content: center;
   padding: 0.3125rem 1.25rem;
   font-size: calc(14px / 16 * var(--base-body-size) + 0px);
+  font-size: 18px;
+  font-weight: 600;
   cursor: default;
 }
 .announcement-bar__content-nav {
