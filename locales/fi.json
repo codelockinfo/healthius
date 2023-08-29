@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Sähköpostiosoitteesi",
       "signup_form_submit": "Lähetä",
       "signup_form_success": "Lähetämme sinulle sähköpostia juuri ennen kuin avaamme!",
-      "admin_link_html": "Oletko kaupan omistaja? <a href=\"/admin\">Kirjaudu tästä</a>",
+      "admin_link_html": "Oletko kaupan omistaja? <a href=\"\/admin\">Kirjaudu tästä<\/a>",
       "password_link": "Siirry käyttäen salasanaa",
       "powered_by_shopify_html": "Tämän kaupan palvelun tarjoaa {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Takaisin",
       "play_video": "Toista video",
       "language_dropdown_label": "Kieli",
-      "country_dropdown_label": "Maa/alue",
+      "country_dropdown_label": "Maa\/alue",
       "quantity": "Määrä",
       "price": {
         "regular": "Vakituinen hinta",
@@ -95,7 +95,7 @@
         "pinterest": "Jaa Pinterestissä"
       },
       "rating": "arvosana",
-      "rating_info": "Arvosana: {{ rating_value }}/{{ rating_max }}",
+      "rating_info": "Arvosana: {{ rating_value }}\/{{ rating_max }}",
       "form_error": "Virhe",
       "go_to_top": "Siirry ylös",
       "top": "Ylhäällä"
@@ -129,8 +129,8 @@
     },
     "max_price_html": "Korkein hinta on {{ price }}",
     "product_count": {
-      "one": "{{ product_count }}/{{ count }} tuote",
-      "other": "{{ product_count }}/{{ count }} tuotetta"
+      "one": "{{ product_count }}\/{{ count }} tuote",
+      "other": "{{ product_count }}\/{{ count }} tuotetta"
     },
     "product_count_simple": {
       "one": "{{ count }} tuote",
@@ -140,7 +140,7 @@
     "sort_button": "Lajittele",
     "sort_by_label": "Lajitteluperuste:",
     "to": "Päättyy",
-    "use_fewer_filters_html": "Käytä vähemmän suodattimia tai <a class=\"{{ class }}\" href=\"{{ link }}\">tyhjennä kaikki</a>",
+    "use_fewer_filters_html": "Käytä vähemmän suodattimia tai <a class=\"{{ class }}\" href=\"{{ link }}\">tyhjennä kaikki<\/a>",
     "view_all_products": "Näytä kaikki tuotteet",
     "no_collections": "Olemme pahoillamme, mutta tässä kaupassa ei ole tällä hetkellä yhtään kokoelmaa.",
     "view_all_collections": "Näytä kaikki kokoelmat"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Ladataan lisää arvosteluja",
       "include_taxes": "Sisältää veron.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Toimituskulut</a> lasketaan kassalla.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Toimituskulut<\/a> lasketaan kassalla.",
       "view_in_space": "Näytä omassa tilassasi",
       "view_in_space_label": "Näytä omassa tilassasi, lataa kohteen lisätyn todellisuuden ikkunaan",
       "sales_amount_html": "säästät {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Päivitä ostoskori",
     "note": "Tilausohjeet",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Verot ja <a href=\"{{ link }}\">toimituskulut</a> lasketaan kassalla",
+      "taxes_and_shipping_policy_at_checkout_html": "Verot ja <a href=\"{{ link }}\">toimituskulut<\/a> lasketaan kassalla",
       "taxes_included_but_shipping_at_checkout": "Sisältää veron, ja toimituskulut lasketaan kassalla",
-      "taxes_included_and_shipping_policy_html": "Sisältää veron. <a href=\"{{ link }}\">Toimituskulut</a> lasketaan kassalla.",
+      "taxes_included_and_shipping_policy_html": "Sisältää veron. <a href=\"{{ link }}\">Toimituskulut<\/a> lasketaan kassalla.",
       "taxes_and_shipping_at_checkout": "Verot ja toimituskulut lasketaan kassalla"
     },
     "empty": "Ostoskorisi on tällä hetkellä tyhjä.",
@@ -287,7 +287,7 @@
       "results_count": {
         "zero": "Ei tuloksia",
         "one": "Näytetään {{ count }} hakutulos",
-        "other": "Näytetään {{ offset }} - {{ page_size }} /{{ count }} hakutuloksesta"
+        "other": "Näytetään {{ offset }} - {{ page_size }} \/{{ count }} hakutuloksesta"
       },
       "form_placeholder": "Kirjoita hakusana tähän",
       "search_button_label": "Haku",
@@ -429,8 +429,8 @@
     "check_other_stores": "Tarkista saatavuus muissa kaupoissa",
     "pick_up_available": "Noutomahdollisuus",
     "pick_up_currently_unavailable": "Nouto ei ole tällä hetkellä mahdollinen",
-    "pick_up_available_at_html": "Noutomahdollisuus kohteessa <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Nouto ei tällä hetkellä ole mahdollinen kohteessa <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Noutomahdollisuus kohteessa <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Nouto ei tällä hetkellä ole mahdollinen kohteessa <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Ota yhteys kauppaan osoitteen varmistamiseksi",
     "refresh": "Päivitä",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Tämä tuote ei ole noudettavissa yhdestäkään kaupasta",
       "view_store_info": "Kaupan tiedot",
       "check_other_stores": "Tarkista saatavuus muissa kaupoissa"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
