@@ -4,7 +4,7 @@
 <div class="container--large container--vertical-space">
 
 	<h1 class="h2 gutter-bottom--small">{{ 'customers.account_page.title' | t }}</h1>
-
+	<p><a href="/tools/recurring/login/" class="button button--outline button--small">Manage Subscriptions</a></p>
   {% if shop.customer_accounts_enabled and customer %}
     <a class="button button--outline button--small" href="{{ routes.account_logout_url }}">{{ 'customers.login_page.form_logout_button' | t }}</a>
   {% endif %}
@@ -81,7 +81,6 @@
 				<div class="account-widget__head">
 					<span>{{ customer.name }}</span>
 				</div>
-				<p><a href="/tools/recurring/login/">Manage Subscriptions</a></p>
 
 				<div class="account-widget__body">
 					
