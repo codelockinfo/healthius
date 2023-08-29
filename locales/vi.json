@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Email của bạn",
       "signup_form_submit": "Gửi",
       "signup_form_success": "Chúng tôi sẽ gửi email cho bạn ngay trước khi chúng tôi mở cửa!",
-      "admin_link_html": "Bạn là chủ cửa hàng? <a href=\"/admin\">Đăng nhập tại đây</a>",
+      "admin_link_html": "Bạn là chủ cửa hàng? <a href=\"\/admin\">Đăng nhập tại đây<\/a>",
       "password_link": "Vào bằng mật khẩu",
       "powered_by_shopify_html": "Cửa hàng này sẽ được cung cấp bởi {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Quay lại",
       "play_video": "Phát video",
       "language_dropdown_label": "Ngôn ngữ",
-      "country_dropdown_label": "Quốc gia/vùng",
+      "country_dropdown_label": "Quốc gia\/vùng",
       "quantity": "Số lượng",
       "price": {
         "regular": "Giá thông thường",
@@ -95,7 +95,7 @@
         "pinterest": "Chia sẻ trên pinterest"
       },
       "rating": "xếp hạng",
-      "rating_info": "Xếp hạng : {{ rating_value }} / {{ rating_max }}",
+      "rating_info": "Xếp hạng : {{ rating_value }} \/ {{ rating_max }}",
       "form_error": "Lỗi",
       "go_to_top": "Lên đầu trang",
       "top": "Trên cùng"
@@ -129,8 +129,8 @@
     },
     "max_price_html": "Giá cao nhất là {{ price }}",
     "product_count": {
-      "one": "{{ product_count }} / {{ count }} sản phẩm",
-      "other": "{{ product_count }} / {{ count }} sản phẩm"
+      "one": "{{ product_count }} \/ {{ count }} sản phẩm",
+      "other": "{{ product_count }} \/ {{ count }} sản phẩm"
     },
     "product_count_simple": {
       "one": "{{ count }} sản phẩm",
@@ -140,7 +140,7 @@
     "sort_button": "Sắp xếp",
     "sort_by_label": "Sắp xếp theo:",
     "to": "Đến",
-    "use_fewer_filters_html": "Sử dụng ít bộ lọc hơn hoặc <a class=\"{{ class }}\" href=\"{{ link }}\">xóa tất cả</a>",
+    "use_fewer_filters_html": "Sử dụng ít bộ lọc hơn hoặc <a class=\"{{ class }}\" href=\"{{ link }}\">xóa tất cả<\/a>",
     "view_all_products": "Xem tất cả sản phẩm",
     "no_collections": "Chúng tôi rất tiếc, hiện tại không có bộ sưu tập nào trên cửa hàng này.",
     "view_all_collections": "Xem tất cả các bộ sưu tập"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Đang tải thêm đánh giá",
       "include_taxes": "Đã bao gồm thuế.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Phí vận chuyển</a> được tính khi thanh toán.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Phí vận chuyển<\/a> được tính khi thanh toán.",
       "view_in_space": "Xem trong không gian của bạn",
       "view_in_space_label": "Xem trong không gian của bạn, tải vật phẩm trong cửa sổ thực tế tăng cường",
       "sales_amount_html": "bạn tiết kiệm {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Cập nhật giỏ hàng",
     "note": "Hướng dẫn đặt hàng",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Thuế và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán",
+      "taxes_and_shipping_policy_at_checkout_html": "Thuế và <a href=\"{{ link }}\">phí vận chuyển<\/a> được tính khi thanh toán",
       "taxes_included_but_shipping_at_checkout": "Đã bao gồm thuế, phí vận chuyển được tính khi thanh toán",
-      "taxes_included_and_shipping_policy_html": "Đã bao gồm thuế. <a href=\"{{ link }}\">Phí vận chuyển</a> được tính khi thanh toán.",
+      "taxes_included_and_shipping_policy_html": "Đã bao gồm thuế. <a href=\"{{ link }}\">Phí vận chuyển<\/a> được tính khi thanh toán.",
       "taxes_and_shipping_at_checkout": "Thuế và phí vận chuyển được tính khi thanh toán"
     },
     "empty": "Giỏ hàng của bạn hiện đang trống.",
@@ -287,7 +287,7 @@
       "results_count": {
         "zero": "Không có kết quả nào",
         "one": "Hiển thị {{ count }} kết quả",
-        "other": "Hiển thị {{ offset }} - {{ page_size }} / {{ count }} kết quả"
+        "other": "Hiển thị {{ offset }} - {{ page_size }} \/ {{ count }} kết quả"
       },
       "form_placeholder": "Nhập từ khóa vào đây",
       "search_button_label": "Tìm kiếm",
@@ -374,7 +374,7 @@
         "city_label": "Thành phố",
         "country_label": "Quốc gia",
         "province_label": "Tỉnh",
-        "zip_label": "Mã Zip/Mã bưu chính",
+        "zip_label": "Mã Zip\/Mã bưu chính",
         "phone_label": "Điện thoại",
         "add_button": "Thêm Địa chỉ",
         "update_button": "Cập nhật Địa chỉ",
@@ -429,8 +429,8 @@
     "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác",
     "pick_up_available": "Sẵn có để đến lấy",
     "pick_up_currently_unavailable": "Không sẵn có để đến lấy",
-    "pick_up_available_at_html": "Sẵn có để đến lấy tại <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Không sẵn có để đến lấy tại <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Sẵn có để đến lấy tại <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Không sẵn có để đến lấy tại <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Liên hệ với cửa hàng để xác nhận địa chỉ",
     "refresh": "Làm mới",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Sản phẩm này không có sẵn để đến lấy tại bất kỳ cửa hàng nào",
       "view_store_info": "Chi tiết cửa hàng",
       "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
