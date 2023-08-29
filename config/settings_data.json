@@ -264,6 +264,12 @@
           "cards_background": "#FFFFFF",
           "cards_border_color": "rgba(0,0,0,0)"
         }
+      },
+      "16278478101612877664": {
+        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   }

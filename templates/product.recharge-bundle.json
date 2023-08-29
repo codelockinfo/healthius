@@ -18,38 +18,6 @@
         "remove_margin": false
       }
     },
-    "recharge-bundles-widget": {
-      "type": "apps",
-      "blocks": {
-        "recharge-bundles-widget-block": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/bundles-widget\/371eed76-0b44-4869-9813-730372ea378e",
-          "disabled": true,
-          "settings": {
-            "product": "{{ product }}",
-            "rb_theme_color": "#00c09e",
-            "rb_theme_text": "#ffffff",
-            "rb_theme_other_text": "#283965",
-            "rb_theme_bg": "#ffffff",
-            "rb_text_size": "16px",
-            "rb_spacing_width": 1220,
-            "rb_spacing_margins": "15px",
-            "rb_buttons_size": "15px",
-            "rb_buttons_corners": "4",
-            "rb_builder_items_per_row_ns": 4,
-            "rb_builder_items_per_row": "1",
-            "rb_builder_aspect_ratio": "100%",
-            "rb_builder_radius": "4"
-          }
-        }
-      },
-      "block_order": [
-        "recharge-bundles-widget-block"
-      ],
-      "settings": {
-        "full_width": false,
-        "remove_margin": false
-      }
-    },
     "7d74e3c2-914c-46a3-889a-da1251a4f605": {
       "type": "featured-bundle-collection",
       "blocks": {
@@ -65,6 +33,7 @@
         },
         "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1": {
           "type": "quick_buy",
+          "disabled": true,
           "settings": {
           }
         },
@@ -84,7 +53,7 @@
       ],
       "custom_css": [
         ".productsimage .product-item {cursor: pointer;}",
-        ".giftProduct .product-item__quick-buy{display:none;}"
+        ".giftProduct .product-item__quick-buy {display: none;}"
       ],
       "settings": {
         "heading": "",
@@ -102,14 +71,13 @@
         "product_list": "gift-product",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
-        "remove_margin": false,
+        "remove_margin": true,
         "seo_h_tag": "h2"
       }
     }
   },
   "order": [
     "16931505586e383317",
-    "recharge-bundles-widget",
     "7d74e3c2-914c-46a3-889a-da1251a4f605"
   ]
 }

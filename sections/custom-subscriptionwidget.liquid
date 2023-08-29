@@ -10,43 +10,51 @@
           <div class="filterlabel">{{ section.settings.widgetheading }}</div>
         </div>
       </div>
-
       <div class="subscriptwidth">
-        <div class="subscriptionlabel">
-          <div class="subscribename">
-            {{ section.settings.widgetlabel1 }}
-            <span>{{ section.settings.widgetext1 }}</span>
-
-          </div>
-          <div class="disflex justify-between">
-            <div class="distext">
-              <ul>
-                <li>{{ section.settings.widgetext2 }}</li>
-                <li>{{ section.settings.widgetext3 }}</li>
-              </ul>
+        {% if section.settings.widgetlabel1 != blank %}
+            <div class="subscriptionlabel active">
+            <div class="subscribename subscriptionOption">
+                {{ section.settings.widgetlabel1 }}
+                {% if section.settings.widgetext1 != blank %} <span>{{ section.settings.widgetext1 }}</span>{% endif %}
             </div>
-            <div class="distext">
-              <ul>
-                <li>{{ section.settings.widgetext4 }}</li>
-                <li>{{ section.settings.widgetext5 }}</li>
-              </ul>
+            <div class="disflex justify-between">
+                <div class="distext">
+                <ul>
+                    {% if section.settings.widgetext2  != blank %}
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>{{ section.settings.widgetext2 }}</li>
+                    {% endif %}
+                    {% if section.settings.widgetext3  != blank %}
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>{{ section.settings.widgetext3 }}</li>
+                    {% endif %}
+                </ul>
+                </div>
+                <div class="distext">
+                <ul>
+                    {% if section.settings.widgetext4  != blank %}
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>{{ section.settings.widgetext4 }}</li>
+                    {% endif %}
+                    {% if section.settings.widgetext5  != blank %}
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>{{ section.settings.widgetext5 }}</li>
+                    {% endif %}
+                </ul>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="subscriptionlabel sub-align">
-          <div class="subscribename">
-            {{ section.settings.widgetlabel2 }}
-          </div>
-
-        </div>
+            </div>
+        {% endif  %}
+        {% if section.settings.widgetlabel2 != blank %}
+            <div class="subscriptionlabel sub-align">
+            <div class="subscribename onetimeOption">
+                {{ section.settings.widgetlabel2 }}
+            </div>
+            </div>
+        {% endif %}
       </div>
     </div>
     <div class="deliverybox">
-      <span>{{ section.settings.deliverylabel }}</span>
+    {% if section.settings.deliverylabel  != blank %} <span>{{ section.settings.deliverylabel }}</span>{% endif %}
       <select>
-        <option>{{ section.settings.deliveryin15days }}</option>
-        <option>{{ section.settings.deliveryin30days }}</option>
+        {% if section.settings.deliveryin15days  != blank %} <option>{{ section.settings.deliveryin15days }}</option>{% endif %}
+        {% if section.settings.deliveryin30days  != blank %} <option>{{ section.settings.deliveryin30days }}</option>{% endif %}
       </select>
     </div>
   </div>
@@ -85,7 +93,7 @@
             "label": "t:sections.rich-text.settings.text_alignment.options__2.label"
           }
         ],
-        "default": "section-heading--left"
+        "default": "section-heading--center"
       }, {
         "type": "text",
         "id": "widgetheading",
@@ -115,12 +123,12 @@
         "type": "text",
         "id": "widgetext3",
         "label": "Text3",
-        "default": "5 Day Email Reminder - Cancel Anytime"
+        "default": "$4 Off Future Orders"
       }, {
         "type": "text",
         "id": "widgetext4",
         "label": "Text4",
-        "default": "$4 Off Future Orders"
+        "default": "5 Day Email Reminder - Cancel Anytime"
       }, {
         "type": "text",
         "id": "widgetext5",

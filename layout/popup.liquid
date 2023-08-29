@@ -92,7 +92,13 @@
       <link rel="stylesheet" href="{{ 'theme-noscript.css' | asset_url }}">
     </noscript>
   
-  </head>
+  
+  <!-- REAMAZE INTEGRATION START - DO NOT REMOVE -->
+{% render 'reamaze-config' %}
+{% render 'reamaze-sso' %}
+<!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
+
+</head>
   
   <body id="{{ page_title | handle }}" class="no-touchevents 
     {% if customer %} customer-logged-in {% endif %} 
