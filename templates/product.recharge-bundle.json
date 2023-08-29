@@ -56,8 +56,10 @@
         ".giftProduct .product-item__quick-buy {display: none;}"
       ],
       "settings": {
-        "heading": "",
-        "subheading": "",
+        "heading": "2",
+        "subheading": "SELECT PRODUCT",
+        "subtext1": "Quickly fill your box with our preselected bundles",
+        "subtext2": "Or, personalize with your favorites",
         "show_view_all": false,
         "section_heading_layout": "section-heading--left",
         "style": "grid",
@@ -72,7 +74,9 @@
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
-        "seo_h_tag": "h2"
+        "seo_h_tag": "h2",
+        "minprice": "$90",
+        "maxprice": "$130"
       }
     }
   },
