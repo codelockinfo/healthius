@@ -828,7 +828,7 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-.cartfontcontainer a.product-item__title {
+.main-custombundle .cartfontcontainer a.product-item__title {
     display: none;
 }
 .product-price span.product-price--original {
@@ -876,7 +876,7 @@ margin-left: 50px;
     order:2;
     width: 70%;
 }
-.bundle_flex .newcustomfilter.container--large.container--vertical-space.remove-empty-space {
+.bundle_flex .newcustomfilter.container--large.remove-empty-space {
     margin-bottom: 0;
 }
 .bundle_flex .section-heading.section-heading--left.gutter-bottom--page{
