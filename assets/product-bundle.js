@@ -255,6 +255,8 @@ $(document).ready(function() {
 			if($giftVariantid !== undefined){
 				addGiftproduct($giftVariantid);
 			}else{
+				removeCookie("variantids");
+				removeCookie("variant_qty");
 				window.location.href = '/checkout';
 			}
 		}
@@ -272,7 +274,8 @@ $(document).ready(function() {
 			},
 			success: function(response) {
 				// Handle the success response here
-				console.log(response);
+				removeCookie("variantids");
+				removeCookie("variant_qty");
 				window.location.href = '/checkout';
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
