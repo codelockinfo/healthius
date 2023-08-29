@@ -869,7 +869,6 @@ margin-left: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -6%;
 }
 /* .bundle_flex .newcustomfilter.container--large.container--vertical-space.remove-empty-space{ */
 .bundle_flex .subtextflex{
@@ -878,6 +877,7 @@ margin-left: 50px;
 }
 .bundle_flex .newcustomfilter.container--large.remove-empty-space {
     margin-bottom: 0;
+    margin-top: 0;
 }
 .bundle_flex .section-heading.section-heading--left.gutter-bottom--page{
     width: 30%;
