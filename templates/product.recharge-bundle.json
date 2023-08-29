@@ -14,9 +14,9 @@
         "widgetext3": "$4 Off Future Orders",
         "widgetext4": "5 Day Email Reminder - Cancel Anytime",
         "widgetext5": "Free New Flavor with Every Box",
-        "deliverylabel": "Delivery",
-        "deliveryin15days": "Delivery every 15 Days",
-        "deliveryin30days": "Delivery every 30 Days",
+        "deliverylabel": "",
+        "deliveryin15days": "",
+        "deliveryin30days": "",
         "seo_h_tag": "h2",
         "remove_margin": false
       }
