@@ -2,7 +2,8 @@
 {{ 'section-main-product-custombundle.css' | asset_url | stylesheet_tag }}
 
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
-
+<input type="hiden" class="minCartprice" value="{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}"/>
+<input type="hiden"  class="maxCartprice"  value="{% if section.settings.maxprice != blank %}{{ section.settings.maxprice }}{% endif %}"/>
   {% comment %} <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
     <!-- Filter options like checkboxes, dropdowns, etc. -->
     <select id="product-filterselect">
@@ -93,11 +94,11 @@
                       <li>$60</li>
                       <li>$70</li>
                       <li>$80</li>
-                      <li>$90</li>
+                      <li>{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}</li>
                       <li>$100</li>
                       <li>$110</li>
                       <li>$120</li>
-                      <li>$130</li>
+                      <li>{% if section.settings.maxprice != blank %}{{ section.settings.maxprice }}{% endif %}</li>
                     </ul>
                   </div>
                   <div class="containercircle containerCircle">
@@ -495,6 +496,18 @@
           }
         ],
         "default": "h2"
+      },
+      {
+        "type": "text",
+        "id": "minprice",
+        "label": "Minimum price for cart",
+        "default": "$90"
+      },
+      {
+        "type": "text",
+        "id": "maxprice",
+        "label": "Maximum price for cart",
+        "default": "$130"
       }
     ],
     "presets": [
