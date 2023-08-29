@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "بريدك الإلكتروني",
       "signup_form_submit": "إرسال",
       "signup_form_success": "سنرسل لك بريدًا إلكترونيًا قبل الافتتاح!",
-      "admin_link_html": "هل أنت مالك المتجر؟ <a href=\"/admin\">Log in here</a>",
+      "admin_link_html": "هل أنت مالك المتجر؟ <a href=\"\/admin\">Log in here<\/a>",
       "password_link": "أدخل باستخدام كلمة المرور",
       "powered_by_shopify_html": "سيتم تشغيل هذا المتجر بواسطة  {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "رجوع",
       "play_video": "تشغيل الفيديو",
       "language_dropdown_label": "اللغة",
-      "country_dropdown_label": "الدولة/الإقليم",
+      "country_dropdown_label": "الدولة\/الإقليم",
       "quantity": "الكمية",
       "price": {
         "regular": "السعر العادي",
@@ -140,7 +140,7 @@
     "sort_button": "فرز",
     "sort_by_label": "فرز حسب:",
     "to": "إلى",
-    "use_fewer_filters_html": "استخدم عامل تصفية أقل أو <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>",
+    "use_fewer_filters_html": "استخدم عامل تصفية أقل أو <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>",
     "view_all_products": "عرض جميع المنتجات",
     "no_collections": "معذرةً، لا توجد مجموعات حاليًا في هذا المتجر.",
     "view_all_collections": "عرض جميع المجموعات"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "تحميل المزيد من المراجعات",
       "include_taxes": "شامل الضريبة",
-      "shipping_policy_html": "يتم حساب <a href=\"{{ link }}\">Shipping</a> عند السداد.",
+      "shipping_policy_html": "يتم حساب <a href=\"{{ link }}\">Shipping<\/a> عند السداد.",
       "view_in_space": "عرض في مساحتك الخاصة",
       "view_in_space_label": "عرض في مساحتك، وتحميل العنصر في نافذة الواقع المعزز",
       "sales_amount_html": "تحفظ {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "تحديث عربة التسوق",
     "note": "تعليمات الطلب",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "الضرائب و<a href=\"{{ link }}\">shipping</a> محسوبة عند السداد",
+      "taxes_and_shipping_policy_at_checkout_html": "الضرائب و<a href=\"{{ link }}\">shipping<\/a> محسوبة عند السداد",
       "taxes_included_but_shipping_at_checkout": "الضريبة مشمولة والشحن محسوب عند الدفع",
-      "taxes_included_and_shipping_policy_html": "شامل الضريبة يتم حساب <a href=\"{{ link }}\">Shipping</a> عند السداد.",
+      "taxes_included_and_shipping_policy_html": "شامل الضريبة يتم حساب <a href=\"{{ link }}\">Shipping<\/a> عند السداد.",
       "taxes_and_shipping_at_checkout": "الضرائب والشحن محسوبة عند الدفع"
     },
     "empty": "عربة التسوق فارغة حاليا.",
@@ -374,7 +374,7 @@
         "city_label": "المدينة",
         "country_label": "الدولة",
         "province_label": "المقاطعة",
-        "zip_label": "الكود/الرمز البريدي",
+        "zip_label": "الكود\/الرمز البريدي",
         "phone_label": "الهاتف",
         "add_button": "إضافة عنوان",
         "update_button": "تحديث العنوان",
@@ -429,8 +429,8 @@
     "check_other_stores": "تحقق من التوفّر في المتاجر الأخرى",
     "pick_up_available": "التسليم متوفر",
     "pick_up_currently_unavailable": "التسليم غير متوفر حاليًا",
-    "pick_up_available_at_html": "التسليم متوفر في <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "التسليم غير متوفر في  <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "التسليم متوفر في <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "التسليم غير متوفر في  <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "اتصل بالمتجر لتأكيد العنوان",
     "refresh": "تحديث",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "هذا المنتج غير متاح للاستلام في أي متجر",
       "view_store_info": "تفاصيل المتجر",
       "check_other_stores": "تحقق من التوفّر في المتاجر الأخرى"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
