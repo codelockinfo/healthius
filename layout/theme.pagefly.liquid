@@ -102,6 +102,12 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
   <script src="{{ 'product-bundle.js' | asset_url }}" defer></script>
   {% endif%}
   
+
+  <!-- REAMAZE INTEGRATION START - DO NOT REMOVE -->
+{% render 'reamaze-config' %}
+{% render 'reamaze-sso' %}
+<!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
+
 </head>
 
 <body id="{{ page_title | handle }}" class="no-touchevents 
