@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "Din e-post",
       "signup_form_submit": "Send inn",
       "signup_form_success": "Vi sender deg en e-post rett før vi åpner!",
-      "admin_link_html": "Er du butikkeieren? <a href=\"/admin\">Logg in her</a>",
+      "admin_link_html": "Er du butikkeieren? <a href=\"\/admin\">Logg in her<\/a>",
       "password_link": "Gå inn ved å skrive inn et passord",
       "powered_by_shopify_html": "Denne butikken vil bli drevet av {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Tilbake",
       "play_video": "Spill av video",
       "language_dropdown_label": "Språk",
-      "country_dropdown_label": "Land/region",
+      "country_dropdown_label": "Land\/region",
       "quantity": "Antall",
       "price": {
         "regular": "Ordinær pris",
@@ -140,7 +140,7 @@
     "sort_button": "Sorter",
     "sort_by_label": "Sorter etter:",
     "to": "Til",
-    "use_fewer_filters_html": "Bruk færre filtre eller <a class=\"{{ class }}\" href=\"{{ link }}\">slett alle</a>",
+    "use_fewer_filters_html": "Bruk færre filtre eller <a class=\"{{ class }}\" href=\"{{ link }}\">slett alle<\/a>",
     "view_all_products": "Se alle produkter",
     "no_collections": "Det finnes dessverre ingen tilgjengelige samlinger i denne butikken.",
     "view_all_collections": "Se alle samlingene"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "Laster flere anmeldelser",
       "include_taxes": "Avgifter er inkludert.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Frakten</a> beregnes ved utsjekk.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frakten<\/a> beregnes ved utsjekk.",
       "view_in_space": "Se i området ditt",
       "view_in_space_label": "Se i området ditt. Elementet lastes inn i utvidet virkelighet-vinduet",
       "sales_amount_html": "du sparer {{ amount }}",
@@ -203,9 +203,9 @@
     "checkout": "Betal",
     "note": "Bestillingsinstruksjoner",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Avgifter og <a href=\"{{ link }}\">frakt</a> beregnes i kassen",
+      "taxes_and_shipping_policy_at_checkout_html": "Avgifter og <a href=\"{{ link }}\">frakt<\/a> beregnes i kassen",
       "taxes_included_but_shipping_at_checkout": "Inkludert avgift og frakt beregnes i kassen",
-      "taxes_included_and_shipping_policy_html": "Inkludert avgifter. <a href=\"{{ link }}\">Frakt</a> beregnes ved kassen.",
+      "taxes_included_and_shipping_policy_html": "Inkludert avgifter. <a href=\"{{ link }}\">Frakt<\/a> beregnes ved kassen.",
       "taxes_and_shipping_at_checkout": "Avgifter og frakt beregnes i kassen"
     },
     "empty": "Handlevognen din er tom.",
@@ -373,7 +373,7 @@
         "address_2_label": "Adresselinje 2",
         "city_label": "By",
         "country_label": "Land",
-        "province_label": "Distrikt/fylke",
+        "province_label": "Distrikt\/fylke",
         "zip_label": "Postnummer",
         "phone_label": "Telefon",
         "add_button": "Legg til adresse",
@@ -429,8 +429,8 @@
     "check_other_stores": "Se tilgjengelighet i andre butikker",
     "pick_up_available": "Henting er tilgjengelig",
     "pick_up_currently_unavailable": "Henting er for øyeblikket ikke tilgjengelig",
-    "pick_up_available_at_html": "Henting tilgjengelig ved <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Henting er for tiden utilgjengelig ved <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Henting tilgjengelig ved <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Henting er for tiden utilgjengelig ved <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Kontakt butikken for å bekrefte adressen",
     "refresh": "Oppdater",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Dette produktet er ikke tilgjengelig for henting i noen butikk",
       "view_store_info": "Butikkdetaljer",
       "check_other_stores": "Sjekk tilgjengeligheten i andre butikker"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
