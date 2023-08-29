@@ -332,7 +332,20 @@ $(document).ready(function() {
 		var cartTotQty = 0;
 		var productPrice = 0;
     	var indicatore = 0;
-		var inputtotalrange = 130;
+		$splitMinPrice = $(".minCartprice").val().split("$");
+		var inputtotalrange = $splitMinPrice[1];
+		$splitMaxPrice = $(".maxCartprice").val().split("$");
+		var inputtotalrangemax = $splitMaxPrice[1];
+		$.each($(".subscriptionlabel"), function(index) {
+			if($(this).hasClass('active')){
+				$dataValue = $(this).data('value');
+				if($dataValue == "subscribe & save"){
+					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*35)/100);
+				}
+				console.log(inputtotalrange + "inputtotalrange");
+				// return false;
+			}
+		});
 		$productPrices = 0;
 		$.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
 
@@ -362,25 +375,18 @@ $(document).ready(function() {
 		// var productPrice = $("#rangeSlider").attr("step");
 		// var pro_price = cartTotQty * parseInt($productPrices);
     
-    indicatore = ($productPrices * 100)/inputtotalrange;
+		indicatore = ($productPrices * 100)/inputtotalrange;
 		if ($productPrices <= inputtotalrange) {
 			$("#rangeSlider").val($productPrices);
-      $(".range-slider__indicators .range-slider__value").css("left",indicatore+"%");
+			$(".range-slider__indicators .range-slider__value").css("left",indicatore+"%");
 		} else if ($productPrices > inputtotalrange) {
-      $("#rangeSlider").val(inputtotalrange);
-      $(".range-slider__indicators .range-slider__value").css("left","100%");
+			$("#rangeSlider").val(inputtotalrange);
+			$(".range-slider__indicators .range-slider__value").css("left","100%");
 		}
-    // do't remove this comment
-    // $(".range-slider__indicators .range-slider__value").html("$"+$productPrices);
-    // do't remove this comment
-	if($(".subscriptionlabel").hasClass('active')){
-		console.log("if");
-		console.log($(this).data('value'));
-		
-	}else{
-		console.log("else");
+		// do't remove this comment
+		// $(".range-slider__indicators .range-slider__value").html("$"+$productPrices);
+		// do't remove this comment
 
-	}
 		$remain_amount = inputtotalrange - $productPrices;
 
 		if ($remain_amount < 1) {
@@ -408,18 +414,20 @@ $(document).ready(function() {
 	$(document).on("click", ".containerCircle", function() {
 		$(".cartcolumn").removeClass("active");
 	});
-});
-$(document).on("click",".subscriptionOption",function(){
-    console.log("CLICK");
-    $(this).closest(".subscriptionlabel").addClass("active");
-    $(".onetimeOption").closest(".subscriptionlabel").removeClass("active");
-    $(".deliverybox").removeClass("hide");
-});
-$(document).on("click",".onetimeOption",function(){
-    console.log("CLICK");
-    $(this).closest(".subscriptionlabel").addClass("active");
-    $(".subscriptionOption").closest(".subscriptionlabel").removeClass("active");
-    $(".deliverybox").addClass("hide");
+	$(document).on("click",".subscriptionOption",function(){
+		console.log("CLICK");
+		$(this).closest(".subscriptionlabel").addClass("active");
+		$(".onetimeOption").closest(".subscriptionlabel").removeClass("active");
+		$(".deliverybox").removeClass("hide");
+		getcartTotalQty();
+	});
+	$(document).on("click",".onetimeOption",function(){
+		console.log("CLICK");
+		$(this).closest(".subscriptionlabel").addClass("active");
+		$(".subscriptionOption").closest(".subscriptionlabel").removeClass("active");
+		$(".deliverybox").addClass("hide");
+		getcartTotalQty();
+	});
 });
 
 function setCookie(name, value, daysToExpire) {
