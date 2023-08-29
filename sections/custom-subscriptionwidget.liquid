@@ -12,7 +12,7 @@
       </div>
       <div class="subscriptwidth">
         {% if section.settings.widgetlabel1 != blank %}
-            <div class="subscriptionlabel active">
+            <div class="subscriptionlabel active" data-value="{{ section.settings.widgetlabel1 | downcase }}">
             <div class="subscribename subscriptionOption">
                 {{ section.settings.widgetlabel1 }}
                 {% if section.settings.widgetext1 != blank %} <span>{{ section.settings.widgetext1 }}</span>{% endif %}
@@ -42,7 +42,7 @@
             </div>
         {% endif  %}
         {% if section.settings.widgetlabel2 != blank %}
-            <div class="subscriptionlabel sub-align">
+            <div class="subscriptionlabel sub-align" data-value="{{ section.settings.widgetlabel2 | downcase }}">
             <div class="subscribename onetimeOption">
                 {{ section.settings.widgetlabel2 }}
             </div>
@@ -149,7 +149,8 @@
         "id": "deliveryin30days",
         "label": "Delivery value",
         "default": "Delivery every 30 Days"
-      }, {
+      },
+       {
         "type": "select",
         "id": "seo_h_tag",
         "label": "t:sections.refactor_words.seo.label",
@@ -176,6 +177,12 @@
           }
         ],
         "default": "h2"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_margin",
+        "label": "t:sections.local-extra-words.sections.rich-text.settings.remove_margin.label",
+        "default": false
       }
     ],
     "presets": [

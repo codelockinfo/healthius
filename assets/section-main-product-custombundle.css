@@ -206,6 +206,9 @@
 .box-footer .button{
     font-size: 16px;
 }
+.subscription-widget .container--has-background{
+    padding-top: 0;
+}
 /* progressbar */
 .range-labels {
     padding: 0;

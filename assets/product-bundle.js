@@ -370,6 +370,14 @@ $(document).ready(function() {
     // do't remove this comment
     // $(".range-slider__indicators .range-slider__value").html("$"+$productPrices);
     // do't remove this comment
+	if($(".subscriptionlabel").hasClass('active')){
+		console.log("if");
+		console.log($(this).data('value'));
+		
+	}else{
+		console.log("else");
+
+	}
 		$remain_amount = inputtotalrange - $productPrices;
 
 		if ($remain_amount < 1) {
