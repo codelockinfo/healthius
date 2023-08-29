@@ -1,5 +1,26 @@
 {
   "sections": {
+    "d6f239c2-1744-4d9d-b156-3b5d57c93a6f": {
+      "type": "custom-subscriptionwidget",
+      "settings": {
+        "heading": "Get your meats now",
+        "subheading": "We guarantee you'll love it or your money back !",
+        "section_heading_layout": "section-heading--center",
+        "widgetheading": "Select frequency",
+        "widgetlabel1": "Subscribe & Save",
+        "widgetlabel2": "One Time",
+        "widgetext1": "Save 25% on your first order",
+        "widgetext2": "$15 Off First Order",
+        "widgetext3": "$4 Off Future Orders",
+        "widgetext4": "5 Day Email Reminder - Cancel Anytime",
+        "widgetext5": "Free New Flavor with Every Box",
+        "deliverylabel": "Delivery",
+        "deliveryin15days": "Delivery every 15 Days",
+        "deliveryin30days": "Delivery every 30 Days",
+        "seo_h_tag": "h2",
+        "remove_margin": false
+      }
+    },
     "16931505586e383317": {
       "type": "apps",
       "blocks": {
@@ -81,6 +102,7 @@
     }
   },
   "order": [
+    "d6f239c2-1744-4d9d-b156-3b5d57c93a6f",
     "16931505586e383317",
     "7d74e3c2-914c-46a3-889a-da1251a4f605"
   ]
