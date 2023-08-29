@@ -37,7 +37,7 @@
       "signup_form_email_placeholder": "O seu email",
       "signup_form_submit": "Enviar",
       "signup_form_success": "Receberá um email pouco tempo antes da abertura!",
-      "admin_link_html": "É o proprietário da loja? <a href=\"/admin\">Entre aqui</a>",
+      "admin_link_html": "É o proprietário da loja? <a href=\"\/admin\">Entre aqui<\/a>",
       "password_link": "Entrar usando a palavra-passe",
       "powered_by_shopify_html": "Esta loja será suportada pela tecnologia da {{ shopify }}"
     },
@@ -82,7 +82,7 @@
       "back": "Voltar",
       "play_video": "Reproduzir vídeo",
       "language_dropdown_label": "Idioma",
-      "country_dropdown_label": "País/Região",
+      "country_dropdown_label": "País\/Região",
       "quantity": "Quantidade",
       "price": {
         "regular": "Preço normal",
@@ -140,7 +140,7 @@
     "sort_button": "Ordenar",
     "sort_by_label": "Ordenar por:",
     "to": "Para",
-    "use_fewer_filters_html": "Use menos filtros ou <a class=\"{{ class }}\" href=\"{{ link }}\">limpe tudo</a>",
+    "use_fewer_filters_html": "Use menos filtros ou <a class=\"{{ class }}\" href=\"{{ link }}\">limpe tudo<\/a>",
     "view_all_products": "Ver todos os produtos",
     "no_collections": "Lamentamos, mas atualmente não há coleções nesta loja.",
     "view_all_collections": "Ver todas as coleções"
@@ -183,7 +183,7 @@
       },
       "loading_reviews": "A carregar mais avaliações",
       "include_taxes": "Imposto incluído.",
-      "shipping_policy_html": "Os <a href=\"{{ link }}\">custos de envio</a> são calculados aquando da finalização da compra.",
+      "shipping_policy_html": "Os <a href=\"{{ link }}\">custos de envio<\/a> são calculados aquando da finalização da compra.",
       "view_in_space": "Ver no seu espaço",
       "view_in_space_label": "A opção \"Ver no seu espaço\" carrega o item numa janela de realidade aumentada",
       "sales_amount_html": "poupa {{ amount }}",
@@ -204,9 +204,9 @@
     "update": "Atualizar",
     "note": "Instruções do pedido",
     "policies": {
-      "taxes_and_shipping_policy_at_checkout_html": "Tributos e <a href=\"{{ link }}\">frete</a> calculados na finalização da compra",
+      "taxes_and_shipping_policy_at_checkout_html": "Tributos e <a href=\"{{ link }}\">frete<\/a> calculados na finalização da compra",
       "taxes_included_but_shipping_at_checkout": "Tributos incluídos e frete calculado na finalização da compra",
-      "taxes_included_and_shipping_policy_html": "Tributos incluídos. <a href=\"{{ link }}\">Frete</a> calculado na finalização da compra.",
+      "taxes_included_and_shipping_policy_html": "Tributos incluídos. <a href=\"{{ link }}\">Frete<\/a> calculado na finalização da compra.",
       "taxes_and_shipping_at_checkout": "Tributos e frete calculados na finalização da compra"
     },
     "empty": "O seu carrinho está vazio neste momento.",
@@ -429,8 +429,8 @@
     "check_other_stores": "Verificar a disponibilidade noutras lojas",
     "pick_up_available": "Recolha disponível",
     "pick_up_currently_unavailable": "Recolha indisponível neste momento",
-    "pick_up_available_at_html": "Recolha disponível em <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Recolha indisponível neste momento em <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Recolha disponível em <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Recolha indisponível neste momento em <strong>{{ location_name }}<\/strong>",
     "invalid_location_address": "Contactar a loja para confirmar o endereço",
     "refresh": "Atualizar",
     "general": {
@@ -458,6 +458,51 @@
       "unavailable_for_pickup": "Este produto não se encontra disponível para recolha em nenhuma loja",
       "view_store_info": "Detalhes da loja",
       "check_other_stores": "Verificar a disponibilidade noutras lojas"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }
