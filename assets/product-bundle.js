@@ -197,8 +197,6 @@ $(document).ready(function() {
 				}else{
 					onetimeAddtocart();
 				}
-			}else{
-				onetimeAddtocart();
 			}
 		});
 	});
