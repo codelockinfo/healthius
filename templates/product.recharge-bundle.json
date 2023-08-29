@@ -65,6 +65,7 @@
         },
         "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1": {
           "type": "quick_buy",
+          "disabled": true,
           "settings": {
           }
         },
@@ -84,7 +85,7 @@
       ],
       "custom_css": [
         ".productsimage .product-item {cursor: pointer;}",
-        ".giftProduct .product-item__quick-buy{display:none;}"
+        ".giftProduct .product-item__quick-buy {display: none;}"
       ],
       "settings": {
         "heading": "",
