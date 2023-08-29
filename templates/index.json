@@ -1067,6 +1067,11 @@
         "video": "",
         "seo_h_tag": "h2"
       }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -1086,6 +1091,7 @@
     "cd11c812-58de-40ef-974d-cc93e50b29a5",
     "76b47b75-9e8f-4e75-8ef0-cf83a83ef4b0",
     "1655112847aaa4cc50",
-    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0"
+    "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0",
+    "pagefly-home"
   ]
 }
