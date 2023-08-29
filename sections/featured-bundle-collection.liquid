@@ -14,33 +14,39 @@
     <option value="/collections/whey-protein">Whey Protein</option>
     </select>
   </div> {% endcomment %}
-  <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
-   {% comment %} <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
-    <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div> {% endcomment %}
-    {% assign collection =  section.settings.collection %}
-    {% assign collection1 =  section.settings.collection1 %}
-    {% assign collection2 =  section.settings.collection2 %}
-    {% assign collection3 =  section.settings.collection3 %}
-    {% assign collection4 =  section.settings.collection4 %}
-    <ul class="filtertab">
-        {%  if collection != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
-        {%  if collection1 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
-        {%  if collection2 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
-        {%  if collection3 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
-        {%  if collection4 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
-    </ul>
-    <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
-      <!-- Filter options like checkboxes, dropdowns, etc. -->
-      <select id="product-filterselect">
-        {%  if collection != blank %}<option  value="{{ collections[collection].url }}"  data-collection-id="{{ collections[collection].id   }}">{{ collections[collection].title }} </option>{% endif %}
-        {%  if collection1 != blank %}<option  value="{{ collections[collection1].url }}"  data-collection-id="{{ collections[collection1].id   }}">{{ collections[collection1].title }}</option>{% endif %}
-        {%  if collection2 != blank %}<option  value="{{ collections[collection2].url }}"  data-collection-id="{{ collections[collection2].id   }}">{{ collections[collection2].title }}</option>{% endif %}
-        {%  if collection3 != blank %}<option  value="{{ collections[collection3].url }}"  data-collection-id="{{ collections[collection3].id   }}">{{ collections[collection3].title }}</option>{% endif %}
-        {%  if collection4 != blank %}<option value="{{ collections[collection4].url }}"  data-collection-id="{{ collections[collection4].id   }}">{{ collections[collection4].title }}</option>{% endif %}
-      </select>
-    </div> 
+  <div class="bundle_flex">
+    <div class="subtextflex">
+      <div><h2 class="subtext1">{{section.settings.subtext1}}</h2></div>
+      <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+      {% comment %} <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
+        <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div> {% endcomment %}
+        {% assign collection =  section.settings.collection %}
+        {% assign collection1 =  section.settings.collection1 %}
+        {% assign collection2 =  section.settings.collection2 %}
+        {% assign collection3 =  section.settings.collection3 %}
+        {% assign collection4 =  section.settings.collection4 %}
+        <ul class="filtertab">
+            {%  if collection != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
+            {%  if collection1 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
+            {%  if collection2 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
+            {%  if collection3 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
+            {%  if collection4 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
+        </ul>
+        <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+          <!-- Filter options like checkboxes, dropdowns, etc. -->
+          <select id="product-filterselect">
+            {%  if collection != blank %}<option  value="{{ collections[collection].url }}"  data-collection-id="{{ collections[collection].id   }}">{{ collections[collection].title }} </option>{% endif %}
+            {%  if collection1 != blank %}<option  value="{{ collections[collection1].url }}"  data-collection-id="{{ collections[collection1].id   }}">{{ collections[collection1].title }}</option>{% endif %}
+            {%  if collection2 != blank %}<option  value="{{ collections[collection2].url }}"  data-collection-id="{{ collections[collection2].id   }}">{{ collections[collection2].title }}</option>{% endif %}
+            {%  if collection3 != blank %}<option  value="{{ collections[collection3].url }}"  data-collection-id="{{ collections[collection3].id   }}">{{ collections[collection3].title }}</option>{% endif %}
+            {%  if collection4 != blank %}<option value="{{ collections[collection4].url }}"  data-collection-id="{{ collections[collection4].id   }}">{{ collections[collection4].title }}</option>{% endif %}
+          </select>
+        </div> 
+      </div>
+      <div><h2 class="subtext1" style="margin-top: 1rem;">{{section.settings.subtext2}}</h2></div>
   </div>
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
+ </div>
   <div class="custom-bundle">
 
     {%- if section.settings.style == 'slider' -%}
@@ -217,8 +223,9 @@
 
 {% schema %}
   {
-    "name": "featured bundle coll",
+    "name": "featured bundle coll aaa",
     "class": "mount-css-slider",
+  
     "blocks": [
       {
         "type": "price",
@@ -358,6 +365,18 @@
         "id": "subheading",
         "label": "t:sections.local-extra-words.sections.headings.subheading",
         "default": "Showcase your best products"
+      },
+      {
+        "type": "text",
+        "id": "subtext1",
+        "label": "Sub Text",
+        "default": "Quickly fill your box with our preselected bundles"
+      },
+      {
+        "type": "text",
+        "id": "subtext2",
+        "label": "Sub text1",
+        "default": "Or, personalize with your favorites"
       },
       {
         "type": "checkbox",
