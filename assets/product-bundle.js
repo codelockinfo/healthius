@@ -184,80 +184,86 @@ $(document).ready(function() {
 	// 	});
 	// });
 	
-	$('.addToCart').click(function(e) {
-		e.preventDefault();
-		console.log("ADDTOCART");
-		$(".subscriptionlabel").each( function( i ) {
-			console.log("in each ");
-			if($(this).hasClass('active')){
-				$dataValue = $(this).data('value');
-				if($dataValue == "subscribe & save"){
-					console.log("SUBSCRIBE")
-					subscriptionAddtocart();
-				}else{
-					onetimeAddtocart();
-				}
-			}
-		});
-	});
-	function onetimeAddtocart(){
-		console.log("ONE TIME");
-		$giftVariantid = $(".product-variant-select").val();
-		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
-		var bundle_product_arr = {};
-		var bundleObject = {
-			externalProductId: PRODUCT_ID,
-			externalVariantId: $giftVariantid ,
-			selections: []
-		};
+	// $('.addToCart').click(function(e) {
+	// 	e.preventDefault();
+	// 	console.log("ADDTOCART");
+	// 	$(".subscriptionlabel").each( function( i ) {
+	// 		console.log("in each ");
+	// 		if($(this).hasClass('active')){
+	// 			$dataValue = $(this).data('value');
+	// 			if($dataValue == "subscribe & save"){
+	// 				console.log("SUBSCRIBE")
+	// 				subscriptionAddtocart();
+	// 			}else{
+	// 				onetimeAddtocart();
+	// 			}
+	// 		}
+	// 	});
+	// });
 
-		$.each($("#cartSummary .productsimage"), function() {
-			$currentVarQty = $(this).find(".product-quantity__selector").val();
-			var product_id = $(this).data("product");
-			var variant_id = $(this).data("variant");
+	// function onetimeAddtocart(){
+	// 	console.log("ONE TIME");
+	// 	$giftVariantid = $(".product-variant-select").val();
+	// 	var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+	// 	var bundle_product_arr = {};
+	// 	var bundleObject = {
+	// 		externalProductId: PRODUCT_ID,
+	// 		externalVariantId: $giftVariantid ,
+	// 		selections: []
+	// 	};
 
-			console.log(variant_id);
-			var collection_id = $(this).data("collection");
+	// 	$.each($("#cartSummary .productsimage"), function() {
+	// 		$currentVarQty = $(this).find(".product-quantity__selector").val();
+	// 		var product_id = $(this).data("product");
+	// 		var variant_id = $(this).data("variant");
 
-			var item_data = {
-				collectionId: collection_id,  // Example Shopify Collection
-				externalProductId: product_id,  // Dynamic Product ID
-				externalVariantId: variant_id,  // Dynamic Variant ID
-				quantity: $currentVarQty  // Dynamic Quantity
-			}
-			bundleObject.selections.push(item_data);
+	// 		console.log(variant_id);
+	// 		var collection_id = $(this).data("collection");
+
+	// 		var item_data = {
+	// 			collectionId: collection_id,  // Example Shopify Collection
+	// 			externalProductId: product_id,  // Dynamic Product ID
+	// 			externalVariantId: variant_id,  // Dynamic Variant ID
+	// 			quantity: $currentVarQty  // Dynamic Quantity
+	// 		}
+	// 		bundleObject.selections.push(item_data);
 			
-		});
-		const bundle = bundleObject;
-		console.log(bundle);
-		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
-		console.log(bundleItems);
-		const cartData = { items: bundleItems };
-		const asyncGetCall = async () => {
+	// 	});
+	// 	const bundle = bundleObject;
+	// 	console.log(bundle);
+	// 	const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+	// 	console.log(bundleItems);
+	// 	const cartData = { items: bundleItems };
+	// 	const asyncGetCall = async () => {
 
-		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(cartData),
-			});
-			const data = await respons.json();
-			if($giftVariantid !== undefined){
-				addGiftproduct($giftVariantid);
-			}else{
-				removeCookie("variantids");
-				removeCookie("variant_qty");
-				window.location.href = '/checkout';
-			}
-		}
-		asyncGetCall();
-	}
-	function subscriptionAddtocart(){
+	// 	const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+	// 			method: 'POST',
+	// 			headers: { 'Content-Type': 'application/json' },
+	// 			body: JSON.stringify(cartData),
+	// 		});
+	// 		const data = await respons.json();
+	// 		if($giftVariantid !== undefined){
+	// 			addGiftproduct($giftVariantid);
+	// 		}else{
+	// 			removeCookie("variantids");
+	// 			removeCookie("variant_qty");
+	// 			window.location.href = '/checkout';
+	// 		}
+	// 	}
+	// 	asyncGetCall();
+	// }
+
+
+	$('.addToCart').click(function(e) {
+
 		$giftVariantid = $(".product-variant-select").val();
+		console.log($giftVariantid);
 		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+		console.log(PRODUCT_ID);
 		var bundle_product_arr = {};
 		var bundleObject = {
-			externalProductId: PRODUCT_ID,
-			externalVariantId: $giftVariantid ,
+			externalProductId: meta.product.id,
+			externalVariantId: PRODUCT_ID ,
 			selections: []
 		};
 		var static_frequancy = 15;
@@ -266,7 +272,7 @@ $(document).ready(function() {
 		console.log(meta.product.id + " MTEA PRODUCT");
 		console.log(selling_plan_id + " selling_plan_id");
 		
-		if(selling_plan_id ==  undefined){
+		if(selling_plan_id == undefined){
 			if(window.Recharge.widgets[meta.product.id] !== undefined){
 				var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
 				for(var i = 0; i < selling_plans.length; i++){
@@ -307,7 +313,10 @@ $(document).ready(function() {
 		console.log(bundle);
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 		console.log(bundleItems);
+	    
+		
 		const cartData = { items: bundleItems };
+	    console.log(cartData);
 		const asyncGetCall = async () => {
 
 		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
@@ -316,6 +325,7 @@ $(document).ready(function() {
 				body: JSON.stringify(cartData),
 			});
 			const data = await respons.json();
+			
 			if($giftVariantid !== undefined){
 				addGiftproduct($giftVariantid);
 			}else{
@@ -325,7 +335,8 @@ $(document).ready(function() {
 			}
 		}
 		asyncGetCall();
-	}
+	});
+
 	function addGiftproduct(giftVariantid) {
 		$.ajax({
 			url: '/cart/add.js',
@@ -416,7 +427,7 @@ $(document).ready(function() {
 			$currentVarQty = $(this).val();
 			$price = $(this).closest(".productsimage").find(".product-price--original").data("price");
 			console.log($price);
-			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
+			$Dataprice = ($price != undefined) ? $price.split("€") : 0;
 			if ($Dataprice != 0) {
 				$productPrices += $currentVarQty * parseInt($Dataprice[1]);
 				console.log($productPrices + "TP");
