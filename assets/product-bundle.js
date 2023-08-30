@@ -427,7 +427,7 @@ $(document).ready(function() {
 			$currentVarQty = $(this).val();
 			$price = $(this).closest(".productsimage").find(".product-price--original").data("price");
 			console.log($price);
-			$Dataprice = ($price != undefined) ? $price.split("€") : 0;
+			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
 			if ($Dataprice != 0) {
 				$productPrices += $currentVarQty * parseInt($Dataprice[1]);
 				console.log($productPrices + "TP");
