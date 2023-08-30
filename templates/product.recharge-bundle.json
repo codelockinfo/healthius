@@ -2,6 +2,7 @@
   "sections": {
     "d6f239c2-1744-4d9d-b156-3b5d57c93a6f": {
       "type": "custom-subscriptionwidget",
+      "disabled": true,
       "settings": {
         "heading": "Get your meats now",
         "subheading": "We guarantee you'll love it or your money back !",
