@@ -259,7 +259,9 @@ $(document).ready(function() {
 		$giftVariantid = $(".product-variant-select").val();
 		console.log($giftVariantid);
 		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+        console.log('Please be this');
 		console.log(PRODUCT_ID);
+         
 		var bundle_product_arr = {};
 		var bundleObject = {
 			externalProductId: meta.product.id,
