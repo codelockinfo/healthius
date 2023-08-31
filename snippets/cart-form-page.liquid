@@ -197,14 +197,14 @@
 												</span>
 											{%- endfor -%} -->
                                   {%- for item in cart.items -%}
-    {%- if item.properties['bundle_id'] == current_bundle_id -%}
-        <div class="product-option">
-            <dt>{{ item.variant.title }}:
-            </dt>
-            <dd>{{ item.quantity }}</dd>
-        </div>
-    {%- endif -%}
-{%- endfor -%}
+                                      {%- if item.properties['bundle_id'] == current_bundle_id -%}
+                                          <div class="product-option">
+                                              <dt>{{ item.variant.title }}:
+                                              </dt>
+                                              <dd>{{ item.quantity }}</dd>
+                                          </div>
+                                      {%- endif -%}
+                                  {%- endfor -%}
 									{%- endunless -%}
 
 									{%- if item.selling_plan_allocation -%}
