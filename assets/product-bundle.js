@@ -1,6 +1,7 @@
 const parentDiv = document.querySelector('.rc-selling-plans');
 
   console.log(parentDiv);
+  console.log("parent div")
 
 // Listen for changes on the parent div
 parentDiv.addEventListener('change', function(event) {
