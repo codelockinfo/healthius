@@ -1,6 +1,8 @@
 // console.log("onload js");
 $(document).on("click", ".productsimage .card__image", function(e) {
+	$bkpQty = $(this).closest(".productsimage").find(".product-quantity.show .product-quantity__selector").val();
 	var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
+	
 	e.preventDefault();
 	if (!thisObj.quickViewModal) {
 		const target = e.currentTarget;
@@ -52,6 +54,14 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 				}
 				setTimeout(() => {
 					thisObj.quickViewModal.show();
+					console.log($bkpQty);
+					if($bkpQty != undefined){
+						var innnHtml = thisObj.quickViewModal.querySelector('.modal-content');
+						innnHtml.querySelector(".popupaddbtn").classList.remove('show');
+						innnHtml.querySelector(".productQty").classList.add('show');
+						innnHtml.querySelector(".productQty .product-quantity__minus").classList.remove('disabled');
+						innnHtml.querySelector(".product-quantity__selector").value = $bkpQty;
+					}
 					target.classList.remove('working');
 				}, 250);
 			});
@@ -106,7 +116,7 @@ $(document).ready(function() {
 			$(".box-summary").append("<div class='productsimage'>" + $html + "</div>");
 		} else {
 			// $('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__selector').val($variantQty);
-			$('.box-summary .container-box[data-summery-index="' + $summeryindex + '"] .product-quantity__minus').removeClass('disabled');
+			$('.container-box[data-variant="' + $var_id + '"] .product-quantity__minus').removeClass('disabled');
 			$(".main-custombundle div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val($variantQty);
 			$(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val($variantQty);
 		}
@@ -121,17 +131,21 @@ $(document).ready(function() {
 		var itemQtyArray = variant_qty.split(delimiter);
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$variantQtyMinus = $(this).closest(".productQty").find(".product-quantity__selector").val();
-    		$summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+		$summeryindex = $(this).closest(".container-box").attr('data-summery-index');
+		console.log($variantQtyMinus);
+
 		for (var i = 0; i < itemArray.length; i++) {
 			if ($.trim($var_id) == itemArray[i].trim()) {
+				console.log(itemQtyArray[i].trim());
+				console.log("=============");
 				if (itemQtyArray[i].trim() == $variantQtyMinus) {
 					itemArray.splice(i, 1);
 					itemQtyArray.splice(i, 1);
 					setCookie("variantids", itemArray, {path: '/'});
 					setCookie("variant_qty", itemQtyArray, {path: '/'});
-					$(".box-summary").find('.container-box[data-summery-index="' + $summeryindex + '"]').closest(".productsimage").remove();
-					$(".main-custombundle div[data-variant='" + $var_id + "']").find(".productQty").removeClass("show");
-					$(".main-custombundle div[data-variant='" + $var_id + "']").find(".addButton").css("display", "block");
+					$(".box-summary").find('.container-box[data-variant="' + $var_id + '"]').closest(".productsimage").remove();
+					$(".main-custombundle .productsimage[data-variant='" + $var_id + "']").find(".productQty").removeClass("show");
+					$(".main-custombundle .productsimage[data-variant='" + $var_id + "']").find(".add-button").css("display", "block");
 				}
 			}
 		}
@@ -348,7 +362,7 @@ $(document).ready(function() {
 	}
   
 	set_lineitems_onload();
-	$(".addButton").on("click", function() {
+	$(document).on("click",".addButton",function() {
 		console.log("addButton  click");
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$product_id = $(this).closest(".productsimage").data("product");
@@ -393,7 +407,6 @@ $(document).ready(function() {
 		var selected_items = [];
 		var selected_item_qty = [];
 		var cartTotQty = 0;
-		var productPrice = 0;
     	var indicatore = 0;
 		$splitMinPrice = $(".minCartprice").val().split("$");
 		var inputtotalrange = $splitMinPrice[1];
@@ -419,6 +432,7 @@ $(document).ready(function() {
 			$price = $(this).closest(".productsimage").find(".product-price--original").data("price");
 			// console.log($price);
 			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
+			// €
 			if ($Dataprice != 0) {
                 $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
                 $productPrices += $currentVarQty * parseInt($Dataprice[1]);
@@ -456,17 +470,20 @@ $(document).ready(function() {
 		// do't remove this comment
 
 		$remain_amount = inputtotalrange - $getproductPrices;
-        var $getremainAmount = Math.round($remain_amount * 100) / 100;
+		var $getremainAmount = Math.round($remain_amount * 100) / 100;
+		if(inputtotalrangemax < $getproductPrices){
+			if (!$(".productsimage").hasClass("giftProduct")) {
+				$(".box-giftproduct").addClass("show");
+			}
+		}else{
+			$(".box-giftproduct").removeClass("show");
+		}
 		if ($remain_amount < 1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
 			$(".addToCart").prop('disabled', false);
 			$(".addToCart").css("cursor", "pointer");
-			if (!$(".productsimage").hasClass("giftProduct")) {
-				$(".box-giftproduct").addClass("show");
-			}
 		} else {
-			$(".box-giftproduct").removeClass("show");
 			$(".addToCart").attr("disabled", "disabled");
 			$(".addToCart").css("cursor", "not-allowed");
 			$remain_amount = "$" + $remain_amount + " Left to ";
@@ -521,6 +538,16 @@ $(document).ready(function() {
 		$(".deliverybox").addClass("hide");
 		$(".rc-selling-plans").addClass("hide");
 		getcartTotalQty();
+	});
+	$(document).on("click",".popupAddbtn",function(){
+		console.log("popupAddbtn");
+		$(this).css("display", "none");
+		$(this).closest(".custom-quickview").find(".product-quantity").addClass("show");
+		$productId = $(this).closest(".product-quick-view__product").data("id");
+		// $backupQty = $(".custom-bundle .main-custombundle .productsimage[data-product='"+ $productId +"'] .product-quantity__selector").val();
+	
+		$(".main-custombundle .productsimage[data-product='"+ $productId +"']").find(".addButton").trigger("click");
+	
 	});
 });
 
