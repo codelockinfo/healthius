@@ -266,9 +266,9 @@ $(document).ready(function() {
 	}
 
 	function subscriptionAddtocart(){
-		$SelectedVariantid = $(".product-variant-select").val();
+		$giftVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
-        console.log($SelectedVariantid);
+        console.log($giftVariantid);
 
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
