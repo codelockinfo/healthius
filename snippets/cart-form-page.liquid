@@ -63,8 +63,11 @@
 {%- assign rc_bundle_variant = "" -%}
 {%- assign rc_bundle_variant_id = "" -%}
 
+{%- assign custom_bundle_variant_id = "/cart/update?" -%}}
 
 {%- for item in cart.items -%}
+  {% assign main_id = '' %}
+  {% assign addon_product_id = '' %}
   {%- if item.properties["_rc_bundle"] == rc_bundle_id -%}
     {%- assign rc_bundle_price = rc_bundle_price | plus: item.final_line_price-%}
 
@@ -77,7 +80,8 @@
     {%- assign rc_bundle_selling_plan_allocation_compare_at_price = rc_bundle_selling_plan_allocation_compare_at_price | plus: selling_plan_allocation_compare_at_price_total -%}
 
     {%- assign rc_bundle_handle = item.properties["_rc_bundle_parent"] -%}
-
+    {%- assign main_id = item.properties["_rc_bundle"] -%}
+    {% assign custom_bundle_variant_id = main_id %}
     {%- assign rc_bundle_variant_id = item.properties["_rc_bundle_variant"] | plus: 0 -%}
 
     {%- assign rc_bundle_url_to_remove = rc_bundle_url_to_remove | append: "updates[" | append: item.key | append: "]=0&" -%}
@@ -103,7 +107,7 @@
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
-        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}">Remove</a>
+        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}">Remove-{{ custom_bundle_variant_id }}</a>
         </div>
     {%- endunless -%}
 
