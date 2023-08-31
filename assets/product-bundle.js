@@ -302,7 +302,7 @@ $(document).ready(function() {
 			var product_id = parseInt($(this).data("product"));
 			var variant_id = parseInt($(this).data("variant"));
 
-			console.log(variant_id);
+			// console.log(variant_id);
 			var collection_id = $(this).data("collection");
 			var sellingplan_id = (selling_plan_id == '689131815193') ? $(this).data("selling15") : $(this).data("selling30");
 
