@@ -606,5 +606,17 @@ function getCookie(name) {
 }
 
   
+const parentDiv = document.querySelector('.rc-selling-plans');
 
+// Listen for changes on the parent div
+parentDiv.addEventListener('change', function(event) {
+  // Make sure the event comes from a <select> element
+  if (event.target.tagName.toLowerCase() === 'select') {
+    // Get the selected option's value (id)
+    const selectedOptionValue = event.target.value;
+
+    // Log the selected id
+    console.log(`Selected id: ${selectedOptionValue}`);
+  }
+});
 
