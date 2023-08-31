@@ -276,7 +276,7 @@ $(document).ready(function() {
 
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
-			externalVariantId: selectedOptionValue,
+  			externalVariantId: selectedId,
 			selections: []
 		};
 		var static_frequancy = 15;
