@@ -125,6 +125,11 @@
           {{ rc_bundle_contents }}
         </span>
       </div>
+      <div class="cart__quantity">
+          <div class="cart-item__actions">
+             <a href="{{ rc_bundle_url_to_remove }}{{ addon_id }}" class="remove_bundle_one remove" title="Remove" data-href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">Remove</a>
+          </div>
+      </div>
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
