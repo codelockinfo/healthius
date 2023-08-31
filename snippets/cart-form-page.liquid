@@ -64,10 +64,14 @@
 {%- assign rc_bundle_variant_id = "" -%}
 
 {%- assign custom_bundle_variant_id = "/cart/update?" -%}}
+{%- assign custom_addon_variant_id = "" -%}}
 
 {%- for item in cart.items -%}
   {% assign main_id = '' %}
-  {% assign addon_product_id = '' %}
+  {% assign addon_product_id = item.properties["_main_bundle_id"] %}
+  {%- if addon_product_id -%}
+    {% assign custom_addon_variant_id = item.properties["_main_bundle_id"] %}
+  {% endif %}
   {%- if item.properties["_rc_bundle"] == rc_bundle_id -%}
     {%- assign rc_bundle_price = rc_bundle_price | plus: item.final_line_price-%}
 
@@ -107,7 +111,7 @@
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
-        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}">Remove-{{ custom_bundle_variant_id }}</a>
+        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}">Remove-{{ custom_bundle_variant_id }}---{{ custom_addon_variant_id }}</a>
         </div>
     {%- endunless -%}
 
