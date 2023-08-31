@@ -639,12 +639,18 @@
        border: none;
     }
     .customfilter {
-        display: block;
+        /* display: block; */
         width: 100%;
         margin: 15px auto;
     }
+    .mainboxli{
+        margin-bottom: 3%;
+        margin-right: 0;
+    }
     .filtertab{
-        display: none;
+        /* display: none; */
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .filterlabel{
         /* width: 30%; */
@@ -824,6 +830,7 @@
     }
     .newcustomfilter{
         flex-direction: column;
+        padding: 0;
     }
     .subscriptionlabel.sub-align .subscribename {
         margin-left: 0;
