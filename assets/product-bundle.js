@@ -607,6 +607,9 @@ function getCookie(name) {
 	return null;
 }
 
+// Declare a variable to hold the selected ID
+let selectedId;
+
 let checkForElement = setInterval(function() {
   // Attempt to select the parent div
   var parentDiv = document.querySelector('.rc-selling-plans');
@@ -624,11 +627,25 @@ let checkForElement = setInterval(function() {
         // Get the selected option's value (id)
         const selectedOptionValue = event.target.value;
 
-        // Log the selected id
-        // console.log(`Selected id: ${selectedOptionValue}`);
+        // Set the selected id to the variable
+        selectedId = selectedOptionValue;
+
+        // Log the selected id for debugging (Optional)
+        console.log(`Selected id: ${selectedId}`);
       }
     });
+
+    // Set the initially selected ID
+    const initialSelectElement = parentDiv.querySelector('select');
+    if (initialSelectElement) {
+      const initialSelectedOptionValue = initialSelectElement.value;
+      selectedId = initialSelectedOptionValue;
+
+      // Log the initially selected id
+      console.log(`Initially selected id: ${selectedId}`);
+    }
   }
 }, 100);  // Check every 100 milliseconds
+
 
 
