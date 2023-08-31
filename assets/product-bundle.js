@@ -285,6 +285,7 @@ $(document).ready(function() {
 		if(selling_plan_id ==  undefined){
 			if(window.Recharge.widgets[meta.product.id] !== undefined){
 				var selling_plans = window.Recharge.widgets[meta.product.id].product.selling_plan_groups;
+                console.log(selling_plans);
 				for(var i = 0; i < selling_plans.length; i++){
 					for(var j = 0; j < (selling_plans[i].selling_plans).length; j++ ){
 						var selling_plan_details = selling_plans[i].selling_plans[j];
