@@ -198,11 +198,14 @@
 											{%- endfor -%} -->
                                   {%- for item in cart.items -%}
                                       {%- if item.properties['bundle_id'] == current_bundle_id -%}
+                                        {% if item.variant.title == 'Default Title' %}
+                                        {% else %}
                                           <div class="product-option">
                                               <dt>{{ item.variant.title }}:
                                               </dt>
                                               <dd>{{ item.quantity }}</dd>
                                           </div>
+                                        {% endif %}
                                       {%- endif -%}
                                   {%- endfor -%}
 									{%- endunless -%}
