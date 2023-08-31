@@ -1,7 +1,7 @@
 {{ 'component-product-item.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-product-custombundle.css' | asset_url | stylesheet_tag }}
-{% if section.settings.bgimage  != blank %} <div class="imageheight cssbgimage" style="background-image:url('{{ section.settings.bgimage | img_url: 'master'}}')">{% endif %}
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
+<hr class="custom-bundle-border"></hr>
 <input type="hiden" class="minCartprice" value="{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}"/>
 <input type="hiden"  class="maxCartprice"  value="{% if section.settings.maxprice != blank %}{{ section.settings.maxprice }}{% endif %}"/>
   {% comment %} <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
@@ -350,11 +350,6 @@
       }
     ],
     "settings": [
-      {
-        "type": "image_picker",
-        "id": "bgimage",
-        "label": "Background image"
-      },
       {
         "type": "header",
         "content": "t:local-march-update.labels.heading"

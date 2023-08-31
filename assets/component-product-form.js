@@ -724,3 +724,34 @@ if ( typeof GiftCardRecipient !== 'function' ) {
 	}
 
 }
+
+
+
+console.log('Set Cokkie');
+// Function to set cookie
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  const expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Function to get cookie
+function getCookie(cname) {
+  const name = cname + "=";
+  const ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+      }
+    return "";
+}
+// Check if the cookie is already set
+if (getCookie("discount_code") === "") {
+  setCookie("discount_code", "FIRSTSUBSCRIBTION", 30);
+}

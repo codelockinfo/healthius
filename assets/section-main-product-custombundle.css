@@ -1,4 +1,17 @@
-.custom-bundle{
+.cartcolumn .box-header {
+    position: sticky;
+    top: 10px;
+}
+.custom-bundle-border:empty {
+    display: block;
+}
+.custom-bundle-border {
+    border: 1px solid #131515;
+    opacity: 0.3;
+    margin-bottom: 30px;
+}
+.custom-bundle {
+    position: relative;
     /* max-width: 80rem; */
     display: flex;
     /* flex-wrap: wrap; */
@@ -712,7 +725,7 @@
     display: none;
 }
 .rc-button-group__options{
-    /* display: none !important; */
+    display: none !important;
 }
  .rc-selling-plans.hide{
       display: none !important;
@@ -785,16 +798,6 @@
     border-top: 4px solid #131515;
     opacity: 0.3;
 }
-.cssbgimage{
-    background-repeat: repeat;
-    background-size: cover;
-    padding: 10px;
-    background-position: center;
-    height: 100%;
-   }
-   .cssbgimage.imageheight{
-    height: 100vh;
-   }
 @media screen and (max-width: 1024px) {
     .subscriptwidth{
         flex-wrap: wrap;
