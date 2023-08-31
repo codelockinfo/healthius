@@ -130,13 +130,10 @@
              <a href="{{ rc_bundle_url_to_remove }}{{ addon_id }}" class="remove_bundle_one remove text-link text-size--xsmall text-color--opacity" title="Remove" data-href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">Remove</a>
           </div>
       </div>
-        <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
-        <p>Contents: {{ rc_bundle_contents }}</p>
-        <p>{{ rc_bundle_price | money }}</p>
-        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">Remove</a>
-        </div>
-      </div>
-    {%- endunless -%}
+      <div class="cart-item__total text-align--right"><span class="visually-hidden">Regular price</span><strong>{{ rc_bundle_price | money }}</strong></div>
+    </div>
+  </div>
+{%- endunless -%}
 
   {%- else -%}
                   
