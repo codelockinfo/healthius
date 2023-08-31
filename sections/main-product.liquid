@@ -1,3 +1,17 @@
+--test
+
+{% for selling_plan_group in product.selling_plan_groups %}
+  {% assign first_selling_plan = selling_plan_group.selling_plans[0] %}
+  {% assign first_selling_plan2 = selling_plan_group.selling_plans[1] %}
+  {% assign emp = first_selling_plan.id %}
+  {% assign emp2 = first_selling_plan2.id %}
+
+  {{ emp }} <!-- This will print the ID of the first selling plan -->
+  {{ emp2 }} <!-- This will print the ID of the second selling plan -->
+{% endfor %}
+
+
+
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
 <product-page 
