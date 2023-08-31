@@ -319,11 +319,8 @@ $(document).ready(function() {
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        console.log('bundle----');
-        console.log(bundle);
-        console.log('bundleItems----');
-        console.log(bundleItems[0]['properties']['_rc_bundle']);
-        console.log(bundleItems[0][properties]['_rc_bundle']);
+        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        console.log('get_main_bundle_id---'+get_main_bundle_id);
 		
         const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
@@ -338,7 +335,7 @@ $(document).ready(function() {
 				$splitMaxPrice = $(".maxCartprice").val().split("$");
 				var inputtotalrangemax = $splitMaxPrice[1];
 				if(inputtotalrangemax < $getproductPrices){
-					addGiftproduct($giftVariantid);
+					addGiftproduct($giftVariantid,get_main_bundle_id);
 				}else{
 					removeCookie("variantids");
 					removeCookie("variant_qty");
@@ -353,29 +350,32 @@ $(document).ready(function() {
 		asyncGetCall();
 	}
 
-	function addGiftproduct(giftVariantid) {
-		$.ajax({
-			url: '/cart/add.js',
-			dataType: 'json',
-			type: 'POST',
-			data: {
-				quantity: 1, // Adjust the quantity as needed
-				id: giftVariantid
-			},
-			success: function(response) {
-              
-            console.log('Success----');
-            console.log(response);
+	function addGiftproduct(giftVariantid,get_main_bundle_id) {
 
-				// Handle the success response here
-				removeCookie("variantids");
-				removeCookie("variant_qty");
-				// window.location.href = '/checkout';
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.log('Error:', textStatus, errorThrown);
-			}
-		});
+      console.log('giftVariantid----'+giftVariantid);
+      console.log('get_main_bundle_id----'+get_main_bundle_id);
+		// $.ajax({
+		// 	url: '/cart/add.js',
+		// 	dataType: 'json',
+		// 	type: 'POST',
+		// 	data: {
+		// 		quantity: 1, // Adjust the quantity as needed
+		// 		id: giftVariantid
+		// 	},
+		// 	success: function(response) {
+              
+  //           console.log('Success----');
+  //           console.log(response);
+
+		// 		// Handle the success response here
+		// 		removeCookie("variantids");
+		// 		removeCookie("variant_qty");
+		// 		// window.location.href = '/checkout';
+		// 	},
+		// 	error: function(jqXHR, textStatus, errorThrown) {
+		// 		console.log('Error:', textStatus, errorThrown);
+		// 	}
+		// });
 	}
   
 	set_lineitems_onload();
