@@ -266,11 +266,11 @@ $(document).ready(function() {
 	}
 
 	function subscriptionAddtocart(){
-		$giftVariantid = $(".product-variant-select").val();
+		$SelectedVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
-			externalVariantId: $giftVariantid ,
+			externalVariantId: $SelectedVariantid ,
 			selections: []
 		};
 		var static_frequancy = 15;
