@@ -268,6 +268,7 @@ $(document).ready(function() {
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
+        console.log('giftVariantid');
         console.log($giftVariantid);
 
 		var bundleObject = {
