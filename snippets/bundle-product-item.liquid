@@ -1,6 +1,12 @@
 {%- assign product_variant = product.selected_or_first_available_variant -%}
-<div class="productsimage"  data-summery-index="{{ index }}" data-selling15="{{product.metafields.custom.sellling_plan_15}}" data-selling30="{{product.metafields.custom.selling_plan}}" data-variant="{{ product_variant.id }}" data-collection="{{ collection.id }}"  data-product="{{ product.id }}" data-price="{{ product.price | money }}">
-
+{% assign emp = '' %}
+{% for selling_plan_group in product.selling_plan_groups %}
+  {% assign first_selling_plan = selling_plan_group.selling_plans[0] %}  
+  {% assign first_selling_plan2 = selling_plan_group.selling_plans[1] %}  
+  {% assign emp = first_selling_plan.id %}
+  {% assign emp2 = first_selling_plan2.id %}
+  {% endfor %}
+<div class="productsimage"  data-summery-index="{{ index }}" data-selling15="{{ emp }}" data-selling30="{{ emp2 }}" data-variant="{{ product_variant.id }}" data-collection="{{ collection.id }}"  data-product="{{ product.id }}" data-price="{{ product.price | money }}">
 <div id="product-item-{{ product.id }}" class="product-item card container-box" data-js-product-item  data-variant="{{ product_variant.id }}" data-summery-index="{{ index }}">
 
   {%- liquid

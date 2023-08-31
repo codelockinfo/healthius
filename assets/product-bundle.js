@@ -203,7 +203,7 @@ $(document).ready(function() {
 	function onetimeAddtocart(){
 		console.log("ONE TIME");
 		$giftVariantid = $(".product-variant-select").val();
-		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundle_product_arr = {};
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
@@ -253,7 +253,7 @@ $(document).ready(function() {
 	}
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
-		var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
+		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundle_product_arr = {};
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
@@ -283,8 +283,8 @@ $(document).ready(function() {
 		bundleObject.sellingPlan = selling_plan_id;
 		$.each($("#cartSummary .productsimage"), function() {
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
-			var product_id = $(this).data("product");
-			var variant_id = $(this).data("variant");
+			var product_id = parseInt($(this).data("product"));
+			var variant_id = parseInt($(this).data("variant"));
 
 			console.log(variant_id);
 			var collection_id = $(this).data("collection");

@@ -14,8 +14,101 @@
 						<span>{{ 'cart.table.quantity' | t }}</span>
 						<span class="text-align--right">{{ 'cart.table.total' | t }}</span>
 					</div>
+
+
+{%- assign rc_displayed_bundles = "" -%}
+{%- assign rc_bundles = "" -%}
+{%- assign rc_bundles_cart_count = cart.item_count -%}
+{%- assign rc_bundles_count = 0 -%}
+{%- assign rc_bundles_item_count = 0 -%}
+
+{%- for item in cart.items -%}
+  {%- if item.properties["_rc_bundle"] -%}
+
+    {%- unless rc_bundles contains item.properties["_rc_bundle"] -%}
+      {%- assign rc_bundles = rc_bundles | append: "," | append: item.properties["_rc_bundle"] -%}
+      {%- assign rc_bundles_count = rc_bundles_count | plus: 1 -%}
+    {%- endunless -%}
+
+    {%- assign rc_bundles_item_count = rc_bundles_item_count | plus: item.quantity -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign rc_bundles = rc_bundles | remove_first: "," -%}
+{%- assign rc_bundles_cart_count = rc_bundles_cart_count | minus: rc_bundles_item_count | plus: rc_bundles_count -%}
+
                   
-					{%- for item in cart.items -%}
+{%- for item in cart.items -%}
+  {%- if rc_bundles contains item.properties["_rc_bundle"] -%}
+    {%- unless rc_displayed_bundles contains item.properties["_rc_bundle"] -%}
+      {%- comment -%}
+        - recharge-bundle-cart-item: exposes the following assignments:
+        - rc_bundle_product: The bundle parent product.
+        - rc_bundle_variant: The bundle selected variant.
+        - rc_bundle_contents: The individual contents copy and it respective quantities: `1x product title, 2x product title`.
+        - rc_bundle_price: The total price of all of the items in the bundle in the currency's subunit. This includes any line-level discounts.
+        - rc_bundle_original_price: The total price of all of the items in the bundle in the currency's subunit, before discounts have been applied.
+        - rc_bundle_selling_plan_allocation_compare_at_price: The total price of all of the items `selling_plan_allocation.compare_at_price`
+        - rc_bundle_url_to_remove: A url to remove the bundle from the cart. Similar to `line_item.url_to_remove`.
+      {%- endcomment -%} 
+{% assign rc_bundle_id  = item.properties["_rc_bundle"] %}
+
+      {%- assign rc_bundle_price = 0 -%}
+{%- assign rc_bundle_original_price = 0 -%}
+{%- assign rc_bundle_selling_plan_allocation_compare_at_price = 0-%}
+{%- assign rc_bundle_product = "" -%}
+{%- assign rc_bundle_contents = "" -%}
+{%- assign rc_bundle_handle = "" -%}
+{%- assign rc_bundle_url_to_remove = "/cart/update?" -%}
+{%- assign rc_bundle_variant = "" -%}
+{%- assign rc_bundle_variant_id = "" -%}
+
+
+{%- for item in cart.items -%}
+  {%- if item.properties["_rc_bundle"] == rc_bundle_id -%}
+    {%- assign rc_bundle_price = rc_bundle_price | plus: item.final_line_price-%}
+
+    {%- assign rc_bundle_original_price = rc_bundle_original_price | plus: item.original_line_price -%}
+
+    {%- assign rc_bundle_contents = rc_bundle_contents | append: ", " | append: item.quantity | append: 'x ' | append: item.title -%}
+
+    {%- assign selling_plan_allocation_compare_at_price_total = item.selling_plan_allocation.compare_at_price | default: 0 | times: item.quantity -%}
+
+    {%- assign rc_bundle_selling_plan_allocation_compare_at_price = rc_bundle_selling_plan_allocation_compare_at_price | plus: selling_plan_allocation_compare_at_price_total -%}
+
+    {%- assign rc_bundle_handle = item.properties["_rc_bundle_parent"] -%}
+
+    {%- assign rc_bundle_variant_id = item.properties["_rc_bundle_variant"] | plus: 0 -%}
+
+    {%- assign rc_bundle_url_to_remove = rc_bundle_url_to_remove | append: "updates[" | append: item.key | append: "]=0&" -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign rc_bundle_product = all_products[rc_bundle_handle] -%}
+
+{%- assign rc_bundle_contents = rc_bundle_contents | remove_first: ", " -%}
+
+{%- assign rc_displayed_bundles = rc_displayed_bundles | append: "," | append: rc_bundle_id -%}
+
+{%- for variant in rc_bundle_product.variants -%}
+  {%- if variant.id == rc_bundle_variant_id -%}
+    {%- assign rc_bundle_variant = variant -%}
+  {%- endif -%}
+{%- endfor -%}
+      
+      {%- comment -%}
+        Render bundle:
+      {%- endcomment -%}
+      <div>
+        <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
+        <p>Contents: {{ rc_bundle_contents }}</p>
+        <p>{{ rc_bundle_price | money }}</p>
+        <a href="{{ rc_bundle_url_to_remove }}">Remove</a>
+        </div>
+    {%- endunless -%}
+
+  {%- else -%}
+                  
                       {%- if item.properties['bundle_id'] -%}
                             {%- unless bundles_displayed contains item.properties['bundle_id'] -%}
                                 {%- assign bundles_displayed = item.properties['bundle_id'] | concat: bundles_displayed -%}
@@ -167,13 +260,14 @@
 
 						</div>
                         {% endif %}
+                        {% endif %}
 					{%- endfor -%}
 
 				{%- else -%}
 
 					{{ 'cart.empty' | t }}
 					<div class="gutter-top--regular">
-						<a href="/products/fresh-bundle" class="button button--solid button--large">
+						<a href="{{ routes.all_products_collection_url }}" class="button button--solid button--large">
 							{{ 'cart.continue_browsing' | t }}
 						</a>
 					</div>
