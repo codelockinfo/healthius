@@ -322,7 +322,8 @@ $(document).ready(function() {
         console.log('bundle----');
         console.log(bundle);
         console.log('bundleItems----');
-        console.log(bundleItems);
+        console.log(bundleItems[0]['properties']['_rc_bundle']);
+        console.log(bundleItems[0][properties]['_rc_bundle']);
 		
         const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
