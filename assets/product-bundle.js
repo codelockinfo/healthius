@@ -333,6 +333,8 @@ $(document).ready(function() {
 				if(inputtotalrangemax < $getproductPrices){
 					addGiftproduct($giftVariantid);
 				}else{
+					removeCookie("variantids");
+					removeCookie("variant_qty");
 					window.location.href = '/checkout';
 				}
 			}else{
