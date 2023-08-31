@@ -111,11 +111,16 @@
         {% endif %}
     {% endfor %}
               
-      <div>
+      <div class="cart-form-item">
+        <div class="cart-item__product-info cart-form-item--layout">
+          <a href="{{ rc_bundle_product.url }}" class="cart-item__thumbnail element--border-width-clamped element--border-radius">
+            ddddd
+          </a>
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
         <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">Remove</a>
+        </div>
       </div>
     {%- endunless -%}
 
