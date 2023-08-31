@@ -605,17 +605,25 @@ function getCookie(name) {
 	return null;
 }
 
+   document.addEventListener('DOMContentLoaded', (event) => {
+      const selectElement = document.querySelector('.rb-select.tmb0');
+      let selectedId;  // Variable to store the selected ID
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const selectElement = document.querySelector('.rb-select.tmb0');
+      // Check if the select element exists
+      if (selectElement) {
+        selectElement.addEventListener('change', function() {
+          const selectedOption = this.options[this.selectedIndex];
+          const selectedOptionId = selectedOption.getAttribute('data-id');  // Get the data-id attribute
 
-  selectElement.addEventListener('change', function() {
-    const selectedOption = this.options[this.selectedIndex];
-    const selectedOptionId = selectedOption.getAttribute('data-id');  // Get the data-id attribute
+          // Update the selectedId variable
+          selectedId = selectedOptionId;
 
-    // Print the ID to the console
-    console.log(`Selected ID: ${selectedOptionId}`);
-  });
-});
+          // Print the ID to the console
+          console.log(`Updated selected ID: ${selectedId}`);
+        });
+      } else {
+        console.error('Select element not found');
+      }
+    });
 
 
