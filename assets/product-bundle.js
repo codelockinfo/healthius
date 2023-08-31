@@ -265,8 +265,20 @@ $(document).ready(function() {
 		asyncGetCall();
 	}
 
+  const selectElement = document.getElementById('sellingPlan8619519803673');
+
+// Listen for changes on the select element
+selectElement.addEventListener('change', function() {
+  // Get the selected option's value (id)
+  const selectedOptionValue = this.value;
+
+  // Log the selected id
+  console.log(`Selected id: ${selectedOptionValue}`);
+});
+
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
+        $selectedVariantid = 
 		var PRODUCT_ID = $(".product_variant_id").val();
         console.log('giftVariantid');
         console.log($giftVariantid);
