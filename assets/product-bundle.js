@@ -356,10 +356,14 @@ $(document).ready(function() {
 				id: giftVariantid
 			},
 			success: function(response) {
+              
+            console.log('Success----');
+            console.log(response);
+
 				// Handle the success response here
 				removeCookie("variantids");
 				removeCookie("variant_qty");
-				window.location.href = '/checkout';
+				// window.location.href = '/checkout';
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				console.log('Error:', textStatus, errorThrown);
