@@ -1,4 +1,15 @@
 // console.log("onload js");
+
+ const selectElement = document.getElementById('sellingPlan8619519803673');
+
+// Listen for changes on the select element
+selectElement.addEventListener('change', function() {
+  // Get the selected option's value (id)
+  const selectedOptionValue = this.value;
+
+  // Log the selected id
+  console.log(`Selected id: ${selectedOptionValue}`);
+});
 $(document).on("click", ".productsimage .card__image", function(e) {
 	$bkpQty = $(this).closest(".productsimage").find(".product-quantity.show .product-quantity__selector").val();
 	var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
@@ -265,16 +276,7 @@ $(document).ready(function() {
 		asyncGetCall();
 	}
 
-  const selectElement = document.getElementById('sellingPlan8619519803673');
-
-// Listen for changes on the select element
-selectElement.addEventListener('change', function() {
-  // Get the selected option's value (id)
-  const selectedOptionValue = this.value;
-
-  // Log the selected id
-  console.log(`Selected id: ${selectedOptionValue}`);
-});
+ 
 
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
