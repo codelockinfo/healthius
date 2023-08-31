@@ -606,7 +606,6 @@ function getCookie(name) {
 }
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
   const selectElement = document.querySelector('.rb-select.tmb0');
 
   selectElement.addEventListener('change', function() {
@@ -616,6 +615,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Print the ID to the console
     console.log(`Selected ID: ${selectedOptionId}`);
   });
-});
 
 
