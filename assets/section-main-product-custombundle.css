@@ -668,7 +668,7 @@
   /* cls015 start */
   .frequentlyflex{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     width: 25%;
   }
   .frequentlyflex{
@@ -676,11 +676,8 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  .subscriptwidth{
-    width:100%;
-  }
   .subscriptwidth {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: stretch;
     justify-items: stretch;
@@ -701,8 +698,8 @@
 .subscribename span {
     background: #f3f4f6;
     color: #000;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    /* border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; */
     font-size: 14px;
     position: absolute;
     margin-left: auto;
@@ -726,6 +723,9 @@
 }
 .rc-button-group__options{
     display: none !important;
+}
+.rc-template__button-group{
+    width: 75% !important;
 }
  .rc-selling-plans.hide{
       display: none !important;
@@ -780,8 +780,8 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.25rem;
-    font-weight: 400;
-    font-size: .75rem;
+    font-weight: 600;
+    font-size: .85rem;
     line-height: 1rem;
 }
 .subscribename {
@@ -817,7 +817,7 @@
 }
 @media screen and (max-width: 1024px) {
     .frequentlyflex{
-        display: none;
+        /* display: none; */
     }
     
 }
@@ -846,7 +846,7 @@
   .subscribename {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .filterlabelmain {
     margin-top: 8px;
@@ -918,7 +918,7 @@ text-transform: uppercase;
 .bundle_flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 /* .bundle_flex .newcustomfilter.container--large.container--vertical-space.remove-empty-space{ */
 .bundle_flex .subtextflex{
@@ -930,7 +930,7 @@ text-transform: uppercase;
     margin-top: 0;
 }
 .bundle_flex .section-heading.section-heading--left.gutter-bottom--page{
-    width: 30%;
+    width: 25%;
     margin-bottom: 0;
 }
 .mount-css-slider  .container--vertical-space {
