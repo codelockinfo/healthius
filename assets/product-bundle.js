@@ -605,3 +605,17 @@ function getCookie(name) {
 	return null;
 }
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const selectElement = document.querySelector('.rb-select.tmb0');
+
+  selectElement.addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    const selectedOptionId = selectedOption.getAttribute('data-id');  // Get the data-id attribute
+
+    // Print the ID to the console
+    console.log(`Selected ID: ${selectedOptionId}`);
+  });
+});
+
+
