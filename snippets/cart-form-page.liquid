@@ -121,8 +121,8 @@
             <div class="element--hide-on-small"><span class="visually-hidden">Regular price</span><span>{{ rc_bundle_price | money }}</span></div>  
             <div class="element--hide-on-desk"><span class="visually-hidden">Regular price</span><strong>{{ rc_bundle_price | money }}</strong></div>  
         </div>
-        <span class="cart-item__title">
-            <span class="text-animation--underline-thin">{{ rc_bundle_contents }}</span>
+        <span class="cart-item__variant">
+          {{ rc_bundle_contents }}
         </span>
       </div>
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
