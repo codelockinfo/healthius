@@ -363,7 +363,9 @@ $(document).ready(function() {
               quantity: 1, // Adjust the quantity as needed
               id: giftVariantid,
               properties: {
-                "_main_bundle_id": get_main_bundle_id
+               // "_main_bundle_id": get_main_bundle_id
+               "_main_bundle_id": "8619519803673"
+
               }
           },
           success: function(response) {
