@@ -268,6 +268,8 @@ $(document).ready(function() {
 	function subscriptionAddtocart(){
 		$SelectedVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
+        console.log($SelectedVariantid);
+
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
 			externalVariantId: $SelectedVariantid ,
