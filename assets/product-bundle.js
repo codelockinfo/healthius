@@ -625,7 +625,7 @@ let checkForElement = setInterval(function() {
         const selectedOptionValue = event.target.value;
 
         // Log the selected id
-        console.log(`Selected id: ${selectedOptionValue}`);
+        // console.log(`Selected id: ${selectedOptionValue}`);
       }
     });
   }
