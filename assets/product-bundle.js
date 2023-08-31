@@ -241,8 +241,8 @@ $(document).ready(function() {
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
-        var get_main_bundle_id = "8619519803673";
+        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        //var get_main_bundle_id = "8619519803673";
 
 
 		const cartData = { items: bundleItems };
@@ -269,7 +269,7 @@ $(document).ready(function() {
 		$giftVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundleObject = {
-			externalProductId: '8619519803673',
+			externalProductId: PRODUCT_ID,
 			externalVariantId: $giftVariantid ,
 			selections: []
 		};
