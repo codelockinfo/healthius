@@ -269,7 +269,7 @@ $(document).ready(function() {
 		$giftVariantid = $(".product-variant-select").val();
 		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundleObject = {
-			externalProductId: PRODUCT_ID,
+			externalProductId: '8619519803673',
 			externalVariantId: $giftVariantid ,
 			selections: []
 		};
