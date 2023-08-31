@@ -354,28 +354,31 @@ $(document).ready(function() {
 
       console.log('giftVariantid----'+giftVariantid);
       console.log('get_main_bundle_id----'+get_main_bundle_id);
-		// $.ajax({
-		// 	url: '/cart/add.js',
-		// 	dataType: 'json',
-		// 	type: 'POST',
-		// 	data: {
-		// 		quantity: 1, // Adjust the quantity as needed
-		// 		id: giftVariantid
-		// 	},
-		// 	success: function(response) {
-              
-  //           console.log('Success----');
-  //           console.log(response);
+      $.ajax({
+          url: '/cart/add.js',
+          dataType: 'json',
+          type: 'POST',
+          data: {
+              quantity: 1, // Adjust the quantity as needed
+              id: giftVariantid,
+              properties: {
+                "_main_bundle_id": get_main_bundle_id
+              }
+          },
+          success: function(response) {
+            
+          console.log('Success----');
+          console.log(response);
 
-		// 		// Handle the success response here
-		// 		removeCookie("variantids");
-		// 		removeCookie("variant_qty");
-		// 		// window.location.href = '/checkout';
-		// 	},
-		// 	error: function(jqXHR, textStatus, errorThrown) {
-		// 		console.log('Error:', textStatus, errorThrown);
-		// 	}
-		// });
+              // Handle the success response here
+              removeCookie("variantids");
+              removeCookie("variant_qty");
+              // window.location.href = '/checkout';
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              console.log('Error:', textStatus, errorThrown);
+          }
+      });
 	}
   
 	set_lineitems_onload();
