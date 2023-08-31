@@ -70,12 +70,11 @@
         {%- case block.type %}
 
           {%- when 'title' -%}
-            <a class="product-item__title" 
-              href="{{ product_url }}" title="{{ product.title | escape }}" 
+            <a class="product-item__title" title="{{ product.title | escape }}" 
               {{ block.shopify_attributes }}
             >
               <div class="remove-line-height-space--small marginbottomtitle">
-                <span data-id="{{ product_variant.id }}" class="variant-title text-animation--underline text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold text-animation--underline">
+                <span data-id="{{ product_variant.id }}" class="variant-title  text-size--{{ settings.product_card_text_size }} text-line-height--small text-weight--bold">
                   {%- liquid 
                     unless blank_product 
                       echo product.title 

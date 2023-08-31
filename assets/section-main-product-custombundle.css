@@ -1003,6 +1003,9 @@ h2.subtext1 {
     width: 3.5rem;
     border-radius: 0;
 }
+.product-item__title,.imageforcart,.product-price,.flexdirrow {
+    cursor: default;
+}
 @media only screen and (max-width: 1200px) { 
     .mount-css-slider span.section-heading__subheading.text-size--large{
         margin-left: 0px;
