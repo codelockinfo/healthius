@@ -116,6 +116,15 @@
           <a href="{{ rc_bundle_product.url }}" class="bundle-link cart-item__thumbnail element--border-width-clamped element--border-radius">
             <figure></figure>
           </a>
+      <div class="cart-form-item__price-title-variants">
+        <div class="cart-item__price">
+            <div class="element--hide-on-small"><span class="visually-hidden">Regular price</span><span>{{ rc_bundle_price | money }}</span></div>  
+            <div class="element--hide-on-desk"><span class="visually-hidden">Regular price</span><strong>{{ rc_bundle_price | money }}</strong></div>  
+        </div>
+        <span class="cart-item__title">
+            <span class="text-animation--underline-thin">{{ rc_bundle_contents }}</span>
+        </span>
+      </div>
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
