@@ -240,6 +240,9 @@ $(document).ready(function() {
 		});
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+
+        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+
 		const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
 
@@ -250,7 +253,7 @@ $(document).ready(function() {
 			});
 			const data = await respons.json();
 			if($giftVariantid !== undefined){
-				addGiftproduct($giftVariantid);
+                addGiftproduct($giftVariantid,get_main_bundle_id);
 			}else{
 				removeCookie("variantids");
 				removeCookie("variant_qty");
@@ -352,8 +355,6 @@ $(document).ready(function() {
 
 	function addGiftproduct(giftVariantid,get_main_bundle_id) {
 
-      console.log('giftVariantid----'+giftVariantid);
-      console.log('get_main_bundle_id----'+get_main_bundle_id);
       $.ajax({
           url: '/cart/add.js',
           dataType: 'json',
@@ -373,7 +374,7 @@ $(document).ready(function() {
               // Handle the success response here
               removeCookie("variantids");
               removeCookie("variant_qty");
-              // window.location.href = '/checkout';
+              window.location.href = '/checkout';
           },
           error: function(jqXHR, textStatus, errorThrown) {
               console.log('Error:', textStatus, errorThrown);
