@@ -607,6 +607,28 @@ function getCookie(name) {
 	return null;
 }
 
-  
+let checkForElement = setInterval(function() {
+  // Attempt to select the parent div
+  var parentDiv = document.querySelector('.rc-selling-plans');
+
+  // If the element is found, stop checking and attach the event listener
+  if (parentDiv !== null) {
+    clearInterval(checkForElement);  // Stop the interval
+
+    console.log('Element found:', parentDiv);
+
+    // Listen for changes on the parent div
+    parentDiv.addEventListener('change', function(event) {
+      // Make sure the event comes from a <select> element
+      if (event.target.tagName.toLowerCase() === 'select') {
+        // Get the selected option's value (id)
+        const selectedOptionValue = event.target.value;
+
+        // Log the selected id
+        console.log(`Selected id: ${selectedOptionValue}`);
+      }
+    });
+  }
+}, 100);  // Check every 100 milliseconds
 
 
