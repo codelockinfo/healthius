@@ -318,7 +318,13 @@ $(document).ready(function() {
 
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
-		const cartData = { items: bundleItems };
+
+        console.log('bundle----');
+        console.log(bundle);
+        console.log('bundleItems----');
+        console.log(bundleItems);
+		
+        const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
 
 		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
