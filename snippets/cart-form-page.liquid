@@ -117,7 +117,7 @@
         <p>{{ rc_bundle_product.title }} - {{ rc_bundle_variant.title }}</p>
         <p>Contents: {{ rc_bundle_contents }}</p>
         <p>{{ rc_bundle_price | money }}</p>
-        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">Remove-{{ custom_bundle_variant_id }}---{{ custom_addon_variant_id }}</a>
+        <a class="remove_bundle_one" href="{{ rc_bundle_url_to_remove }}{{ addon_id }}">{{ addon_id }}==========Remove-{{ custom_bundle_variant_id }}---{{ custom_addon_variant_id }}</a>
       </div>
     {%- endunless -%}
 
