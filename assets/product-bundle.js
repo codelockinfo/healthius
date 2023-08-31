@@ -606,7 +606,6 @@ function getCookie(name) {
 	}
 	return null;
 }
-
 // console.log("onload js");
 
  const selectElement = document.getElementById('sellingPlan8619519803673');
