@@ -1,4 +1,3 @@
-
 $(document).on("click", ".productsimage .card__image", function(e) {
 	$bkpQty = $(this).closest(".productsimage").find(".product-quantity.show .product-quantity__selector").val();
 	var thisObj = $(this).closest(".productsimage").find("quick-view-product a");
