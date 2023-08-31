@@ -241,7 +241,9 @@ $(document).ready(function() {
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        var get_main_bundle_id = "8619519803673";
+
 
 		const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
