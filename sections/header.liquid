@@ -51,7 +51,7 @@
         <div>
           <a class="button button--regular button--solid headerorderbtn" href="{{ section.settings.buttonurl }}">{{ section.settings.buttontext }}</a>
         </div>
-        <!-- {%- if section.settings.show_search -%}
+        {%- if section.settings.show_search -%}
           {% comment %} <search-form style="position:relative">
             <div class="button button--outline button--icon button--outline-hover button--no-padding button--no-hover site-search-handle">
               <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: 'search' -%}</span>
@@ -68,7 +68,7 @@
             <div class="search-results-overlay" id="search-results-overlay-desktop" onclick="this.classList.remove('active')" style="display:none"></div>
             <div class="search-results-container" data-js-search-results></div> 
           </search-form> {% endcomment %}
-        {%- endif -%} -->
+        {%- endif -%}
 
         {%- if shop.customer_accounts_enabled -%}
           {%- if customer -%}
