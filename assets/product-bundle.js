@@ -163,13 +163,10 @@ $(document).ready(function() {
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
-		console.log("ADDTOCART");
 		$(".subscriptionlabel").each( function( i ) {
-			console.log("in each ");
 			if($(this).hasClass('active')){
 				$dataValue = $(this).data('value');
 				if($dataValue == "subscribe & save"){
-					console.log("SUBSCRIBE")
 					subscriptionAddtocart();
 				}else{
 					onetimeAddtocart();
@@ -201,46 +198,45 @@ $(document).ready(function() {
 			}
 			bundleObject.selections.push(item_data);
 		});
+		
 		const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
         var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         //var get_main_bundle_id = "8619519803673";
-
-
 		const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
 
 		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(cartData),
-			});
-			const data = await respons.json();
-			if($giftVariantid !== undefined){
-                addGiftproduct($giftVariantid,get_main_bundle_id);
-			}else{
-				removeCookie("variantids");
-				removeCookie("variant_qty");
-				window.location.href = '/checkout';
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(cartData),
+		});
+		const data = await respons.json();
+		if($giftVariantid !== undefined){
+			addGiftproduct($giftVariantid,get_main_bundle_id);
+		}else{
+			removeCookie("variantids");
+			removeCookie("variant_qty");
+			window.location.href = '/checkout';
 			}
 		}
 		asyncGetCall();
 	}
+
     function buildFreeProductForSubscription($giftVariantid, ){
          // Corrected this part to refer to a known element if 'this' is not clear
-      var plan15 = $('.giftProduct').attr('gift-data-selling15');  
-      var plan30 = $('.giftProduct').attr('gift-data-selling30');
-      var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
+      	var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+      	var plan30 = $('.giftProduct').attr('gift-data-selling30');
+      	var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
 
-      var item_data = {
-				collectionId: collection_id,  // Example Shopify Collection WE NEED TTO STORE THE COLLECTION IT BELONGS TO. 
-				externalProductId: $productid,  // GIFT PRODUCT ID
-				externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
-				quantity: 1,  // Dynamic Quantity
-				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-			}
-    
+      	var item_data = {
+			collectionId: collection_id,  // Example Shopify Collection WE NEED TTO STORE THE COLLECTION IT BELONGS TO. 
+			externalProductId: $productid,  // GIFT PRODUCT ID
+			externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+			quantity: 1,  // Dynamic Quantity
+			sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		}
     }
  
 
@@ -305,47 +301,41 @@ $(document).ready(function() {
 		});
 
         var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
-
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
 
-        if($giftVariantid !== undefined){
-				$splitMaxPrice = $(".maxCartprice").val().split("$");
-				var inputtotalrangemax = $splitMaxPrice[1];
-				if(inputtotalrangemax < $getproductPrices){
-                    console.log('gettingGiftVariant');
-					buildFreeProductForSubscription(PRODUCT_ID);
-                    // @brandon Here I'm trying to append the selection to the other selections. 
-                    bundleObject.selections.push(buildFreeProductForSubscription);
-                  
-        const bundle = bundleObject;
-		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
-
-      
-        // console.log('get_main_bundle_id---'+get_main_bundle_id);
-		
-        const cartData = { items: bundleItems };
-		const asyncGetCall = async () => {
-
-		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(cartData),
-			});
-			const data = await respons.json();
-			
-		
-				removeCookie("variantids");
-				removeCookie("variant_qty");
-				window.location.href = '/checkout';
-			
+		if($giftVariantid !== undefined){
+			$splitMaxPrice = $(".maxCartprice").val().split("$");
+			var inputtotalrangemax = $splitMaxPrice[1];
+			if(inputtotalrangemax < $getproductPrices){
+				console.log('gettingGiftVariant');
+				buildFreeProductForSubscription(PRODUCT_ID);
+				// @brandon Here I'm trying to append the selection to the other selections. 
+				bundleObject.selections.push(buildFreeProductForSubscription);
+				
+				const bundle = bundleObject;
+				const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+				// console.log('get_main_bundle_id---'+get_main_bundle_id);
+				
+				const cartData = { items: bundleItems };
+				const asyncGetCall = async () => {
+					const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify(cartData),
+					});
+					const data = await respons.json();
+					removeCookie("variantids");
+					removeCookie("variant_qty");
+					window.location.href = '/checkout';
+				}
+				asyncGetCall();
+			}
 		}
-		asyncGetCall();
 	}
+
 
 function addGiftproduct(giftVariantid, get_main_bundle_id) {
     console.log('something here');
-  
-
     var data = {
         quantity: 1, // Adjust the quantity as needed
         id: giftVariantid,
