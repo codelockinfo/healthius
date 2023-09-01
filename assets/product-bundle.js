@@ -350,6 +350,7 @@ $(document).ready(function() {
 				$splitMaxPrice = $(".maxCartprice").val().split("$");
 				var inputtotalrangemax = $splitMaxPrice[1];
 				if(inputtotalrangemax < $getproductPrices){
+                    console.log('gettingGiftVariant');
 					addGiftproduct($giftVariantid,get_main_bundle_id);
 				}else{
 					removeCookie("variantids");
