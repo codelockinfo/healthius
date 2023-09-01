@@ -383,8 +383,8 @@ $(document).ready(function() {
               properties: {
                 "_main_bundle_id": get_main_bundle_id,
                 "_rc_bundle": get_main_bundle_id,
-                "_rc_bundle_variant": PRODUCT_ID
-                "sellingPlan": 
+                "_rc_bundle_variant": PRODUCT_ID,
+                "sellingPlan": sellingplan_id
               }
           },
           success: function(response) {
