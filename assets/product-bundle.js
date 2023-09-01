@@ -265,7 +265,20 @@ $(document).ready(function() {
 		}
 		asyncGetCall();
 	}
-
+    function buildFreeProductForSubscription(){
+         // Corrected this part to refer to a known element if 'this' is not clear
+    var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+    var plan30 = $('.giftProduct').attr('gift-data-selling30');
+      var item_data = {
+				collectionId: collection_id,  // Example Shopify Collection
+				externalProductId: product_id,  // Dynamic Product ID
+				externalVariantId: variant_id,  // Dynamic Variant ID
+				quantity: $currentVarQty,  // Dynamic Quantity
+				sellingPlan: sellingplan_id // Dynamic Selling Plan ID
+			}
+      
+      
+    }
  
 
 	function subscriptionAddtocart(){
@@ -329,13 +342,24 @@ $(document).ready(function() {
 		});
 
 		const bundle = bundleObject;
+        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+
+        if($giftVariantid !== undefined){
+				$splitMaxPrice = $(".maxCartprice").val().split("$");
+				var inputtotalrangemax = $splitMaxPrice[1];
+				if(inputtotalrangemax < $getproductPrices){
+                    console.log('gettingGiftVariant');
+					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id);
+                  
+				
+      
+      
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         //var get_main_bundle_id = "8619519803673";
 
       
-        console.log('get_main_bundle_id---'+get_main_bundle_id);
+        // console.log('get_main_bundle_id---'+get_main_bundle_id);
 		
         const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
@@ -346,40 +370,19 @@ $(document).ready(function() {
 				body: JSON.stringify(cartData),
 			});
 			const data = await respons.json();
-			if($giftVariantid !== undefined){
-				$splitMaxPrice = $(".maxCartprice").val().split("$");
-				var inputtotalrangemax = $splitMaxPrice[1];
-				if(inputtotalrangemax < $getproductPrices){
-                    console.log('gettingGiftVariant');
-					addGiftproduct($giftVariantid,get_main_bundle_id);
-				}else{
-					removeCookie("variantids");
-					removeCookie("variant_qty");
-					window.location.href = '/checkout';
-				}
-			}else{
+			
+		
 				removeCookie("variantids");
 				removeCookie("variant_qty");
 				window.location.href = '/checkout';
-			}
+			
 		}
 		asyncGetCall();
 	}
 
 function addGiftproduct(giftVariantid, get_main_bundle_id) {
     console.log('something here');
-    // Corrected the .val to .val()
-    var PRODUCT_ID = $(".product_variant_id").val(); 
-
-    // Assume sellingplan_id comes from somewhere; set a default value for demonstration.
-    var sellingplan_id = null; // or some initial value
-
-    // Corrected this part to refer to a known element if 'this' is not clear
-    var plan15 = $('.giftProduct').attr('gift-data-selling15');  
-    var plan30 = $('.giftProduct').attr('gift-data-selling30');
-    console.log(plan30);
-    console.log('this is plan 30');
-    sellingplan_id = (sellingplan_id == null) ? plan15 : plan30;
+  
 
     var data = {
         quantity: 1, // Adjust the quantity as needed
