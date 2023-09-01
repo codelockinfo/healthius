@@ -390,7 +390,7 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
         data.properties = {
             "_main_bundle_id": get_main_bundle_id,
             "_rc_bundle": get_main_bundle_id,
-            "_rc_bundle_variant": PRODUCT_ID,
+            "_rc_bundle_variant": PRODUCT_ID
           
         };
     }
