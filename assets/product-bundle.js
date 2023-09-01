@@ -273,7 +273,7 @@ $(document).ready(function() {
 				collectionId: collection_id,  // Example Shopify Collection
 				externalProductId: product_id,  // Dynamic Product ID
 				externalVariantId: variant_id,  // Dynamic Variant ID
-				quantity: $currentVarQty,  // Dynamic Quantity
+				quantity: 1,  // Dynamic Quantity
 				sellingPlan: sellingplan_id // Dynamic Selling Plan ID
 			}
       
@@ -341,7 +341,6 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 
-		const bundle = bundleObject;
         var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
 
         if($giftVariantid !== undefined){
@@ -349,11 +348,11 @@ $(document).ready(function() {
 				var inputtotalrangemax = $splitMaxPrice[1];
 				if(inputtotalrangemax < $getproductPrices){
                     console.log('gettingGiftVariant');
-					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id);
+					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id)
+                    bundleObject.selections.push(buildFreeProductForSubscription);
+        const bundle = bundleObject;
+
                   
-				
-      
-      
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
         //var get_main_bundle_id = "8619519803673";
