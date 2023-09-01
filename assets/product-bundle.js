@@ -366,6 +366,7 @@ $(document).ready(function() {
 	}
 
 function addGiftproduct(giftVariantid, get_main_bundle_id) {
+    console.log('something here');
     // Corrected the .val to .val()
     var PRODUCT_ID = $(".product_variant_id").val(); 
 
