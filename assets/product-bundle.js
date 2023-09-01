@@ -369,9 +369,6 @@ $(document).ready(function() {
       var PRODUCT_ID = $(".product_variant_id").val
       var sellingplan_id = (selling_plan_id == null) ? $(this).data("selling15") : $(this).data("selling30");
 
-      
-
-
       $.ajax({
           url: '/cart/add.js',
           dataType: 'json',
