@@ -445,7 +445,7 @@ $(document).ready(function() {
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
-			  '<img src="https://healthius-store.myshopify.com/cdn/shop/files/RoastedChickenBreast_medium.png?v=1693264770" alt="">'+
+			  '<img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/RoastedTurkeyBreast_b95ca030-1edb-4510-8c8d-f6b03187bffd.png?v=1693605897" alt="">'+
 		  '</div>'+
 			'<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">'+
 			  '<div class="cartfontcontainer"><a class="product-item__title" title="turkey">'+
