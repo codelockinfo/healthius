@@ -306,6 +306,7 @@ $(document).ready(function() {
 			console.log("INNN");
 			$splitMaxPrice = $(".maxCartprice").val().split("$");
 			var inputtotalrangemax = $splitMaxPrice[1];
+
 			if(inputtotalrangemax < $getproductPrices){
 				console.log("PRICE");
 				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
@@ -320,6 +321,7 @@ $(document).ready(function() {
 			  	}
 			  	bundleObject.selections.push(item_data);
 				console.log(bundleObject);
+			}
 				// buildFreeProductForSubscription(PRODUCT_ID);
 				// @brandon Here I'm trying to append the selection to the other selections. 
 				// bundleObject.selections.push(buildFreeProductForSubscription);
@@ -342,7 +344,6 @@ $(document).ready(function() {
 					window.location.href = '/checkout';
 				}
 				asyncGetCall();
-			}
 		}
 	}
 
