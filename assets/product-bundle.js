@@ -184,8 +184,17 @@ $(document).ready(function() {
 			externalVariantId: $giftVariantid ,
 			selections: []
 		};
+      	$getproductPrices = 0;
+
 
 		$.each($("#cartSummary .productsimage"), function() {
+          $price = $(this).find(".product-price--original").data("price");
+			$currentVarQty = $(this).find(".product-quantity__selector").val();
+			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
+			// €
+			if ($Dataprice != 0) {
+                $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
+			}
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
 			var variant_id = $(this).data("variant");
