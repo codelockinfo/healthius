@@ -223,13 +223,17 @@ $(document).ready(function() {
 			body: JSON.stringify(cartData),
 		});
 		const data = await respons.json();
-		if($giftVariantid !== undefined){
-            $splitMaxPrice = $(".maxCartprice").val().split("$");
-			var inputtotalrangemax = $splitMaxPrice[1];
-			
-			if(inputtotalrangemax < $getproductPrices){
-			addGiftproduct($giftVariantid,get_main_bundle_id);
-            }
+        if($giftVariantid !== undefined){
+				$splitMaxPrice = $(".maxCartprice").val().split("$");
+				var inputtotalrangemax = $splitMaxPrice[1];
+				if(inputtotalrangemax < $getproductPrices){
+					addGiftproduct($giftVariantid,get_main_bundle_id);
+				}else{
+					removeCookie("variantids");
+					removeCookie("variant_qty");
+					window.location.href = '/checkout';
+				}
+
 		}else{
 			removeCookie("variantids");
 			removeCookie("variant_qty");
