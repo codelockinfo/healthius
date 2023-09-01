@@ -408,7 +408,7 @@ if (sellingplan_id) {
           type: 'POST',
           data: {
               quantity: 1, // Adjust the quantity as needed
-              id: giftVariantid,
+              id: giftVariantid
           
           },
           success: function(response) {
