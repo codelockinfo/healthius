@@ -375,8 +375,8 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
     var sellingplan_id = null; // or some initial value
 
     // Corrected this part to refer to a known element if 'this' is not clear
-    var plan15 = $( ".gift-data-selling15" ).text();  
-    var plan30 = $( ".gift-data-selling30" ).text();
+    var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+    var plan30 = $('.giftProduct').attr('gift-data-selling30');
     console.log(plan30);
     console.log('this is plan 30');
     sellingplan_id = (sellingplan_id == null) ? plan15 : plan30;
