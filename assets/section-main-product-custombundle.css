@@ -665,8 +665,10 @@
   .modal-content  .add-to-cart .button__text{
     font-size: 18px;
   }
-  .modal-content  .product__title{
-    font-size: 20px;
+  .modal-content .product__title {
+    font-size: 30px;
+    text-align: left;
+    font-weight: 600;
   }
   .modal-content  .product__description  .hide, .hidden{
     display:block;
@@ -1005,6 +1007,9 @@ h2.subtext1 {
 }
 .product-item__title,.imageforcart,.product-price,.flexdirrow {
     cursor: default;
+}
+.modal-content .main-custombundle{
+    width: 100%;
 }
 @media only screen and (max-width: 1200px) { 
     .mount-css-slider span.section-heading__subheading.text-size--large{
