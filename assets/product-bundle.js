@@ -376,6 +376,7 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
     var plan15 = $( "gift-data-selling15" ).text();  
     var plan30 = $( "gift-data-selling30" ).text();
     console.log(plan30);
+    console.log('this is plan 30');
     sellingplan_id = (sellingplan_id == null) ? plan15 : plan30;
 
     var data = {
