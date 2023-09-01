@@ -384,7 +384,6 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
     var data = {
         quantity: 1, // Adjust the quantity as needed
         id: giftVariantid,
-        sellingPlan: sellingplan_id
     };
 
     if (sellingplan_id) {
