@@ -369,6 +369,8 @@ $(document).ready(function() {
       var PRODUCT_ID = $(".product_variant_id").val
       var sellingplan_id = (sellingplan_id == null) ? $(this).data("selling15") : $(this).data("selling30");
 
+if (sellingplan_id) {
+  // The sellingplan_id variable is not null.
       $.ajax({
           url: '/cart/add.js',
           dataType: 'json',
@@ -398,6 +400,34 @@ $(document).ready(function() {
               console.log('Error:', textStatus, errorThrown);
           }
       });
+
+} else {      ---------------------
+      $.ajax({
+          url: '/cart/add.js',
+          dataType: 'json',
+          type: 'POST',
+          data: {
+              quantity: 1, // Adjust the quantity as needed
+              id: giftVariantid,
+          
+          },
+          success: function(response) {
+            
+          console.log('Success----');
+          console.log(response);
+
+              // Handle the success response here
+              removeCookie("variantids");
+              removeCookie("variant_qty");
+              window.location.href = '/checkout';
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              console.log('Error:', textStatus, errorThrown);
+          }
+      });
+
+
+      --------------
 	}
   
 	set_lineitems_onload();
