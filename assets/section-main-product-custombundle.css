@@ -665,7 +665,6 @@
     .product-quick-view__product{
         padding-left: calc(var(--gutter-large) * .75);
         padding-right: calc(var(--gutter-large) * .75);
-        padding-bottom: calc(var(--gutter-large) * .75);
     }
    .modal-content .product-quantity,.modal-content  .product-variants,.modal-content .product__subtitle,.shopify-product-form shopify-payment-terms{
     display:none;
