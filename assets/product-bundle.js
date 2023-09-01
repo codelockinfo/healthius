@@ -425,9 +425,6 @@ if (sellingplan_id) {
               console.log('Error:', textStatus, errorThrown);
           }
       });
-
-
-      
 	}
   
 	set_lineitems_onload();
