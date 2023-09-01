@@ -361,25 +361,25 @@
                       </div>
                     </div>
                   {% endif %}
-                    <div class="description_width">
-                      <h3 class="product__description_title h2">Product Information:</h3>                      
-                      <p class="product__description">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
+                  <div class="description_width">
+                    <h3 class="product__description_title h2">Product Information:</h3>                      
+                    {%- if product.metafields.custom.product_information != blank -%}
+                      <div class="product__description rte" {{ block.shopify_attributes }}>
+                        {{ product.metafields.custom.product_information }}
+                      </div>
+                    {%- endif -%}
+                      
                     </div>
                     <div class="quickingrediantflex">
                       <div class="quickingrediantwidth">
                         <h3 class="product__ingredient_title h2">INGREDIENTS:</h3>
-                        <p class="product__ingredient">Frittata (Bacon, Mushroom, Egg White, Cheddar, Cream, Garlic, Onion), Potato, Ham, Green Onion, Frittata (Bacon, Mushroom, Egg White, Cheddar, Cream, Garlic, Onion), Potato, Ham, Green Onion, Frittata (Bacon, Mushroom, Egg White, Cheddar, Cream, Garlic, Onion), Potato, Ham, Green Onion, Egg White, Cheddar, Cream, Garlic, Onion), Potato, Ham, Green Onion, Frittata (Bacon, Mushroom, Egg White, Cheddar, Cream, Garlic, Onion), Potato, Ham, Green Onion</p>
+                        {{product.metafields.custom.ingredients}}
                       </div>
                       <div class="quickallergenswidth">
                         <h3 class="product__ingredient_title h2">ALLERGENS:</h3>
-                        <p class="product__ingredient">Milk, Egg</p>
+                        <p class="product__ingredient">{{ product.metafields.custom.allergens }}</p>
                       </div>
                     </div>
-                    {%- if product.description != blank -%}
-                      <div class="product__description rte" {{ block.shopify_attributes }}>
-                        {{ product.description }}
-                      </div>
-                    {%- endif -%}
 
                   {%- when 'variant_picker' -%}
 
