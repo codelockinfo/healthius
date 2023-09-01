@@ -367,7 +367,7 @@ $(document).ready(function() {
 
 	function addGiftproduct(giftVariantid,get_main_bundle_id) {
       var PRODUCT_ID = $(".product_variant_id").val
-      var sellingplan_id = (selling_plan_id == null) ? $(this).data("selling15") : $(this).data("selling30");
+      var sellingplan_id = (sellingplan_id == null) ? $(this).data("selling15") : $(this).data("selling30");
 
       $.ajax({
           url: '/cart/add.js',
