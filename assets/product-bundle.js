@@ -227,7 +227,7 @@ $(document).ready(function() {
 		}
 		asyncGetCall();
 	}
-    function buildFreeProductForSubscription(variant_id){
+    function buildFreeProductForSubscription($giftVariantid, ){
          // Corrected this part to refer to a known element if 'this' is not clear
       var plan15 = $('.giftProduct').attr('gift-data-selling15');  
       var plan30 = $('.giftProduct').attr('gift-data-selling30');
@@ -235,8 +235,8 @@ $(document).ready(function() {
 
       var item_data = {
 				collectionId: collection_id,  // Example Shopify Collection
-				externalProductId: "8619519803673",  // Dynamic Product ID
-				externalVariantId: variant_id,  // Dynamic Variant ID
+				externalProductId: $giftVariantid,  // Dynamic Product ID
+				externalVariantId: $giftVariantid,  // Dynamic Variant ID
 				quantity: 1,  // Dynamic Quantity
 				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			}
