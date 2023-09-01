@@ -61,10 +61,8 @@
 										</span>
 									{%- endif -%}
 
-									<!-- <a href="{{ item.url }}" class="cart-item__title">
-										<span class="text-animation--underline-thin">{{ item.product.title | escape }}</span> -->
-									<!-- </a>
- -->
+										<span class="text-animation--underline-thin">{{ item.product.title | escape }}</span>
+
 									{%- unless item.product.has_only_default_variant -%}
 											{%- for option in item.options_with_values -%}
 												<span class="cart-item__variant text-size--small text-color--opacity">
