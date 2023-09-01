@@ -234,9 +234,9 @@ $(document).ready(function() {
       var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
 
       var item_data = {
-				collectionId: collection_id,  // Example Shopify Collection
-				externalProductId: $giftVariantid,  // Dynamic Product ID
-				externalVariantId: $giftVariantid,  // Dynamic Variant ID
+				collectionId: collection_id,  // Example Shopify Collection WE NEED TTO STORE THE COLLECTION IT BELONGS TO. 
+				externalProductId: $productid,  // GIFT PRODUCT ID
+				externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
 				quantity: 1,  // Dynamic Quantity
 				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			}
