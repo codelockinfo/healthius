@@ -14,8 +14,21 @@
           "settings": {
           }
         },
+        "a46fe586-5549-4a71-9170-628968efc0c7": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.card_description != blank %}<p class=\"card-description\">{{ product.metafields.custom.card_description }}<\/p>\n{% endif %}"
+          }
+        },
+        "df761b8e-ba12-47b2-8e6f-76412d1409fa": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.servings != blank %}<p class=\"custom-serving\">${{ product.metafields.custom.servings }}<\/p>\n{% endif %}"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
           }
         },
@@ -54,6 +67,8 @@
       "block_order": [
         "vendor",
         "title",
+        "a46fe586-5549-4a71-9170-628968efc0c7",
+        "df761b8e-ba12-47b2-8e6f-76412d1409fa",
         "price",
         "003775aa-e91c-42c6-8b7c-e34ab646f7f8",
         "515d0ea3-c7d6-422a-9acd-83eeeba519cd",
