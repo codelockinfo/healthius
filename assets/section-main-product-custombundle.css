@@ -271,6 +271,11 @@
 .range-labels li:nth-child(9),.range-labels li:nth-child(13){
     opacity: 1;
 }
+
+.range-labels li:nth-child(13) span{
+    display: block;
+}
+
 .range-labels li::before {
     position: absolute;
     top: -29.5px;
