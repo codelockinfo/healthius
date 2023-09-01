@@ -375,6 +375,7 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
     // Corrected this part to refer to a known element if 'this' is not clear
     var plan15 = $( "gift-data-selling15" ).text();  
     var plan30 = $( "gift-data-selling30" ).text();
+    console.log(plan30);
     sellingplan_id = (sellingplan_id == null) ? plan15 : plan30;
 
     var data = {
