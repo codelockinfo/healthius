@@ -226,6 +226,8 @@ $(document).ready(function() {
         if($giftVariantid !== undefined){
 				$splitMaxPrice = $(".maxCartprice").val().split("$");
 				var inputtotalrangemax = $splitMaxPrice[1];
+                  console.log(inputtotalrangemax);
+                  console.log('input total range max')
 				if(inputtotalrangemax < $getproductPrices){
 					addGiftproduct($giftVariantid,get_main_bundle_id);
 				}else{
