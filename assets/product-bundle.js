@@ -313,7 +313,7 @@ $(document).ready(function() {
 				var inputtotalrangemax = $splitMaxPrice[1];
 				if(inputtotalrangemax < $getproductPrices){
                     console.log('gettingGiftVariant');
-					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id);
+					buildFreeProductForSubscription(PRODUCT_ID);
                     // @brandon Here I'm trying to append the selection to the other selections. 
                     bundleObject.selections.push(buildFreeProductForSubscription);
                   
