@@ -178,6 +178,7 @@ $(document).ready(function() {
 
 	function onetimeAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
+      
 		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
@@ -188,7 +189,7 @@ $(document).ready(function() {
 
 
 		$.each($("#cartSummary .productsimage"), function() {
-          $price = $(this).find(".product-price--original").data("price");
+         $price = $(this).find(".product-price--original").data("price");
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
 			// €
