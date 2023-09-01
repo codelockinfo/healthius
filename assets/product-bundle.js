@@ -178,14 +178,29 @@ $(document).ready(function() {
 
 	function onetimeAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
+		$giftProductid = $(".giftProduct").data("product");
+
 		var PRODUCT_ID = $(".product_variant_id").val();
+		
 		var bundleObject = {
-			externalProductId: PRODUCT_ID,
-			externalVariantId: $giftVariantid ,
+			externalProductId: '8619519803673',
+			externalVariantId: PRODUCT_ID ,
 			selections: []
 		};
 
+		var selling_plan_id = $( "input[name='selling_plan']").val();
+		$getproductPrices = 0;
 		$.each($("#cartSummary .productsimage"), function() {
+
+			$price = $(this).find(".product-price--original").data("price");
+			$currentVarQty = $(this).find(".product-quantity__selector").val();
+			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
+			// €
+			if ($Dataprice != 0) {
+                $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
+			}
+
+
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
 			var variant_id = $(this).data("variant");
@@ -200,27 +215,54 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 		
-		const bundle = bundleObject;
-		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+			$splitMaxPrice = $(".maxCartprice").val().split("$");
+			var inputtotalrangemax = $splitMaxPrice[1];
+			
+			if(inputtotalrangemax < $getproductPrices){
+				console.log("PRICE");
+				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+				var plan30 = $('.giftProduct').attr('gift-data-selling30');
+				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
+	  
+				var item_data = {
+					collectionId: '459204722969',
+				  	externalProductId: $giftProductid,  // GIFT PRODUCT ID
+				  	externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+				  	quantity: 1  // Dynamic Quantity
+				  	// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			  	}
+			  	bundleObject.selections.push(item_data);
+				console.log(bundleObject);
+			}
+
+
+
+		const bundle = bundleObject;
+		console.log(bundle);
+		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
+		
+        // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         //var get_main_bundle_id = "8619519803673";
 		const cartData = { items: bundleItems };
 		const asyncGetCall = async () => {
-
-		const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(cartData),
-		});
-		const data = await respons.json();
-		if($giftVariantid !== undefined){
-			addGiftproduct($giftVariantid,get_main_bundle_id);
-		}else{
-			removeCookie("variantids");
-			removeCookie("variant_qty");
-			window.location.href = '/checkout';
+			
+			const respons = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(cartData),
+			});
+			const data = await respons.json();
+			console.log(data);
+			if(data !== undefined){
+				removeCookie("variantids");
+				removeCookie("variant_qty");
+				window.location.href = '/checkout';
 			}
+			// if($giftVariantid !== undefined){
+			// addGiftproduct($giftVariantid,get_main_bundle_id);
+			// }else{
+			// }
 		}
 		asyncGetCall();
 	}
@@ -350,39 +392,39 @@ $(document).ready(function() {
 	}
 
 
-function addGiftproduct(giftVariantid, get_main_bundle_id) {
-    console.log('something here');
-    var data = {
-        quantity: 1, // Adjust the quantity as needed
-        id: giftVariantid,
-    };
+// function addGiftproduct(giftVariantid, get_main_bundle_id) {
+//     console.log('something here');
+//     var data = {
+//         quantity: 1, // Adjust the quantity as needed
+//         id: giftVariantid,
+//     };
 
-    // if (sellingplan_id) {
-    //     data.properties = {
-    //         "_main_bundle_id": get_main_bundle_id,
-    //         "_rc_bundle": get_main_bundle_id,
-    //         "_rc_bundle_variant": PRODUCT_ID
+//     // if (sellingplan_id) {
+//     //     data.properties = {
+//     //         "_main_bundle_id": get_main_bundle_id,
+//     //         "_rc_bundle": get_main_bundle_id,
+//     //         "_rc_bundle_variant": PRODUCT_ID
           
-    //     };
-    // }
+//     //     };
+//     // }
 
-    $.ajax({
-        url: '/cart/add.js',
-        dataType: 'json',
-        type: 'POST',
-        data: data,
-        success: function(response) {
-            console.log('Success----');
-            console.log(response);
-            removeCookie("variantids");
-            removeCookie("variant_qty");
-            window.location.href = '/checkout';
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log('Error:', textStatus, errorThrown);
-        }
-    });
-}
+//     $.ajax({
+//         url: '/cart/add.js',
+//         dataType: 'json',
+//         type: 'POST',
+//         data: data,
+//         success: function(response) {
+//             console.log('Success----');
+//             console.log(response);
+//             removeCookie("variantids");
+//             removeCookie("variant_qty");
+//             window.location.href = '/checkout';
+//         },
+//         error: function(jqXHR, textStatus, errorThrown) {
+//             console.log('Error:', textStatus, errorThrown);
+//         }
+//     });
+// }
   
 	set_lineitems_onload();
 	$(document).on("click",".addButton",function() {
