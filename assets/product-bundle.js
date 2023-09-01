@@ -267,8 +267,10 @@ $(document).ready(function() {
 	}
     function buildFreeProductForSubscription(){
          // Corrected this part to refer to a known element if 'this' is not clear
-    var plan15 = $('.giftProduct').attr('gift-data-selling15');  
-    var plan30 = $('.giftProduct').attr('gift-data-selling30');
+      var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+      var plan30 = $('.giftProduct').attr('gift-data-selling30');
+      var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
+
       var item_data = {
 				collectionId: collection_id,  // Example Shopify Collection
 				externalProductId: product_id,  // Dynamic Product ID
