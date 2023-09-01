@@ -366,6 +366,8 @@ $(document).ready(function() {
 	}
 
 	function addGiftproduct(giftVariantid,get_main_bundle_id) {
+      var PRODUCT_ID = $(".product_variant_id").val();
+
 
       $.ajax({
           url: '/cart/add.js',
