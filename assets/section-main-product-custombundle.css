@@ -274,6 +274,8 @@
 
 .range-labels li:nth-child(13) span{
     display: block;
+    white-space: nowrap;
+    font-size: 12px;
 }
 
 .range-labels li::before {
