@@ -401,7 +401,7 @@ if (sellingplan_id) {
           }
       });
 
-} else {      ---------------------
+} else {      
       $.ajax({
           url: '/cart/add.js',
           dataType: 'json',
@@ -427,7 +427,7 @@ if (sellingplan_id) {
       });
 
 
-      --------------
+      
 	}
   
 	set_lineitems_onload();
