@@ -1213,7 +1213,7 @@ h2.subtext1 {
         max-width: calc(var(--button-product) * 3.5);
     }
     .custom-quickview .quickingrediantflex,.custom-quickview .description_width{
-        display: none;
+        width: 100%;
     }
     .modal-content .product__title{
         font-size: 28px;
