@@ -1209,4 +1209,12 @@ h2.subtext1 {
         flex-wrap: wrap;
     }
 }
+.main-content.backimage{
+    padding-top: 10px;
+     height:100%;
+     width: 100%;
+   background-repeat: no-repeat;
+     background-size: cover;
+    background-attachment: fixed;
+ }
   /* cls015 end */
