@@ -227,7 +227,7 @@ $(document).ready(function() {
 		}
 		asyncGetCall();
 	}
-    function buildFreeProductForSubscription(variant_id, ){
+    function buildFreeProductForSubscription(variant_id){
          // Corrected this part to refer to a known element if 'this' is not clear
       var plan15 = $('.giftProduct').attr('gift-data-selling15');  
       var plan30 = $('.giftProduct').attr('gift-data-selling30');
@@ -313,13 +313,12 @@ $(document).ready(function() {
 				var inputtotalrangemax = $splitMaxPrice[1];
 				if(inputtotalrangemax < $getproductPrices){
                     console.log('gettingGiftVariant');
-					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id)
+					buildFreeProductForSubscription($giftVariantid,get_main_bundle_id);
+                    // @brandon Here I'm trying to append the selection to the other selections. 
                     bundleObject.selections.push(buildFreeProductForSubscription);
-        const bundle = bundleObject;
-
                   
+        const bundle = bundleObject;
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
-
 
       
         // console.log('get_main_bundle_id---'+get_main_bundle_id);
