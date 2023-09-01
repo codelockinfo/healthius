@@ -306,7 +306,7 @@ $(document).ready(function() {
 			console.log("INNN");
 			$splitMaxPrice = $(".maxCartprice").val().split("$");
 			var inputtotalrangemax = $splitMaxPrice[1];
-
+			
 			if(inputtotalrangemax < $getproductPrices){
 				console.log("PRICE");
 				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
@@ -314,10 +314,11 @@ $(document).ready(function() {
 				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
 	  
 				var item_data = {
-				  externalProductId: $giftProductid,  // GIFT PRODUCT ID
-				  externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
-				  quantity: 1,  // Dynamic Quantity
-				  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+					collectionId: '459204722969',
+				  	externalProductId: $giftProductid,  // GIFT PRODUCT ID
+				  	externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+				  	quantity: 1,  // Dynamic Quantity
+				  	sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			  	}
 			  	bundleObject.selections.push(item_data);
 				console.log(bundleObject);
