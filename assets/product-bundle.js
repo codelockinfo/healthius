@@ -239,9 +239,9 @@ $(document).ready(function() {
 		}
     }
  
-
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
+		$giftProductid = $(".giftProduct").data("product");
 		var PRODUCT_ID = $(".product_variant_id").val();
         console.log('giftVariantid');
         console.log($giftVariantid);
@@ -300,17 +300,29 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 
-        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
-
 		if($giftVariantid !== undefined){
+			console.log("INNN");
 			$splitMaxPrice = $(".maxCartprice").val().split("$");
 			var inputtotalrangemax = $splitMaxPrice[1];
 			if(inputtotalrangemax < $getproductPrices){
-				console.log('gettingGiftVariant');
-				buildFreeProductForSubscription(PRODUCT_ID);
+				console.log("PRICE");
+				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+				var plan30 = $('.giftProduct').attr('gift-data-selling30');
+				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
+	  
+				var item_data = {
+				  externalProductId: $giftProductid,  // GIFT PRODUCT ID
+				  externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+				  quantity: 1,  // Dynamic Quantity
+				  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			  	}
+			  	bundleObject.selections.push(item_data);
+				console.log(bundleObject);
+				// buildFreeProductForSubscription(PRODUCT_ID);
 				// @brandon Here I'm trying to append the selection to the other selections. 
-				bundleObject.selections.push(buildFreeProductForSubscription);
+				// bundleObject.selections.push(buildFreeProductForSubscription);
 				
 				const bundle = bundleObject;
 				const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
@@ -324,6 +336,7 @@ $(document).ready(function() {
 						body: JSON.stringify(cartData),
 					});
 					const data = await respons.json();
+					console.log(data);
 					removeCookie("variantids");
 					removeCookie("variant_qty");
 					window.location.href = '/checkout';
