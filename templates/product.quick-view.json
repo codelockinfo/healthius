@@ -62,12 +62,12 @@
         "buy_buttons"
       ],
       "settings": {
-        "gallery_ratio": "natural",
-        "gallery_fit": false,
+        "gallery_ratio": "1",
+        "gallery_fit": true,
         "show_border": false,
         "gallery_card_design": false,
         "gallery_padding": 0,
-        "gallery_pagination": "dots",
+        "gallery_pagination": "thumbnails",
         "enable_video_looping": false
       }
     }

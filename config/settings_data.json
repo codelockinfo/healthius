@@ -180,7 +180,7 @@
     "product_icon_1_label": "",
     "product_icon_2_image": "custom.product_icon_2",
     "product_icon_3_image": "custom.product_icon_3",
-    "cart_image_ratio": "0.666667",
+    "cart_image_ratio": "1",
     "cart_image_fit": true,
     "cart_free_shipping": false,
     "social_facebook": "https:\/\/www.facebook.com\/shopify",
