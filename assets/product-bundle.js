@@ -375,7 +375,7 @@ function addGiftproduct(giftVariantid) {
     console.log('something here ----------------------');
     var data = {
         quantity: 1, // Adjust the quantity as needed
-        id: giftVariantid,
+        id: giftVariantid
     };
 
     // if (sellingplan_id) {
