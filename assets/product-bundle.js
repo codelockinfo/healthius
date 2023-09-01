@@ -160,44 +160,6 @@ $(document).ready(function() {
 		console.log($giftVariantid);
 		$(this).attr("data-vid", $giftVariantid);
 	});
-
-	// $('.addToCart').click(function(e) {
-	// 	e.preventDefault();
-	// 	$giftVariantid = $('.productSelect').attr("data-vid");
-	// 	var PRODUCT_ID = $(this).closest(".bundle_product").find(".product_variant_id").val();
-	// 	var selected_product_items = [];
-	// 	$.each($("#cartSummary .productsimage"), function() {
-	// 		$currentVarQty = $(this).find(".product-quantity__selector").val();
-	// 		var $currentvartitle = $(this).find(".variant-title").html();
-	// 		$perticular_propertie = $currentVarQty + "*" + $currentvartitle;
-	// 		selected_product_items.push($perticular_propertie);
-	// 	});
-
-	// 	const objectItems = {};
-	// 	$.each(selected_product_items, function(index, item) {
-	// 		objectItems[index] = item;
-	// 	});
-
-	// 	$finalproperties = objectItems;
-	// 	$.ajax({
-	// 		url: '/cart/add.js',
-	// 		dataType: 'json',
-	// 		type: 'POST',
-	// 		data: {
-	// 			id: PRODUCT_ID,
-	// 			quantity: 1,
-	// 			properties: $finalproperties
-	// 		},
-	// 		success: function(response) {
-	// 			removeCookie("variantids");
-	// 			removeCookie("variant_qty");
-	// 			addGiftproduct($giftVariantid);
-	// 		},
-	// 		error: function(jqXHR, textStatus, errorThrown) {
-	// 			console.log('Error:', textStatus, errorThrown);
-	// 		}
-	// 	});
-	// });
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
@@ -265,7 +227,7 @@ $(document).ready(function() {
 		}
 		asyncGetCall();
 	}
-    function buildFreeProductForSubscription(){
+    function buildFreeProductForSubscription(variant_id, ){
          // Corrected this part to refer to a known element if 'this' is not clear
       var plan15 = $('.giftProduct').attr('gift-data-selling15');  
       var plan30 = $('.giftProduct').attr('gift-data-selling30');
@@ -273,13 +235,12 @@ $(document).ready(function() {
 
       var item_data = {
 				collectionId: collection_id,  // Example Shopify Collection
-				externalProductId: product_id,  // Dynamic Product ID
+				externalProductId: "8619519803673",  // Dynamic Product ID
 				externalVariantId: variant_id,  // Dynamic Variant ID
 				quantity: 1,  // Dynamic Quantity
-				sellingPlan: sellingplan_id // Dynamic Selling Plan ID
+				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			}
-      
-      
+    
     }
  
 
@@ -345,6 +306,8 @@ $(document).ready(function() {
 
         var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
 
+        // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
+
         if($giftVariantid !== undefined){
 				$splitMaxPrice = $(".maxCartprice").val().split("$");
 				var inputtotalrangemax = $splitMaxPrice[1];
@@ -357,7 +320,6 @@ $(document).ready(function() {
                   
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
 
-        //var get_main_bundle_id = "8619519803673";
 
       
         // console.log('get_main_bundle_id---'+get_main_bundle_id);
