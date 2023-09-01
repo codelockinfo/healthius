@@ -240,9 +240,9 @@ $(document).ready(function() {
 		}
     }
  
-
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
+		$giftProductid = $(".giftProduct").data("product");
 		var PRODUCT_ID = $(".product_variant_id").val();
         console.log('giftVariantid');
         console.log($giftVariantid);
@@ -301,17 +301,32 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 
-        var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
+        // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
-
 		if($giftVariantid !== undefined){
+			console.log("INNN");
 			$splitMaxPrice = $(".maxCartprice").val().split("$");
 			var inputtotalrangemax = $splitMaxPrice[1];
+			
 			if(inputtotalrangemax < $getproductPrices){
-				console.log('gettingGiftVariant');
-				buildFreeProductForSubscription(PRODUCT_ID);
+				console.log("PRICE");
+				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+				var plan30 = $('.giftProduct').attr('gift-data-selling30');
+				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
+	  
+				var item_data = {
+					collectionId: '459204722969',
+				  	externalProductId: $giftProductid,  // GIFT PRODUCT ID
+				  	externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+				  	quantity: 1,  // Dynamic Quantity
+				  	sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			  	}
+			  	bundleObject.selections.push(item_data);
+				console.log(bundleObject);
+			}
+				// buildFreeProductForSubscription(PRODUCT_ID);
 				// @brandon Here I'm trying to append the selection to the other selections. 
-				bundleObject.selections.push(buildFreeProductForSubscription);
+				// bundleObject.selections.push(buildFreeProductForSubscription);
 				
 				const bundle = bundleObject;
 				const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
@@ -325,12 +340,12 @@ $(document).ready(function() {
 						body: JSON.stringify(cartData),
 					});
 					const data = await respons.json();
+					console.log(data);
 					removeCookie("variantids");
 					removeCookie("variant_qty");
 					window.location.href = '/checkout';
 				}
 				asyncGetCall();
-			}
 		}
 	}
 
@@ -385,6 +400,28 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
 	});
 
 	function set_lineitems_onload() {
+		  $staticGiftProduct = '<div class="productsimage" data-selling30="689133224217" data-selling15="689133191449" data-variant="46476104368409" data-product="8598449291545" data-collection="459204722969">'+
+		  '<div id="product-item-8598449291545" class="product-item card container-box" data-js-product-item="" data-variant="46476104368409" data-summery-index="4">'+
+		  '<div class="imageforcart">'+
+			  '<img src="https://healthius-store.myshopify.com/cdn/shop/files/RoastedChickenBreast_medium.png?v=1693264770" alt="">'+
+		  '</div>'+
+			'<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">'+
+			  '<div class="cartfontcontainer"><a class="product-item__title" title="turkey">'+
+						'<div class="remove-line-height-space--small marginbottomtitle">'+
+						  '<span data-id="46476104368409" class="variant-title  text-size--large text-line-height--small text-weight--bold">Turkey</span>'+
+						'</div>'+
+					  '</a>'+
+		  '<div class="product-item__price text-size--large equalize-white-space">'+
+						'<div class="remove-line-height-space">'+
+		  '<div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">FREE</span>'+
+			  '<del class="product-price--compare" data-js-product-price-compare=""></del><span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>'+
+		  '</div></div>'+
+		  '</div>'+
+		  '</div>'+
+		  '</div><div class="product-item__badges text-size--xsmall"></div></div>'+
+		  '</div>';
+
+		$("#cartSummary").append($staticGiftProduct);
 		var selected_item = getCookie("variantids");
 		var variant_qty = getCookie("variant_qty");
 		if (selected_item) {
