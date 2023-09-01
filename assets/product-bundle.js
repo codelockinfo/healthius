@@ -365,67 +365,49 @@ $(document).ready(function() {
 		asyncGetCall();
 	}
 
-	function addGiftproduct(giftVariantid,get_main_bundle_id) {
-      var PRODUCT_ID = $(".product_variant_id").val
-      var sellingplan_id = (sellingplan_id == null) ? $(this).data("selling15") : $(this).data("selling30");
+function addGiftproduct(giftVariantid, get_main_bundle_id) {
+    // Corrected the .val to .val()
+    var PRODUCT_ID = $(".product_variant_id").val(); 
 
-if (sellingplan_id) {
-  // The sellingplan_id variable is not null.
-      $.ajax({
-          url: '/cart/add.js',
-          dataType: 'json',
-          type: 'POST',
-          data: {
-              quantity: 1, // Adjust the quantity as needed
-              id: giftVariantid,
-              
-              properties: {
-                "_main_bundle_id": get_main_bundle_id,
-                "_rc_bundle": get_main_bundle_id,
-                "_rc_bundle_variant": PRODUCT_ID,
-                "sellingPlan": sellingplan_id
-              }
-          },
-          success: function(response) {
-            
-          console.log('Success----');
-          console.log(response);
+    // Assume sellingplan_id comes from somewhere; set a default value for demonstration.
+    var sellingplan_id = null; // or some initial value
 
-              // Handle the success response here
-              removeCookie("variantids");
-              removeCookie("variant_qty");
-              window.location.href = '/checkout';
-          },
-          error: function(jqXHR, textStatus, errorThrown) {
-              console.log('Error:', textStatus, errorThrown);
-          }
-      });
+    // Corrected this part to refer to a known element if 'this' is not clear
+    var plan15 = $('#someElement').data("selling15");  
+    var plan30 = $('#someElement').data("selling30");
+    sellingplan_id = (sellingplan_id == null) ? plan15 : plan30;
 
-} else {      
-      $.ajax({
-          url: '/cart/add.js',
-          dataType: 'json',
-          type: 'POST',
-          data: {
-              quantity: 1, // Adjust the quantity as needed
-              id: giftVariantid
-          
-          },
-          success: function(response) {
-            
-          console.log('Success----');
-          console.log(response);
+    var data = {
+        quantity: 1, // Adjust the quantity as needed
+        id: giftVariantid
+    };
 
-              // Handle the success response here
-              removeCookie("variantids");
-              removeCookie("variant_qty");
-              window.location.href = '/checkout';
-          },
-          error: function(jqXHR, textStatus, errorThrown) {
-              console.log('Error:', textStatus, errorThrown);
-          }
-      });
-	}
+    if (sellingplan_id) {
+        data.properties = {
+            "_main_bundle_id": get_main_bundle_id,
+            "_rc_bundle": get_main_bundle_id,
+            "_rc_bundle_variant": PRODUCT_ID,
+            "sellingPlan": sellingplan_id
+        };
+    }
+
+    $.ajax({
+        url: '/cart/add.js',
+        dataType: 'json',
+        type: 'POST',
+        data: data,
+        success: function(response) {
+            console.log('Success----');
+            console.log(response);
+            removeCookie("variantids");
+            removeCookie("variant_qty");
+            window.location.href = '/checkout';
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log('Error:', textStatus, errorThrown);
+        }
+    });
+}
   
 	set_lineitems_onload();
 	$(document).on("click",".addButton",function() {
