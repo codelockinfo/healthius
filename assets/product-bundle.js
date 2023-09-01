@@ -400,8 +400,8 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
 	});
 
 	function set_lineitems_onload() {
-		  $staticGiftProduct = '<div class="productsimage" data-selling30="689133224217" data-selling15="689133191449" data-variant="46476104368409" data-product="8598449291545" data-collection="459204722969">'+
-		  '<div id="product-item-8598449291545" class="product-item card container-box" data-js-product-item="" data-variant="46476104368409" data-summery-index="4">'+
+		  $staticGiftProduct = '<div>'+
+		  '<div class="product-item card container-box" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
 			  '<img src="https://healthius-store.myshopify.com/cdn/shop/files/RoastedChickenBreast_medium.png?v=1693264770" alt="">'+
 		  '</div>'+
