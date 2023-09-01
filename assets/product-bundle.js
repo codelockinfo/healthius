@@ -178,24 +178,14 @@ $(document).ready(function() {
 
 	function onetimeAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
-      
 		var PRODUCT_ID = $(".product_variant_id").val();
 		var bundleObject = {
 			externalProductId: PRODUCT_ID,
 			externalVariantId: $giftVariantid ,
 			selections: []
 		};
-      	$getproductPrices = 0;
-
 
 		$.each($("#cartSummary .productsimage"), function() {
-         $price = $(this).find(".product-price--original").data("price");
-			$currentVarQty = $(this).find(".product-quantity__selector").val();
-			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
-			// €
-			if ($Dataprice != 0) {
-                $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
-			}
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
 			var variant_id = $(this).data("variant");
@@ -224,19 +214,8 @@ $(document).ready(function() {
 			body: JSON.stringify(cartData),
 		});
 		const data = await respons.json();
-        if($giftVariantid !== undefined){
-				$splitMaxPrice = $(".maxCartprice").val().split("$");
-				var inputtotalrangemax = $splitMaxPrice[1];
-                  console.log(inputtotalrangemax);
-                  console.log('input total range max')
-				if(inputtotalrangemax < $getproductPrices){
-					addGiftproduct($giftVariantid);
-				}else{
-					removeCookie("variantids");
-					removeCookie("variant_qty");
-					window.location.href = '/checkout';
-				}
-
+		if($giftVariantid !== undefined){
+			addGiftproduct($giftVariantid,get_main_bundle_id);
 		}else{
 			removeCookie("variantids");
 			removeCookie("variant_qty");
@@ -371,11 +350,11 @@ $(document).ready(function() {
 	}
 
 
-function addGiftproduct(giftVariantid) {
-    console.log('something here ----------------------');
+function addGiftproduct(giftVariantid, get_main_bundle_id) {
+    console.log('something here');
     var data = {
         quantity: 1, // Adjust the quantity as needed
-        id: giftVariantid
+        id: giftVariantid,
     };
 
     // if (sellingplan_id) {
