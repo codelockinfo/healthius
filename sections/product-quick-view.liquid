@@ -4,10 +4,9 @@
   {%- assign section_id = section.id | append: '-' | append: product.id -%}
   <div class="main-custombundle">
     <div class="productsimage container-box  custom-quickview"  data-id="{{ product.id }}" data-variant="{{ current_variant.id }}" data-product="{{ product.id }}">
-      <div class="main-custombundle">
           <product-page 
             id="product-{{ section_id }}" 
-            class="grid grid--layout grid--gap-large grid-2 grid-lap-1 product product-quick-view__product custom-quickview productsimage container-box" 
+            class="grid grid--layout grid--gap-large grid-2 grid-lap-1 product product-quick-view__product" 
             data-collection="{{ collection.handle }}" data-id="{{ product.id }}" data-variant="{{ current_variant.id }}" data-product="{{ product.id }}"
             data-availability="{{ product.available }}" >
 
@@ -320,9 +319,52 @@
                     </div>
 
                   {%- when 'description' -%}
-                    <h3 class="product__description_title h2">Product Information:</h3>
-                    What is Lorem Ipsum?
-                    <p class="product__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
+                    <div>
+                      <div class="heaalthyflex">
+                        <div class="healtyflex1">
+                          <div class="bordercircle">
+                          
+                          </div>
+                          <div class="bordertitle">
+                          <p class="bordertag">Healthy, Fresh</p>
+                          </div>
+                        </div>
+
+                        <div class="healtyflex1">
+                          <div class="bordercircle">
+                          
+                          </div>
+                          <div class="bordertitle">
+                          <p class="bordertag">Prep Time 2 Minutes</p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="ingridiant_metafield">
+                      {% if product.metafields.custom.protein != blank %}
+                      <div class="ingridiant_width"> 
+                        <div class="ingridiant_value">{{  product.metafields.custom.protein }}</div>
+                        <div class="ingridiant_label">Protein</div>
+                      </div>
+                    {% endif %}
+                      {% if product.metafields.custom.fat != blank %}
+                      <div class="ingridiant_width"> 
+                        <div class="ingridiant_value">{{ product.metafields.custom.fat }}</div>
+                        <div class="ingridiant_label">Fat</div>
+                      </div>
+                    {% endif %}
+                    {% if product.metafields.custom.carbs != blank %}
+                      <div class="ingridiant_width"> 
+                        <div class="ingridiant_value">{{ product.metafields.custom.carbs }}</div>
+                        <div class="ingridiant_label">Carbs</div>
+                      </div>
+                    </div>
+                  {% endif %}
+                    <div class="description_width">
+                      <h3 class="product__description_title h2">Product Information:</h3>                      
+                      <p class="product__description">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
+                    </div>
                     <div class="quickingrediantflex">
                       <div class="quickingrediantwidth">
                         <h3 class="product__ingredient_title h2">INGREDIENTS:</h3>
@@ -666,7 +708,7 @@
             <div class="displayflex-quickviewfooter">
               <div class="img-section">
                 <img class="moneyback-img" src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/1279px-Font_Awesome_5_solid_money-bill-wave_svg.png?v=1693547441" />
-                <h2 class="product__title h2 img-text">Money back guarantee</h2>
+                <h2 class="img-text">Money back guarantee</h2>
               </div>
               <div class="img-section">
                 <div
@@ -704,8 +746,6 @@
             {{ 'component-video.css' | asset_url | stylesheet_tag }}
             <script src="{{ 'component-video.js' | asset_url }}" defer></script>
           {%- endif -%}
-
-      </div>
     </div>
   </div>
 </div>
