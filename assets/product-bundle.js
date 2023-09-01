@@ -58,6 +58,7 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 					console.log($bkpQty);
 					if($bkpQty != undefined){
 						var innnHtml = thisObj.quickViewModal.querySelector('.modal-content');
+						console.log(innnHtml);
 						innnHtml.querySelector(".popupaddbtn").classList.remove('show');
 						innnHtml.querySelector(".productQty").classList.add('show');
 						innnHtml.querySelector(".productQty .product-quantity__minus").classList.remove('disabled');
@@ -550,7 +551,7 @@ function addGiftproduct(giftVariantid, get_main_bundle_id) {
 		console.log("popupAddbtn");
 		$(this).css("display", "none");
 		$(this).closest(".custom-quickview").find(".product-quantity").addClass("show");
-		$productId = $(this).closest(".product-quick-view__product").data("id");
+		$productId = $(this).closest(".custom-quickview").data("id");
 		// $backupQty = $(".custom-bundle .main-custombundle .productsimage[data-product='"+ $productId +"'] .product-quantity__selector").val();
 	
 		$(".main-custombundle .productsimage[data-product='"+ $productId +"']").find(".addButton").trigger("click");
