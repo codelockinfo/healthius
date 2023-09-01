@@ -1,4 +1,4 @@
-{%- if recommendations.performed and recommendations.products_count > 0 -%}
+{% comment %} {%- if recommendations.performed and recommendations.products_count > 0 -%}
 	<div class="cart-recommendations-sidebar" data-js-cart-recommendations-performed>
 		<div class="text-weight--bold gutter-bottom--small gutter-top--small">{{ settings.cart_recommendations_heading | escape }}</div>
 		<css-slider
@@ -66,4 +66,4 @@
 	  	{%- endfor -%}
 	  </css-slider>
  	</div>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
