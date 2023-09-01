@@ -230,7 +230,7 @@ $(document).ready(function() {
                   console.log(inputtotalrangemax);
                   console.log('input total range max')
 				if(inputtotalrangemax < $getproductPrices){
-					addGiftproduct($giftVariantid,get_main_bundle_id);
+					addGiftproduct($giftVariantid);
 				}else{
 					removeCookie("variantids");
 					removeCookie("variant_qty");
@@ -371,8 +371,8 @@ $(document).ready(function() {
 	}
 
 
-function addGiftproduct(giftVariantid, get_main_bundle_id) {
-    console.log('something here');
+function addGiftproduct(giftVariantid) {
+    console.log('something here ----------------------');
     var data = {
         quantity: 1, // Adjust the quantity as needed
         id: giftVariantid,
