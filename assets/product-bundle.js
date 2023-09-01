@@ -442,7 +442,7 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		  $staticGiftProduct = '<div>'+
+		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
 			  '<img src="https://healthius-store.myshopify.com/cdn/shop/files/RoastedChickenBreast_medium.png?v=1693264770" alt="">'+

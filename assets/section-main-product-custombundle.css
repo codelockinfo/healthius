@@ -152,15 +152,33 @@
 .box-summary .productsimage  img,.cartgiftproduct img{
     width: 72px;
 }
+
+.box-summary .freeTurkey  img{
+    width: 72px;
+}
+
+.box-summary .freeTurkey:nth-child(even) .container-box{
+    background-color: #fff;
+}
+
 .box-summary .productsimage:nth-child(even) .container-box{
     background-color: #fff;
 }
+
 .box-summary .productsimage {
     margin-left: 2%;
     margin-top: 2%;
     margin-bottom: 2%;
     margin-right: 2%;
 }
+
+.box-summary .freeTurkey {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
 .box-summary{
     width: 100%;
     overflow-y: scroll;
