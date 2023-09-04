@@ -9,8 +9,7 @@ audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;
 }
-[aria-label="cookieconsent"] {
-    display: none !important;
+
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
