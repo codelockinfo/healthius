@@ -193,6 +193,7 @@
         "blocks": {
           "popups-0": {
             "type": "cookies",
+            "disabled": true,
             "settings": {
               "enable": true,
               "show_after": 1,
