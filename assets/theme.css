@@ -2455,3 +2455,8 @@ html[dir=ltr] .container--has-background:after, html[dir=ltr] .card__image svg, 
   }
 }
 /* custom header css  */
+
+/* CSS BY ADMIN */
+.cartcolumn .product-container{
+  background-color:#fff;
+}
