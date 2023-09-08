@@ -2457,6 +2457,6 @@ html[dir=ltr] .container--has-background:after, html[dir=ltr] .card__image svg, 
 /* custom header css  */
 
 /* CSS BY ADMIN */
-.cartcolumn .product-container{
+.cartcolumn .product-container, .cartcolumn .box-footer{
   background-color:#fff;
 }
