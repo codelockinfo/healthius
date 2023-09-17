@@ -2,6 +2,7 @@
   "sections": {
     "165650871288cb3c80": {
       "type": "media-with-text-overlay",
+      "disabled": true,
       "custom_css": [
         ".container--large {max-width: 100%; padding: 0; margin: 0;}"
       ],
@@ -102,6 +103,7 @@
         "2e204d50-c1ba-4960-97ce-3d5c4f5f0f57",
         "a4f6113b-5786-4836-b086-691fed0de6b7"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/thoughtfully-crafted-background-mobile__1_1_d620532e-69a0-4fa9-b3aa-14efd12575c2.webp",
         "image_position": "left",
@@ -170,6 +172,7 @@
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-2",
         "template--20487105741081__71efc0f4-4264-48af-8019-7383c2c36784-image-4"
       ],
+      "disabled": true,
       "settings": {
         "heading": "You’ll Forget It’s Better For You.",
         "subheading": "",
@@ -206,6 +209,7 @@
       "block_order": [
         "1653646142fd3f3126-0"
       ],
+      "disabled": true,
       "settings": {
         "desktop_height": "60vh",
         "mobile_height": "50vh",
@@ -228,6 +232,7 @@
     },
     "dd2407e3-cb76-4b4a-84d8-6f7c4131c1b0": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "title": "Oatmeal Reimagined.",
         "subtitle": "Breakfast Beyond the Bowl. 20g Protein, 20+ Flavors",
