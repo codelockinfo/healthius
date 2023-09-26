@@ -10,7 +10,8 @@
   {%- if product.title == "Free Meat" -%}
     {% continue %}
   {%- endif -%}
-<div class="productsimage"  data-summery-index="{{ index }}" data-selling15="{{ emp }}" data-selling30="{{ emp2 }}" data-variant="{{ product_variant.id }}" data-collection="{{ collection.id }}"  data-product="{{ product.id }}" data-price="{{ product.price | money }}">
+  {% assign concatenated_tags = product.tags | join: ',' %}
+<div class="productsimage" data-tags="{{ concatenated_tags }}"  data-summery-index="{{ index }}" data-selling15="{{ emp }}" data-selling30="{{ emp2 }}" data-variant="{{ product_variant.id }}" data-collection="{{ collection.id }}"  data-product="{{ product.id }}" data-price="{{ product.price | money }}">
 <div id="product-item-{{ product.id }}" class="product-item card container-box" data-js-product-item  data-variant="{{ product_variant.id }}" data-summery-index="{{ index }}">
 
   {%- liquid

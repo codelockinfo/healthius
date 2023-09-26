@@ -75,22 +75,43 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 $(document).ready(function() {
 	const filterContainer = $(".mainboxli");
 	filterContainer.on("click", function() {
-		var collection_id = $(this).data("collection-id");
-		const filterUrl = $(this).find(".tablisting").attr('value') // Update with your actual collection URL + filters
-		$.get(filterUrl, function(data) {			
-			$("#filtered-products .productsimage").css("display", "none");
-			$eachProduct = $(data).find("#main-collection-product-grid .product-item.card");
-			console.log($eachProduct);
-			$($eachProduct).each(function() {
-				console.log($(this).attr('data-product'));
-				$eachProductId = $(this).attr('data-product');
-				$(".productsimage[data-product='" + $eachProductId + "']").attr("data-collection",collection_id);
-				$(".productsimage[data-product='" + $eachProductId + "']").css("display", "block");
-			});
-		}).fail(function(error) {
-			console.error("Error fetching products:", error);
+		console.log("CLICK");
+		$(".box-summary .productsimage").each(function(index) {
+			removeCookie("variantids");
+			removeCookie("variant_qty");
+			$(".productsimage").find('.product-quantity__selector').val(1);
+			$(".box-summary .productsimage").html("");
+			$(".main-custombundle .productsimage").find(".productQty").removeClass("show");
+			$(".main-custombundle .productsimage").find(".add-button").css("display", "block");
 		});
+		$boxTag = $(this).data("tag");
+		if($boxTag != ""){
+			$(".main-custombundle .productsimage").each(function(index) {
+				var productTags = $(this).attr("data-tags");
+				productTags = productTags.split(",");
+
+                var matchingValues = productTags.filter(function(value) {
+                	value = value.slice(0, -1);
+                    return value.endsWith("_") && $boxTag == value;
+                });
+				console.log(matchingValues.length);
+                if (matchingValues.length > 0) {
+                    var getNewQty = matchingValues.join(", ").slice(-1);
+					$(this).find(".productQty input").val(getNewQty);
+					$(this).find(".productQty input").trigger("change");
+					$(this).find(".addButton").trigger("click");
+					$var_id = $(this).data("variant");
+					$(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val(getNewQty);
+					getcartTotalQty();
+                } 
+			});
+		}else{
+			$(".main-custombundle .productsimage").each(function(index) {
+				$(this).find(".addButton").trigger("click");
+			});
+		}
 	});
+
 
 	const filterContainerselect = $("#product-filterselect");
 	filterContainerselect.on("change", function() {

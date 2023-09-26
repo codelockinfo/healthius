@@ -14,24 +14,25 @@
     <option value="/collections/whey-protein">Whey Protein</option>
     </select>
   </div> {% endcomment %}
+  {% assign collection =  section.settings.collection %}
+        {% assign collection1 =  section.settings.collection1 %}
+        {% assign collection2 =  section.settings.collection2 %}
+        {% assign collection3 =  section.settings.collection3 %}
+        {% assign collection4 =  section.settings.collection4 %}
+        <ul class="filtertab">
+            {%  if collection != blank %}<li class="mainboxli" data-tag="" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
+            {%  if collection1 != blank %}<li class="mainboxli" data-tag="Beef_" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
+            {%  if collection2 != blank %}<li class="mainboxli" data-tag="Brisket_" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
+            {%  if collection3 != blank %}<li class="mainboxli" data-tag="Chicken_" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
+            {%  if collection4 != blank %}<li class="mainboxli" data-tag="Pork_" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
+        </ul>
   <div class="bundle_flex">
     <div class="subtextflex">
       <div class="widthmobile"><h2 class="subtext1">{{section.settings.subtext1}}</h2></div>
       <div id="" class="newcustomfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
       {% comment %} <div class="seconfsection"><span class="seconfsectiontext">2</span> </div>
         <div class="filterlabelmain"><div class="filterlabel">Protein Bundles</div></div> {% endcomment %}
-        {% assign collection =  section.settings.collection %}
-        {% assign collection1 =  section.settings.collection1 %}
-        {% assign collection2 =  section.settings.collection2 %}
-        {% assign collection3 =  section.settings.collection3 %}
-        {% assign collection4 =  section.settings.collection4 %}
-        <ul class="filtertab">
-            {%  if collection != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
-            {%  if collection1 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
-            {%  if collection2 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
-            {%  if collection3 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
-            {%  if collection4 != blank %}<li class="mainboxli" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
-        </ul>
+        
         <div id="product-filter" class="customfilter container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
           <!-- Filter options like checkboxes, dropdowns, etc. -->
           <select id="product-filterselect">
