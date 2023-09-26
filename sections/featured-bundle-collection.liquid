@@ -20,9 +20,10 @@
         {% assign collection3 =  section.settings.collection3 %}
         {% assign collection4 =  section.settings.collection4 %}
         <ul class="filtertab">
-          <li class="mainboxli" data-tag="mostpopular_" ><span class="tablisting">Most Popular</span> </li>
-          <li class="mainboxli" data-tag="chefschoice_" ><span class="tablisting">Chefs Choice</span> </li>
-          <li class="mainboxli" data-tag="familyfavorites_" ><span class="tablisting">Family Favorites</span> </li>
+          {% comment %} <li class="mainboxli selected-btn-color" data-tag="" ><span class="tablisting">Build Your Own</span> </li> {% endcomment %}
+          <li class="mainboxli selected-btn-color" data-tag="mostpopular_" ><span class="tablisting">Most Popular</span> </li>
+          <li class="mainboxli selected-btn-color" data-tag="chefschoice_" ><span class="tablisting">Chefs Choice</span> </li>
+          <li class="mainboxli selected-btn-color" data-tag="familyfavorites_" ><span class="tablisting">Family Favorites</span> </li>
             {% comment %} {%  if collection != blank %}<li class="mainboxli" data-tag="" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
             {%  if collection1 != blank %}<li class="mainboxli" data-tag="Beef_" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
             {%  if collection2 != blank %}<li class="mainboxli" data-tag="Brisket_" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}

@@ -406,13 +406,21 @@
     display: flex;
     /* align-items: center; */
 }
-.mainboxli{
+
+.selected-btn-color{
     width: 150px;
     background: #862E1B;
     text-align: center;
     padding: 7px 0;
     margin-right: 10px;
 }
+.filtertab .selected-btn-color.selected-button-active{
+    background: #1c7084;
+}
+.filtertab .selected-btn-color.selected-button-active .tablisting{
+    background: #1c7084;
+}
+
 .filtertab{
     width: 100%;
     margin: 0 auto;
@@ -671,6 +679,10 @@
         margin: 15px auto;
     }
     .mainboxli{
+        margin-bottom: 3%;
+        margin-right: 0;
+    }
+    .selected-btn-color{
         margin-bottom: 3%;
         margin-right: 0;
     }

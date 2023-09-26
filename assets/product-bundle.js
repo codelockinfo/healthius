@@ -76,6 +76,8 @@ $(document).ready(function() {
 	const filterContainer = $(".mainboxli");
 	filterContainer.on("click", function() {
 		console.log("CLICK");
+		$(".selected-btn-color").removeClass("selected-button-active");
+		$(this).addClass("selected-button-active");
 		$(".box-summary .productsimage").each(function(index) {
 			removeCookie("variantids");
 			removeCookie("variant_qty");
