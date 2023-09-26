@@ -80,7 +80,7 @@ $(document).ready(function() {
 			removeCookie("variantids");
 			removeCookie("variant_qty");
 			$(".productsimage").find('.product-quantity__selector').val(1);
-			$(".box-summary .productsimage").html("");
+			$(".box-summary .productsimage").remove();
 			$(".main-custombundle .productsimage").find(".productQty").removeClass("show");
 			$(".main-custombundle .productsimage").find(".add-button").css("display", "block");
 		});
