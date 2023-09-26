@@ -541,6 +541,7 @@
     background: #862E1B;
     color: #fff;
     border: none;
+    padding: 0;
 }
 /* New qty picker design */
 
@@ -1052,7 +1053,7 @@
     font-weight: 600;
 }
 .main-custombundle .add-button{
-    padding: 10px 30px;
+    padding: 10px 25px;
     display: flex;
     align-items: center;
 }
