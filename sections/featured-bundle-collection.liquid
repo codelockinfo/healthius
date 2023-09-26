@@ -20,11 +20,14 @@
         {% assign collection3 =  section.settings.collection3 %}
         {% assign collection4 =  section.settings.collection4 %}
         <ul class="filtertab">
-            {%  if collection != blank %}<li class="mainboxli" data-tag="" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
+          <li class="mainboxli" data-tag="mostpopular_" ><span class="tablisting">Most Popular</span> </li>
+          <li class="mainboxli" data-tag="chefschoice_" ><span class="tablisting">Chefs Choice</span> </li>
+          <li class="mainboxli" data-tag="familyfavorites_" ><span class="tablisting">Family Favorites</span> </li>
+            {% comment %} {%  if collection != blank %}<li class="mainboxli" data-tag="" data-collection-id="{{ collections[collection].id   }}"><span class="tablisting active" value="{{ collections[collection].url }}">{{ collections[collection].title }} </span></li>{% endif %}
             {%  if collection1 != blank %}<li class="mainboxli" data-tag="Beef_" data-collection-id="{{ collections[collection1].id   }}"><span class="tablisting" value="{{ collections[collection1].url }}">{{ collections[collection1].title }}</span></li>{% endif %}
             {%  if collection2 != blank %}<li class="mainboxli" data-tag="Brisket_" data-collection-id="{{ collections[collection2].id   }}"><span class="tablisting" value="{{ collections[collection2].url }}">{{ collections[collection2].title }}</span></li>{% endif %}
             {%  if collection3 != blank %}<li class="mainboxli" data-tag="Chicken_" data-collection-id="{{ collections[collection3].id   }}"><span class="tablisting"  value="{{ collections[collection3].url }}">{{ collections[collection3].title }}</span></li>{% endif %}
-            {%  if collection4 != blank %}<li class="mainboxli" data-tag="Pork_" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %}
+            {%  if collection4 != blank %}<li class="mainboxli" data-tag="Pork_" data-collection-id="{{ collections[collection4].id   }}"><span class="tablisting" value="{{ collections[collection4].url }}">{{ collections[collection4].title }}</span></li>{% endif %} {% endcomment %}
         </ul>
   <div class="bundle_flex">
     <div class="subtextflex">
