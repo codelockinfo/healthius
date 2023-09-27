@@ -85,6 +85,7 @@ $(document).ready(function() {
 			$(".box-summary .productsimage").remove();
 			$(".main-custombundle .productsimage").find(".productQty").removeClass("show");
 			$(".main-custombundle .productsimage").find(".add-button").css("display", "block");
+			getcartTotalQty();
 		});
 		$boxTag = $(this).data("tag");
 		if($boxTag != ""){
@@ -106,10 +107,6 @@ $(document).ready(function() {
 					$(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val(getNewQty);
 					getcartTotalQty();
                 } 
-			});
-		}else{
-			$(".main-custombundle .productsimage").each(function(index) {
-				$(this).find(".addButton").trigger("click");
 			});
 		}
 	});
