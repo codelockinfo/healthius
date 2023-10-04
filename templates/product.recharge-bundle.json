@@ -34,6 +34,9 @@
       "block_order": [
         "e11d7379-80ec-4afe-8eb2-5a880e890c1b"
       ],
+      "custom_css": [
+        ".rc-selling-plans {display: none;}"
+      ],
       "settings": {
         "full_width": false,
         "remove_margin": false
