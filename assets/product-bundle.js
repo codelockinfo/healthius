@@ -73,8 +73,65 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 });
 
 $(document).ready(function() {
-	const filterContainer = $(".mainboxli");
-	filterContainer.on("click", function() {
+	const filterSelectlabel = $(".filterSelectlabel");
+	filterSelectlabel.on("click", function() {
+		$(this).addClass("active");
+		$boxTag = $(this).data("tag");
+		if($boxTag != ""){
+			$popupHtml = "";
+			$totalprice = 0;
+			$(".main-custombundle .productsimage").each(function(index) {
+				var productTags = $(this).attr("data-tags");
+				productTags = productTags.split(",");
+				
+                var matchingValues = productTags.filter(function(value) {
+					value = value.slice(0, -1);
+                    return value.endsWith("_") && $boxTag == value;
+                });
+				console.log(matchingValues.length);
+                if (matchingValues.length > 0) {
+                    var getNewQty = matchingValues.join(", ").slice(-1);
+					$(this).find(".productQty input").val(getNewQty);
+					$(this).find(".productQty input").trigger("change");
+					$var_id = $(this).data("variant");
+					$imgSrc = $(this).find(".imageforcart img").attr("src");
+					$productTitle = $(this).find(".variant-title").html();
+					$productPrice = $(this).find(".product-price .product-price--original ").html();
+					$popupHtml += '<div class="popupimage">'+
+									'<div class="imageforpopup">'+
+										'<img src="'+ $imgSrc +'">'+
+									'</div>'+ 
+									'<div class="flexrowcontaner">'+
+										'<div>'+
+											'<div class="text-weight--bold ">'+getNewQty+'X</div>'+
+											'<div class="text-weight--bold ">'+$productTitle+'</div>'+
+										'</div>'+
+										'<div class="text-weight--bold ">'+$productPrice +'</div>'+
+									'</div>'+
+								'</div>';
+
+                } 
+			});
+			if($popupHtml != ""){
+				$addSelectproduct = '<div class="main-custombundle selectproductAddbtn selectproductadd">'+
+				'<button role="button" data-tag="'+ $boxTag +'"  class="mainboxli add-button button button-primary small" >'+
+				'<span class="plusicon">+</span>'+
+				'<span> ADD</span>'+
+				'</button>'+
+				'</div>';
+				$(".pop-up-content-wrap").append($popupHtml);
+				$(".pop-up-content-wrap").append($addSelectproduct);
+					$(".custom-model-main").addClass('model-open');					  
+			}
+		}
+	});
+	$(document).on("click",".close-btn, .bg-overlay",function(){
+		$(".pop-up-content-wrap").html("");
+		$(".custom-model-main").removeClass('model-open');
+	  });
+	// const filterContainer = $(".mainboxli");
+	// filterContainer.on("click", function() {
+	$(document).on("click",".mainboxli",function(){
 		console.log("CLICK");
 		$(".selected-btn-color").removeClass("selected-button-active");
 		$(this).addClass("selected-button-active");
@@ -109,6 +166,8 @@ $(document).ready(function() {
                 } 
 			});
 		}
+		$(".pop-up-content-wrap").html("");
+		$(".custom-model-main").removeClass('model-open');
 	});
 
 
@@ -629,6 +688,14 @@ $(document).ready(function() {
 	$(document).on("click", ".containerCircle", function() {
 		$(".cartcolumn").removeClass("active");
 	});
+	$(document).on("mouseleave",".subscriptionlabel ",function(){
+		console.log("Label Hover");
+		$(this).removeClass("hoveractive");
+	});
+	$(document).on("mouseenter",".subscriptionlabel ",function(){
+		console.log("Label Hover");
+		$(this).addClass("hoveractive");
+	});
 	$(document).on("click",".subscriptionOption",function(){
 		console.log("CLICK");
 		$(this).closest(".subscriptionlabel").addClass("active");
@@ -645,6 +712,12 @@ $(document).ready(function() {
 		$(".deliverybox").addClass("hide");
 		$(".rc-selling-plans").addClass("hide");
 		getcartTotalQty();
+	});
+	$(document).on("change",".frequency_select",function(){
+		console.log("frequency_select");
+		$frequency_val = $(this).val();
+		console.log($frequency_val);
+		$( "input[name='selling_plan']").val($frequency_val);
 	});
 	$(document).on("click",".popupAddbtn",function(){
 		console.log("popupAddbtn");

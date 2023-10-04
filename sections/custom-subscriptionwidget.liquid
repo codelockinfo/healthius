@@ -7,7 +7,7 @@
           <span class="seconfsectiontext">1</span>
         </div>
         <div class="filterlabelmain">
-          <div class="filterlabel">{{ section.settings.widgetheading }}</div>
+          <div class="filterlabel"><span>{{ section.settings.widgetheading }}</span><hr class="filterlabel-border"></div>
         </div>
       </div>
       <div class="subscriptwidth">
@@ -16,6 +16,10 @@
             <div class="subscribename subscriptionOption">
                 {{ section.settings.widgetlabel1 }}
                 {% if section.settings.widgetext1 != blank %} <span>{{ section.settings.widgetext1 }}</span>{% endif %}
+                <select class="frequency_select">
+                <option value="689131815193">Every 2 Weeks</option>
+                <option value="689131847961">Every 4 Weeks</option>
+                </select>
             </div>
             <div class="disflex justify-between">
                 <div class="distext">
