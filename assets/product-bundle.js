@@ -88,7 +88,6 @@ $(document).ready(function() {
 					value = value.slice(0, -1);
                     return value.endsWith("_") && $boxTag == value;
                 });
-				console.log(matchingValues.length);
                 if (matchingValues.length > 0) {
                     var getNewQty = matchingValues.join(", ").slice(-1);
 					$(this).find(".productQty input").val(getNewQty);
@@ -593,7 +592,6 @@ $(document).ready(function() {
 				$dataValue = $(this).data('value');
 				if($dataValue == "subscribe & save"){
 					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*31)/100);
-					// inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*35)/100);
 				}
 				console.log(inputtotalrange + "inputtotalrange");
 			}
@@ -605,14 +603,13 @@ $(document).ready(function() {
 			cartTotQty += parseInt($(this).val());
 			$currentVarQty = $(this).val();
 			$price = $(this).closest(".productsimage").find(".product-price--original").data("price");
-			// console.log($price);
 			$Dataprice = ($price != undefined) ? $price.split("$") : 0;
 			// €
 			if ($Dataprice != 0) {
                 $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
                 $productPrices += $currentVarQty * parseFloat($Dataprice[1]);
 			}
-			$(".totalPrice").text('Total: $'+$productPrices.toFixed(2));
+
 			var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
 			var checkExistingVal = $.inArray(varId, selected_items);
 			if (checkExistingVal !== -1) {
@@ -628,8 +625,9 @@ $(document).ready(function() {
 		});
 		// var productPrice = $("#rangeSlider").attr("step");
 		// var pro_price = cartTotQty * parseInt($productPrices);
-
-      
+      console.log($getproductPrices + "1111111");
+	  console.log(inputtotalrange + "22222222");
+		$(".totalPrice").html('Total: $'+$productPrices.toFixed(2));
 		indicatore = ($productPrices * 100)/inputtotalrange;
 		if ($getproductPrices <= inputtotalrange) {
 			$("#rangeSlider").val($getproductPrices);
@@ -638,9 +636,9 @@ $(document).ready(function() {
             $("#rangeSlider").val($getproductPrices);
 			$(".range-slider__indicators .range-slider__value").css("left","100%");
 		}
-		// do't remove this comment
+		// don't remove this comment
 		// $(".range-slider__indicators .range-slider__value").html("$"+$productPrices);
-		// do't remove this comment
+		// don't remove this comment
 
 		$remain_amount = inputtotalrange - $getproductPrices;
 		var $getremainAmount = Math.round($remain_amount * 100) / 100;
@@ -681,7 +679,6 @@ $(document).ready(function() {
         }
       
         // var $finalremainamount = "$" + $finalremainamount + " Left to ";
-
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
         }
