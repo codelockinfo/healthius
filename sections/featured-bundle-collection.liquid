@@ -39,7 +39,7 @@
         <li class="mainboxli selected-btn-color" data-tag="familyfavorites_" ><span class="tablisting">Family Favorites</span> </li>
       </ul> {% endcomment %}
     </div>
-    {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
+    {%- render 'bundle-section-heading', heading: section.settings.heading, subheading: section.settings.subheading,subtext2: section.settings.subtext2, button: section.settings.show_view_all, button_label: 'collections.view_all_products', link: collections[section.settings.collection].url, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
     <div>
         <div class="custom-model-main">
           <div class="custom-model-inner">        
@@ -84,7 +84,9 @@
         </div>
         <div class="cartcolumn">
           <div class="box-header">
-                  <div class="box-header-title">ADD MORE AND EARN REWARDS</div>
+                  <div class="box-header-title">SUBSCRIBERS SAVE 35%
+                    <div><span class="subcarttitle">Applied at checkout</span></div>
+                  </div>
                   <div class="progress-container">
                     <div>
                       <div class="range-input">
@@ -105,11 +107,16 @@
                         <li>$60</li>
                         <li>$70</li>
                         <li>$80</li>
-                        <li>{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}</li>
+                        <li class="label90">{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}</li>
                         <li>$100</li>
                         <li>$110</li>
                         <li>$120</li>
                         <li>{% if section.settings.maxprice != blank %}{{ section.settings.maxprice }}{% endif %}<span>Free meat</span></li>
+                        <li>$140</li>
+                        <li>$150</li>
+                        <li>$160</li>
+                        <li>$170</li>
+                        <li>$180</li>
                       </ul>
                     </div>
                     <div class="containercircle containerCircle">
@@ -120,6 +127,42 @@
                   </div>
                   <div class="product-container">
                     <div class="box-summary" id="cartSummary"> </div>
+                    <div class="box-footer">
+                      {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                      {%- assign current_variant = product.selected_or_first_available_variant -%}
+                        {%- form 'product', product, id: product_form_id, class: 'form bundle_product', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                          <input type="hidden" name="id" value="{{ current_variant.id }}" class="product_variant_id">
+                          <div class="product__cart-functions">
+                    
+                            <div class="flex-buttons">
+                              {%- liquid 
+                                if block.settings.show_quantity_selector
+                                  render 'product-quantity', variant: current_variant, id: section.id
+                                endif
+                              -%}
+                              <span class="totalPrice">Total: $00.00</span>  
+                              <button type="submit" name="add" class="addToCart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
+                                <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
+                                  {%- liquid
+                                        echo 'Spend $90 to Continue'
+                                  -%}
+                                </span>
+                                <span class="button__preloader">
+                                  <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
+                                </span>
+                              </button>
+                      
+                              {%- liquid
+                                if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
+                                  echo form | payment_button
+                                endif
+                              -%}
+                      
+                            </div>
+                            
+                          </div>
+                        {%- endform -%}
+                    </div>
                     <div class="box-giftproduct">
                     {% if section.settings.product_list != blank %}
                       {% assign  productgift = section.settings.product_list  %}
@@ -130,41 +173,7 @@
                         
                     </div> 
                   </div>
-                  <div class="box-footer">
-                    {%- assign product_form_id = 'product-form-' | append: section.id -%}
-                    {%- assign current_variant = product.selected_or_first_available_variant -%}
-                      {%- form 'product', product, id: product_form_id, class: 'form bundle_product', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                        <input type="hidden" name="id" value="{{ current_variant.id }}" class="product_variant_id">
-                        <div class="product__cart-functions">
-                  
-                          <div class="flex-buttons">
-                            {%- liquid 
-                              if block.settings.show_quantity_selector
-                                render 'product-quantity', variant: current_variant, id: section.id
-                              endif
-                            -%}
-                            <button type="submit" name="add" class="addToCart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
-                              <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
-                                {%- liquid
-                                      echo '90$ Left to checkout'
-                                -%}
-                              </span>
-                              <span class="button__preloader">
-                                <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
-                              </span>
-                            </button>
-                    
-                            {%- liquid
-                              if block.settings.show_dynamic_checkout and block.settings.show_gift_card_recipient == false
-                                echo form | payment_button
-                              endif
-                            -%}
-                    
-                          </div>
-                          
-                        </div>
-                      {%- endform -%}
-                  </div>
+                
             </div>
             <div class="cart-overlay">
             </div>
@@ -191,13 +200,13 @@
               <button type="submit" name="add" class="stickyAddtocart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                 <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
                   {%- liquid
-                        echo 'Cart total should be at least $90'
+                        echo 'Spend $90 to Continue'
                   -%}
                 </span>
                 <span class="button__preloader">
                   <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
                 </span>
-              </button>      
+              </button>    
             </div>
           </div>
     </div>
@@ -382,7 +391,7 @@
       {
         "type": "text",
         "id": "subtext2",
-        "label": "Sub text1",
+        "label": "Cart top text title",
         "default": "Or, personalize with your favorites"
       },
       {

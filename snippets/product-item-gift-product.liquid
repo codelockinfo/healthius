@@ -10,7 +10,7 @@
   {% endfor %}
 
 
-<div id="product-item-{{ product.id }}" class="giftProduct product-item card {{class}}" data-js-product-item data-product="{{  product.id }}" gift-data-selling15="{{ emp }}" gift-data-selling30="{{ emp2 }}">
+<div id="product-item-{{ product.id }}" class="giftProduct product-item  {{class}}" data-js-product-item data-product="{{  product.id }}" gift-data-selling15="{{ emp }}" gift-data-selling30="{{ emp2 }}">
 
   {%- liquid
     
@@ -35,10 +35,7 @@
     endif
 
   -%}
-  <div class="cartgiftproduct">
-    <img src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}" />
-</div>
-  <div class="card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}">
+  <div class="card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--right">
 
     
     {%- for block in section_blocks -%}
@@ -76,7 +73,7 @@
               </option>
             {%- endfor -%}
           </select>
-       
+          <div><span class="btnlocked">Locked</span></div>
         {%- when 'price' -%}
           <div 
             class="product-item__price text-size--large equalize-white-space" 
@@ -130,6 +127,9 @@
     {%- endfor -%}
 
   </div>
+  <div class="cartgiftproduct">
+    <img src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}" />
+</div>
 
   {%- liquid
     unless blank_product
