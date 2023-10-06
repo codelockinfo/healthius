@@ -21,6 +21,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+.custom-bundle-css .section-heading .overlaycustom{
+    position: relative;
+    z-index: 9999;
 }
 .buncleselectlabel{
     font-size: 22px;
@@ -449,6 +455,8 @@
     margin-left: 0;
     padding-left: 0;
     display: flex;
+    position: relative;
+    z-index: 9999;
 }
 
 .selected-btn-color{
@@ -461,6 +469,14 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 0.9rem) center;
     background-image:url('data:image/svg+xml;utf8,<svg width="13" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.414.086 7.9 6.57 6.485 7.985 0 1.5 1.414.086Z" fill="%231d1d1d"/><path d="M12.985 1.515 6.5 8 5.085 6.586 11.571.101l1.414 1.414Z" fill="%231d1d1d"/></svg>');
+}
+.selected-btn-color:hover .tablisting,.selected-btn-color:hover,.selected-btn-color.active,.selected-btn-color.active .tablisting{
+    color: #FBFBFB;
+    background: #862E1B;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5rem) center;
+    background-image: url('data:image/svg+xml;utf8,<svg width="13" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.414.086 7.9 6.57 6.485 7.985 0 1.5 1.414.086Z" fill="%23ffffff"/><path d="M12.985 1.515 6.5 8 5.085 6.586 11.571.101l1.414 1.414Z" fill="%23ffffff"/></svg>') !important;
+    display: block;
 }
 .filtertab .selected-btn-color.selected-button-active{
     background: #1c7084;
@@ -640,7 +656,7 @@
     overflow: hidden;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 12%;
     bottom: 0;
     left: 0; /* z-index: 1050; */
     -webkit-overflow-scrolling: touch;
@@ -707,9 +723,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    max-height: calc(100vh - 500px);
-      overflow-y: scroll;
-      margin-top: 8%;
+    max-height: calc(100vh - 400px);
+    overflow-y: scroll;
+    margin-top: 8%;
 
   }
   .model-open .custom-model-inner {
@@ -730,8 +746,19 @@
   }
   .model-open .bg-overlay {
     /* background: rgba(0, 0, 0, 0.6); */
-    background: rgb(235 234 233 / 60%);
-    z-index: 99;
+    /* background: rgb(235 234 233 / 60%);
+    z-index: 99; */
+  }
+  .overlaypopup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(233 233 233 / 60%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 999;
   }
   .bg-overlay {
     background: rgba(0, 0, 0, 0);
@@ -808,9 +835,12 @@
     }
 }
 @media screen and (max-width: 1024px){
+    .cartlabeltext{
+        display:none;
+    }
     .progress-container {
         display: flex;
-        align-items: center;
+        align-items: baseline;
     }
     .custom-bundle .cartcolumn{
         position: fixed;
@@ -846,10 +876,10 @@
         transform: translateY(0);
     }
     .range-input{
-        width: 90%;
+        width: 88%;
     }
     .range-labels li{
-        width: 6.6%;
+        width: 4.7%;
         left: 8%;
     }
     .containercircle{
@@ -908,7 +938,7 @@
     }
     .box-summary{
         border: none;
-        height: 68%;
+        height: 57%;
     }
     .box-giftproduct{
        border: none;
@@ -1211,6 +1241,15 @@
     }
 }
 @media screen and (max-width: 1024px) {
+    .productcontainerindex{
+        flex-wrap: wrap;
+    }
+    .custom-bundle-border{
+        margin-bottom: 10px;
+    }
+    .productcontainerindex .newcustomfilter{
+        margin: 0 0 10px 0;
+    }
     .subscriptwidth{
         flex-wrap: wrap;
         width: 100%;
@@ -1299,11 +1338,11 @@
     display: none;
 }
 .product-price span.product-price--original {
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 600;
 }
 .main-custombundle .add-button{
-    padding: 10px 25px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
 }
@@ -1316,7 +1355,7 @@
     float: right;
 }
 .main-custombundle  .plusicon{
-    height: 22px;
+    height: 20px;
     display: flex;
     align-items: center;
     padding: 0 5px;
@@ -1458,11 +1497,22 @@ h2.subtext1 {
     }
 }
 @media only screen and (max-width: 1024px) { 
+    .newcartBtn{
+        position: fixed;
+        bottom: 0;
+        text-align: right;
+        right: 10%;
+        z-index: 999;
+        padding-bottom: 2%;
+    }
     .bundle_flex .subtextflex {
         width: 100%;
     }
     .bundle_flex{
         flex-direction: column;
+    }
+    .filterlabelmain{
+        width: unset;
     }
     .bundle_flex .section-heading.section-heading--left.gutter-bottom--page{
         width: 100%;

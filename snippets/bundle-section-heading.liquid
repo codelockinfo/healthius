@@ -4,7 +4,7 @@
       
       {%- unless heading == blank and subheading == blank -%}
   
-        <div class="section-heading__text remove-empty-space"> 
+        <div class="section-heading__text remove-empty-space overlaycustom"> 
   
           {%- unless heading == blank -%}
             <{{ heading_tag }} class="section-heading__title h4">{{ heading | escape }}</{{ heading_tag }}>
@@ -15,7 +15,7 @@
           {%- endunless -%}
   
         </div>
-        <div class="section-heading__text remove-empty-space"> 
+        <div class="section-heading__text remove-empty-space cartlabeltext"> 
   
         {%- unless subtext2 == blank -%}
             <span class="section-heading__subheading text-size--large">{{ subtext2 }}</span>
