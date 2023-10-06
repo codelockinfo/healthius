@@ -843,6 +843,9 @@
     .cartlabeltext{
         display:none;
     }
+  .StickyCartBtn{
+    z-index: 9999 !important;
+  }
     .progress-container {
         display: flex;
         align-items: baseline;
