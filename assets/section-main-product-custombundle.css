@@ -289,6 +289,10 @@
 .box-footer .button{
     font-size: 16px;
 }
+.subscription-widget{
+    position: relative;
+    z-index: 9999;
+}
 .subscription-widget .container--has-background{
     padding-top: 0;
     padding-bottom: 0;
@@ -384,7 +388,7 @@
   
   .range-input input::-webkit-slider-thumb{
     -webkit-appearance: none;
-    appearance: none; 
+    appearance: none;
     width: 10px;
     height: 20px;
     left:-50px;
@@ -455,8 +459,6 @@
     margin-left: 0;
     padding-left: 0;
     display: flex;
-    position: relative;
-    z-index: 9999;
 }
 
 .selected-btn-color{
