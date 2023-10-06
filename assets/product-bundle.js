@@ -590,7 +590,6 @@ $(document).ready(function() {
 		var inputtotalrange = $splitMinPrice[1];
 		$splitMaxPrice = $(".maxCartprice").val().split("$");
 		var inputtotalrangemax = $splitMaxPrice[1];
-		$totalinputrange = 180;
 		$.each($(".subscriptionlabel"), function(index) {
 			if($(this).hasClass('active')){
 				$dataValue = $(this).data('value');
@@ -626,8 +625,6 @@ $(document).ready(function() {
 			setCookie("variant_qty", selected_item_qty, 7);
 
 		});
-		// var productPrice = $("#rangeSlider").attr("step");
-		// var pro_price = cartTotQty * parseInt($productPrices);
 		$(".totalPrice").html('Total: $'+$productPrices.toFixed(2));
 		indicatore = ($productPrices * 100)/inputtotalrange;
 		if ($getproductPrices <= inputtotalrangemax) {
@@ -687,8 +684,6 @@ $(document).ready(function() {
         }
         //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
         //   $(".stickyAddtocart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
-		// $(".addToCart").find("span").text($remain_amount + " Checkout ($" + $productPrices + ")");
-		// $(".stickyAddtocart").find("span").text($remain_amount + " Checkout ($" + $productPrices + ")");
 
       return cartTotQty;
 	}
