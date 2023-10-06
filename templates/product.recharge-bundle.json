@@ -80,7 +80,7 @@
         ".giftProduct .product-item__quick-buy {display: none;}"
       ],
       "settings": {
-        "heading": "2",
+        "heading": "OR",
         "subheading": "SELECT PRODUCT",
         "subtext1": "",
         "subtext2": "YOUR SHOPPING CART",
