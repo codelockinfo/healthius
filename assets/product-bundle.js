@@ -152,7 +152,7 @@ $(document).ready(function() {
 			$(".productsimage").find('.product-quantity__selector').val(1);
 			$(".box-summary .productsimage").remove();
 			$(".main-custombundle .productsimage").find(".productQty").removeClass("show");
-			$(".main-custombundle .productsimage").find(".add-button").css("display", "block");
+			$(".main-custombundle .productsimage").find(".add-button").css("display", "flex");
 			getcartTotalQty();
 		});
 		$boxTag = $(this).data("tag");
