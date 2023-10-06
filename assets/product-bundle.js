@@ -595,7 +595,7 @@ $(document).ready(function() {
 			if($(this).hasClass('active')){
 				$dataValue = $(this).data('value');
 				if($dataValue == "subscribe & save"){
-					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*35)/100);
+					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*31)/100);
 				}
 			}
 		});
@@ -660,10 +660,12 @@ $(document).ready(function() {
 			$(".addToCart").prop('disabled', false);
 			$(".addToCart").css("cursor", "pointer");
 			$(".add-to-cart").addClass("up90");
+			$(".addToCart").find("span").text("Continue To Checkout");
 		} else {
 			$(".addToCart").attr("disabled", "disabled");
 			$(".addToCart").css("cursor", "not-allowed");
 			$(".add-to-cart").removeClass("up90");
+			$(".addToCart").find("span").text("Spend $90 to Continue");
 			// $remain_amount = "$" + $remain_amount + " Left to ";
 		}
       
