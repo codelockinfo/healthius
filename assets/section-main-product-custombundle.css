@@ -24,7 +24,7 @@
     position: relative;
     z-index: 9999;
 }
-.custom-bundle-css .section-heading .overlaycustom{
+.custom-bundle-css .section-heading .overlaycustom,.seconfsectiontext{
     position: relative;
     z-index: 9999;
 }
@@ -743,10 +743,6 @@
     position: relative;
     z-index: 999;
     background-color: #fff;
-    background-color: #fff;
-    border: 1px solid #999;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 6px;
     -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
     box-shadow: 0 3px 9px #00000080;
     background-clip: padding-box;
@@ -797,6 +793,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
   }
   .popupimage{
     display: flex;
