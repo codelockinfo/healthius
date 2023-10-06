@@ -595,7 +595,7 @@ $(document).ready(function() {
 			if($(this).hasClass('active')){
 				$dataValue = $(this).data('value');
 				if($dataValue == "subscribe & save"){
-					inputtotalrange = Math.round($totalinputrange - ($totalinputrange*35)/100);
+					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*35)/100);
 				}
 			}
 		});
