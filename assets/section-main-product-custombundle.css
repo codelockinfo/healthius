@@ -1666,7 +1666,6 @@ h2.subtext1 {
     }
     .selected-btn-color{
         margin: 5% 0;
-        padding: 3px;
         background-position: calc(100% - 0.5rem) center;
     }
     .selected-btn-color:hover .tablisting,.selected-btn-color:hover,.selected-btn-color.active,.selected-btn-color.active .tablisting{
