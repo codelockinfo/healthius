@@ -15,7 +15,7 @@
     margin-right: 10px;
 }
 .productcontainerindex .seconfsectiontext{
-    padding: 0;
+    padding: 1px;
 }
 .bundleselectore_container{
     display: flex;
@@ -1016,7 +1016,7 @@
         margin-right: 0;
         width: 32%;
         padding: 3px 2px;
-        background-size: 10px;
+        background-size: 12px;
     }
     .filtertab{
         flex-wrap: wrap;
@@ -1592,12 +1592,12 @@ h2.subtext1 {
 }
 @media only screen and (max-width: 1024px) { 
     .newcustomfilter .seconfsection{
-        width: 43px;
+        width: 35px;
     }
     .seconfsectiontext{
-        padding: 8px 0;
+        padding: 4px 0;
         font-weight: 900;
-        font-size: 30px;
+        font-size: 22px;
     }
     .newcartBtn{
         position: fixed;
@@ -1683,7 +1683,7 @@ h2.subtext1 {
     .selected-btn-color{
         padding: 3px 0;
         background-position: calc(100% - 0.3rem) center;
-        background-size: 8px;
+        /* background-size: 8px; */
     }
     .tablisting {
         font-size: 11px;
