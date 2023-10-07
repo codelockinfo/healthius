@@ -461,7 +461,6 @@
     padding: 20px 2px;
 }
 .newcustomfilter{
-    margin: 50px 0;
     margin-left: 0;
     padding-left: 0;
     display: flex;
@@ -1015,7 +1014,6 @@
         margin: 3% 0;
         margin-right: 0;
         width: 32%;
-        padding: 3px 2px;
         background-size: 12px;
     }
     .filtertab{
@@ -1663,8 +1661,16 @@ h2.subtext1 {
     }
 }
 @media only screen and (max-width: 500px) { 
+    .subscription-widget .section-heading__subheading{
+        font-size: 16px;
+    }
     .selected-btn-color{
         margin: 5% 0;
+        padding: 3px;
+        background-position: calc(100% - 0.5rem) center;
+    }
+    .selected-btn-color:hover .tablisting,.selected-btn-color:hover,.selected-btn-color.active,.selected-btn-color.active .tablisting{
+        background-position: calc(100% - 0.5rem) center;
     }
     .quickingrediantflex .quickallergenswidth,.quickingrediantflex .quickingrediantwidth{
         width: 100%;
@@ -1680,13 +1686,8 @@ h2.subtext1 {
     }
 }
 @media only screen and (max-width: 400px) { 
-    .selected-btn-color{
-        padding: 3px 0;
-        background-position: calc(100% - 0.3rem) center;
-        /* background-size: 8px; */
-    }
     .tablisting {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 .main-content.backimage{
