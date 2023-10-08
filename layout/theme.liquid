@@ -360,7 +360,15 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       }, {passive: true});
     </script>
   {%- endif -%}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11317384601"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'AW-11317384601');
+</script>
 </body>
 </html>
 {% if  template.name contains "index" %}
