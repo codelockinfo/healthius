@@ -1691,7 +1691,7 @@ h2.subtext1 {
 }
 @media only screen and (max-width: 400px) { 
     .tablisting {
-        font-size: 9.9px;
+        font-size: 10px;
     }
     .selected-btn-color{
         background-size: 10px;
