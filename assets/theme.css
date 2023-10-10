@@ -2460,3 +2460,7 @@ html[dir=ltr] .container--has-background:after, html[dir=ltr] .card__image svg, 
 .cartcolumn .product-container, .cartcolumn .box-footer{
   background-color:#fff;
 }
+.breadcrumb-main.about_breadcrumb {
+  position: relative;
+  top:unset;
+}

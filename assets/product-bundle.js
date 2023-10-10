@@ -81,7 +81,7 @@ $(document).ready(function() {
 		if($boxTag != ""){
 			$popupHtml = "";
 			$totalprice = 0;
-			$(".main-custombundle .productsimage").each(function(index) {
+			$("#filtered-products .productsimage").each(function(index) {
 				var productTags = $(this).attr("data-tags");
 				productTags = productTags.split(",");
 				
@@ -125,7 +125,7 @@ $(document).ready(function() {
 				'<span> ADD</span>'+
 				'</button>'+
 				'</div>';
-				$TotalPrice = '<span class="totalPricepopup">Total: $'+$totalprice+'</span>';
+				$TotalPrice = '<span class="totalPricepopup">Total $'+$totalprice+'</span>';
 				$(".pop-up-content-wrap").append($popupHtml);
 				$(".pop-up-content-wrap").append($TotalPrice);
 				$(".pop-up-content-wrap").append($addSelectproduct);
@@ -157,7 +157,7 @@ $(document).ready(function() {
 		});
 		$boxTag = $(this).data("tag");
 		if($boxTag != ""){
-			$(".main-custombundle .productsimage").each(function(index) {
+			$("#filtered-products .productsimage").each(function(index) {
 				var productTags = $(this).attr("data-tags");
 				productTags = productTags.split(",");
 
@@ -165,7 +165,6 @@ $(document).ready(function() {
                 	value = value.slice(0, -1);
                     return value.endsWith("_") && $boxTag == value;
                 });
-				console.log(matchingValues.length);
                 if (matchingValues.length > 0) {
                     var getNewQty = matchingValues.join(", ").slice(-1);
 					$(this).find(".productQty input").val(getNewQty);
@@ -695,11 +694,9 @@ $(document).ready(function() {
 		$(".cartcolumn").removeClass("active");
 	});
 	$(document).on("mouseleave",".subscriptionlabel ",function(){
-		console.log("Label Hover");
 		$(this).removeClass("hoveractive");
 	});
 	$(document).on("mouseenter",".subscriptionlabel ",function(){
-		console.log("Label Hover");
 		$(this).addClass("hoveractive");
 	});
 	$(document).on("click",".subscriptionOption",function(){
