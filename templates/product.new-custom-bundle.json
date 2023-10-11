@@ -75,6 +75,7 @@
         "template--20542029103385__7d74e3c2-914c-46a3-889a-da1251a4f605-quick_buy-1",
         "fd149ccd-0e28-435d-9c21-174a47fd0a74"
       ],
+      "disabled": true,
       "custom_css": [
         ".productsimage .product-item {cursor: pointer;}",
         ".giftProduct .product-item__quick-buy {display: none;}"
