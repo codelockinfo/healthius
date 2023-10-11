@@ -313,7 +313,7 @@ $(document).ready(function() {
 				console.log("PRICE");
 				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
 				var plan30 = $('.giftProduct').attr('gift-data-selling30');
-				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
+				var giftSellingPlanId = (selling_plan_id == '689312137497') ? plan15 : plan30;
 	  
 				var item_data = {
 					collectionId: '459204722969',
@@ -421,7 +421,7 @@ $(document).ready(function() {
 
 			// console.log(variant_id);
 			var collection_id = $(this).data("collection");
-			var sellingplan_id = (selling_plan_id == '689131815193') ? $(this).data("selling15") : $(this).data("selling30");
+			var sellingplan_id = (selling_plan_id == '689312137497') ? $(this).data("selling15") : $(this).data("selling30");
 
 			var item_data = {
 				collectionId: collection_id,  // Example Shopify Collection
@@ -444,7 +444,7 @@ $(document).ready(function() {
 				console.log("PRICE");
 				var plan15 = $('.giftProduct').attr('gift-data-selling15');  
 				var plan30 = $('.giftProduct').attr('gift-data-selling30');
-				var giftSellingPlanId = (selling_plan_id == '689131815193') ? plan15 : plan30;
+				var giftSellingPlanId = (selling_plan_id == '689312137497') ? plan15 : plan30;
 	  
 				var item_data = {
 					collectionId: '459204722969',
@@ -480,41 +480,6 @@ $(document).ready(function() {
 				asyncGetCall();
 		}
 	}
-
-
-// function addGiftproduct(giftVariantid, get_main_bundle_id) {
-//     console.log('something here');
-//     var data = {
-//         quantity: 1, // Adjust the quantity as needed
-//         id: giftVariantid,
-//     };
-
-//     // if (sellingplan_id) {
-//     //     data.properties = {
-//     //         "_main_bundle_id": get_main_bundle_id,
-//     //         "_rc_bundle": get_main_bundle_id,
-//     //         "_rc_bundle_variant": PRODUCT_ID
-          
-//     //     };
-//     // }
-
-//     $.ajax({
-//         url: '/cart/add.js',
-//         dataType: 'json',
-//         type: 'POST',
-//         data: data,
-//         success: function(response) {
-//             console.log('Success----');
-//             console.log(response);
-//             removeCookie("variantids");
-//             removeCookie("variant_qty");
-//             window.location.href = '/checkout';
-//         },
-//         error: function(jqXHR, textStatus, errorThrown) {
-//             console.log('Error:', textStatus, errorThrown);
-//         }
-//     });
-// }
   
 	set_lineitems_onload();
 	$(document).on("click",".addButton",function() {
@@ -593,7 +558,7 @@ $(document).ready(function() {
 			if($(this).hasClass('active')){
 				$dataValue = $(this).data('value');
 				if($dataValue == "subscribe & save"){
-					inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*31)/100);
+					// inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*31)/100);
 				}
 			}
 		});

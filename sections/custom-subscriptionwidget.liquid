@@ -17,8 +17,8 @@
                 {{ section.settings.widgetlabel1 }}
                 {% if section.settings.widgetext1 != blank %} <span>{{ section.settings.widgetext1 }}</span>{% endif %}
                 <select class="frequency_select">
-                <option value="689131815193">Every 15 days</option>
-                <option value="689131847961">Every 30 days</option>
+                <option value="{%- if section.settings.frequency_select_id1  != blank -%} {{- section.settings.frequency_select_id1 -}} {%- endif -%}">{% if section.settings.frequency_select_label1  != blank %} {{ section.settings.frequency_select_label1 }} {% endif %}</option>
+                <option value="{%- if section.settings.frequency_select_id2  != blank -%} {{- section.settings.frequency_select_id2 -}} {%- endif -%}">{% if section.settings.frequency_select_label2  != blank %} {{ section.settings.frequency_select_label2 }} {% endif %}</option>
                 </select>
             </div>
             <div class="disflex justify-between">
@@ -111,6 +111,29 @@
         "id": "widgetheading",
         "label": "Text",
         "default": "Select frequency"
+      }, {
+        "type": "text",
+        "id": "frequency_select_label1",
+        "label": "Frequency select label",
+        "default": "Every 15 days"
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_label2",
+        "label": "Frequency select label",
+        "default": "Every 30 days"
+      }, 
+      {
+        "type": "text",
+        "id": "frequency_select_id1",
+        "label": "Frequency select ID",
+        "default": "689131815193"
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_id2",
+        "label": "Frequency select ID",
+        "default": "689131847961"
       }, {
         "type": "text",
         "id": "widgetlabel1",
