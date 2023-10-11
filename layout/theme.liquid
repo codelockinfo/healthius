@@ -60,7 +60,7 @@ window.TriplePixelData={TripleName:"healthius-store.myshopify.com",ver:"1.9"},fu
   {%- render 'head-variables', direction: direction -%}
 
   {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {% if product.handle == "dummy-product-1" or product.handle == "fresh-bundle" %}
+  {% if product.handle == "dummy-product-1" or product.handle == "fresh-bundle" or product.handle == "custom-bundle" %}
     {{ 'custombundleproduct.css' | asset_url | stylesheet_tag }}
   {% endif %}
 	{{ content_for_header }}
@@ -148,7 +148,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
   <a href="#main" class="visually-hidden skip-to-content" tabindex="0" data-js-inert>{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
 
   {{ 'section-header.css' | asset_url | stylesheet_tag }}
-  {% unless product.handle == "dummy-product-1" or product.handle == "fresh-bundle" %}
+  {% unless product.handle == "dummy-product-1" or product.handle == "fresh-bundle" or product.handle == "custom-bundle" %}
   {%- sections 'header-group' -%}
   {% else %}
   {%- sections 'header-group-custombundle' -%}
@@ -156,8 +156,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'component-product-form.js' | asset_url }}" defer></script>
-
-  {% if template.suffix == "recharge-bundle" %}
+  {% if template.suffix == "recharge-bundle"  or template.suffix == "new-custom-bundle" %}
     <main id="main" class="main-content  backimage
       {% if settings.product_card_align_buy %} main-content--align-product-items {% endif %}
     " style="background-image: url('https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Mask_Group_125_2_1.png?v=1693548433');">
@@ -166,12 +165,12 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
       {% if settings.product_card_align_buy %} main-content--align-product-items {% endif %}
     ">
   {% endif %}
-  {% unless product.handle == "dummy-product-1"  or product.handle == "fresh-bundle"%}
+  {% unless product.handle == "dummy-product-1"  or product.handle == "fresh-bundle" or product.handle == "custom-bundle" %}
     {%- render 'breadcrumb' -%}
   {% endunless %}
     {{ content_for_layout }}
   </main>
-  {% unless product.handle == "dummy-product-1" or product.handle == "fresh-bundle" %}
+  {% unless product.handle == "dummy-product-1" or product.handle == "fresh-bundle" or product.handle == "custom-bundle" %}
   {%- sections 'footer-group' -%}
   {% endunless %}
   {%- section 'popups' -%}
