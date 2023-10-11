@@ -146,18 +146,18 @@
         "style": "grid",
         "layout": "grid-3 grid-lap-2 grid-tiny-1",
         "products_number": 16,
-        "collection": "all-products",
+        "collection": "temp",
         "collection1": "",
         "collection2": "",
         "collection3": "",
         "collection4": "",
-        "product_list": "",
+        "product_list": "gift-product",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": false,
         "seo_h_tag": "h2",
-        "minprice": "$90",
-        "maxprice": "$130"
+        "minprice": "$75",
+        "maxprice": "$125"
       }
     },
     "1693439542cff73aec": {
