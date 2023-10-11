@@ -198,15 +198,15 @@
                           </div>
                         {%- endform -%}
                     </div>
-                    {% comment %} <div class="box-giftproduct">
-                    {% if section.settings.product_list != blank %}
-                      {% assign  productgift = section.settings.product_list  %}
-                      <div class="maingiftproductitem">
-                      {%  render 'product-item-gift-product', product: productgift, section_blocks: section.blocks, index: forloop.index, layout: 'shop' %}
-                      </div>
-                      {% endif %}
-                        
-                    </div>  {% endcomment %}
+                <div class="box-giftproduct">
+                {% if section.settings.product_list != blank %}
+                    {% assign  productgift = section.settings.product_list  %}
+                    <div class="maingiftproductitem">
+                    {%  render 'product-item-gift-product', product: productgift, section_blocks: section.blocks, index: forloop.index, layout: 'shop' %}
+                    </div>
+                    {% endif %}
+                    
+                </div> 
                   </div>
                 
             </div>
