@@ -170,7 +170,9 @@ $(document).ready(function() {
 					$(this).find(".productQty input").val(getNewQty);
 					$(this).find(".productQty input").trigger("change");
 					$(this).find(".addButton").trigger("click");
+					(getNewQty > 1 ) ? $(this).find('.product-quantity__minus').removeClass("disabled") : '' ;
 					$var_id = $(this).data("variant");
+					(getNewQty > 1 ) ? $(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__minus').removeClass("disabled") : '' ;
 					$(".box-summary div[data-variant='" + $var_id + "']").find('.product-quantity__selector').val(getNewQty);
 					getcartTotalQty();
                 } 
