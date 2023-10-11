@@ -137,6 +137,10 @@
         "template--21340479848729__b223c187-45d7-4940-9eab-081c26a54590-quick_buy-1",
         "1b439b6c-d824-4d43-a85a-e069f3e8dd62"
       ],
+      "custom_css": [
+        ".productsimage .product-item {cursor: pointer;}",
+        ".giftProduct .product-item__quick-buy {display: none;}"
+      ],
       "settings": {
         "heading": "OR",
         "subheading": "BUILD YOUR OWN",
