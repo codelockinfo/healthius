@@ -107,6 +107,9 @@ window.TriplePixelData={TripleName:"healthius-store.myshopify.com",ver:"1.9"},fu
   {% if product.handle == "dummy-product-1" or product.handle == "fresh-bundle" %}
   <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
   <script src="{{ 'product-bundle.js' | asset_url }}" defer></script>
+  {% elsif  product.handle == "custom-bundle" %}
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom-bundle.js' | asset_url }}" defer></script>
   {% endif%}
   
 <!-- Start VWO Async SmartCode -->
