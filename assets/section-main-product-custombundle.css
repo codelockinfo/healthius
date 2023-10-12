@@ -392,7 +392,18 @@
       height: 20px;
       background: #fff;
   }
-  
+  .range-input input::-moz-range-thumb{
+    width: 10px;
+    height: 20px;
+    left:-50px;
+    outline: none;
+    background: #1C7084;
+    background-color: #1C7084;
+    box-shadow: -50rem 0 5rem 20rem #1C7084,
+                -40rem 0 5rem 30rem #1C7084,
+                -30rem 0 2rem 25rem #1C7084,
+                -25.5rem 0 0 25rem  #1C7084;
+  }
   .range-input input::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
