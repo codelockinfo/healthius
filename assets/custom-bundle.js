@@ -256,11 +256,11 @@ $(document).ready(function() {
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
-			// Send an AJAX request to clear the cart
-			var request = new XMLHttpRequest();
-			request.open('POST', '/cart/clear.js', true);  
-			request.send(); 
-			window.setTimeout(() => {
+		// Send an AJAX request to clear the cart
+		var request = new XMLHttpRequest();
+		request.open('POST', '/cart/clear.js', true);  
+		request.send(); 
+		window.setTimeout(() => {
 			$(".subscriptionlabel").each( function( i ) {
 				if($(this).hasClass('active')){
 					$dataValue = $(this).data('value');
