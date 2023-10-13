@@ -256,16 +256,22 @@ $(document).ready(function() {
 	
 	$('.addToCart').click(function(e) {
 		e.preventDefault();
-		$(".subscriptionlabel").each( function( i ) {
-			if($(this).hasClass('active')){
-				$dataValue = $(this).data('value');
-				if($dataValue == "subscribe & save"){
-					subscriptionAddtocart();
-				}else{
-					onetimeAddtocart();
+		// Send an AJAX request to clear the cart
+		var request = new XMLHttpRequest();
+		request.open('POST', '/cart/clear.js', true);  
+		request.send(); 
+		window.setTimeout(() => {
+			$(".subscriptionlabel").each( function( i ) {
+				if($(this).hasClass('active')){
+					$dataValue = $(this).data('value');
+					if($dataValue == "subscribe & save"){
+						subscriptionAddtocart();
+					}else{
+						onetimeAddtocart();
+					}
 				}
-			}
-		});
+			});
+		}, 1000);
 	});
 
 	function onetimeAddtocart(){
@@ -347,8 +353,8 @@ $(document).ready(function() {
 			const data = await respons.json();
 			console.log(data);
 			if(data !== undefined){
-				removeCookie("variantids");
-				removeCookie("variant_qty");
+				// removeCookie("variantids");
+				// removeCookie("variant_qty");
 				window.location.href = '/checkout';
 			}
 			// if($giftVariantid !== undefined){
@@ -475,8 +481,8 @@ $(document).ready(function() {
 					});
 					const data = await respons.json();
 					console.log(data);
-					removeCookie("variantids");
-					removeCookie("variant_qty");
+					// removeCookie("variantids");
+					// removeCookie("variant_qty");
 					window.location.href = '/checkout';
 				}
 				asyncGetCall();

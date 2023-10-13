@@ -2463,4 +2463,5 @@ html[dir=ltr] .container--has-background:after, html[dir=ltr] .card__image svg, 
 .breadcrumb-main.about_breadcrumb {
   position: relative;
   top:unset;
+  display: none;
 }
