@@ -335,7 +335,9 @@
     font-size: 11px;
     margin-left: 0px;
 }
-
+.range-labels li:nth-child(13) .labelsecond{
+    margin-left: -21px;    
+}
 .range-labels li::before {
     position: absolute;
     top: -30.5px;
