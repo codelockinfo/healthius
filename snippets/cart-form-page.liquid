@@ -114,7 +114,8 @@
       <div class="cart-form-item">
         <div class="cart-item__product-info cart-form-item--layout">
           <a href="{{ rc_bundle_product.url }}" class="bundle-link cart-item__thumbnail element--border-width-clamped element--border-radius">
-         {%- render 'lazy-image-small', image: item.image, aspect_ratio: settings.cart_image_ratio, fit: settings.cart_image_fit -%}
+         {% comment %} {%- render 'lazy-image-small', image: item.image, aspect_ratio: settings.cart_image_ratio, fit: settings.cart_image_fit -%} {% endcomment %}
+		 <img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/fresh-bundle-372757_8e513828-9cdc-463e-86d8-ef98a2e57554.png?v=1697605681" loading="lazy" class="cart_static_img" >
           </a>
       <div class="cart-form-item__price-title-variants">
         <div class="cart-item__price">

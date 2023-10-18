@@ -161,3 +161,9 @@
 #site-cart-sidebar:not(.cart-is-empty) .cart-continue {
   display: none;
 }
+/* customimge */
+.cart_static_img{
+  width: 100px;
+  height: 100px;
+}
+/* customimge */
