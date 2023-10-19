@@ -32,7 +32,7 @@
         "logo_height": 90,
         "main_linklist": "new-menu",
         "buttontext": "Order Now",
-        "buttonurl": "shopify:\/\/products\/fresh-bundle",
+        "buttonurl": "shopify:\/\/products\/custom-bundle",
         "show_search": false,
         "sticky_header": true,
         "select_header_actions_on_mobile": "show_on_homepage",
