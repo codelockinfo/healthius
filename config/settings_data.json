@@ -228,6 +228,7 @@
         "blocks": {
           "store-selector-0": {
             "type": "store",
+            "disabled": true,
             "settings": {
               "store_name": "My store",
               "store_pickup_price": "Free",
