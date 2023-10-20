@@ -186,6 +186,7 @@
     "cart_image_ratio": "1",
     "cart_image_fit": true,
     "cart_free_shipping": false,
+    "show_breadcrumb": false,
     "social_facebook": "https:\/\/www.facebook.com\/profile.php?id=61550191665305",
     "social_instagram": "https:\/\/www.instagram.com\/justmeats.co\/",
     "social_tiktok": "https:\/\/www.tiktok.com\/@justmeats.com",
