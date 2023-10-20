@@ -166,7 +166,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
     ">
   {% endif %}
   {% unless product.handle == "dummy-product-1"  or product.handle == "fresh-bundle" or product.handle == "custom-bundle" %}
-    {% comment %} {%- render 'breadcrumb' -%} {% endcomment %}
+    {%- render 'breadcrumb' -%}
   {% endunless %}
     {{ content_for_layout }}
   </main>
