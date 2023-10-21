@@ -68,6 +68,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_price": true,
             "show_quantity_selector": true,
@@ -138,6 +139,7 @@
         },
         "quick_buy": {
           "type": "quick_buy",
+          "disabled": true,
           "settings": {
           }
         }
