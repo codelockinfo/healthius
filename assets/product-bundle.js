@@ -250,8 +250,18 @@ $(document).ready(function() {
 
 	$(".productSelect").change(function() {
 		$giftVariantid = $(this).find(":selected").val();
-		console.log($giftVariantid);
+		setCookie("freshgiftvariantid", $giftVariantid);
+		$giftVariantTitle = $.trim($(this).find(":selected").html());
 		$(this).attr("data-vid", $giftVariantid);
+
+		$("#filtered-products .productsimage").each( function( i ) {
+			$productTitle = $(this).find(".variant-title").html();
+			$productSrc = $(this).find(".imageforcart img").attr("src");
+			if($productTitle.includes($giftVariantTitle)){
+				$(".freeTurkey").find(".variant-title").html($productTitle);
+				$(".freeTurkey").find(".imageforcart img").attr("src",$productSrc);
+			}
+		});
 	});
 	
 	$('.addToCart').click(function(e) {
@@ -618,7 +628,9 @@ $(document).ready(function() {
                 $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
                 $productPrices += $currentVarQty * parseFloat($Dataprice[1]);
 			}
-
+			$gistSelectedvariant = getCookie("freshgiftvariantid");
+			$(".productSelect  option[value='"+ $gistSelectedvariant +"']").prop("selected", true);
+ 
 			var varId = $(this).closest(".productsimage").find(".variant-title").data("id");
 			var checkExistingVal = $.inArray(varId, selected_items);
 			if (checkExistingVal !== -1) {
@@ -652,11 +664,22 @@ $(document).ready(function() {
 				$(".box-giftproduct").addClass("show");
 				$(".product-variant-select").addClass("show");
 				$(".btnlocked").addClass("hide");
+				$(".freeTurkey").addClass("show");
+				$("#filtered-products .productsimage").each( function( i ) {
+					$allproductTitle = $(this).find(".variant-title").html();
+					$allproductSrc = $(this).find(".imageforcart img").attr("src");
+					$giftproductTitle = $.trim($(".productSelect").find(":selected").html());
+					if($allproductTitle.includes($giftproductTitle)){
+						$(".freeTurkey").find(".variant-title").html($allproductTitle);
+						$(".freeTurkey").find(".imageforcart img").attr("src",$allproductSrc);
+					}
+				});
 			}
 		}else{
 			$(".box-giftproduct").removeClass("show");
 			$(".product-variant-select").removeClass("show");
 			$(".btnlocked").removeClass("hide");
+			$(".freeTurkey").removeClass("show");
 		}
 		if ($remain_amount < 1) {
 			console.log("GIFTPRODUCT ADD");
