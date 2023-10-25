@@ -258,8 +258,8 @@ $(document).ready(function() {
 			$productTitle = $(this).find(".variant-title").html();
 			$productSrc = $(this).find(".imageforcart img").attr("src");
 			if($productTitle.includes($giftVariantTitle)){
-				$(".freeTurkey").find(".variant-title").html($productTitle);
-				$(".freeTurkey").find(".imageforcart img").attr("src",$productSrc);
+				// $(".freeTurkey").find(".variant-title").html($productTitle);
+				// $(".freeTurkey").find(".imageforcart img").attr("src",$productSrc);
 			}
 		});
 	});

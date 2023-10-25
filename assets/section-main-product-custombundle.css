@@ -1,4 +1,4 @@
-.freeTurkey{display: none;}
+.freeTurkey{display: block;}
 .freeTurkey.show{
     display: block;
 }
