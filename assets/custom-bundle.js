@@ -125,7 +125,7 @@ $(document).ready(function() {
 				'<span> ADD</span>'+
 				'</button>'+
 				'</div>';
-				$TotalPrice = '<span class="totalPricepopup">Total $'+$totalprice+'</span>';
+				$TotalPrice = '<span class="totalPricepopup">Total $'+$totalprice.toFixed(2)+'</span>';
 				$(".pop-up-content-wrap").append($popupHtml);
 				$(".pop-up-content-wrap").append($TotalPrice);
 				$(".pop-up-content-wrap").append($addSelectproduct);
