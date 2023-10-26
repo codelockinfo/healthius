@@ -100,6 +100,9 @@
         "collection3": "chicken",
         "collection4": "pork",
         "product_list": "gift-product",
+        "turkryselect": "buildproduct",
+        "turkey_heading": "",
+        "turkey_product": "",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": true,
@@ -161,12 +164,19 @@
         "collection3": "",
         "collection4": "",
         "product_list": "free-meat-unlocked-at-125",
+        "turkryselect": "buildproduct",
+        "turkey_heading": "Free Meat",
+        "turkey_image": "shopify:\/\/shop_images\/custom-bundle-623742.png",
+        "turkey_product": "free-meat-unlocked-at-125",
         "section_background_color": "rgba(0,0,0,0)",
         "section_heading_color": "rgba(0,0,0,0)",
         "remove_margin": false,
         "seo_h_tag": "h2",
         "minprice": "$75",
-        "maxprice": "$125"
+        "labelmin": "UNLOCK ORDER",
+        "maxprice": "$125",
+        "labelmax1": "FREE MEAT",
+        "labelmax2": "(UNLOCKED AT $130)"
       }
     },
     "1693439542cff73aec": {
