@@ -143,7 +143,68 @@
                     </div>
                   </div>
                   <div class="product-container">
-                    <div class="box-summary" id="cartSummary"> </div>
+                    <div class="box-summary" id="cartSummary"> 
+                      {% if section.settings.turkryselect == "customproduct" and section.settings.turkey_heading != blank  %}
+                        <div class="freeTurkey">
+                          <div class="product-item card container-box" data-summery-index="4">
+                            <div class="imageforcart">
+                              {% if section.settings.turkey_image != blank %}
+                              <img src="{{ section.settings.turkey_image | img_url: 'master' }}" alt="Turkey product">
+                              {% endif %}
+                            </div>
+                            <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">
+                              <div class="cartfontcontainer">
+                                <a class="product-item__title">
+                                  <div class="remove-line-height-space--small marginbottomtitle">
+                                  <span  class="variant-title  text-size--large text-line-height--small text-weight--bold">{% if section.settings.turkey_heading != blank %}{{ section.settings.turkey_heading }}{% endif %}</span>
+                                  </div>
+                                </a>
+                                <div class="product-item__price text-size--large equalize-white-space">
+                                  <div class="remove-line-height-space">
+                                    <div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">{% if section.settings.turkey_heading != blank %} FREE {% endif %}</span>
+                                      <del class="product-price--compare" data-js-product-price-compare=""></del>
+                                      <span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-item__badges text-size--xsmall"></div>
+                          </div>
+                        </div>
+                      {% endif %}
+                      {% if section.settings.turkryselect == "buildproduct" %}
+                        {% if section.settings.turkey_product != blank %}
+                          {% assign  turkeyProduct = section.settings.turkey_product  %}
+                            <div class="freeTurkey">
+                              <div class="product-item card container-box" data-summery-index="4">
+                                <div class="imageforcart">
+                                  {% if turkeyProduct.featured_media != blank %}
+                                    <img src="{{ turkeyProduct.featured_media | img_url: 'master' }}" alt="{{ turkeyProduct.featured_media.title }}" />
+                                  {% endif %}                              </div>
+                                <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">
+                                  <div class="cartfontcontainer">
+                                    <a class="product-item__title">
+                                      <div class="remove-line-height-space--small marginbottomtitle">
+                                        <span  class="variant-title  text-size--large text-line-height--small text-weight--bold">{% if turkeyProduct.title != blank %}{{ turkeyProduct.title }}{% endif %}</span>
+                                      </div>
+                                    </a>
+                                    <div class="product-item__price text-size--large equalize-white-space">
+                                      <div class="remove-line-height-space">
+                                        <div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">{% if turkeyProduct.price != blank and turkeyProduct.price == 0%}FREE{% else %}{{ turkeyProduct.price  | money }}{% endif %}</span>
+                                          <del class="product-price--compare" data-js-product-price-compare=""></del>
+                                          <span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item__badges text-size--xsmall"></div>
+                              </div>
+                            </div>
+                        {% endif %}
+                      {% endif %}
+                    </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}
                       {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -509,6 +570,37 @@
         "type": "product",
         "id": "product_list",
         "label": "Add gift Product"
+      },
+      {
+        "type": "select",
+        "id": "turkryselect",
+        "label": "Select Free product",
+        "options": [
+          {
+            "value": "customproduct",
+            "label": "Select custom product"
+          },
+          {
+            "value": "buildproduct",
+            "label": "Build free product"
+          }
+        ],
+        "default": "buildproduct"
+      },
+      {
+        "type": "text",
+        "id": "turkey_heading",
+        "label": "Free Turkey product Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "turkey_image",
+        "label": "Free Turkey product Image"
+      },
+      {
+        "type": "product",
+        "id": "turkey_product",
+        "label": "Select Turkey product"
       },
       {
         "type": "header",

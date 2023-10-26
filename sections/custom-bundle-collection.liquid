@@ -115,24 +115,49 @@
                           <div class="margin-top"></div>
                           </div>
                       </div> 
-                      <ul class="range-labels">
-                        <li class="active selected">$5</li>
-                        <li>$10</li>
-                        <li>$15</li>
-                        <li>$20</li>
-                        <li>$25</li>
-                        <li>$30</li>
-                        <li>$35</li>
-                        <li>$40</li>
-                        <li>$45</li>
-                        <li>$50</li>
-                        <li>$55</li>
-                        <li>$60</li>
-                        <li>$65</li>
-                        <li>$70</li>
-                        <li class="label90">{% if section.settings.minprice != blank %}{{ section.settings.minprice }}{% endif %}<span>UNLOCK ORDER</span></li>
-                        <li>$80</li>
-                        <li>$85</li>
+                      {% assign minPrice = section.settings.minprice | remove_first: "$" | plus: 0  %}
+                      {% assign priceminimum = section.settings.minprice %}
+                      {% assign labelmin = section.settings.labelmin %}
+                      {% assign maxPrice = section.settings.maxprice | remove_first: "$" | plus: 0  %}
+                      {% assign pricemaximum = section.settings.maxprice  %}
+                      {% assign labelmax1 = section.settings.labelmax1 %}
+                      {% assign labelmax2 = section.settings.labelmax2 %}
+                      <ul class="range-labels">                        
+                        {% comment %} <li class="active selected">$5</li> {% endcomment %}
+                        <li class="active selected {% if minPrice <= 5 and  minPrice > 0 %}label90{% endif %}">{{ priceminimum }}{% if minPrice <= 5 and  minPrice > 0 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 10 and minPrice > 5 %}label90{% endif %}">{{ priceminimum }}{% if minPrice <= 10 and minPrice > 5 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 15 and minPrice > 10 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 15 and minPrice > 10 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 20 and minPrice > 15 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 20 and minPrice > 15 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 25 and minPrice > 20 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 25 and minPrice > 20 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 30 and minPrice > 25 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 30 and minPrice > 25 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 35 and minPrice > 30 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 35 and minPrice > 30 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 40 and minPrice > 35 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 40 and minPrice > 35 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 45 and minPrice > 40 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 45 and minPrice > 40 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 50 and minPrice > 45 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 50 and minPrice > 45 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 55 and minPrice > 50 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 55 and minPrice > 50 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 60 and minPrice > 55 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 60 and minPrice > 55 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 65 and minPrice > 60 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 65 and minPrice > 60 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 70 and minPrice > 65 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 70 and minPrice > 65 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 75 and minPrice > 70 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 75 and minPrice > 70 %}<span>{{ labelmin }}</span>{% endif %}</li>
+                        <li class="{% if minPrice <= 80 and minPrice > 75 %}label90{% endif %}" >{{ priceminimum }}{% if minPrice <= 80 and minPrice > 75 %}<span>{{ labelmin }}</span>{% endif %}</li>
+
+                        <li class="{% if maxPrice <= 85 and maxPrice > 80 %}label130{% endif %}" >{{ pricemaximum }} {% if maxPrice <= 85 and maxPrice > 80 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 90 and maxPrice > 85 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 90 and maxPrice > 85 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 95 and maxPrice > 90 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 95 and maxPrice > 90 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 100 and maxPrice > 95 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 100 and maxPrice > 95 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 105 and maxPrice > 100 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 105 and maxPrice > 100 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 110 and maxPrice > 105 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 110 and maxPrice > 105 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 115 and maxPrice > 110 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 115 and maxPrice > 110 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 120 and maxPrice > 115 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 120 and maxPrice > 115 %}label130{% endif %}</li>
+                        <li class="{% if maxPrice <= 125 and maxPrice > 120 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 125 and maxPrice > 120 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 130 and maxPrice > 125 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 130 and maxPrice > 125 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 135 and maxPrice > 130 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 135 and maxPrice > 130 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 140 and maxPrice > 135 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 140 and maxPrice > 135 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 145 and maxPrice > 140 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 145 and maxPrice > 140 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 150 and maxPrice > 145 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 150 and maxPrice > 145 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 155 and maxPrice > 150 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 155 and maxPrice > 150 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        <li class="{% if maxPrice <= 160 and maxPrice > 155 %}label130{% endif %}" >{{ pricemaximum }}{% if maxPrice <= 160 and maxPrice > 155 %}<span>{{labelmax1}}</span><span class="labelsecond">{{labelmax2}}</span>{% endif %}</li>
+                        {% comment %} <li>$85</li>
                         <li>$90</li>
                         <li>$95</li>
                         <li>$100</li>
@@ -146,6 +171,8 @@
                         <li>$140</li>
                         <li>$145</li>
                         <li>$150</li>
+                        <li>$155</li>
+                        <li>$160</li> {% endcomment %}
                       </ul>
                     </div>
                     <div class="containercircle containerCircle">
@@ -155,7 +182,67 @@
                     </div>
                   </div>
                   <div class="product-container">
-                    <div class="box-summary" id="cartSummary"> </div>
+                    <div class="box-summary" id="cartSummary"> 
+                        {% if section.settings.turkryselect == "customproduct" and section.settings.turkey_heading != blank %}
+                          <div class="freeTurkey">
+                              <div class="product-item card container-box" data-summery-index="4">
+                                <div class="imageforcart">
+                                  {% if section.settings.turkey_image != blank %}
+                                    <img src="{{ section.settings.turkey_image | img_url: 'master' }}" alt="Turkey product">
+                                  {% endif %}                              </div>
+                                <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">
+                                  <div class="cartfontcontainer">
+                                    <a class="product-item__title">
+                                      <div class="remove-line-height-space--small marginbottomtitle">
+                                        <span  class="variant-title  text-size--large text-line-height--small text-weight--bold">{% if section.settings.turkey_heading != blank %}{{ section.settings.turkey_heading }}{% endif %}</span>
+                                      </div>
+                                    </a>
+                                    <div class="product-item__price text-size--large equalize-white-space">
+                                      <div class="remove-line-height-space">
+                                        <div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">{% if section.settings.turkey_heading != blank %} FREE {% endif %}</span>
+                                          <del class="product-price--compare" data-js-product-price-compare=""></del>
+                                          <span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item__badges text-size--xsmall"></div>
+                              </div>
+                          </div>
+                        {% endif %}
+                        {% if section.settings.turkryselect == "buildproduct" %}
+                          {% if section.settings.turkey_product != blank %}
+                            {% assign  turkeyProduct = section.settings.turkey_product  %}
+                              <div class="freeTurkey">
+                                <div class="product-item card container-box" data-summery-index="4">
+                                  <div class="imageforcart">
+                                    {% if turkeyProduct.featured_media != blank %}
+                                      <img src="{{ turkeyProduct.featured_media | img_url: 'master' }}" alt="{{ turkeyProduct.featured_media.title }}" />
+                                    {% endif %}                              </div>
+                                  <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">
+                                    <div class="cartfontcontainer">
+                                      <a class="product-item__title">
+                                        <div class="remove-line-height-space--small marginbottomtitle">
+                                          <span  class="variant-title  text-size--large text-line-height--small text-weight--bold">{% if turkeyProduct.title != blank %}{{ turkeyProduct.title }}{% endif %}</span>
+                                        </div>
+                                      </a>
+                                      <div class="product-item__price text-size--large equalize-white-space">
+                                        <div class="remove-line-height-space">
+                                          <div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">{% if turkeyProduct.price != blank and turkeyProduct.price == 0%}FREE{% else %}{{ turkeyProduct.price  | money }}{% endif %}</span>
+                                          <del class="product-price--compare" data-js-product-price-compare=""></del>
+                                            <span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="product-item__badges text-size--xsmall"></div>
+                                </div>
+                              </div>
+                          {% endif %}
+                        {% endif %}
+                    </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}
                       {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -178,9 +265,7 @@
                               <span class="totalPrice">Total: $00.00</span>  
                               <button type="submit" name="add" class="addToCart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                                 <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
-                                  {%- liquid
-                                        echo 'Spend $75 to Continue'
-                                  -%}
+                                  Spend {{ section.settings.minprice }} to Continue
                                 </span>
                                 <span class="button__preloader">
                                   <svg class="button__preloader-element" viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="4"/></svg>
@@ -523,6 +608,37 @@
         "label": "Add gift Product"
       },
       {
+        "type": "select",
+        "id": "turkryselect",
+        "label": "Select Free product",
+        "options": [
+          {
+            "value": "customproduct",
+            "label": "Select custom product"
+          },
+          {
+            "value": "buildproduct",
+            "label": "Build free product"
+          }
+        ],
+        "default": "buildproduct"
+      },
+      {
+        "type": "text",
+        "id": "turkey_heading",
+        "label": "Free Turkey product Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "turkey_image",
+        "label": "Free Turkey product Image"
+      },
+      {
+        "type": "product",
+        "id": "turkey_product",
+        "label": "Select Turkey product"
+      },
+      {
         "type": "header",
         "content": "t:local-march-update.labels.section_design"
       }, {
@@ -579,9 +695,27 @@
       },
       {
         "type": "text",
+        "id": "labelmin",
+        "label": "Label for above value",
+        "default": "UNLOCK ORDER"
+      },
+      {
+        "type": "text",
         "id": "maxprice",
         "label": "Maximum price for cart",
         "default": "$130"
+      },
+      {
+        "type": "text",
+        "id": "labelmax1",
+        "label": "Label for above value",
+        "default": "FREE MEAT"
+      },
+      {
+        "type": "text",
+        "id": "labelmax2",
+        "label": "Label for above value",
+        "default": "(UNLOCKED AT $130)"
       }
     ],
     "presets": [

@@ -536,7 +536,7 @@ $(document).ready(function() {
 		  '</div><div class="product-item__badges text-size--xsmall"></div></div>'+
 		  '</div>';
 
-		$("#cartSummary").append($staticGiftProduct);
+		// $("#cartSummary").append($staticGiftProduct);
 		var selected_item = getCookie("variantids");
 		var variant_qty = getCookie("variant_qty");
 		if (selected_item) {
@@ -658,7 +658,7 @@ $(document).ready(function() {
 			$(".addToCart").attr("disabled", "disabled");
 			$(".addToCart").css("cursor", "not-allowed");
 			$(".add-to-cart").removeClass("up90");
-			$(".addToCart").find("span").text("Spend $75 to Continue");
+			$(".addToCart").find("span").text("Spend $"+ inputtotalrange +" to Continue");
 			// $remain_amount = "$" + $remain_amount + " Left to ";
 		}
       
