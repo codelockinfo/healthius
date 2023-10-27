@@ -317,7 +317,7 @@
 .range-labels li {
     position: relative;
     float: left;
-    width: 2.7%;
+    width: 2.5%;
     left: 11%;
     text-align: center;
     color: #000;
@@ -340,8 +340,23 @@
     font-size: 11px;
     margin-left: 0px;
 }
+.range-labels li.label130 span.maxspan1{
+    margin-left: -9px;
+}
+.range-labels li.label130 span.maxspan2{
+    margin-left: -18px;
+}
 .range-labels li.label130 .labelsecond {
     margin-left: -30px;
+}
+.range-labels li.label130 .labelsecond.lastlabel1 {
+    margin-left: -40px;
+}
+.range-labels li.label130 .labelsecond.lastlabel2 {
+    margin-left: -50px;
+}
+.range-labels li.label130 .labelsecond.lastlabel3 {
+    margin-left: -67px;
 }
 .range-labels li::before {
     position: absolute;
@@ -961,7 +976,7 @@
         width: 88%;
     }
     .range-labels li{
-        width: 2.9%;
+        width: 2.66%;
         left: 8%;
     }
     .containercircle{
@@ -1680,7 +1695,21 @@ h2.subtext1 {
         font-size: 28px;
     }
 }
+@media only screen and (max-width: 550px) { 
+    .range-labels li.label130 span.maxspan1 {
+        margin-left: -24px;
+    }
+    .range-labels li.label130 .labelsecond.lastlabel3 {
+        margin-left: -70px;
+    }
+}
 @media only screen and (max-width: 500px) { 
+    .range-labels li.label130 span.maxspan1 {
+        margin-left: -29px;
+    }
+    .range-labels li.label130 .labelsecond.lastlabel3 {
+        margin-left: -77px;
+    }
     .subscription-widget .section-heading__subheading{
         font-size: 16px;
     }
@@ -1708,6 +1737,12 @@ h2.subtext1 {
     }
 }
 @media only screen and (max-width: 400px) { 
+    .range-labels li.label130 span.maxspan1 {
+        margin-left: -34px;
+    }
+    .range-labels li.label130 .labelsecond.lastlabel3 {
+        margin-left: -83px;
+    }
     .tablisting {
         font-size: 10px;
     }
