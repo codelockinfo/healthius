@@ -518,12 +518,12 @@ $(document).ready(function() {
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
-			  '<img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_27.png?v=1695269150" alt="">'+
+			  '<img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995" alt="">'+
 		  '</div>'+
 			'<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">'+
 			  '<div class="cartfontcontainer"><a class="product-item__title">'+
 						'<div class="remove-line-height-space--small marginbottomtitle">'+
-						  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">Raspberry Chicken Breast</span>'+
+						  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">Lemon Pepper Chicken</span>'+
 						'</div>'+
 					  '</a>'+
 		  '<div class="product-item__price text-size--large equalize-white-space">'+
