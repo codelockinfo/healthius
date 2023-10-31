@@ -143,17 +143,17 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 
 </head>
 
-<body <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53HM3TQ7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --> id="{{ page_title | handle }}" class="no-touchevents 
+<body  id="{{ page_title | handle }}" class="no-touchevents 
   {% if customer %} customer-logged-in {% endif %} 
   template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} 
   {% if settings.shadow_cards_x < 0 %} has-negative-shadow-x {% endif %}
   {% if settings.shadow_cards_y < 0 %} has-negative-shadow-y {% endif %}
 ">
 
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53HM3TQ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   
   <script type="text/javascript">
     if ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) { document.querySelector('body').classList.remove('no-touchevents'); document.querySelector('body').classList.add('touchevents'); } 
