@@ -450,6 +450,15 @@ $(document).ready(function() {
 			}
 			bundleObject.selections.push(item_data);
 		});
+		var item_data = {
+			collectionId: '459204722969',
+			  externalProductId: '8887761469721',  // GIFT PRODUCT ID
+			  externalVariantId: '47309007225113',  // THE SELECTED VARIANT
+			  quantity: 1,  // Dynamic Quantity
+			  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		  }
+		  bundleObject.selections.push(item_data);
+		console.log(bundleObject);
 
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
