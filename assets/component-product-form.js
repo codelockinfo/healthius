@@ -753,5 +753,7 @@ function getCookie(cname) {
 }
 // Check if the cookie is already set
 if (getCookie("discount_code") === "") {
+	//  TODO  NEED TO REMOVE COMMENT
 //   setCookie("discount_code", "FIRSTSUBSCRIPTION", 30);
+//  TODO  NEED TO REMOVE COMMENT
 }

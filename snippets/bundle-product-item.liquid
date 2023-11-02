@@ -1,4 +1,6 @@
+{% comment %} TODO NEED TO REMOVE LAST PRODUCT ID {% endcomment %}
 {% if product.id  != 8626470617369 and  product.id  != 8841086140697  and product.id != 8887761469721  %}
+  {% comment %} TODO NEED TO REMOVE LAST PRODUCT ID {% endcomment %}
 {%- assign product_variant = product.selected_or_first_available_variant -%}
 {% assign emp = '' %}
 {% for selling_plan_group in product.selling_plan_groups %}

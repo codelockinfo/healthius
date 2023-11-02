@@ -450,6 +450,7 @@ $(document).ready(function() {
 			}
 			bundleObject.selections.push(item_data);
 		});
+		//  TODO
 		var item_data = {
 			collectionId: '459204722969',
 			  externalProductId: '8887761469721',  // GIFT PRODUCT ID
@@ -459,7 +460,7 @@ $(document).ready(function() {
 		  }
 		  bundleObject.selections.push(item_data);
 		console.log(bundleObject);
-
+		//  TODO
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
 		if($giftVariantid !== undefined){
