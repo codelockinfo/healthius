@@ -156,21 +156,23 @@
                   </div>
                   <div class="product-container">
 
-    {% assign desired_product_handle = 'holiday-box-6' %}
+    
     {% for product in collections.all.products %}
-      {% if product.handle == desired_product_handle %}
+      {% if product.handle == 'holiday-box-6' %}
         {% if product.available %}
           <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
         {% else %}
-          {% if product.handle == 'holiday-box-3' %}
-            {% if product.available %}
-              <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
-            {% else %}
-              <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL">
+          {% for product in collections.all.products %}
+            {% if product.handle == 'holiday-box-3' %}
+              {% if product.available %}
+                <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
+              {% else %}
+                <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL">
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endif %}
+          {% endfor %}
         {% break %}
+        {% endif %}
       {% endif %}
     {% endfor %}
 

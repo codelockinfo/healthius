@@ -529,7 +529,7 @@ $(document).ready(function() {
 		var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995';
 		var free_pro_title = 'Lemon Pepper Chicken';
 		console.log(promo_product+ ' -----');
-		if(promo_product != undefined && promo_product != ''){
+		if(promo_product != undefined && promo_product != 'NULL'){
 			free_pro_img = $(".promoProduct").data('img');
 			free_pro_title = $(".promoProduct").data('title');
 		}
