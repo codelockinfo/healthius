@@ -155,6 +155,25 @@
                     </div>
                   </div>
                   <div class="product-container">
+
+    {% assign desired_product_handle = 'holiday-box-6' %}
+    {% for product in collections.all.products %}
+      {% if product.handle == desired_product_handle %}
+        {% if product.available %}
+          <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
+        {% else %}
+          {% if product.handle == 'holiday-box-3' %}
+            {% if product.available %}
+              <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
+            {% else %}
+              <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL">
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
                     <div class="box-summary" id="cartSummary"> </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}

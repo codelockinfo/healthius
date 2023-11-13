@@ -525,15 +525,23 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
+		var promo_product = $(".promoProduct").val();
+		var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995';
+		var free_pro_title = 'Lemon Pepper Chicken';
+		console.log(promo_product+ ' -----');
+		if(promo_product != undefined && promo_product != ''){
+			free_pro_img = $(".promoProduct").data('img');
+			free_pro_title = $(".promoProduct").data('title');
+		}
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
-			  '<img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995" alt="">'+
+			  '<img src="'+free_pro_img+'" alt="">'+
 		  '</div>'+
 			'<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">'+
 			  '<div class="cartfontcontainer"><a class="product-item__title">'+
 						'<div class="remove-line-height-space--small marginbottomtitle">'+
-						  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">Lemon Pepper Chicken</span>'+
+						  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">'+free_pro_title+'</span>'+
 						'</div>'+
 					  '</a>'+
 		  '<div class="product-item__price text-size--large equalize-white-space">'+
