@@ -574,17 +574,6 @@ $(document).ready(function() {
 				free_pro_img = $(".promoProduct").data('img');
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
-				var selected_item = getCookie("variantids");
-				console.log(selected_item + "SSSSSSSSSSSSSSS");
-				if(selected_item){
-					$(".addToCart").removeClass("hide");
-					$(".only-continue").addClass("hide");
-				}else{
-					$(".addToCart").addClass("hide");
-					$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
-									'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
-								   '</button>');
-				}
 			}
 		}
 		
@@ -632,6 +621,13 @@ $(document).ready(function() {
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 			}
+			$(".addToCart").removeClass("hide");
+			$(".only-continue").addClass("hide");
+		}else{
+			$(".addToCart").addClass("hide");
+			$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
+							'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
+						   '</button>');
 		}
 		getcartTotalQty();
 	}
@@ -766,6 +762,17 @@ $(document).ready(function() {
         //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
         //   $(".stickyAddtocart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
 
+		var selected_item_cookie = getCookie("variantids");
+		console.log(selected_item_cookie + "SSSSSSSSSSSSSSS");
+		if(selected_item_cookie){
+			$(".addToCart").removeClass("hide");
+			$(".only-continue").addClass("hide");
+		}else{
+			$(".addToCart").addClass("hide");
+			$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
+							'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
+							'</button>');
+		}
       return cartTotQty;
 	  	}
 	$(document).on("click", ".StickyCartBtn", function() {
