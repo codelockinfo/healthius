@@ -468,24 +468,16 @@ $(document).ready(function() {
 			}
 			bundleObject.selections.push(item_data);
 		});
-		//  TODO
-		var item_data = {
-			collectionId: '459204722969',
-			  externalProductId: '8887761469721',  // GIFT PRODUCT ID
-			  externalVariantId: '47309007225113',  // THE SELECTED VARIANT
-			  quantity: 1,  // Dynamic Quantity
-			  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-		  }
-		  bundleObject.selections.push(item_data);
-		console.log(bundleObject);
-		//  TODO
+		
 		// Promo Product
 		var promo_product = $(".promoProduct").val();
 		var affiliate_cookie = getCookie("discount_code");
 		console.log(promo_product + "---------");
 		console.log(affiliate_cookie + "---------");
+		var check_promo_product = false;
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			if(promo_product != undefined && promo_product != 'NULL'){
+				check_promo_product = true;
 				$promo_variant_id = $(".promoProduct").attr("variant_id");
 					var item_data = {
 						collectionId: '459204722969',
@@ -497,6 +489,22 @@ $(document).ready(function() {
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
 			}}
+
+
+			//  TODO
+			if(check_promo_product == false){
+				var item_data = {
+					collectionId: '459204722969',
+					  externalProductId: '8887761469721',  // GIFT PRODUCT ID
+					  externalVariantId: '47309007225113',  // THE SELECTED VARIANT
+					  quantity: 1,  // Dynamic Quantity
+					  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+				  }
+				  bundleObject.selections.push(item_data);
+				console.log(bundleObject);
+			}
+		//  TODO
+
 		// Promo Product
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
@@ -568,9 +576,12 @@ $(document).ready(function() {
 		var affiliate_cookie = getCookie("discount_code");
 		var promo_class = '';
 		console.log(promo_product+ ' -----');
+
 		
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			if(promo_product != undefined && promo_product != 'NULL'){
+				$('.subscriptionOption span').text('Save 10% on your first order');
+				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				free_pro_img = $(".promoProduct").data('img');
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
@@ -755,24 +766,23 @@ $(document).ready(function() {
         //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
         //   $(".stickyAddtocart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
 
-		var selected_item_cookie = getCookie("variantids");
-		console.log(selected_item_cookie + "SSSSSSSSSSSSSSS");
-		if(selected_item_cookie){
-			console.log("INIF");
-			$(".addToCart").removeClass("hide");
-			$(".only-continue").addClass("hide");
-		}else{
-			console.log("inelse");
-			$(".addToCart").addClass("hide");
-			$(".only-continue").removeClass("hide");
-			$hasonlyContinue = $(".onlyContinue").html();
-			console.log($hasonlyContinue + "FFFFFFFFFF");
-			if($hasonlyContinue == undefined){
-				$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
-					'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
-				'</button>');
-			}		
-		}
+		// var selected_item_cookie = getCookie("variantids");
+		// if(selected_item_cookie){
+		// 	console.log("INIF");
+		// 	$(".addToCart").removeClass("hide");
+		// 	$(".only-continue").addClass("hide");
+		// }else{
+		// 	console.log("inelse");
+		// 	$(".addToCart").addClass("hide");
+		// 	$(".only-continue").removeClass("hide");
+		// 	$hasonlyContinue = $(".onlyContinue").html();
+		// 	console.log($hasonlyContinue + "FFFFFFFFFF");
+		// 	if($hasonlyContinue == undefined){
+		// 		$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
+		// 			'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
+		// 		'</button>');
+		// 	}
+		// }
       return cartTotQty;
 	  	}
 	$(document).on("click", ".StickyCartBtn", function() {
