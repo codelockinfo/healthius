@@ -234,6 +234,10 @@
     display: none;
 }
 
+.box-summary .freeTurkey .promo-product .imageforcart{
+    width: 100%;
+}
+
 .box-summary .freeTurkey:nth-child(even) .container-box{
     background-color: #fff;
 }
