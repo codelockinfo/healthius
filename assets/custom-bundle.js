@@ -621,13 +621,6 @@ $(document).ready(function() {
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .product-quantity__selector").val(product_item_qty);
 				$(".box-summary div[data-variant='" + product_item + "']").find(".productQty .qty-minus").removeClass('disabled');
 			}
-			$(".addToCart").removeClass("hide");
-			$(".only-continue").addClass("hide");
-		}else{
-			$(".addToCart").addClass("hide");
-			$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
-							'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
-						   '</button>');
 		}
 		getcartTotalQty();
 	}
@@ -765,13 +758,20 @@ $(document).ready(function() {
 		var selected_item_cookie = getCookie("variantids");
 		console.log(selected_item_cookie + "SSSSSSSSSSSSSSS");
 		if(selected_item_cookie){
+			console.log("INIF");
 			$(".addToCart").removeClass("hide");
 			$(".only-continue").addClass("hide");
 		}else{
+			console.log("inelse");
 			$(".addToCart").addClass("hide");
-			$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
-							'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
-							'</button>');
+			$(".only-continue").removeClass("hide");
+			$hasonlyContinue = $(".onlyContinue").html();
+			console.log($hasonlyContinue + "FFFFFFFFFF");
+			if($hasonlyContinue == undefined){
+				$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
+					'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
+				'</button>');
+			}		
 		}
       return cartTotQty;
 	  	}

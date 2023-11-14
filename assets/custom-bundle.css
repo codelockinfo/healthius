@@ -1735,7 +1735,7 @@ h2.subtext1 {
     background-attachment: fixed;
  }
   /* cls015 end */
-  .add-to-cart.hide{
+  .addToCart.add-to-cart.hide,.onlyContinue.add-to-cart.hide{
     display: none;
   }
   .no-touchevents .bundle_product .only-continue.add-to-cart{
