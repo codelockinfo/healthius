@@ -12,6 +12,15 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 -%}
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
 <head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53HM3TQ7');</script>
+<!-- End Google Tag Manager -->
+  
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
@@ -138,7 +147,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 
 </head>
 
-<body id="{{ page_title | handle }}" class="no-touchevents 
+<body  id="{{ page_title | handle }}" class="no-touchevents 
   {% if customer %} customer-logged-in {% endif %} 
   template-{{ template.name }} template-{{ template | replace: '.', ' ' | handle }} 
   {% if settings.shadow_cards_x < 0 %} has-negative-shadow-x {% endif %}
