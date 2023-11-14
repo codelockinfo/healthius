@@ -1735,3 +1735,16 @@ h2.subtext1 {
     background-attachment: fixed;
  }
   /* cls015 end */
+  .add-to-cart.hide{
+    display: none;
+  }
+  .no-touchevents .bundle_product .only-continue.add-to-cart{
+    background: #862E1B;
+    border-color: #862e1b;
+    border-radius: 0;
+  }
+  .only-continue.add-to-cart{
+    background: #862E1B;
+    border-color: #862e1b;
+    border-radius: 0;
+  }

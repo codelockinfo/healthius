@@ -160,12 +160,12 @@
     {% for product in collections.all.products %}
       {% if product.handle == 'holiday-box-6' %}
         {% if product.available %}
-          <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
+          <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
         {% else %}
           {% for product in collections.all.products %}
             {% if product.handle == 'holiday-box-3' %}
               {% if product.available %}
-                <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
+                <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
               {% else %}
                 <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL">
               {% endif %}
@@ -190,7 +190,7 @@
                                 <span class="labelretunshop containerCircle">Return to Shop</span>
                               </div>
                             </div>
-                            <div class="flex-buttons">
+                            <div class="flex-buttons only_continue">
                               {%- liquid 
                                 if block.settings.show_quantity_selector
                                   render 'product-quantity', variant: current_variant, id: section.id

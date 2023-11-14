@@ -343,7 +343,25 @@ $(document).ready(function() {
 			  	bundleObject.selections.push(item_data);
 				console.log(bundleObject);
 			}
-
+			// Promo Product
+			var promo_product = $(".promoProduct").val();
+			var affiliate_cookie = getCookie("discount_code");
+			console.log(promo_product + "---------");
+			console.log(affiliate_cookie + "---------");
+			if(affiliate_cookie != undefined && affiliate_cookie != ''){
+				if(promo_product != undefined && promo_product != 'NULL'){
+					$promo_variant_id = $(".promoProduct").attr("variant_id");
+						var item_data = {
+							collectionId: '459204722969',
+							externalProductId: promo_product,  // GIFT PRODUCT ID
+							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+							quantity: 1,  // Dynamic Quantity
+							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+						}
+						bundleObject.selections.push(item_data);
+						console.log(bundleObject);
+				}}
+			// Promo Product
 
 
 		const bundle = bundleObject;
@@ -461,6 +479,25 @@ $(document).ready(function() {
 		  bundleObject.selections.push(item_data);
 		console.log(bundleObject);
 		//  TODO
+		// Promo Product
+		var promo_product = $(".promoProduct").val();
+		var affiliate_cookie = getCookie("discount_code");
+		console.log(promo_product + "---------");
+		console.log(affiliate_cookie + "---------");
+		if(affiliate_cookie != undefined && affiliate_cookie != ''){
+			if(promo_product != undefined && promo_product != 'NULL'){
+				$promo_variant_id = $(".promoProduct").attr("variant_id");
+					var item_data = {
+						collectionId: '459204722969',
+						externalProductId: promo_product,  // GIFT PRODUCT ID
+						externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+						quantity: 1,  // Dynamic Quantity
+						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+					}
+					bundleObject.selections.push(item_data);
+					console.log(bundleObject);
+			}}
+		// Promo Product
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
         // check the price of to see if we need to append the free product to the selections before we get all the recharge values back needed to add to subscription.
 		if($giftVariantid !== undefined){
@@ -537,6 +574,17 @@ $(document).ready(function() {
 				free_pro_img = $(".promoProduct").data('img');
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
+				var selected_item = getCookie("variantids");
+				console.log(selected_item + "SSSSSSSSSSSSSSS");
+				if(selected_item){
+					$(".addToCart").removeClass("hide");
+					$(".only-continue").addClass("hide");
+				}else{
+					$(".addToCart").addClass("hide");
+					$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
+									'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
+								   '</button>');
+				}
 			}
 		}
 		
@@ -587,7 +635,7 @@ $(document).ready(function() {
 		}
 		getcartTotalQty();
 	}
-
+	
 	function getcartTotalQty() {
 		var selected_items = [];
 		var selected_item_qty = [];
@@ -719,7 +767,7 @@ $(document).ready(function() {
         //   $(".stickyAddtocart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
 
       return cartTotQty;
-	}
+	  	}
 	$(document).on("click", ".StickyCartBtn", function() {
 		console.log("stocky btn click");
 		$(".cartcolumn").addClass("active");
@@ -767,13 +815,33 @@ $(document).ready(function() {
 		$(this).closest(".custom-quickview").find(".product-quantity").addClass("show");
 		$productId = $(this).closest(".custom-quickview").data("id");
 		// $backupQty = $(".custom-bundle .main-custombundle .productsimage[data-product='"+ $productId +"'] .product-quantity__selector").val();
-	
+		
 		$(".main-custombundle .productsimage[data-product='"+ $productId +"']").find(".addButton").trigger("click");
-	
+		
 	});
+	
+	$(document).on("click",".onlyContinue ",function(event){
+		event.preventDefault()
+		console.log("onlyContinue  btn click ");
+		$promo_variant_id = $(".promoProduct").attr("variant_id");
+		console.log($promo_variant_id + "Promo varint id");
+		$.ajax({
+			type: 'POST',
+			url: '/cart/add.js',
+			data: {
+			  quantity: 1,
+			  id:$promo_variant_id
+			},
+			 dataType: 'json', 
+			 success: function (data) { 
+				if(data !== undefined){
+					window.location.href = '/checkout';
+				}
+			 } 
+			 });
 
+	});
 });
-
 function setCookie(name, value, daysToExpire) {
 	var date = new Date();
 	date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
