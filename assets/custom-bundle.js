@@ -583,7 +583,7 @@ $(document).ready(function() {
 				$('.subscriptionOption span').text('Save 10% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				$('.announcement').text('BLACK FRIDAY PRE-SALE: shipments deliver the week of 11/27');
-				free_pro_img = $(".promoProduct").data('img');
+				free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_4.jpg?v=1700023422' : $(".promoProduct").data('img'));
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
 			}
