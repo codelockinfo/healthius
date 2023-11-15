@@ -582,6 +582,7 @@ $(document).ready(function() {
 			if(promo_product != undefined && promo_product != 'NULL'){
 				$('.subscriptionOption span').text('Save 10% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+				$('.announcement').text('BLACK FRIDAY PRE-SALE: shipments deliver the week of 11/27');
 				free_pro_img = $(".promoProduct").data('img');
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
