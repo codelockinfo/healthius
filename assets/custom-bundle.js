@@ -348,7 +348,9 @@ $(document).ready(function() {
 			var affiliate_cookie = getCookie("discount_code");
 			console.log(promo_product + "---------");
 			console.log(affiliate_cookie + "---------");
-			if(affiliate_cookie != undefined && affiliate_cookie != ''){
+			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15'];
+		if(affiliate_cookie != undefined && affiliate_cookie != ''){
+			if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 				if(promo_product != undefined && promo_product != 'NULL'){
 					$promo_variant_id = $(".promoProduct").attr("variant_id");
 						var item_data = {
@@ -360,7 +362,9 @@ $(document).ready(function() {
 						}
 						bundleObject.selections.push(item_data);
 						console.log(bundleObject);
-				}}
+				}
+			}
+		}
 			// Promo Product
 
 
@@ -475,7 +479,9 @@ $(document).ready(function() {
 		console.log(promo_product + "---------");
 		console.log(affiliate_cookie + "---------");
 		var check_promo_product = false;
-		if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15'];
+	if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 			if(promo_product != undefined && promo_product != 'NULL'){
 				check_promo_product = true;
 				$promo_variant_id = $(".promoProduct").attr("variant_id");
@@ -488,7 +494,9 @@ $(document).ready(function() {
 					}
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
-			}}
+			}
+		}
+	}
 
 
 			//  TODO
@@ -574,11 +582,13 @@ $(document).ready(function() {
 		var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995';
 		var free_pro_title = 'Lemon Pepper Chicken';
 		var affiliate_cookie = getCookie("discount_code");
-		var promo_class = '';
-		console.log(promo_product+ ' -----');
-
+		affiliate_cookie = affiliate_cookie.toLowerCase();
 		
-		if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		var promo_class = '';
+
+	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15'];
+	if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 			if(promo_product != undefined && promo_product != 'NULL'){
 				$('.subscriptionOption span').text('Save 10% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
@@ -588,6 +598,7 @@ $(document).ready(function() {
 				promo_class = 'promo-product';
 			}
 		}
+	}
 		
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
