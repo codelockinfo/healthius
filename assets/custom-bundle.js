@@ -495,6 +495,16 @@ $(document).ready(function() {
 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 					}
 					bundleObject.selections.push(item_data);
+					//Free gift product
+					var item_data = {
+						collectionId: '459204722969',
+						externalProductId: '8930725921049',  // GIFT PRODUCT ID
+						externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+						quantity: 1,  // Dynamic Quantity
+						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+					}
+					bundleObject.selections.push(item_data);
+					//Free gift product
 					console.log(bundleObject);
 			}
 		}
