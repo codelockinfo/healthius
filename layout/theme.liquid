@@ -387,6 +387,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
  {% include 'smile-initializer' %}
 
+
+      <!--PageFly  fix horizontal -->
+<style>
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden ! important;
+  }
+}
+
+.__pf [data-pf-type="Section"] {
+  overflow: hidden ! important;
+}
+</style>
 </body>
 </html>
 {% if  template.name contains "index" %}
