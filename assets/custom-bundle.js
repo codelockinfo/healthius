@@ -348,7 +348,7 @@ $(document).ready(function() {
 			var affiliate_cookie = getCookie("discount_code");
 			console.log(promo_product + "---------");
 			console.log(affiliate_cookie + "---------");
-			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree', 'buffaloes15'];
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
@@ -480,7 +480,7 @@ $(document).ready(function() {
 		console.log(promo_product + "---------");
 		console.log(affiliate_cookie + "---------");
 		var check_promo_product = false;
-		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree', 'buffaloes15'];
 	if(affiliate_cookie != undefined && affiliate_cookie != ''){
 		affiliate_cookie = affiliate_cookie.toLowerCase();
 		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
@@ -598,7 +598,7 @@ $(document).ready(function() {
 		
 		var promo_class = '';
 
-	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
+	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree', 'buffaloes15'];
 	if(affiliate_cookie != undefined && affiliate_cookie != ''){
 		affiliate_cookie = affiliate_cookie.toLowerCase();
 		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
