@@ -483,7 +483,7 @@ $(document).ready(function() {
 		var check_promo_product = false;
 		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
 	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-		affiliate_cookie = affiliate_cookie.toLowerCase();
+		// affiliate_cookie = affiliate_cookie.toLowerCase();
 		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 			if(promo_product != undefined && promo_product != 'NULL'){
 				check_promo_product = true;
@@ -601,7 +601,7 @@ $(document).ready(function() {
 
 	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
 	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-		affiliate_cookie = affiliate_cookie.toLowerCase();
+		// affiliate_cookie = affiliate_cookie.toLowerCase();
 		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 			// if(promo_product != undefined && promo_product != 'NULL'){
 				$('.subscriptionOption span').text('Save 10% on your first order');
