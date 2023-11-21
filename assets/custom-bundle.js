@@ -359,8 +359,8 @@ $(document).ready(function() {
 							collectionId: '459204722969',
 							externalProductId: promo_product,  // GIFT PRODUCT ID
 							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-							quantity: 1,  // Dynamic Quantity
-							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							quantity: 1  // Dynamic Quantity
+							// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 						}
 						bundleObject.selections.push(item_data);
 						console.log(bundleObject);
