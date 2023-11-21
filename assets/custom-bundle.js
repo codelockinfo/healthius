@@ -606,7 +606,7 @@ $(document).ready(function() {
 			// if(promo_product != undefined && promo_product != 'NULL'){
 				$('.subscriptionOption span').text('Save 10% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-				$('.announcement').text('BLACK FRIDAY PRE-SALE: shipments deliver the week of 11/27');
+				$('.announcement').text('BLACK FRIDAY SALE: shipments deliver the week of 11/27');
 				free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/holiday-meats-3-pack-tier-2-672904.jpg?v=1700588784' : $(".promoProduct").data('img'));
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
