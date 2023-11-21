@@ -344,28 +344,29 @@ $(document).ready(function() {
 				console.log(bundleObject);
 			}
 			// Promo Product
-			var promo_product = $(".promoProduct").val();
-			var affiliate_cookie = getCookie("discount_code");
-			console.log(promo_product + "---------");
-			console.log(affiliate_cookie + "---------");
-			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
-		if(affiliate_cookie != undefined && affiliate_cookie != ''){
-			affiliate_cookie = affiliate_cookie.toLowerCase();
-			if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-				if(promo_product != undefined && promo_product != 'NULL'){
-					$promo_variant_id = $(".promoProduct").attr("variant_id");
-						var item_data = {
-							collectionId: '459204722969',
-							externalProductId: promo_product,  // GIFT PRODUCT ID
-							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-							quantity: 1,  // Dynamic Quantity
-							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-						}
-						bundleObject.selections.push(item_data);
-						console.log(bundleObject);
-				}
-			}
-		}
+		// 	var promo_product = $(".promoProduct").val();
+		// 	var affiliate_cookie = getCookie("discount_code");
+		// 	console.log(promo_product + "---------");
+		// 	console.log(affiliate_cookie + "---------");
+		// 	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+		// // if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		// 	affiliate_cookie = affiliate_cookie.toLowerCase();
+		// 	// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+		// 		if(promo_product != undefined && promo_product != 'NULL'){
+		// 			$promo_variant_id = $(".promoProduct").attr("variant_id");
+		// 			console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
+		// 				var item_data = {
+		// 					collectionId: '459204722969',
+		// 					externalProductId: promo_product,  // GIFT PRODUCT ID
+		// 					externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+		// 					quantity: 1,  // Dynamic Quantity
+		// 					sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		// 				}
+		// 				bundleObject.selections.push(item_data);
+		// 				console.log(bundleObject);
+		// 		}
+		// 	// }
+		// // }
 			// Promo Product
 
 
@@ -481,9 +482,9 @@ $(document).ready(function() {
 		console.log(affiliate_cookie + "---------");
 		var check_promo_product = false;
 		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
-	if(affiliate_cookie != undefined && affiliate_cookie != ''){
+	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
 		affiliate_cookie = affiliate_cookie.toLowerCase();
-		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 			if(promo_product != undefined && promo_product != 'NULL'){
 				check_promo_product = true;
 				$promo_variant_id = $(".promoProduct").attr("variant_id");
@@ -507,8 +508,8 @@ $(document).ready(function() {
 					//Free gift product
 					console.log(bundleObject);
 			}
-		}
-	}
+		// }
+	// }
 
 
 			//  TODO
@@ -599,19 +600,19 @@ $(document).ready(function() {
 		var promo_class = '';
 
 	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
-	if(affiliate_cookie != undefined && affiliate_cookie != ''){
+	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
 		affiliate_cookie = affiliate_cookie.toLowerCase();
-		if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-			if(promo_product != undefined && promo_product != 'NULL'){
+		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+			// if(promo_product != undefined && promo_product != 'NULL'){
 				$('.subscriptionOption span').text('Save 10% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				$('.announcement').text('BLACK FRIDAY PRE-SALE: shipments deliver the week of 11/27');
 				free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_4.jpg?v=1700023422' : $(".promoProduct").data('img'));
 				free_pro_title = $(".promoProduct").data('title');
 				promo_class = 'promo-product';
-			}
-		}
-	}
+			// }
+		// }
+	// }
 		
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
