@@ -344,29 +344,29 @@ $(document).ready(function() {
 				console.log(bundleObject);
 			}
 			// Promo Product
-		// 	var promo_product = $(".promoProduct").val();
-		// 	var affiliate_cookie = getCookie("discount_code");
-		// 	console.log(promo_product + "---------");
-		// 	console.log(affiliate_cookie + "---------");
-		// 	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
-		// // if(affiliate_cookie != undefined && affiliate_cookie != ''){
-		// 	affiliate_cookie = affiliate_cookie.toLowerCase();
-		// 	// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-		// 		if(promo_product != undefined && promo_product != 'NULL'){
-		// 			$promo_variant_id = $(".promoProduct").attr("variant_id");
-		// 			console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
-		// 				var item_data = {
-		// 					collectionId: '459204722969',
-		// 					externalProductId: promo_product,  // GIFT PRODUCT ID
-		// 					externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-		// 					quantity: 1,  // Dynamic Quantity
-		// 					sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-		// 				}
-		// 				bundleObject.selections.push(item_data);
-		// 				console.log(bundleObject);
-		// 		}
-		// 	// }
-		// // }
+			var promo_product = $(".promoProduct").val();
+			var affiliate_cookie = getCookie("discount_code");
+			console.log(promo_product + "---------");
+			console.log(affiliate_cookie + "---------");
+			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+		// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+			affiliate_cookie = affiliate_cookie.toLowerCase();
+			// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+				if(promo_product != undefined && promo_product != 'NULL'){
+					$promo_variant_id = $(".promoProduct").attr("variant_id");
+					console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
+						var item_data = {
+							collectionId: '459204722969',
+							externalProductId: promo_product,  // GIFT PRODUCT ID
+							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+							quantity: 1,  // Dynamic Quantity
+							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+						}
+						bundleObject.selections.push(item_data);
+						console.log(bundleObject);
+				}
+			// }
+		// }
 			// Promo Product
 
 
