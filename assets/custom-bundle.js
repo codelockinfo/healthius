@@ -647,7 +647,7 @@ $(document).ready(function() {
 			free_pro_title = $(".promoProduct").data('title');
 			promo_class = 'promo-product';
 			$('.subscriptionOption span').text('Save 10% on your first order');
-			$('.announcement').text('CYBER MONDAY SALE: Get 6 Free Holiday Meats');
+			$('.announcement').text('EXCLUSIVE CYBER MONDAY SALE: Get 6 Free Holiday Meats');
 			$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		}else{
 			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
