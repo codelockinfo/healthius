@@ -646,6 +646,8 @@ $(document).ready(function() {
 			free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
 			free_pro_title = $(".promoProduct").data('title');
 			promo_class = 'promo-product';
+			$('.subscriptionOption span').text('Save 10% on your first order');
+			$('.announcement').text('CYBER MONDAY SALE: Get 6 Free Holiday Meats');
 		}else{
 			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
 			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
