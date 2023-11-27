@@ -346,27 +346,42 @@ $(document).ready(function() {
 			// Promo Product
 			var promo_product = $(".promoProduct").val();
 			var affiliate_cookie = getCookie("discount_code");
+			var cyber_monday_cokkie = getCookie("cybermonday");
 			console.log(promo_product + "---------");
 			console.log(affiliate_cookie + "---------");
+			console.log(cyber_monday_cokkie + "---------");
 			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
-		// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-			affiliate_cookie = affiliate_cookie.toLowerCase();
-			// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-				if(promo_product != undefined && promo_product != 'NULL'){
-					$promo_variant_id = $(".promoProduct").attr("variant_id");
-					console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
-						var item_data = {
-							collectionId: '459204722969',
-							externalProductId: promo_product,  // GIFT PRODUCT ID
-							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-							quantity: 1  // Dynamic Quantity
-							// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			if(cyber_monday_cokkie){
+				check_promo_product = true;
+							$promo_variant_id = $(".promoProduct").attr("variant_id");
+								var item_data = {
+									collectionId: '459204722969',
+									externalProductId: '8923626340633',  // GIFT PRODUCT ID
+									externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+									quantity: 1,  // Dynamic Quantity
+									// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+								}
+								bundleObject.selections.push(item_data);
+			}else{
+				// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+					// affiliate_cookie = affiliate_cookie.toLowerCase();
+					// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+						if(promo_product != undefined && promo_product != 'NULL'){
+							$promo_variant_id = $(".promoProduct").attr("variant_id");
+							console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
+								var item_data = {
+									collectionId: '459204722969',
+									externalProductId: promo_product,  // GIFT PRODUCT ID
+									externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+									quantity: 1  // Dynamic Quantity
+									// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+								}
+								bundleObject.selections.push(item_data);
+								console.log(bundleObject);
 						}
-						bundleObject.selections.push(item_data);
-						console.log(bundleObject);
-				}
-			// }
-		// }
+					// }
+				// }
+			}
 			// Promo Product
 
 
@@ -478,38 +493,66 @@ $(document).ready(function() {
 		// Promo Product
 		var promo_product = $(".promoProduct").val();
 		var affiliate_cookie = getCookie("discount_code");
+		var cyber_monday_cokkie = getCookie("cybermonday");
 		console.log(promo_product + "---------");
 		console.log(affiliate_cookie + "---------");
+		console.log(cyber_monday_cokkie + "---------");
 		var check_promo_product = false;
 		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
-	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-		// affiliate_cookie = affiliate_cookie.toLowerCase();
-		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-			if(promo_product != undefined && promo_product != 'NULL'){
-				check_promo_product = true;
-				$promo_variant_id = $(".promoProduct").attr("variant_id");
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: promo_product,  // GIFT PRODUCT ID
-						externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-						quantity: 1,  // Dynamic Quantity
-						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		if(cyber_monday_cokkie){
+			console.log("in if ");
+			check_promo_product = true;
+						$promo_variant_id = $(".promoProduct").attr("variant_id");
+							var item_data = {
+								collectionId: '459204722969',
+								externalProductId: '8923626340633',  // GIFT PRODUCT ID
+								externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+								quantity: 1,  // Dynamic Quantity
+								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							}
+							bundleObject.selections.push(item_data);
+							//Free gift product
+							var item_data = {
+								collectionId: '459204722969',
+								externalProductId: '8930725921049',  // GIFT PRODUCT ID
+								externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+								quantity: 1,  // Dynamic Quantity
+								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							}
+							bundleObject.selections.push(item_data);
+							//Free gift product
+							console.log(bundleObject);
+		}else{
+			console.log("else");
+			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+				// affiliate_cookie = affiliate_cookie.toLowerCase();
+				// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+					if(promo_product != undefined && promo_product != 'NULL'){
+						check_promo_product = true;
+						$promo_variant_id = $(".promoProduct").attr("variant_id");
+							var item_data = {
+								collectionId: '459204722969',
+								externalProductId: promo_product,  // GIFT PRODUCT ID
+								externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+								quantity: 1,  // Dynamic Quantity
+								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							}
+							bundleObject.selections.push(item_data);
+							//Free gift product
+							var item_data = {
+								collectionId: '459204722969',
+								externalProductId: '8930725921049',  // GIFT PRODUCT ID
+								externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+								quantity: 1,  // Dynamic Quantity
+								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							}
+							bundleObject.selections.push(item_data);
+							//Free gift product
+							console.log(bundleObject);
 					}
-					bundleObject.selections.push(item_data);
-					//Free gift product
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8930725921049',  // GIFT PRODUCT ID
-						externalVariantId: '47413484945689',  // THE SELECTED VARIANT
-						quantity: 1,  // Dynamic Quantity
-						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-					}
-					bundleObject.selections.push(item_data);
-					//Free gift product
-					console.log(bundleObject);
-			}
-		// }
-	// }
+				// }
+			// }
+		}
 
 
 			//  TODO
@@ -595,25 +638,32 @@ $(document).ready(function() {
 		var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995';
 		var free_pro_title = 'Lemon Pepper Chicken';
 		var affiliate_cookie = getCookie("discount_code");
-		
+		var cyber_monday = getCookie("cybermonday");
+		console.log(cyber_monday + "cyber_monday");
 		
 		var promo_class = '';
-
-	var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
-	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-		// affiliate_cookie = affiliate_cookie.toLowerCase();
-		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-			// if(promo_product != undefined && promo_product != 'NULL'){
-				$('.subscriptionOption span').text('Save 10% on your first order');
-				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-				$('.announcement').text('BLACK FRIDAY SALE: shipments deliver the week of 12/4');
-				free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/holiday-meats-3-pack-tier-2-672904.jpg?v=1700588784' : $(".promoProduct").data('img'));
-				free_pro_title = $(".promoProduct").data('title');
-				promo_class = 'promo-product';
+		if(cyber_monday){
+			free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
+			free_pro_title = $(".promoProduct").data('title');
+			promo_class = 'promo-product';
+		}else{
+			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
+			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+				// affiliate_cookie = affiliate_cookie.toLowerCase();
+				// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+					// if(promo_product != undefined && promo_product != 'NULL'){
+						$('.subscriptionOption span').text('Save 10% on your first order');
+						$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+						$('.announcement').text('BLACK FRIDAY SALE: shipments deliver the week of 12/4');
+						free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/holiday-meats-3-pack-tier-2-672904.jpg?v=1700588784' : (((promo_product == '8926871453977')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-1-pack-tier-3-533175_97de0893-3ce6-4148-914d-cc4196c22df4.jpg?v=1701082055' : $(".promoProduct").data('img')));
+						free_pro_title = $(".promoProduct").data('title');
+						promo_class = 'promo-product';
+					// }
+				// }
 			// }
-		// }
-	// }
+		}
 		
+		console.log(free_pro_img + ".....free_pro_img");
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
 		  '<div class="imageforcart">'+

@@ -751,6 +751,14 @@ function getCookie(cname) {
       }
     return "";
 }
+console.log("HELLOOOOOOO");
+if(window.location.href.includes("/cybermonday")){
+	if (getCookie("cybermonday") === "") {
+		console.log("IN IF COOKIES");
+		setCookie("cybermonday", "true", 30);
+	}
+	window.location.href = "/products/custom-bundle";
+}
 // Check if the cookie is already set
 if (getCookie("discount_code") === "") {
 	//  TODO  NEED TO REMOVE COMMENT
