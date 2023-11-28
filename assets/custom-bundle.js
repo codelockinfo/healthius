@@ -646,17 +646,17 @@ $(document).ready(function() {
 			free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
 			free_pro_title = $(".promoProduct").data('title');
 			promo_class = 'promo-product';
-			$('.subscriptionOption span').text('Save 10% on your first order');
+			$('.subscriptionOption span').text('Save 25% on your first order');
 			$('.announcement').text('EXCLUSIVE CYBER MONDAY SALE: Get 6 Free Holiday Meats');
-			$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+			$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		}else{
 			var affuserdiscounts = ['hobo11'];
 			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
 				// affiliate_cookie = affiliate_cookie.toLowerCase();
 				// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
 					// if(promo_product != undefined && promo_product != 'NULL'){
-						$('.subscriptionOption span').text('Save 10% on your first order');
-						$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+						$('.subscriptionOption span').text('Save 25% on your first order');
+						$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 						$('.announcement').text('BLACK FRIDAY SALE: shipments deliver the week of 12/4');
 						free_pro_img = (promo_product == '8923626340633') ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.jpg?v=1700023422' : (((promo_product == '8923756200217')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/holiday-meats-3-pack-tier-2-672904.jpg?v=1700588784' : (((promo_product == '8926871453977')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-1-pack-tier-3-533175_97de0893-3ce6-4148-914d-cc4196c22df4.jpg?v=1701082055' : $(".promoProduct").data('img')));
 						free_pro_title = $(".promoProduct").data('title');
