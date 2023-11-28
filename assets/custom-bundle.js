@@ -350,7 +350,7 @@ $(document).ready(function() {
 			console.log(promo_product + "---------");
 			console.log(affiliate_cookie + "---------");
 			console.log(cyber_monday_cokkie + "---------");
-			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+			var affuserdiscounts = ['hobbo11'];
 			if(cyber_monday_cokkie){
 				check_promo_product = true;
 							$promo_variant_id = $(".promoProduct").attr("variant_id");
@@ -498,7 +498,7 @@ $(document).ready(function() {
 		console.log(affiliate_cookie + "---------");
 		console.log(cyber_monday_cokkie + "---------");
 		var check_promo_product = false;
-		var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15','hannahfree'];
+		var affuserdiscounts = ['hobo11'];
 		if(cyber_monday_cokkie){
 			console.log("in if ");
 			check_promo_product = true;
@@ -650,7 +650,7 @@ $(document).ready(function() {
 			$('.announcement').text('EXCLUSIVE CYBER MONDAY SALE: Get 6 Free Holiday Meats');
 			$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 10%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		}else{
-			var affuserdiscounts = ['hannah15', 'julian15', 'ainsley15', 'hannahfree'];
+			var affuserdiscounts = ['hobo11'];
 			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
 				// affiliate_cookie = affiliate_cookie.toLowerCase();
 				// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
