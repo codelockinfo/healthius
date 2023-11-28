@@ -640,7 +640,8 @@ $(document).ready(function() {
 		var affiliate_cookie = getCookie("discount_code");
 		var cyber_monday = getCookie("cybermonday");
 		console.log(cyber_monday + "cyber_monday");
-		
+		$('.subscriptionOption span').text('Save 25% on your first order');
+
 		var promo_class = '';
 		// if(cyber_monday){
 		// 	free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
