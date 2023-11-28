@@ -635,14 +635,36 @@ $(document).ready(function() {
 
 	function set_lineitems_onload() {
 		var promo_product = $(".promoProduct").val();
-		var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/LemonPepperChicken_Flipped_Shopify_10.25.23_400ec952-9a87-4ce0-991c-cc8258dd44c5.png?v=1698689995';
-		var free_pro_title = 'Lemon Pepper Chicken';
+		var free_pro_img = 'https://www.justmeats.com/cdn/shop/products/cranapple-rosemary-chicken-134585.png';
+		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
 		var affiliate_cookie = getCookie("discount_code");
 		var cyber_monday = getCookie("cybermonday");
 		console.log(cyber_monday + "cyber_monday");
 		
 		var promo_class = '';
-	
+		// if(cyber_monday){
+		// 	free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
+		// 	free_pro_title = $(".promoProduct").data('title');
+		// 	promo_class = 'promo-product';
+		// 	$('.subscriptionOption span').text('Save 25% on your first order');
+		// 	$('.announcement').text('EXCLUSIVE CYBER MONDAY SALE: Get 6 Free Holiday Meats');
+		// 	$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+		// }else{
+		// 	var affuserdiscounts = ['hobo11'];
+		// 	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		// 		// affiliate_cookie = affiliate_cookie.toLowerCase();
+		// 		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+		// 			// if(promo_product != undefined && promo_product != 'NULL'){
+		// 				$('.subscriptionOption span').text('Save 25% on your first order');
+		// 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+		// 				$('.announcement').text('LIMITED TIME: GET FREE CRANAPPLE ROSEMARY CHICKEN');
+		// 				free_pro_img = (promo_product == '8923626340633') ? 'https://www.justmeats.com/cdn/shop/products/cranapple-rosemary-chicken-134585.png' : (((promo_product == '8929832468761')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/holiday-meats-3-pack-tier-2-672904.jpg?v=1700588784' : (((promo_product == '8926871453977')) ? 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-1-pack-tier-3-533175_97de0893-3ce6-4148-914d-cc4196c22df4.jpg?v=1701082055' : $(".promoProduct").data('img')));
+		// 				free_pro_title = $(".promoProduct").data('title');
+		// 				promo_class = 'promo-product';
+		// 			// }
+		// 		// }
+		// 	// }
+		// }
 		
 		console.log(free_pro_img + ".....free_pro_img");
 		  $staticGiftProduct = '<div class="freeTurkey">'+
