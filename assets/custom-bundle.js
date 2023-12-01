@@ -478,6 +478,7 @@ $(document).ready(function() {
 
 			// console.log(variant_id);
 			var collection_id = $(this).data("collection");
+			console.log(collection_id + "....collection_id");
 			var sellingplan_id = (selling_plan_id == '689312137497') ? $(this).data("selling15") : $(this).data("selling30");
 
 			var item_data = {
@@ -557,12 +558,15 @@ $(document).ready(function() {
 
 			//  TODO
 			// if(check_promo_product == false){
+				console.log(selling_plan_id + "....selling_plan_id");
+				var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? $(this).data("selling15") : $(this).data("selling30");
+				console.log(freeproduct_sellingplan_id + "...freeproduct_sellingplan_id");
 				var item_data = {
 					collectionId: '459204722969',
 					  externalProductId: '8929832468761',  // GIFT PRODUCT ID
 					  externalVariantId: '47409726456089',  // THE SELECTED VARIANT
 					  quantity: 1,  // Dynamic Quantity
-					  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+					  sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
 				  }
 				  bundleObject.selections.push(item_data);
 				console.log(bundleObject);
@@ -572,7 +576,7 @@ $(document).ready(function() {
 							externalProductId: '8930725921049',  // GIFT PRODUCT ID
 							externalVariantId: '47413484945689',  // THE SELECTED VARIANT
 							quantity: 1,  // Dynamic Quantity
-							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+							sellingPlan: sellingplan_id // Dynamic Selling Plan ID
 						}
 						bundleObject.selections.push(item_data);
 				//Free gift product
