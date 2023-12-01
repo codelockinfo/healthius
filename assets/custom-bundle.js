@@ -564,7 +564,7 @@ $(document).ready(function() {
 					  externalProductId: '8929832468761',  // GIFT PRODUCT ID
 					  externalVariantId: '47409726456089',  // THE SELECTED VARIANT
 					  quantity: 1,  // Dynamic Quantity
-					  sellingPlan: selling_plan_id // Dynamic Selling Plan ID
+					  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 				  }
 				  bundleObject.selections.push(item_data);
 				console.log(bundleObject);
