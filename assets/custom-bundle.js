@@ -558,15 +558,13 @@ $(document).ready(function() {
 
 			//  TODO
 			// if(check_promo_product == false){
-				console.log(selling_plan_id + "....selling_plan_id");
-				var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? $(this).data("selling15") : $(this).data("selling30");
-				console.log(freeproduct_sellingplan_id + "...freeproduct_sellingplan_id");
+		
 				var item_data = {
 					collectionId: '459204722969',
 					  externalProductId: '8929832468761',  // GIFT PRODUCT ID
 					  externalVariantId: '47409726456089',  // THE SELECTED VARIANT
 					  quantity: 1,  // Dynamic Quantity
-					  sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+					  sellingPlan: selling_plan_id // Dynamic Selling Plan ID
 				  }
 				  bundleObject.selections.push(item_data);
 				console.log(bundleObject);
