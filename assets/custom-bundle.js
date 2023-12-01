@@ -576,7 +576,7 @@ $(document).ready(function() {
 							externalProductId: '8930725921049',  // GIFT PRODUCT ID
 							externalVariantId: '47413484945689',  // THE SELECTED VARIANT
 							quantity: 1,  // Dynamic Quantity
-							sellingPlan: sellingplan_id // Dynamic Selling Plan ID
+							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 						}
 						bundleObject.selections.push(item_data);
 				//Free gift product
