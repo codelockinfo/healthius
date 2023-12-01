@@ -343,46 +343,46 @@ $(document).ready(function() {
 			  	bundleObject.selections.push(item_data);
 				console.log(bundleObject);
 			}
-			// Promo Product
-			var promo_product = $(".promoProduct").val();
-			var affiliate_cookie = getCookie("discount_code");
-			var cyber_monday_cokkie = getCookie("cybermonday");
-			console.log(promo_product + "---------");
-			console.log(affiliate_cookie + "---------");
-			console.log(cyber_monday_cokkie + "---------");
-			var affuserdiscounts = ['hobbo11'];
-			if(cyber_monday_cokkie){
-				check_promo_product = true;
-							$promo_variant_id = $(".promoProduct").attr("variant_id");
-								var item_data = {
-									collectionId: '459204722969',
-									externalProductId: '8923626340633',  // GIFT PRODUCT ID
-									externalVariantId: '47395617669401',  // THE SELECTED VARIANT
-									quantity: 1,  // Dynamic Quantity
-									// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-								}
-								bundleObject.selections.push(item_data);
-			}else{
-				// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-					// affiliate_cookie = affiliate_cookie.toLowerCase();
-					// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-						if(promo_product != undefined && promo_product != 'NULL'){
-							$promo_variant_id = $(".promoProduct").attr("variant_id");
-							console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
-								var item_data = {
-									collectionId: '459204722969',
-									externalProductId: promo_product,  // GIFT PRODUCT ID
-									externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-									quantity: 1  // Dynamic Quantity
-									// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-								}
-								bundleObject.selections.push(item_data);
-								console.log(bundleObject);
-						}
-					// }
-				// }
-			}
-			// Promo Product
+			// // Promo Product
+			// var promo_product = $(".promoProduct").val();
+			// var affiliate_cookie = getCookie("discount_code");
+			// var cyber_monday_cokkie = getCookie("cybermonday");
+			// console.log(promo_product + "---------");
+			// console.log(affiliate_cookie + "---------");
+			// console.log(cyber_monday_cokkie + "---------");
+			// var affuserdiscounts = ['hobbo11'];
+			// if(cyber_monday_cokkie){
+			// 	check_promo_product = true;
+			// 				$promo_variant_id = $(".promoProduct").attr("variant_id");
+			// 					var item_data = {
+			// 						collectionId: '459204722969',
+			// 						externalProductId: '8923626340633',  // GIFT PRODUCT ID
+			// 						externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+			// 						quantity: 1,  // Dynamic Quantity
+			// 						// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			// 					}
+			// 					bundleObject.selections.push(item_data);
+			// }else{
+			// 	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+			// 		// affiliate_cookie = affiliate_cookie.toLowerCase();
+			// 		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+			// 			if(promo_product != undefined && promo_product != 'NULL'){
+			// 				$promo_variant_id = $(".promoProduct").attr("variant_id");
+			// 				console.log($promo_variant_id + ";;;;;;;;;;;;;;;;;;;;;");
+			// 					var item_data = {
+			// 						collectionId: '459204722969',
+			// 						externalProductId: promo_product,  // GIFT PRODUCT ID
+			// 						externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+			// 						quantity: 1  // Dynamic Quantity
+			// 						// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			// 					}
+			// 					bundleObject.selections.push(item_data);
+			// 					console.log(bundleObject);
+			// 			}
+			// 		// }
+			// 	// }
+			// }
+			// // Promo Product
 
 
 		const bundle = bundleObject;
@@ -490,83 +490,102 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 		
-		// Promo Product
-		var promo_product = $(".promoProduct").val();
-		var affiliate_cookie = getCookie("discount_code");
-		var cyber_monday_cokkie = getCookie("cybermonday");
-		console.log(promo_product + "---------");
-		console.log(affiliate_cookie + "---------");
-		console.log(cyber_monday_cokkie + "---------");
-		var check_promo_product = false;
-		var affuserdiscounts = ['hobo11'];
-		if(cyber_monday_cokkie){
-			console.log("in if ");
-			check_promo_product = true;
-						$promo_variant_id = $(".promoProduct").attr("variant_id");
-							var item_data = {
-								collectionId: '459204722969',
-								externalProductId: '8923626340633',  // GIFT PRODUCT ID
-								externalVariantId: '47395617669401',  // THE SELECTED VARIANT
-								quantity: 1,  // Dynamic Quantity
-								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-							}
-							bundleObject.selections.push(item_data);
-							//Free gift product
-							var item_data = {
-								collectionId: '459204722969',
-								externalProductId: '8930725921049',  // GIFT PRODUCT ID
-								externalVariantId: '47413484945689',  // THE SELECTED VARIANT
-								quantity: 1,  // Dynamic Quantity
-								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-							}
-							bundleObject.selections.push(item_data);
-							//Free gift product
-							console.log(bundleObject);
-		}else{
-			console.log("else");
-			// if(affiliate_cookie != undefined && affiliate_cookie != ''){
-				// affiliate_cookie = affiliate_cookie.toLowerCase();
-				// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
-					if(promo_product != undefined && promo_product != 'NULL'){
-						check_promo_product = true;
-						$promo_variant_id = $(".promoProduct").attr("variant_id");
-							var item_data = {
-								collectionId: '459204722969',
-								externalProductId: promo_product,  // GIFT PRODUCT ID
-								externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
-								quantity: 1,  // Dynamic Quantity
-								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-							}
-							bundleObject.selections.push(item_data);
-							//Free gift product
-							var item_data = {
-								collectionId: '459204722969',
-								externalProductId: '8930725921049',  // GIFT PRODUCT ID
-								externalVariantId: '47413484945689',  // THE SELECTED VARIANT
-								quantity: 1,  // Dynamic Quantity
-								sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-							}
-							bundleObject.selections.push(item_data);
-							//Free gift product
-							console.log(bundleObject);
-					}
-				// }
-			// }
-		}
+		// // Promo Product
+		// var promo_product = $(".promoProduct").val();
+		// var affiliate_cookie = getCookie("discount_code");
+		// var cyber_monday_cokkie = getCookie("cybermonday");
+		// console.log(promo_product + "---------");
+		// console.log(affiliate_cookie + "---------");
+		// console.log(cyber_monday_cokkie + "---------");
+		// var check_promo_product = false;
+		// var affuserdiscounts = ['hobo11'];
+		// if(cyber_monday_cokkie){
+		// 	console.log("in if ");
+		// 	check_promo_product = true;
+		// 				$promo_variant_id = $(".promoProduct").attr("variant_id");
+		// 					var item_data = {
+		// 						collectionId: '459204722969',
+		// 						externalProductId: '8923626340633',  // GIFT PRODUCT ID
+		// 						externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+		// 						quantity: 1,  // Dynamic Quantity
+		// 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		// 					}
+		// 					bundleObject.selections.push(item_data);
+		// 					//Free gift product
+		// 					var item_data = {
+		// 						collectionId: '459204722969',
+		// 						externalProductId: '8930725921049',  // GIFT PRODUCT ID
+		// 						externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+		// 						quantity: 1,  // Dynamic Quantity
+		// 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		// 					}
+		// 					bundleObject.selections.push(item_data);
+		// 					//Free gift product
+		// 					console.log(bundleObject);
+		// }else{
+		// 	console.log("else");
+		// 	// if(affiliate_cookie != undefined && affiliate_cookie != ''){
+		// 		// affiliate_cookie = affiliate_cookie.toLowerCase();
+		// 		// if ($.inArray(affiliate_cookie, affuserdiscounts) !== -1) {
+		// 			if(promo_product != undefined && promo_product != 'NULL'){
+		// 				check_promo_product = true;
+		// 				$promo_variant_id = $(".promoProduct").attr("variant_id");
+		// 					var item_data = {
+		// 						collectionId: '459204722969',
+		// 						externalProductId: promo_product,  // GIFT PRODUCT ID
+		// 						externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+		// 						quantity: 1,  // Dynamic Quantity
+		// 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		// 					}
+		// 					bundleObject.selections.push(item_data);
+		// 					//Free gift product
+		// 					var item_data = {
+		// 						collectionId: '459204722969',
+		// 						externalProductId: '8930725921049',  // GIFT PRODUCT ID
+		// 						externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+		// 						quantity: 1,  // Dynamic Quantity
+		// 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		// 					}
+		// 					bundleObject.selections.push(item_data);
+		// 					//Free gift product
+		// 					console.log(bundleObject);
+		// 			}
+		// 		// }
+		// 	// }
+		// }
 
 
 			//  TODO
-			if(check_promo_product == false){
+			// if(check_promo_product == false){
 				var item_data = {
 					collectionId: '459204722969',
-					  externalProductId: '8887761469721',  // GIFT PRODUCT ID
-					  externalVariantId: '47309007225113',  // THE SELECTED VARIANT
+					  externalProductId: '8929832468761',  // GIFT PRODUCT ID
+					  externalVariantId: '47409726456089',  // THE SELECTED VARIANT
 					  quantity: 1,  // Dynamic Quantity
 					  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 				  }
 				  bundleObject.selections.push(item_data);
 				console.log(bundleObject);
-			}
+				//Free gift product
+						var item_data = {
+							collectionId: '459204722969',
+							externalProductId: '8930725921049',  // GIFT PRODUCT ID
+							externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+							quantity: 1,  // Dynamic Quantity
+							sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+						}
+						bundleObject.selections.push(item_data);
+				//Free gift product
+				// var item_data = {
+				// 	collectionId: '459204722969',
+				// 	  externalProductId: '8887761469721',  // GIFT PRODUCT ID
+				// 	  externalVariantId: '47309007225113',  // THE SELECTED VARIANT
+				// 	  quantity: 1,  // Dynamic Quantity
+				// 	  sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+				//   }
+				//   bundleObject.selections.push(item_data);
+				// console.log(bundleObject);
+			// }
 		//  TODO
 
 		// Promo Product
@@ -634,15 +653,18 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
+		var promo_class = '';
 		var promo_product = $(".promoProduct").val();
-		var free_pro_img = 'https://www.justmeats.com/cdn/shop/products/cranapple-rosemary-chicken-134585.png';
+		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
+		promo_class = 'promo-product';
+		$('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
+		$(".subcarttitle").css("font-size","14px");
 		var affiliate_cookie = getCookie("discount_code");
 		var cyber_monday = getCookie("cybermonday");
 		console.log(cyber_monday + "cyber_monday");
 		$('.subscriptionOption span').text('Save 25% on your first order');
 
-		var promo_class = '';
 		// if(cyber_monday){
 		// 	free_pro_img = "https://www.justmeats.com/cdn/shop/products/holiday-meats-6-pack-tier-1-802335.jpg";
 		// 	free_pro_title = $(".promoProduct").data('title');
@@ -729,8 +751,32 @@ $(document).ready(function() {
 		$subscriptionvalue = getCookie("subscriptionvalue");
 		$(".subscriptionlabel").removeClass('active');
 		if($reachargevalue == "one time"){
+			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
+			$('.box-summary .productsimage[data-product="8948393378073"],.box-summary .productsimage[data-product="8948391477529"]').remove();
 			$('.subscriptionlabel[data-value="one time"]').addClass('active');
 		}else{
+			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').removeClass("hide");
+			$boxsweetchilli =  $('.box-summary .productsimage[data-product="8948393378073"]').html();
+			if($boxsweetchilli  == undefined){
+				$sweetchilli = $('.productsimage[data-product="8948393378073"] .productQty').hasClass("show");
+				if($sweetchilli){
+					$sweetchillihtml  = $('.main-custombundle .productsimage[data-product="8948393378073"]').html();
+					$sweetchilliqty = $('.main-custombundle .productsimage[data-product="8948393378073"] .productQty .qty-selector').val();
+					$(".box-summary").append("<div class='productsimage' data-product='8948393378073'>" + $sweetchillihtml + "</div>");
+					$('.box-summary  .productsimage[data-product="8948393378073"] .productQty .qty-selector').val($sweetchilliqty);
+
+				}
+			}
+			$boxchimichurriSteak =  $('.box-summary .productsimage[data-product="8948391477529"]').html();
+			if($boxchimichurriSteak  == undefined){
+				$chimichurriSteak = $('.productsimage[data-product="8948391477529"] .productQty').hasClass("show");
+				if($chimichurriSteak){
+					$chimichurriSteakhtml  = $('.main-custombundle .productsimage[data-product="8948391477529"]').html();
+					$chimichurriSteakqty = $('.main-custombundle .productsimage[data-product="8948391477529"] .productQty .qty-selector').val();
+					$(".box-summary").append("<div class='productsimage' data-product='8948391477529'>" + $chimichurriSteakhtml + "</div>");
+					$('.box-summary  .productsimage[data-product="8948391477529"] .productQty .qty-selector').val($chimichurriSteakqty);
+				}
+			}
 			$('.subscriptionlabel[data-value="subscribe & save"]').addClass('active');
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
