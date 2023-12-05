@@ -296,7 +296,6 @@ $(document).ready(function() {
 			selections: []
 		};
 
-		var selling_plan_id = $( "input[name='selling_plan']").val();
 		$getproductPrices = 0;
 		$.each($("#cartSummary .productsimage"), function() {
 
@@ -307,7 +306,6 @@ $(document).ready(function() {
 			if ($Dataprice != 0) {
                 $getproductPrices += $currentVarQty * parseFloat($Dataprice[1]);
 			}
-
 
 			$currentVarQty = $(this).find(".product-quantity__selector").val();
 			var product_id = $(this).data("product");
@@ -323,22 +321,16 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 		});
 		
-
 		$splitMaxPrice = $(".maxCartprice").val().split("$");
 		var inputtotalrangemax = $splitMaxPrice[1];
 		
 		if(inputtotalrangemax < $getproductPrices){
-			console.log("PRICE");
-			var plan15 = $('.giftProduct').attr('gift-data-selling15');  
-			var plan30 = $('.giftProduct').attr('gift-data-selling30');
-			var giftSellingPlanId = (selling_plan_id == '689312137497') ? plan15 : plan30;
-	
+			console.log("PRICE");	
 			var item_data = {
 				collectionId: '459204722969',
 				externalProductId: $giftProductid,  // GIFT PRODUCT ID
 				externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
 				quantity: 1  // Dynamic Quantity
-				// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			}
 			bundleObject.selections.push(item_data);
 			console.log(bundleObject);
@@ -354,7 +346,6 @@ $(document).ready(function() {
 						externalProductId: '8923626340633',  // GIFT PRODUCT ID
 						externalVariantId: '47395617669401',  // THE SELECTED VARIANT
 						quantity: 1  // Dynamic Quantity
-						// sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 					}
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
@@ -382,10 +373,6 @@ $(document).ready(function() {
 				// removeCookie("variant_qty");
 				window.location.href = '/checkout';
 			}
-			// if($giftVariantid !== undefined){
-			// addGiftproduct($giftVariantid,get_main_bundle_id);
-			// }else{
-			// }
 		}
 		asyncGetCall();
 	}
@@ -496,8 +483,7 @@ $(document).ready(function() {
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
 				}
-			}
-		
+			}		
 			//Free gift product
 			var item_data = {
 				collectionId: '459204722969',
@@ -507,7 +493,6 @@ $(document).ready(function() {
 				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 			}
 			bundleObject.selections.push(item_data);
-				
 
 		// Promo Product
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
@@ -574,7 +559,6 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		var promo_class = '';
 		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 		$('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
@@ -594,8 +578,6 @@ $(document).ready(function() {
 				free_pro_title = 'Free Holiday Meats 6 Pack (Tier 1)';
 			}
 		}
-	
-		
 		console.log(free_pro_img + ".....free_pro_img");
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
@@ -669,7 +651,7 @@ $(document).ready(function() {
 				if($sweetchilli){
 					$sweetchillihtml  = $('.main-custombundle .productsimage[data-product="8948393378073"]').html();
 					$sweetchilliqty = $('.main-custombundle .productsimage[data-product="8948393378073"] .productQty .qty-selector').val();
-					$(".box-summary").append("<div class='productsimage' data-product='8948393378073'>" + $sweetchillihtml + "</div>");
+					$(".box-summary").append("<div class='productsimage'  data-selling30='689499963673' data-selling15='689499930905' data-variant='47472880124185' data-product='8948393378073' data-collection='459204722969'>" + $sweetchillihtml + "</div>");
 					$('.box-summary  .productsimage[data-product="8948393378073"] .productQty .qty-selector').val($sweetchilliqty);
 
 				}
@@ -680,7 +662,7 @@ $(document).ready(function() {
 				if($chimichurriSteak){
 					$chimichurriSteakhtml  = $('.main-custombundle .productsimage[data-product="8948391477529"]').html();
 					$chimichurriSteakqty = $('.main-custombundle .productsimage[data-product="8948391477529"] .productQty .qty-selector').val();
-					$(".box-summary").append("<div class='productsimage' data-product='8948391477529'>" + $chimichurriSteakhtml + "</div>");
+					$(".box-summary").append("<div class='productsimage' data-selling30='689499898137' data-selling15='689499865369' data-variant='47472870850841'  data-product='8948391477529' data-collection='459204722969'>" + $chimichurriSteakhtml + "</div>");
 					$('.box-summary  .productsimage[data-product="8948391477529"] .productQty .qty-selector').val($chimichurriSteakqty);
 				}
 			}

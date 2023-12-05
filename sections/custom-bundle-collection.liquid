@@ -155,28 +155,6 @@
                     </div>
                   </div>
                   <div class="product-container">
-
-    
-                    {% for product in collections.all.products %}
-                      {% if product.handle == 'holiday-box-3' %}
-                        {% if product.available %}
-                          <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
-                        {% else %}
-                          {% for product in collections.all.products %}
-                            {% if product.handle == 'holiday-meats-1-pack-tier-3' %}
-                              {% if product.available %}
-                                <input type="hidden" name="promo-product" class="promoProduct" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-img="{{ product.featured_image.src | img_url: 'medium' }}">
-                              {% else %}
-                                <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL" aaa>  
-                              {% endif %}
-                            {% comment %} {% else %}
-                              <input type="hidden" name="promo-product" class="promoProduct" value="NULL" data-img="NULL" bbb>   {% endcomment %}
-                            {% endif %}
-                          {% endfor %}
-                        {% endif %}
-                      {% endif %}
-                    {% endfor %}
-
                     <div class="box-summary" id="cartSummary"> </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}
