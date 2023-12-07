@@ -571,8 +571,8 @@ $(document).ready(function() {
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
 				console.log("in if");
-				$('.subscriptionOption span').text('Save 15% on your first order');
-				// $('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 15%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+				$('.subscriptionOption span').text('Save $15 on your first order');
+				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE $15<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				$('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
 				$('.announcement').text('EXCLUSIVE SALE: 6 FREE HOLIDAY MEATS');
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-6-pack-tier-1-802335_5d307892-10b5-47a3-a437-7fd74cd20308.jpg?v=1701759071';
