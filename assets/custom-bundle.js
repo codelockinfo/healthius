@@ -456,7 +456,7 @@ $(document).ready(function() {
 		
 		// Promo Product
 			var influencer_cookie = getCookie("discount_code");
-			var influencerdiscounts = ['ashley15','marcus15'];
+			var influencerdiscounts = ['ashley15','marcus15','christmas15'];
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
@@ -566,7 +566,7 @@ $(document).ready(function() {
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
 		var affiliate_cookie = getCookie("discount_code");
-		var affuser_discounts = ['ashley15','marcus15'];
+		var affuser_discounts = ['ashley15','marcus15','christmas15'];
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
