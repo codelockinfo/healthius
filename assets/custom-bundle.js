@@ -560,7 +560,7 @@ $(document).ready(function() {
 
 	function set_lineitems_onload() {
 		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
-		$('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
+		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
 		$(".subcarttitle").css("font-size","14px");
 		$('.subscriptionOption span').text('Save 25% on your first order');
