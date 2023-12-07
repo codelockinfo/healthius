@@ -337,7 +337,7 @@ $(document).ready(function() {
 		}
 		// Promo Product
 			var influencer_cookie = getCookie("discount_code");
-			var influencerdiscounts = ['ashley15','marcus15'];
+			var influencerdiscounts = ['ashley15','marcus15','CHRISTMAS15'];
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
