@@ -925,7 +925,7 @@
          display: block;
     }
   .StickyCartBtn{
-    z-index: 9999 !important;
+    /* z-index: 9999 !important; */
   }
     .progress-container {
         display: flex;
@@ -993,12 +993,13 @@
     .stickycartbtn{
         position: fixed;
         bottom: 0;
-        width: 92%;
-        z-index: 99;
+        width: 83%;
+        right: 5px;
+        z-index: 9991;
         background-color: var(--color-text-main);
         border-color: var(--color-text-main);
         color: var(--color-foreground-main);
-        margin-bottom: 1px;
+        margin-bottom: 7px;
     }
     .custom-bundle {
         display: flex;
@@ -1057,6 +1058,30 @@
     .filterlabel{
         font-size: 20px;
         font-weight: bold;
+    }
+    .stickycart .add-to-cart .button__text svg{
+        transform: rotate(180deg);
+    }
+    .stickycart .add-to-cart .button__text{
+        display: flex;
+    }
+    .sticky_svg_cart{
+        position: fixed;
+        bottom: 0;
+        left: 5px;
+        width: 17%;
+        z-index: 9999;
+        background-color:#fff;
+        border-color: var(--color-text-main);
+        color: var(--color-foreground-main);
+        margin-bottom: 5px;
+        box-shadow:0px -25px 20px -20px rgba(0,0,0,0.45), 7px 0px 14px 0px rgba(0,0,0,0.45);
+    }
+    .cartcolumn.stickycart{
+        display: flex;
+    }
+    .stickycart .add-to-cart.bg-green, .stickycart .stickycartbtn.bg-green {
+        background: #425b34;
     }
 }
 /* quick view css */
@@ -1691,6 +1716,11 @@ h2.subtext1 {
         font-size: 28px;
     }
 }
+@media only screen and (max-width: 767px) { 
+    .sticky_svg_cart{
+        margin-bottom: 2px;
+    }
+}
 @media only screen and (max-width: 500px) { 
     .subscription-widget .section-heading__subheading{
         font-size: 16px;
@@ -1724,6 +1754,9 @@ h2.subtext1 {
     }
     .selected-btn-color{
         background-size: 10px;
+    }
+    .stickycart .add-to-cart{
+        font-size: calc(16px / 16 * var(--base-body-size) + 0px);
     }
 }
 .main-content.backimage{

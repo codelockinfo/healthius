@@ -220,8 +220,11 @@
     </div>
   </div>
 </div>
-  <div class="cartcolumn stickycart newcartBtn">
-    {% comment %} <div class="stickycartbtn StickyCartBtn">
+  <div class="cartcolumn stickycart">
+      <div class="sticky_svg_cart">
+        <img class="StickyCartBtn" src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_430x.png?v=1696624626" alt="Description of Image">
+      </div>
+     <div class="stickycartbtn StickyCartBtn">
       {%- assign product_form_id = 'product-form-' | append: section.id -%}
       {%- assign current_variant = product.selected_or_first_available_variant -%}
           <div class="">
@@ -235,7 +238,7 @@
               <button type="submit" name="add" class="stickyAddtocart add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                 <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
                   {%- liquid
-                        echo 'Spend $90 to Continue'
+                        echo 'Add $75 to Unlock Cart ($0.00)'
                   -%}
                 </span>
                 <span class="button__preloader">
@@ -244,11 +247,7 @@
               </button>    
             </div>
           </div>
-    </div> {% endcomment %}
-    <div class="">
-      <img class="StickyCartBtn" src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_430x.png?v=1696624626" alt="Description of Image">
-
-    </div>
+    </div> 
   </div>
   {%- if section.settings.show_view_all and section.settings.section_heading_layout contains 'center' -%}
     <div class="gutter-top--large align-content align-content--horizontal-center">

@@ -748,39 +748,49 @@ $(document).ready(function() {
 			$(".btnlocked").removeClass("hide");
 			$(".freeTurkey").removeClass("show");
 		}
-		if ($remain_amount < 1) {
+		console.log($remain_amount + "....remain_amount");
+		console.log($getproductPrices + "...getproductPrices");
+		
+        var $getproductPrices = Math.round($getproductPrices * 100) / 100;
+        var $getremain_amount = Math.round($getremainAmount * 100) / 100;
+		
+        if($getproductPrices == 0){
+			var $getproductPrices = $getproductPrices;          
+			var $finalremainamount = $getremain_amount;                    
+        }
+        else{
+			var $getproductPrices = $getproductPrices.toFixed(2);                    
+			console.log($getproductPrices + "...getproductPrices");
+			var $finalremainamount = $getremain_amount.toFixed(2);                    
+        }
+		$continue_arrow = '';
+		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
 			$(".addToCart").prop('disabled', false);
 			$(".addToCart").css("cursor", "pointer");
 			$(".add-to-cart").addClass("up90");
 			$(".addToCart").find("span").text("Continue To Checkout");
+			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_530x.png?v=1696624626");
+			$remain_amount = "Continue to Checkout ";
+			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
+			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").addClass("bg-green");
 		} else {
+			console.log("else gify product");
 			$(".addToCart").attr("disabled", "disabled");
 			$(".addToCart").css("cursor", "not-allowed");
 			$(".add-to-cart").removeClass("up90");
 			$(".addToCart").find("span").text("Spend $75 to Continue");
-			// $remain_amount = "$" + $remain_amount + " Left to ";
+			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_430x.png?v=1696624626");
+			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
+			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").removeClass("bg-green");
 		}
-      
-        var $getproductPrices = Math.round($getproductPrices * 100) / 100;
-        var $getremain_amount = Math.round($getremainAmount * 100) / 100;
-
-        if($getproductPrices == 0){
-          var $getproductPrices = $getproductPrices;          
-          var $finalremainamount = $getremain_amount;                    
-        }
-        else{
-          var $getproductPrices = $getproductPrices.toFixed(2);                    
-          var $finalremainamount = $getremain_amount.toFixed(2);                    
-        }
-      
-        // var $finalremainamount = "$" + $finalremainamount + " Left to ";
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
         }
+
         //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
-        //   $(".stickyAddtocart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
+        $(".stickyAddtocart").find("span").html($remain_amount +"($" + $getproductPrices + ")"+ $continue_arrow);
 
 		// var selected_item_cookie = getCookie("variantids");
 		// if(selected_item_cookie){
