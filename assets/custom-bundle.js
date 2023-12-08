@@ -771,7 +771,7 @@ $(document).ready(function() {
 			$(".addToCart").css("cursor", "pointer");
 			$(".add-to-cart").addClass("up90");
 			$(".addToCart").find("span").text("Continue To Checkout");
-			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_530x.png?v=1696624626");
+			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_2_1.png?v=1702057302");
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").addClass("bg-green");
@@ -781,7 +781,7 @@ $(document).ready(function() {
 			$(".addToCart").css("cursor", "not-allowed");
 			$(".add-to-cart").removeClass("up90");
 			$(".addToCart").find("span").text("Spend $75 to Continue");
-			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_13_58927e13-9815-425a-97d2-eaa4e775048e_430x.png?v=1696624626");
+			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").removeClass("bg-green");
 		}
