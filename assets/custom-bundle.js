@@ -341,14 +341,15 @@ $(document).ready(function() {
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8923626340633',  // GIFT PRODUCT ID
-						externalVariantId: '47395617669401',  // THE SELECTED VARIANT
-						quantity: 1  // Dynamic Quantity
-					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);
+					// Free Holiday Meats 6 Pack (Tier 1) product
+					// var item_data = {
+					// 	collectionId: '459204722969',
+					// 	externalProductId: '8923626340633',  // GIFT PRODUCT ID
+					// 	externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+					// 	quantity: 1  // Dynamic Quantity
+					// }
+					// bundleObject.selections.push(item_data);
+					// console.log(bundleObject);
 				}
 			}
 		// Promo Product
@@ -460,30 +461,31 @@ $(document).ready(function() {
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
-					// Free Holiday Meats 6 Pack (Tier 1) product
+					// Free 50% product
 					var item_data = {
 						collectionId: '459204722969',
-						externalProductId: '8923626340633',  // GIFT PRODUCT ID
-						externalVariantId: '47395617669401',  // THE SELECTED VARIANT
+						externalProductId: '8981917401369',  // GIFT PRODUCT ID
+						externalVariantId: '47575163896089',  // THE SELECTED VARIANT
 						quantity: 1,  // Dynamic Quantity
 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 					}
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
-				}else{
-					//Cranapple Rosemary Chicken Product
-					var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8929832468761',  // GIFT PRODUCT ID
-						externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-						quantity: 1,  // Dynamic Quantity
-						sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
-					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);
 				}
-			}		
+			}	
+			
+			//Cranapple Rosemary Chicken Product
+			var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+			var item_data = {
+				collectionId: '459204722969',
+				externalProductId: '8929832468761',  // GIFT PRODUCT ID
+				externalVariantId: '47409726456089',  // THE SELECTED VARIANT
+				quantity: 1,  // Dynamic Quantity
+				sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+			}
+			bundleObject.selections.push(item_data);
+			console.log(bundleObject);	
+
 			//Free gift product
 			var item_data = {
 				collectionId: '459204722969',
@@ -565,18 +567,19 @@ $(document).ready(function() {
 		$(".subcarttitle").css("font-size","14px");
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
+		freeTurkeyHide  = '';
 		var affiliate_cookie = getCookie("discount_code");
 		var affuser_discounts = ['ashley15','marcus15','christmas15'];
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
 				console.log("in if");
-				$('.subscriptionOption span').text('Save $15 on your first order');
-				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE $15<div><span class="subcarttitle">Applied at checkout</span></div></div>');
+				$('.subscriptionOption span').text('Save 50% on your first order');
+				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				// $('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
-				$('.announcement').text('EXCLUSIVE SALE: 6 FREE HOLIDAY MEATS');
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-6-pack-tier-1-802335_5d307892-10b5-47a3-a437-7fd74cd20308.jpg?v=1701759071';
-				free_pro_title = 'Free Holiday Meats 6 Pack (Tier 1)';
+				// $('.announcement').text('EXCLUSIVE SALE: 6 FREE HOLIDAY MEATS');
+				// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-6-pack-tier-1-802335_5d307892-10b5-47a3-a437-7fd74cd20308.jpg?v=1701759071';
+				// free_pro_title = 'Free Holiday Meats 6 Pack (Tier 1)';
 			}
 		}
 		console.log(free_pro_img + ".....free_pro_img");
@@ -644,6 +647,7 @@ $(document).ready(function() {
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
 			$('.box-summary .productsimage[data-product="8948393378073"],.box-summary .productsimage[data-product="8948391477529"]').remove();
 			$('.subscriptionlabel[data-value="one time"]').addClass('active');
+			$(".freeTurkey").addClass("hide");
 		}else{
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').removeClass("hide");
 			$boxsweetchilli =  $('.box-summary .productsimage[data-product="8948393378073"]').html();
@@ -656,6 +660,7 @@ $(document).ready(function() {
 					$('.box-summary  .productsimage[data-product="8948393378073"] .productQty .qty-selector').val($sweetchilliqty);
 
 				}
+				$(".freeTurkey").removeClass("hide");
 			}
 			$boxchimichurriSteak =  $('.box-summary .productsimage[data-product="8948391477529"]').html();
 			if($boxchimichurriSteak  == undefined){
