@@ -370,22 +370,24 @@ $(document).ready(function() {
 		}
 		asyncGetCall();
 	}
+	
+	// TO DO NEED TO REMOVE
+		function buildFreeProductForSubscription($giftVariantid, ){
+			// Corrected this part to refer to a known element if 'this' is not clear
+			var plan15 = $('.giftProduct').attr('gift-data-selling15');  
+			var plan30 = $('.giftProduct').attr('gift-data-selling30');
+			var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
 
-    function buildFreeProductForSubscription($giftVariantid, ){
-         // Corrected this part to refer to a known element if 'this' is not clear
-      	var plan15 = $('.giftProduct').attr('gift-data-selling15');  
-      	var plan30 = $('.giftProduct').attr('gift-data-selling30');
-      	var giftSellingPlanId = (selling_plan_id === null) ? plan15 : plan30;
-
-      	var item_data = {
-			collectionId: collection_id,  // Example Shopify Collection WE NEED TTO STORE THE COLLECTION IT BELONGS TO. 
-			externalProductId: $productid,  // GIFT PRODUCT ID
-			externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
-			quantity: 1,  // Dynamic Quantity
-			sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			var item_data = {
+				collectionId: collection_id,  // Example Shopify Collection WE NEED TTO STORE THE COLLECTION IT BELONGS TO. 
+				externalProductId: $productid,  // GIFT PRODUCT ID
+				externalVariantId: $giftVariantid,  // THE SELECTED VARIANT
+				quantity: 1,  // Dynamic Quantity
+				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+			}
 		}
-    }
- 
+	// TO DO NEED TO REMOVE
+	
 	function subscriptionAddtocart(){
 		$giftVariantid = $(".product-variant-select").val();
 		$giftProductid = $(".giftProduct").data("product");
