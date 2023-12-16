@@ -8,5 +8,6 @@
   },
   "order": [
     "pf-814744c2"
-  ]
+  ],
+  "layout": "theme.pagefly"
 }
