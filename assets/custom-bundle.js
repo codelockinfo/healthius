@@ -335,24 +335,17 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 			console.log(bundleObject);
 		}
-		// Promo Product
-			var influencer_cookie = getCookie("discount_code");
-			var influencerdiscounts = ['ashley15','marcus15','christmas15'];
-			if(influencer_cookie != undefined && influencerdiscounts != ''){
-				influencer_cookie = influencer_cookie.toLowerCase();
-				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
-					// Free Holiday Meats 6 Pack (Tier 1) product
-					// var item_data = {
-					// 	collectionId: '459204722969',
-					// 	externalProductId: '8923626340633',  // GIFT PRODUCT ID
-					// 	externalVariantId: '47395617669401',  // THE SELECTED VARIANT
-					// 	quantity: 1  // Dynamic Quantity
-					// }
-					// bundleObject.selections.push(item_data);
-					// console.log(bundleObject);
-				}
-			}
-		// Promo Product
+	
+		//Cranapple Rosemary Chicken Product
+		var item_data = {
+			collectionId: '459204722969',
+			externalProductId: '8929832468761',  // GIFT PRODUCT ID
+			externalVariantId: '47409726456089',  // THE SELECTED VARIANT
+			quantity: 1  // Dynamic Quantity
+		}
+		bundleObject.selections.push(item_data);
+		console.log(bundleObject);	
+
 		const bundle = bundleObject;
 		console.log(bundle);
 		const bundleItems = recharge.bundle.getDynamicBundleItems(bundle, 'shopifyProductHandle');
@@ -457,7 +450,7 @@ $(document).ready(function() {
 		
 		// Promo Product
 			var influencer_cookie = getCookie("discount_code");
-			var influencerdiscounts = ['ashley15','marcus15','christmas15'];
+			var influencerdiscounts = ['julian50', 'claire50', 'hannah15', 'hanjam15', 'marcus15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15'];
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
@@ -567,9 +560,8 @@ $(document).ready(function() {
 		$(".subcarttitle").css("font-size","14px");
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
-		freeTurkeyHide  = '';
 		var affiliate_cookie = getCookie("discount_code");
-		var affuser_discounts = ['ashley15','marcus15','christmas15'];
+		var affuser_discounts = ['julian50', 'claire50', 'hannah15', 'hanjam15', 'marcus15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15'];
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
@@ -647,7 +639,6 @@ $(document).ready(function() {
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
 			$('.box-summary .productsimage[data-product="8948393378073"],.box-summary .productsimage[data-product="8948391477529"]').remove();
 			$('.subscriptionlabel[data-value="one time"]').addClass('active');
-			$(".freeTurkey").addClass("hide");
 		}else{
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').removeClass("hide");
 			$boxsweetchilli =  $('.box-summary .productsimage[data-product="8948393378073"]').html();
@@ -660,7 +651,6 @@ $(document).ready(function() {
 					$('.box-summary  .productsimage[data-product="8948393378073"] .productQty .qty-selector').val($sweetchilliqty);
 
 				}
-				$(".freeTurkey").removeClass("hide");
 			}
 			$boxchimichurriSteak =  $('.box-summary .productsimage[data-product="8948391477529"]').html();
 			if($boxchimichurriSteak  == undefined){
