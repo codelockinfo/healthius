@@ -563,7 +563,7 @@ $(document).ready(function() {
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
 		var affiliate_cookie = getCookie("discount_code");
-		var affuser_discounts = ['julian50', 'claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15'];
+		var affuser_discounts = ['julian50', 'CPT50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50'];
 		if(affiliate_cookie != undefined && affiliate_cookie != ''){
 			affiliate_cookie = affiliate_cookie.toLowerCase();
 			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
