@@ -176,3 +176,35 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 }
 </style>
 {%  endif %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("READY INDEX PAGE");
+    var influencer_cookie = getCookie("discount_code");
+    console.log(influencer_cookie);
+    var influencerdiscounts = ['julian50', 'claire50', 'hannah15', 'hanjam15', 'marcus15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15'];
+  
+    if (influencer_cookie !== undefined && influencerdiscounts.length > 0) {
+      influencer_cookie = influencer_cookie.toLowerCase();
+  
+      if (influencerdiscounts.includes(influencer_cookie)) {
+        console.log("INFLU CODE MATCH");
+        var image_50 = document.querySelector('[data-section-id="pf-98f3"] img');
+        var image_50_mobile = document.querySelector('[data-section-id="pf-68b2"] img');
+        
+        if (image_50) {
+          image_50.src = "https://cdn.shopify.com/s/files/1/0555/1751/1961/files/50_Off_Desktop_Banner.jpg?v=1702510864";
+          image_50.srcset = "https://cdn.shopify.com/s/files/1/0555/1751/1961/files/50_Off_Desktop_Banner.jpg?v=1702510864";
+        }
+        if (image_50_mobile) {
+          image_50_mobile.src = "https://cdn.shopify.com/s/files/1/0555/1751/1961/files/50_Off_Mobile_Banner.jpg?v=1702510864";
+          image_50_mobile.srcset = "https://cdn.shopify.com/s/files/1/0555/1751/1961/files/50_Off_Mobile_Banner.jpg?v=1702510864";
+        }
+      }
+    }
+  });
+  
+  function getCookie(name) {
+    return document.cookie.replace(new RegExp("(?:(?:^|.*;\\s*)" + name + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1") || null;
+  }
+  
+</script>
