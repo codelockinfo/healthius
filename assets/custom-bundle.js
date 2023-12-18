@@ -452,7 +452,7 @@ $(document).ready(function() {
 		
 		// Promo Product
 			var influencer_cookie = getCookie("discount_code");
-			var influencerdiscounts = ['julian50', 'claire50', 'hannah15', 'hanjam15', 'marcus15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15'];
+			var influencerdiscounts = ['julian50', 'claire50','CPT50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50'];
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
