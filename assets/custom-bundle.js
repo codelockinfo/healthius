@@ -458,19 +458,24 @@ $(document).ready(function() {
 			if(influencer_cookie != undefined && influencerdiscounts != ''){
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
-					// Free 50% product
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8981917401369',  // GIFT PRODUCT ID
-						externalVariantId: '47575163896089',  // THE SELECTED VARIANT
-						quantity: 1,  // Dynamic Quantity
-						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);
+					setCookie("50_Off_Discount", "True", 7);
 				}
 			}	
-			
+			var discount_cookie = getCookie("50_Off_Discount");
+			console.log('discount_cookie'+discount_cookie); 
+			if (discount_cookie === "True") {
+				// Free 50% product
+				var item_data = {
+					collectionId: '459204722969',
+					externalProductId: '8981917401369',  // GIFT PRODUCT ID
+					externalVariantId: '47575163896089',  // THE SELECTED VARIANT
+					quantity: 1,  // Dynamic Quantity
+					sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+				}
+				bundleObject.selections.push(item_data);
+				console.log(bundleObject);
+			}
+
 			//Cranapple Rosemary Chicken Product
 			var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
 			var item_data = {
