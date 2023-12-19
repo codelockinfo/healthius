@@ -557,17 +557,6 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		var influencer_cookie = getCookie("discount_code");
-		var influencerdiscounts = ['julian50', 'claire50','cpt50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50'];
-		if(influencer_cookie != undefined && influencerdiscounts != ''){
-			influencer_cookie = influencer_cookie.toLowerCase();
-			if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
-				console.log("matchhhhhhh");
-			}else{
-				fetch('/checkout?discount=CLEAR');
-				console.log("no matchhhhhhh");
-			}
-		}
 		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
