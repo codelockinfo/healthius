@@ -268,7 +268,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		// Send an AJAX request to clear the cart
 		var request = new XMLHttpRequest();
-		fetch('/checkout?discount=CLEAR');
 		request.open('POST', '/cart/clear.js', true);  
 		request.send(); 
 		window.setTimeout(() => {
