@@ -73,7 +73,7 @@ $(document).on("click", ".productsimage .card__image", function(e) {
 });
 
 $(document).ready(function() {
-	fetch('/checkout?discount=CLEAR');
+	// fetch('/checkout?discount=CLEAR');
 
 	const filterSelectlabel = $(".filterSelectlabel");
 	filterSelectlabel.on("click", function() {
