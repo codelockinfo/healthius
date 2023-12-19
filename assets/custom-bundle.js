@@ -557,8 +557,6 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-				
-		fetch('/checkout?discount=CLEAR');
 		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
