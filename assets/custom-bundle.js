@@ -463,7 +463,7 @@ $(document).ready(function() {
 			}	
 			var discount_cookie = getCookie("50_Off_Discount");
 			console.log('discount_cookie'+discount_cookie); 
-			if (discount_cookie === "True") {
+			if (discount_cookie == "True") {
 				console.log('GETTING COOKIE');
 				// Free 50% product
 				var item_data = {
