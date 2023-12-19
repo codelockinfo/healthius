@@ -534,7 +534,6 @@ $(document).ready(function() {
 					});
 					const data = await respons.json();
 					console.log(data);
-					fetch('/checkout?discount=CLEAR');
 					// removeCookie("variantids");
 					// removeCookie("variant_qty");
 					window.location.href = '/checkout';
