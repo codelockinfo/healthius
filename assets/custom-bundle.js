@@ -459,6 +459,7 @@ $(document).ready(function() {
 				influencer_cookie = influencer_cookie.toLowerCase();
 				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
 					// Free 50% product
+					setCookie("50_Off_Discount", "True", 7); // Assuming a 7-day expiry for the cookie
 					var item_data = {
 						collectionId: '459204722969',
 						externalProductId: '8981917401369',  // GIFT PRODUCT ID
@@ -565,10 +566,14 @@ $(document).ready(function() {
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
 		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
-		if(affiliate_cookie != undefined && affiliate_cookie != ''){
-			affiliate_cookie = affiliate_cookie.toLowerCase();
-			if ($.inArray(affiliate_cookie, affuser_discounts) !== -1) {
+		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+			if(affiliate_cookie != undefined){
+				affiliate_cookie = affiliate_cookie.toLowerCase();
+			}
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
 				console.log("in if");
 				$('.subscriptionOption span').text('Save 50% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
