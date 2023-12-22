@@ -112,7 +112,7 @@
               </a>
 
               {%- when 'price' -%}
-              <div class="product-item__price text-size--large equalize-white-space" {{ block.shopify_attributes }}>
+              {% comment %} <div class="product-item__price text-size--large equalize-white-space" {{ block.shopify_attributes }}>
                 <div class="remove-line-height-space">
                   {% unless blank_product %}
                     {%- render 'product-price', target: product, variant: product_variant, product_price_varies: product.price_varies -%}
@@ -120,7 +120,7 @@
                     {{ 9999 | money }}
                   {%- endunless -%}
                 </div>
-              </div>
+              </div> {% endcomment %}
 
               {%- when 'text' -%}
               <div

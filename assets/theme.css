@@ -1208,11 +1208,11 @@ html[dir=ltr] .rte table th, html[dir=ltr] .rte table td {
     --visible-cols: 1;
   }
 }
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .grid-lap-2 {
     --visible-cols: 2;
   }
-}
+} */
 @media screen and (max-width: 767px) {
   .grid-lap-3 {
     --visible-cols: 3;
