@@ -1,7 +1,12 @@
 .mobile_cart_botoom_container{
     display: none;
 }
-
+.for_desktop_range{
+    display: block;
+}
+.for_mobile_range{
+    display: none;
+}
 @media screen and (max-width: 1024px){
     :root{
         --color-maroon: #862E1B;
@@ -37,10 +42,19 @@
         display: none;
     }
     .for_desktop_range{
-        /* display: none; */
+        display: none;
     }
     .for_mobile_range{
-        /* display: block; */
+        display: block;
+    }
+    .for_mobile_range .range-labels li span{
+        font-size: 12px;
+    }
+    .range-labels li.label90 span{
+        margin-left: -14px;
+    }
+    .progress-container{
+        padding-bottom: 5%;
     }
     .range-labels li::before,.box-summary::-webkit-scrollbar-thumb,.range-labels li.label90:before {
         background: var(--color-maroon);
@@ -92,8 +106,11 @@
         display: none;
     }
     .box-footer{
-        bottom: 7%;
-        position: relative;
+        /* bottom: 7%;
+        position: relative; */
+    }
+    .product-container{
+        height: 520px;
     }
     .box-summary {
         -ms-overflow-style: none;  /* IE and Edge */

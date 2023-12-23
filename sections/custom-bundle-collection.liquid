@@ -107,7 +107,57 @@
                   <div class="box-header-title">SUBSCRIBERS SAVE 25%
                     <div><span class="subcarttitle">Applied at checkout</span></div>
                   </div>
-                  <div class="progress-container">
+                  <div class="progress-container for_mobile_range">
+                    <div>
+                      <div class="range-input">
+                        <div class="range-slider__indicators">
+                          <div class="range-slider__value range-slider__value--max"></div>
+                        </div>
+                        <input type="range" min='0' max="150" value="0" step="5" id="rangeSlider">
+                        <div class="value">
+                          <div class="margin-top"></div>
+                          </div>
+                      </div> 
+                      <ul class="range-labels">
+                        <li class="active selected">$5</li>
+                        <li>$10</li>
+                        <li>$15</li>
+                        <li>$20</li>
+                        <li>$25</li>
+                        <li>$30</li>
+                        <li>$35</li>
+                        <li>$40</li>
+                        <li>$45</li>
+                        <li>$50</li>
+                        <li>$55</li>
+                        <li>$60</li>
+                        <li>$65</li>
+                        <li>$70</li>
+                        <li class="label90"><span>Minimum</span></li>
+                        <li>$80</li>
+                        <li>$85</li>
+                        <li>$90</li>
+                        <li>$95</li>
+                        <li>$100</li>
+                        <li>$105</li>
+                        <li>$110</li>
+                        <li>$115</li>
+                        <li>$120</li>
+                        <li class="label130"><span>Bonus Meat</span></li>
+                        <li>$130</li>
+                        <li>$135</li>
+                        <li>$140</li>
+                        <li>$145</li>
+                        <li>$150</li>
+                      </ul>
+                    </div>
+                    <div class="containercircle containerCircle">
+                      <button class="circlebtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none" class="inline-block"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.75364 0.796137C1.40364 0.408427 0.836178 0.408427 0.486178 0.796137C0.136178 1.18385 0.136178 1.81245 0.486178 2.20016L5.6075 7.87328C5.9575 8.26099 6.52496 8.26099 6.87496 7.87328L11.9963 2.20016C12.3463 1.81245 12.3463 1.18385 11.9963 0.796138C11.6463 0.408428 11.0788 0.408428 10.7288 0.796138L6.23878 5.76996L1.75364 0.796137Z" fill="currentColor"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="progress-container for_desktop_range">
                     <div>
                       <div class="range-input">
                         <div class="range-slider__indicators">
@@ -157,6 +207,7 @@
                       </button>
                     </div>
                   </div>
+               
                   <div class="product-container">
                     <div class="box-summary" id="cartSummary"> </div>
                     <div class="box-footer">
@@ -225,6 +276,7 @@
 
                                       </div>
                                   {% endif  %}
+                                
                                   {% if section.settings.widgetlabel2 != blank %}
                                       <div class="subscriptionlabel sub-align" data-value="{{ section.settings.widgetlabel2 | downcase }}">
                                       <div class="subscribename onetimeOption">
