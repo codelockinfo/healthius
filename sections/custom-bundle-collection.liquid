@@ -202,7 +202,39 @@
 
 
                           {% comment %} mobile view cart drawer bottom part {% endcomment %}
-                          <div>
+                          <div class="mobile_cart_botoom_container">
+
+                            <div class="subscription_mobile_container">
+                                <div class="subscriptwidth">
+                                  {% if section.settings.widgetlabel1 != blank %}
+                                        {% if section.settings.widgetext1 != blank %} <span class="save_label active">{{ section.settings.widgetext1 }}</span>{% endif %}
+                                      <div class="subscriptionlabel active" data-value="{{ section.settings.widgetlabel1 | downcase }}">
+                                      <div class="subscribename subscriptionOption">
+                                          {{ section.settings.widgetlabel1 }}
+                                      </div>
+                                      {% comment %} <select class="frequency_select">
+                                      <option value="{%- if section.settings.frequency_select_id1  != blank -%} {{- section.settings.frequency_select_id1 -}} {%- endif -%}">{% if section.settings.frequency_select_label1  != blank %} {{ section.settings.frequency_select_label1 }} {% endif %}</option>
+                                      <option value="{%- if section.settings.frequency_select_id2  != blank -%} {{- section.settings.frequency_select_id2 -}} {%- endif -%}">{% if section.settings.frequency_select_label2  != blank %} {{ section.settings.frequency_select_label2 }} {% endif %}</option>
+                                      </select> {% endcomment %}
+
+                                      <div class="select_frequency_container">
+                                          <div class="select_freqncy_label">{{ section.settings.frequency_select_text }}</div>
+                                          {% if section.settings.frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" data-value=" {{ section.settings.frequency_select_id1 }}">{{ section.settings.frequency_select_label1 }} </div> {% endif %}
+                                          {% if section.settings.frequency_select_label2  != blank %} <div  class="frequncy_select_btn" data-value=" {{ section.settings.frequency_select_id2 }}">{{ section.settings.frequency_select_label2 }} </div> {% endif %}
+                                      </div>
+
+                                      </div>
+                                  {% endif  %}
+                                  {% if section.settings.widgetlabel2 != blank %}
+                                      <div class="subscriptionlabel sub-align" data-value="{{ section.settings.widgetlabel2 | downcase }}">
+                                      <div class="subscribename onetimeOption">
+                                          {{ section.settings.widgetlabel2 }}
+                                      </div>
+                                      </div>
+                                  {% endif %}
+                                </div>
+                            </div>
+
                             <button type="submit" name="add" class="mobile-add-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                             <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
                               {%- liquid
@@ -600,6 +632,55 @@
         "id": "maxprice",
         "label": "Maximum price for cart",
         "default": "$130"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Cart Drawer "
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_label1",
+        "label": "Frequency select label first",
+        "default": "Every 15 days"
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_label2",
+        "label": "Frequency select label second",
+        "default": "Every 30 days"
+      }, 
+      {
+        "type": "text",
+        "id": "frequency_select_text",
+        "label": "Frequency select label",
+        "default": "Select Frequency"
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_id1",
+        "label": "Frequency select ID first",
+        "default": "689131815193"
+      },
+      {
+        "type": "text",
+        "id": "frequency_select_id2",
+        "label": "Frequency select ID second",
+        "default": "689131847961"
+      }, {
+        "type": "text",
+        "id": "widgetlabel1",
+        "label": "Label",
+        "default": "Subscribe & Save"
+      }, {
+        "type": "text",
+        "id": "widgetlabel2",
+        "label": "Label",
+        "default": "One Time"
+      }, {
+        "type": "text",
+        "id": "widgetext1",
+        "label": "Text1",
+        "default": "Save 25% on your first order "
       }
     ],
     "presets": [
