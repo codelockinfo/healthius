@@ -266,7 +266,7 @@ $(document).ready(function() {
 		});
 	});
 	
-	$('.addToCart').click(function(e) {
+	$('.addToCart,.MobileAddCart').click(function(e) {
 		e.preventDefault();
 		// Send an AJAX request to clear the cart
 		var request = new XMLHttpRequest();
@@ -559,7 +559,12 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+		if ($(window).width() > 1024) {
+			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+		}else{
+			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/PRODUCTS_3x_f154f6cd-a7db-445f-8af4-494a00bde15f.png?v=1703329801';
+		}
+
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
 		$(".subcarttitle").css("font-size","14px");
@@ -648,6 +653,7 @@ $(document).ready(function() {
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
 			$('.box-summary .productsimage[data-product="8948393378073"],.box-summary .productsimage[data-product="8948391477529"]').remove();
 			$('.subscriptionlabel[data-value="one time"]').addClass('active');
+			$(".save_label").removeClass('active');
 		}else{
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').removeClass("hide");
 			$boxsweetchilli =  $('.box-summary .productsimage[data-product="8948393378073"]').html();
@@ -672,6 +678,7 @@ $(document).ready(function() {
 				}
 			}
 			$('.subscriptionlabel[data-value="subscribe & save"]').addClass('active');
+			$(".save_label").addClass('active');
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
 				$( "input[name='selling_plan']").val($subscriptionvalue);
@@ -775,19 +782,35 @@ $(document).ready(function() {
 			$(".addToCart").css("cursor", "pointer");
 			$(".add-to-cart").addClass("up90");
 			$(".addToCart").find("span").text("Continue To Checkout");
+			$(".MobileAddCart").prop('disabled', false);
+			$(".MobileAddCart").css("cursor", "pointer");
+			$(".MobileAddCart").addClass("up90");
+			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices );
+			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90").addClass("bg-green");
+			$getTotalPrice = parseInt($getproductPrices);
+			if(inputtotalrangemax < $getTotalPrice){
+				$(".for_mobile_range .range-labels li.label130").addClass("bg-green");
+			}else{
+				$(".for_mobile_range .range-labels li.label130").removeClass("bg-green");
+			}
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_2_1.png?v=1702057302");
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
-			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").addClass("bg-green");
+			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ,.MobileAddCart").addClass("bg-green");
 		} else {
 			console.log("else gify product");
 			$(".addToCart").attr("disabled", "disabled");
 			$(".addToCart").css("cursor", "not-allowed");
 			$(".add-to-cart").removeClass("up90");
 			$(".addToCart").find("span").text("Spend $75 to Continue");
+			$(".MobileAddCart").attr("disabled", "disabled");
+			$(".MobileAddCart").css("cursor", "not-allowed");
+			$(".MobileAddCart").removeClass("up90");
+			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +"(Add $75 to Unlock)");
+			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
-			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ").removeClass("bg-green");
+			$(".stickycart .add-to-cart, .stickycart .stickycartbtn,.MobileAddCart ").removeClass("bg-green");
 		}
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
@@ -836,7 +859,7 @@ $(document).ready(function() {
 		$(".onetimeOption").closest(".subscriptionlabel").removeClass("active");
 		$(".deliverybox").removeClass("hide");
 		$(".rc-selling-plans").removeClass("hide");
-
+		$(".save_label").addClass('active');
 		getcartTotalQty();
 	});
 	$(document).on("click",".onetimeOption",function(){
@@ -847,6 +870,7 @@ $(document).ready(function() {
 		$(".subscriptionOption").closest(".subscriptionlabel").removeClass("active");
 		$(".deliverybox").addClass("hide");
 		$(".rc-selling-plans").addClass("hide");
+		$(".save_label").removeClass('active');
 		getcartTotalQty();
 	});
 	$(document).on("change",".frequency_select",function(){
@@ -867,6 +891,13 @@ $(document).ready(function() {
 		
 	});
 	
+	$(document).on("click",".frequncy_select_btn ",function(event){
+		$(".frequncy_select_btn").removeClass("active");
+		$(this).addClass("active");
+		$frequency_val = $(this).val();
+		setCookie("subscriptionvalue",$frequency_val);
+		$( "input[name='selling_plan']").val($frequency_val);
+	});
 	$(document).on("click",".onlyContinue ",function(event){
 		event.preventDefault()
 		console.log("onlyContinue  btn click ");

@@ -209,7 +209,22 @@
                   </div>
                
                   <div class="product-container">
-                    <div class="box-summary" id="cartSummary"> </div>
+                    <div class="box-summary" id="cartSummary">
+
+                    <div class="box-giftproduct_mobile">
+                      {% if section.settings.product_list != blank %}
+                          {% assign  productgift = section.settings.product_list  %}
+                            <div class="imageforcart"> 
+                              <img src="{{ productgift.featured_media | img_url: 'medium' }}" alt="{{ productgift.featured_media.title }}" />
+                            </div>
+                            <div>
+                              <div class="mobile_gift_pro_info">{{ productgift.title }}</div>
+                            </div>
+                          {% endif %}
+                          
+                    </div> 
+
+                    </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}
                       {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -270,13 +285,26 @@
 
                                       <div class="select_frequency_container">
                                           <div class="select_freqncy_label">{{ section.settings.frequency_select_text }}</div>
-                                          {% if section.settings.frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" data-value=" {{ section.settings.frequency_select_id1 }}">{{ section.settings.frequency_select_label1 }} </div> {% endif %}
-                                          {% if section.settings.frequency_select_label2  != blank %} <div  class="frequncy_select_btn" data-value=" {{ section.settings.frequency_select_id2 }}">{{ section.settings.frequency_select_label2 }} </div> {% endif %}
+                                          {% if section.settings.frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" value=" {{ section.settings.frequency_select_id1 }}">{{ section.settings.frequency_select_label1 }} </div> {% endif %}
+                                          {% if section.settings.frequency_select_label2  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.frequency_select_id2 }}">{{ section.settings.frequency_select_label2 }} </div> {% endif %}
                                       </div>
 
                                       </div>
                                   {% endif  %}
-                                
+                                  <div class="main-part">
+                                    <div class="image-icon">
+                                      <img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Premium_Shipping_3x_c1d559c1-2656-4092-9e97-5650933183fe.png?v=1703319421"/></div>
+                                    <div class="text-sector">
+                                      <div class="text-part"> Shipping Protection</div>
+                                      <p>Protect your order against melting, theft, loss, and damage</p>
+                                    </div>
+                                    <div class="price-sign">
+                                      <div class="dollar">$1.95</div>
+                                      <div class="icon-btn">
+                                        <input type="checkbox" value="1" class="switch-icons" checked>
+                                      </div>
+                                    </div>
+                                  </div>
                                   {% if section.settings.widgetlabel2 != blank %}
                                       <div class="subscriptionlabel sub-align" data-value="{{ section.settings.widgetlabel2 | downcase }}">
                                       <div class="subscribename onetimeOption">
@@ -287,7 +315,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" name="add" class="mobile-add-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
+                            <button type="submit" name="add" class="MobileAddCart mobile-add-cart button button--solid button--product button--loader" data-js-product-add-to-cart>
                             <span class="button__text" data-js-product-add-to-cart-text {% if block.settings.show_preorder %} data-show-preorder-wording {% endif %}>
                               {%- liquid
                                     echo 'Checkout - $0.00 (Add $75 to Unlock)'
