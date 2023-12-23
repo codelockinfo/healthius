@@ -1,0 +1,109 @@
+@media screen and (max-width: 1024px){
+    :root{
+        --color-maroon: #862E1B;
+        --color-green: #425B34;
+        --color-white:#FFFFFF;
+        --color-off-white:#F3F4F6;
+        --color-gray:#AAAAAA;
+    }
+    .carttoplabel {
+        display: flex;
+        padding: 5px;
+        justify-content: space-around;
+        align-items: center;
+        background: #EEEDED;
+    }
+    .mount-css-slider span.section-heading__subheading.text-size--large, .buncleselectlabel{
+        font-size: 16px;
+        text-align: left;
+        font-weight: bold;
+        width: auto;
+    }
+    .cartarrow{
+        border: 1.5pt solid #435B34;
+        padding: 2px 10px;
+        border-radius: 40px;
+        color: #000000;
+        font-weight: 600;
+    }
+    .box-header-title{
+        display: none;
+    }
+    .range-labels li::before,.box-summary::-webkit-scrollbar-thumb,.range-labels li.label90:before {
+        background: var(--color-maroon);
+    }
+    .range-input input::-webkit-slider-thumb,.range-input input::-moz-range-thumb{
+        background: #862E1B;
+        background-color: #862E1B;
+        box-shadow: -50rem 0 5rem 20rem #862E1B,
+                    -40rem 0 5rem 30rem #862E1B,
+                    -30rem 0 2rem 25rem #862E1B,
+                    -25.5rem 0 0 25rem  #862E1B;
+      }
+    .range-labels li.label90:before,.range-labels li:before{
+        position: absolute;
+        top: -35.5px;
+        right: -15px;
+        content: "";
+        margin: 0 auto;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+    }
+
+    .box-summary{
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    .box-summary .product-item,.box-summary .flexdirrow{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .box-summary::-webkit-scrollbar {
+        display: none;
+    }
+
+    .box-summary {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .cartfontcontainer{
+        display: none;
+    }
+    .box-summary .product-quantity{
+        background: var(--color-green);
+    }
+    .box-summary .product-quantity__minus, .box-summary .product-quantity__plus{
+        background:var(--color-green);
+        color: var(--color-white);
+        border-color: var(--color-green);
+        height: 2rem;
+        border-radius: unset;
+        width: 2rem;
+    }
+    .box-summary .product-quantity{
+        background: var(--color-white);
+        align-items: center;
+        padding-bottom: 5px;
+        min-width: calc(var(--button-product) * 2);
+    }
+    .box-summary .product-quantity__selector{
+        background:var(--color-off-white);
+        height: 2rem;
+        margin: 0;
+    }
+    .labelretunshop{
+        display: none;
+    }
+    .product__cart-functions,.box-giftproduct{
+        display: none;
+    }
+    .mobile-add-cart{
+        background:var(--color-gray);
+        border: unset;
+        border-radius: 40px;
+    }
+}
