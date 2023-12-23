@@ -44,6 +44,9 @@
     .for_mobile_range{
         display: block;
     }
+    .for_mobile_range .range-labels li{
+        left: 18%;
+    }
     .for_mobile_range .range-labels li span{
         font-size: 12px;
     }
@@ -308,7 +311,7 @@
     .icon-btn .switch-icons:active::before {
         transition: all 0.1s ease 0.05s;
    }
-   .box-summary .productsimage img, .cartgiftproduct img, .box-summary .freeTurkey img,.box-summary .freeTurkey .promo-product img,.box-giftproduct_mobile img{
+   .box-summary .productsimage img, .cartgiftproduct img, .box-summary .freeTurkey img,.box-summary .freeTurkey .promo-product img,.box-giftproduct_mobile img,.box-giftproduct_mobile{
         width: 100px;
    }
   
