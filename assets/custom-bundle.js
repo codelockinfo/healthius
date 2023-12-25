@@ -561,8 +561,12 @@ $(document).ready(function() {
 	function set_lineitems_onload() {
 		if ($(window).width() > 1024) {
 			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+			var productBadge = "";
+			bgcolor = "";
 		}else{
 			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/PRODUCTS_3x_f154f6cd-a7db-445f-8af4-494a00bde15f.png?v=1703329801';
+			var productBadge = "FREE";
+			bgcolor ="bg_green";
 		}
 
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
@@ -607,7 +611,7 @@ $(document).ready(function() {
 		  '</div></div>'+
 		  '</div>'+
 		  '</div>'+
-		  '</div><div class="product-item__badges text-size--xsmall"></div></div>'+
+		  '</div><div class="product-item__badges text-size--xsmall '+bgcolor+'">'+productBadge+'</div></div>'+
 		  '</div>';
 
 		$("#cartSummary").append($staticGiftProduct);
@@ -725,10 +729,10 @@ $(document).ready(function() {
 		$(".totalPrice").html('Total: $'+$productPrices.toFixed(2));
 		indicatore = ($productPrices * 100)/inputtotalrange;
 		if ($getproductPrices <= inputtotalrangemax) {
-			$("#rangeSlider").val($getproductPrices);
+			$(".for_desktop_range #rangeSlider,.for_mobile_range #rangeSlider").val($getproductPrices);
 			$(".range-slider__indicators .range-slider__value").css("left",indicatore+"%");
       	} else if ($getproductPrices > inputtotalrangemax) {
-            $("#rangeSlider").val($getproductPrices);
+            $(".for_desktop_range #rangeSlider,.for_mobile_range #rangeSlider").val($getproductPrices);
 			$(".range-slider__indicators .range-slider__value").css("left","100%");
 		}
 		// don't remove this comment
@@ -741,8 +745,10 @@ $(document).ready(function() {
 				$(".box-giftproduct").addClass("show");
 				$(".product-variant-select").addClass("show");
 				$(".btnlocked").addClass("hide");
+				$(".box-giftproduct_mobile").removeClass("lockproduct");
+				$(".giftselection").removeClass("hide");
+				$(".mobile_gift_pro_info").addClass("hide");
 				$(".freeTurkey").addClass("show");
-
 				$("#filtered-products .productsimage").each( function( i ) {
 					$allproductTitle = $(this).find(".variant-title").html();
 					$allproductSrc = $(this).find(".imageforcart img").attr("src");
@@ -757,6 +763,9 @@ $(document).ready(function() {
 			$(".box-giftproduct").removeClass("show");
 			$(".product-variant-select").removeClass("show");
 			$(".btnlocked").removeClass("hide");
+			$(".box-giftproduct_mobile").addClass("lockproduct");
+			$(".giftselection").addClass("hide");
+			$(".mobile_gift_pro_info").removeClass("hide");
 			$(".freeTurkey").removeClass("show");
 		}
 		console.log($remain_amount + "....remain_amount");
@@ -770,8 +779,12 @@ $(document).ready(function() {
 			var $finalremainamount = $getremain_amount;                    
         }
         else{
-			var $getproductPrices = $getproductPrices.toFixed(2);                    
+			var $getproductPrices = $getproductPrices.toFixed(2);  
+			var discountAmount =  $getproductPrices * 0.25;
+                  
 			console.log($getproductPrices + "...getproductPrices");
+			$(".subscription_mobile_container .subscribename.onetimeOption").prepend("$"+$getproductPrices);
+
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
 		$continue_arrow = '';

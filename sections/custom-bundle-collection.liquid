@@ -211,19 +211,34 @@
                   <div class="product-container">
                     <div class="box-summary" id="cartSummary">
 
-                    <div class="box-giftproduct_mobile">
-                      {% if section.settings.product_list != blank %}
-                          {% assign  productgift = section.settings.product_list  %}
-                            <div class="imageforcart"> 
-                              <img src="{{ productgift.featured_media | img_url: 'medium' }}" alt="{{ productgift.featured_media.title }}" />
+                        {% if section.settings.product_list != blank %}
+                          <div class="box-giftproduct_mobile">
+                            <div class="product-item card container-box">
+                              {% assign  productgift = section.settings.product_list  %}
+                              <div class="imageforcart"> 
+                                <img src="{{ productgift.featured_media | img_url: 'medium' }}" alt="{{ productgift.featured_media.title }}" />
+                              </div>
+                              <div>
+                                <div class="mobile_gift_pro_info">{{ productgift.title }}</div>
+                                <div class="giftselection">
+                                  {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                                  <select name="id" data-vid="{{ current_variant.id }}"  id="Variants-{{ section.id }}" class="product-variant-select productSelect" {% if productgift.has_only_default_variant %} style="display:none!important" {% endif %}
+                                    form="{{ product_form_id }}" >
+                                    {%- for variant in productgift.variants -%}
+                                      <option class="product-variant-value"
+                                        {% if variant == current_variant %}selected="selected"{% endif %}
+                                        {% if variant.available == false %}disabled{% endif %}
+                                        value="{{ variant.id }}" >
+                                        {{ variant.title }}
+                                      </option>
+                                    {%- endfor -%}
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="product-item__badges text-size--xsmall bg_maroon">LOCKED</div>
                             </div>
-                            <div>
-                              <div class="mobile_gift_pro_info">{{ productgift.title }}</div>
-                            </div>
-                          {% endif %}
-                          
-                    </div> 
-
+                          </div> 
+                        {% endif %}
                     </div>
                     <div class="box-footer">
                       {%- assign product_form_id = 'product-form-' | append: section.id -%}
