@@ -783,7 +783,7 @@ $(document).ready(function() {
 			var discountAmount =  $getproductPrices * 0.25;
                   
 			console.log($getproductPrices + "...getproductPrices");
-			$(".subscription_mobile_container .subscribename.onetimeOption").prepend("$"+$getproductPrices);
+			// $(".subscription_mobile_container .subscribename.onetimeOption").prepend("$"+$getproductPrices);
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
