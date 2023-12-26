@@ -839,11 +839,11 @@ $(document).ready(function() {
 			$(".MobileAddCart").attr("disabled", "disabled");
 			$(".MobileAddCart").css("cursor", "not-allowed");
 			$(".MobileAddCart").removeClass("up90");
+			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			if($reachargevalue != "one time"){
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +"(Add $75 to Unlock)");
-			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
