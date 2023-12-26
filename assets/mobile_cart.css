@@ -1,7 +1,7 @@
-.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range{
+.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range,.for_mobile{
     display: none;
 }
-.for_desktop_range{
+.for_desktop_range,.for_desktop{
     display: block;
 }
 @media screen and (max-width: 1024px){
@@ -145,10 +145,6 @@
         padding: 0;
         margin: 0;
     }
-
-    .box-summary::-webkit-scrollbar {
-        display: none;
-    }
     .box-footer{
         /* bottom: 7%;
         position: relative; */
@@ -163,9 +159,6 @@
     .box-summary {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
-    }
-    .cartfontcontainer{
-        display: none;
     }
     .box-summary .product-quantity{
         background: var(--color-green);
@@ -197,10 +190,7 @@
         height: 2rem;
         margin: 0;
     }
-    .labelretunshop{
-        display: none;
-    }
-    .product__cart-functions,.product-container .box-giftproduct{
+    .product__cart-functions,.product-container .box-giftproduct,.labelretunshop,.cartfontcontainer,.box-summary::-webkit-scrollbar{
         display: none;
     }
     .mobile_cart_botoom_container,.product-container .box-giftproduct_mobile{
@@ -462,5 +452,19 @@
     .box-summary .product-item__badges.bg_maroon{
        background: var(--color-maroon);
    }
-  
+  /* NEW Figma */
+    .for_desktop,.section-heading__title,.frequentlyflex{
+        display: none;
+    }
+    .for_mobile{
+        display: block;
+    }
+    .stickycartbtn{
+        width: 97%;
+    }
+    .logo_text_header{
+        font-size: 20px;
+        font-weight: 600;
+    }
+  /* NEW Figma */
 }

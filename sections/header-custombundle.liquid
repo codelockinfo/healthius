@@ -32,9 +32,10 @@
           {%- if section.settings.logo_src -%}
   
             <a class="logo-img" title="{{ shop.name | escape }}" href="{{ routes.root_url }}" style="height:var(--header-logo)">
-              <img src="{{ section.settings.logo_src | image_url }}" alt="{{ shop.name | escape }}" width="{{ section.settings.logo_src.width }}" height="{{ section.settings.logo_src.height }}" 
+              <img class="for_desktop" src="{{ section.settings.logo_src | image_url }}" alt="{{ shop.name | escape }}" width="{{ section.settings.logo_src.width }}" height="{{ section.settings.logo_src.height }}" 
                 style="width: {{ section.settings.logo_src.aspect_ratio | times: logo_height | round }}px; object-fit:contain"
               />
+              <div class="for_mobile logo_text_header">Customize Your Meat Box</div>
             </a>
   
           {%- else -%}

@@ -377,9 +377,9 @@
   </div>
 </div>
   <div class="cartcolumn stickycart">
-      <div class="sticky_svg_cart">
+      {% comment %} <div class="sticky_svg_cart">
         <img class="StickyCartBtn" src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_2_1.png?v=1702057302" alt="Description of Image">
-      </div>
+      </div> {% endcomment %}
      <div class="stickycartbtn StickyCartBtn">
       {%- assign product_form_id = 'product-form-' | append: section.id -%}
       {%- assign current_variant = product.selected_or_first_available_variant -%}
