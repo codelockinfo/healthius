@@ -747,7 +747,6 @@ $(document).ready(function() {
 				$(".box-giftproduct").addClass("show");
 				$(".product-variant-select").addClass("show");
 				$(".btnlocked").addClass("hide");
-				$(".box-giftproduct_mobile").addClass("lockproduct");
 				$(".giftselection").removeClass("hide");
 				$(".mobile_gift_pro_info").addClass("hide");
 				$(".freeTurkey").addClass("show");
@@ -760,15 +759,20 @@ $(document).ready(function() {
 						// $(".freeTurkey").find(".imageforcart img").attr("src",$allproductSrc);
 					}
 				});
+				$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
+				$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
+				$(".box-giftproduct_mobile").removeClass("lockproduct");
 			}
 		}else{
 			$(".box-giftproduct").removeClass("show");
 			$(".product-variant-select").removeClass("show");
 			$(".btnlocked").removeClass("hide");
-			$(".box-giftproduct_mobile").removeClass("lockproduct");
 			$(".giftselection").addClass("hide");
 			$(".mobile_gift_pro_info").removeClass("hide");
 			$(".freeTurkey").removeClass("show");
+			$(".box-giftproduct_mobile .product-item__badges").text("LOCKED");
+			$(".box-giftproduct_mobile .product-item__badges").removeClass("width_100");
+			$(".box-giftproduct_mobile").addClass("lockproduct");
 		}
 		console.log($remain_amount + "....remain_amount");
 		console.log($getproductPrices + "...getproductPrices");
@@ -776,7 +780,6 @@ $(document).ready(function() {
         var $getproductPrices = Math.round($getproductPrices * 100) / 100;
         var $getremain_amount = Math.round($getremainAmount * 100) / 100;
 		
-      console.log($getproductPrices + ".....getproductPrices");
 		$continue_arrow = '';
 		if($getproductPrices == 0){
 			var $getproductPrices = $getproductPrices;          
@@ -786,12 +789,8 @@ $(document).ready(function() {
 			var $getproductPrices = $getproductPrices.toFixed(2);  
 			var discountAmount =  $getproductPrices * 0.25;
 			var discount_subscribe = $getproductPrices - discountAmount;
-
-			console.log($getproductPrices);
-			console.log( discount_subscribe + ".....discount_subscribe");
 			var originalString_onetime = $(".subscription_mobile_container .subscribename.onetimeOption").text();
 			var originalString_subscribe = $(".subscription_mobile_container .subscribename.subscriptionOption").text();
-			console.log(originalString_subscribe);
 			var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
 			var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
 			var updatedString_subscribe_1 = originalString_subscribe.replace(dollarAmountRegex, "");
@@ -803,7 +802,7 @@ $(document).ready(function() {
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
-
+		console.log($remain_amount + "....remain_amount");
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
@@ -829,8 +828,7 @@ $(document).ready(function() {
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ,.MobileAddCart").addClass("bg-green");
-			$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
-			$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
+		
 		} else {
 			console.log("else gify product");
 			$(".addToCart").attr("disabled", "disabled");
@@ -848,8 +846,7 @@ $(document).ready(function() {
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn,.MobileAddCart ").removeClass("bg-green");
-			$(".box-giftproduct_mobile .product-item__badges").text("LOCKED");
-			$(".box-giftproduct_mobile .product-item__badges").removeClass("width_100");
+		
 		}
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
