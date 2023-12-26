@@ -567,10 +567,11 @@ $(document).ready(function() {
 			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/PRODUCTS_3x_f154f6cd-a7db-445f-8af4-494a00bde15f.png?v=1703329801';
 			var productBadge = "FREE";
 			bgcolor ="bg_green";
+			var free_pro_title = "Free Order Gift";
 		}
 
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-		var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
+		// var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
 		$(".subcarttitle").css("font-size","14px");
 		$('.subscriptionOption span').text('Save 25% on your first order');
 		promo_class = 'promo-product';
@@ -745,7 +746,7 @@ $(document).ready(function() {
 				$(".box-giftproduct").addClass("show");
 				$(".product-variant-select").addClass("show");
 				$(".btnlocked").addClass("hide");
-				$(".box-giftproduct_mobile").removeClass("lockproduct");
+				$(".box-giftproduct_mobile").addClass("lockproduct");
 				$(".giftselection").removeClass("hide");
 				$(".mobile_gift_pro_info").addClass("hide");
 				$(".freeTurkey").addClass("show");
@@ -763,7 +764,7 @@ $(document).ready(function() {
 			$(".box-giftproduct").removeClass("show");
 			$(".product-variant-select").removeClass("show");
 			$(".btnlocked").removeClass("hide");
-			$(".box-giftproduct_mobile").addClass("lockproduct");
+			$(".box-giftproduct_mobile").removeClass("lockproduct");
 			$(".giftselection").addClass("hide");
 			$(".mobile_gift_pro_info").removeClass("hide");
 			$(".freeTurkey").removeClass("show");
@@ -774,20 +775,33 @@ $(document).ready(function() {
         var $getproductPrices = Math.round($getproductPrices * 100) / 100;
         var $getremain_amount = Math.round($getremainAmount * 100) / 100;
 		
-        if($getproductPrices == 0){
+      console.log($getproductPrices + ".....getproductPrices");
+		$continue_arrow = '';
+		if($getproductPrices == 0){
 			var $getproductPrices = $getproductPrices;          
-			var $finalremainamount = $getremain_amount;                    
-        }
-        else{
+			var $finalremainamount = $getremain_amount;   
+			var discount_subscribe = 0.00;                 
+        }else{
 			var $getproductPrices = $getproductPrices.toFixed(2);  
 			var discountAmount =  $getproductPrices * 0.25;
-                  
-			console.log($getproductPrices + "...getproductPrices");
-			// $(".subscription_mobile_container .subscribename.onetimeOption").prepend("$"+$getproductPrices);
+			var discount_subscribe = $getproductPrices - discountAmount;
+
+			console.log($getproductPrices);
+			console.log( discount_subscribe + ".....discount_subscribe");
+			var originalString_onetime = $(".subscription_mobile_container .subscribename.onetimeOption").text();
+			var originalString_subscribe = $(".subscription_mobile_container .subscribename.subscriptionOption").text();
+			console.log(originalString_subscribe);
+			var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
+			var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
+			var updatedString_subscribe = originalString_subscribe.replace(dollarAmountRegex, "");
+
+			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
+			$PriceHtml = "<p> $"+ $getproductPrices + "</p>  &nbsp;"; 
+			$(".subscription_mobile_container .subscribename.subscriptionOption").html($PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe);
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
-		$continue_arrow = '';
+
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
@@ -798,6 +812,9 @@ $(document).ready(function() {
 			$(".MobileAddCart").prop('disabled', false);
 			$(".MobileAddCart").css("cursor", "pointer");
 			$(".MobileAddCart").addClass("up90");
+			if($reachargevalue != "one time"){
+				$getproductPrices = discount_subscribe.toFixed(2);
+			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices );
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90").addClass("bg-green");
 			$getTotalPrice = parseInt($getproductPrices);
@@ -810,6 +827,8 @@ $(document).ready(function() {
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ,.MobileAddCart").addClass("bg-green");
+			$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
+			$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
 		} else {
 			console.log("else gify product");
 			$(".addToCart").attr("disabled", "disabled");
@@ -819,15 +838,21 @@ $(document).ready(function() {
 			$(".MobileAddCart").attr("disabled", "disabled");
 			$(".MobileAddCart").css("cursor", "not-allowed");
 			$(".MobileAddCart").removeClass("up90");
+			if($reachargevalue != "one time"){
+				$getproductPrices = discount_subscribe.toFixed(2);
+			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +"(Add $75 to Unlock)");
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn,.MobileAddCart ").removeClass("bg-green");
+			$(".box-giftproduct_mobile .product-item__badges").text("LOCKED");
+			$(".box-giftproduct_mobile .product-item__badges").removeClass("width_100");
 		}
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
         }
+		
 
         //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
         $(".stickyAddtocart").find("span").html($remain_amount +"($" + $getproductPrices + ")"+ $continue_arrow);
