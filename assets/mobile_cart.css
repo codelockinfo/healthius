@@ -14,6 +14,7 @@
         --color-gray_1:#0000006E;
         --color-gray_2:#919191;
         --color-gray_4:#F4F4F4;
+        --color-gray_5:#E7EAE5;
         --color-black:#000000;
         --color-white-1:#EAEAEA;
         --color-white-2: #EEEDED;
@@ -247,6 +248,7 @@
         margin: 0 auto;
         background: var(--color-gray);
         color: var(--color-white);
+        text-transform: uppercase;
     }
     .save_label.active{
         background: var(--color-green);
@@ -276,10 +278,14 @@
         background:var(--color-gray_4);
         border-radius: 15px;
     }
-    .subscriptionlabel .select_frequency_text_container .frequency_text{
+    .subscriptionlabel.active .select_frequency_text_container,.subscription_mobile_container .subscriptionlabel.active .select_frequency_text_container .frequency_text{
+        background:var(--color-gray_5);
+    }
+    .subscription_mobile_container .subscriptionlabel .select_frequency_text_container .frequency_text{
         width: 100%;
         padding: 0 10px;
         background:var(--color-gray_4);
+        border-radius: 15px;
     }
     .select_frequency_text_container .frequency_text ul{
         display: grid;

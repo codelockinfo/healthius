@@ -562,6 +562,7 @@ $(document).ready(function() {
 		if ($(window).width() > 1024) {
 			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			var productBadge = "";
+			var free_pro_title = "";
 			bgcolor = "";
 		}else{
 			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/PRODUCTS_3x_f154f6cd-a7db-445f-8af4-494a00bde15f.png?v=1703329801';
@@ -793,10 +794,11 @@ $(document).ready(function() {
 			console.log(originalString_subscribe);
 			var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
 			var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
-			var updatedString_subscribe = originalString_subscribe.replace(dollarAmountRegex, "");
+			var updatedString_subscribe_1 = originalString_subscribe.replace(dollarAmountRegex, "");
+			var updatedString_subscribe = $.trim(updatedString_subscribe_1);
 
 			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
-			$PriceHtml = "<p> $"+ $getproductPrices + "</p>  &nbsp;"; 
+			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
 			$(".subscription_mobile_container .subscribename.subscriptionOption").html($PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe);
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
