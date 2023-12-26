@@ -781,6 +781,13 @@ $(document).ready(function() {
         var $getremain_amount = Math.round($getremainAmount * 100) / 100;
 		
 		$continue_arrow = '';
+		var originalString_onetime = $(".subscription_mobile_container .subscribename.onetimeOption").text();
+		var originalString_subscribe = $(".subscription_mobile_container .subscribename.subscriptionOption").text();
+		var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
+		var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
+		var updatedString_subscribe_1 = originalString_subscribe.replace(dollarAmountRegex, "");
+		var updatedString_subscribe = $.trim(updatedString_subscribe_1);
+
 		if($getproductPrices == 0){
 			var $getproductPrices = $getproductPrices;          
 			var $finalremainamount = $getremain_amount;   
@@ -789,12 +796,6 @@ $(document).ready(function() {
 			var $getproductPrices = $getproductPrices.toFixed(2);  
 			var discountAmount =  $getproductPrices * 0.25;
 			var discount_subscribe = $getproductPrices - discountAmount;
-			var originalString_onetime = $(".subscription_mobile_container .subscribename.onetimeOption").text();
-			var originalString_subscribe = $(".subscription_mobile_container .subscribename.subscriptionOption").text();
-			var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
-			var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
-			var updatedString_subscribe_1 = originalString_subscribe.replace(dollarAmountRegex, "");
-			var updatedString_subscribe = $.trim(updatedString_subscribe_1);
 
 			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
@@ -802,6 +803,7 @@ $(document).ready(function() {
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
+		console.log("$getproductPrices ......" +   $getproductPrices );
 		console.log($remain_amount + "....remain_amount");
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
@@ -828,7 +830,6 @@ $(document).ready(function() {
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn ,.MobileAddCart").addClass("bg-green");
-		
 		} else {
 			console.log("else gify product");
 			$(".addToCart").attr("disabled", "disabled");
@@ -842,6 +843,7 @@ $(document).ready(function() {
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +"(Add $75 to Unlock)");
+			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
