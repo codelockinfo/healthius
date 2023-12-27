@@ -561,7 +561,7 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		if ($(window).width() > 1024) {
+		if ($(window).width() > 700) {
 			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			var productBadge = "";
 			var free_pro_title = "";
