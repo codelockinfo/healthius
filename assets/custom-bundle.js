@@ -576,7 +576,7 @@ $(document).ready(function() {
 		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		// var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
 		$(".subcarttitle").css("font-size","14px");
-		$('.subscriptionOption span').text('Save 25% on your first order');
+		$('.saveText').text('Save 25% on your first order');
 		promo_class = 'promo-product';
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
@@ -588,7 +588,7 @@ $(document).ready(function() {
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
 				console.log("in if");
-				$('.subscriptionOption span').text('Save 50% on your first order');
+				$('.saveText').text('Save 50% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				// $('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
 				// $('.announcement').text('EXCLUSIVE SALE: 6 FREE HOLIDAY MEATS');
