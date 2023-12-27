@@ -228,7 +228,7 @@
                                       {% assign variant_metafield_image = '' %}
                                       {% if variant.metafields.custom.mobile_cart_drawer_image %}
                                         {% assign variant_metafield_image = variant.metafields.custom.mobile_cart_drawer_image.value %}
-                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="{{ variant_metafield_image | img_url: '100X151' }}">
+                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="{{ variant_metafield_image |  img_url: 'medium' }}">
                                           {{ variant.title }}
                                         </option>
                                       {% else %}
