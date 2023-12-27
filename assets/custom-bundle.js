@@ -228,12 +228,9 @@ $(document).ready(function() {
 		$var_id = $(this).closest(".productsimage").data("variant");
 		$variantQtyMinus = $(this).closest(".productQty").find(".product-quantity__selector").val();
 		$summeryindex = $(this).closest(".container-box").attr('data-summery-index');
-		console.log($variantQtyMinus);
 
 		for (var i = 0; i < itemArray.length; i++) {
 			if ($.trim($var_id) == itemArray[i].trim()) {
-				console.log(itemQtyArray[i].trim());
-				console.log("=============");
 				if (itemQtyArray[i].trim() == $variantQtyMinus) {
 					itemArray.splice(i, 1);
 					itemQtyArray.splice(i, 1);
@@ -587,7 +584,6 @@ $(document).ready(function() {
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-				console.log("in if");
 				$('.saveText').text('Save 50% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				// $('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
@@ -744,7 +740,7 @@ $(document).ready(function() {
 		// don't remove this comment
 		$remain_amount = inputtotalrange - $getproductPrices;
 		var $getremainAmount = Math.round($remain_amount * 100) / 100;
-		if(inputtotalrangemax < $getproductPrices){
+		if(inputtotalrangemax <= $getproductPrices){
 			if (!$(".productsimage").hasClass("giftProduct")) {
 				$(".box-giftproduct").addClass("show");
 				$(".product-variant-select").addClass("show");
@@ -766,7 +762,7 @@ $(document).ready(function() {
 				$(".box-giftproduct_mobile .product-item__badges").removeClass("bg_maroon");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");
 				$(".box-giftproduct_mobile .freeproductimg").removeClass("freeimgpadding");
-			
+				$(".for_mobile_range .range-labels li.label130").addClass("bg-green");
 				$giftVariantImage = $.trim($(".box-giftproduct_mobile .productSelect").find(":selected").data("src"));
 				$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
 			}
@@ -782,6 +778,7 @@ $(document).ready(function() {
 			$(".box-giftproduct_mobile .product-item__badges").addClass("bg_maroon");
 			$(".box-giftproduct_mobile").addClass("lockproduct");
 			$(".box-giftproduct_mobile .freeproductimg").addClass("freeimgpadding");
+			$(".for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".box-giftproduct_mobile .freeproductimg").attr("src","https://healthius-store.myshopify.com/cdn/shop/products/free-meat-unlocked-at-125-536967_medium.png?v=1697484259");
 
 		}
@@ -814,8 +811,6 @@ $(document).ready(function() {
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
-		console.log("$getproductPrices ......" +   $getproductPrices );
-		console.log($remain_amount + "....remain_amount");
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
@@ -831,12 +826,6 @@ $(document).ready(function() {
 			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices );
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90").addClass("bg-green");
-			$getTotalPrice = parseInt($getproductPrices);
-			if(inputtotalrangemax < $getTotalPrice){
-				$(".for_mobile_range .range-labels li.label130").addClass("bg-green");
-			}else{
-				$(".for_mobile_range .range-labels li.label130").removeClass("bg-green");
-			}
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_2_1.png?v=1702057302");
 			$remain_amount = "Continue to Checkout ";
 			$continue_arrow = '&nbsp;&nbsp;&nbsp;&nbsp;<svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 m-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
@@ -855,7 +844,7 @@ $(document).ready(function() {
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}
 			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +" (Add $75 to Unlock)");
-			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
+			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
 			$(".stickycart .add-to-cart, .stickycart .stickycartbtn,.MobileAddCart ").removeClass("bg-green");
