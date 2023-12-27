@@ -218,7 +218,7 @@
                             <div class="product-item card container-box">
                               {% assign  productgift = section.settings.product_list  %}
                               <div class="imageforcart"> 
-                                <img src="{{ productgift.featured_media | img_url: 'medium' }}" alt="{{ productgift.featured_media.title }}" />
+                                <img class="freeproductimg" src="{{ productgift.featured_media | img_url: 'medium' }}" alt="{{ productgift.featured_media.title }}" />
                               </div>
                               <div>
                                 <div class="mobile_gift_pro_info">{{ productgift.title }}</div>
@@ -242,7 +242,7 @@
                                   </select>
                                 </div>
                               </div>
-                              <div class="product-item__badges text-size--xsmall bg_maroon">LOCKED</div>
+                              <div class="product-item__badges text-size--xsmall">LOCKED</div>
                             </div>
                           </div> 
                         {% endif %}
