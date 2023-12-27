@@ -1,15 +1,19 @@
-.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range,.for_mobile_flex{
+.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range{
     display: none;
 }
-.for_desktop_flex{
-    display: flex;
-}
+
 .for_desktop_range{
     display: block;
 }
 @media screen and (max-width: 1024px){
     .product-container{
         height: 530px;
+    }
+    .for_mobile_flex{
+        display: none;
+    }
+    .for_desktop_flex{
+        display: flex;
     }
 }
 @media screen and (max-width: 700px){
