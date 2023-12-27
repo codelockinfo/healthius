@@ -170,13 +170,16 @@
     .box-summary .product-quantity{
         background: var(--color-green);
     }
+    .box-summary .product-quantity  .visually-hidden{
+        width: 1.5px;
+    }
     .box-summary .product-quantity__minus, .box-summary .product-quantity__plus{
         background:var(--color-green);
         color: var(--color-white);
         border-color: var(--color-green);
         height: 2rem;
         border-radius: unset;
-        width: 2rem;
+        width: 2.2rem;
     }
     .box-summary .product-quantity__minus{
         border-bottom-left-radius: 10px;
