@@ -22,7 +22,17 @@
         "deliveryin15days": "",
         "deliveryin30days": "",
         "seo_h_tag": "h2",
-        "remove_margin": false
+        "remove_margin": false,
+        "mob_frequency_select_label1": "15 Days",
+        "mob_frequency_select_label2": "30 Days",
+        "mob_frequency_select_label3": "",
+        "mob_frequency_select_text": "Select Frequency",
+        "mob_frequency_select_id1": "689131815193",
+        "mob_frequency_select_id2": "689131847961",
+        "mob_frequency_select_id3": "",
+        "mob_widgetlabel1": "Subscribe & Save",
+        "mob_widgetlabel2": "One Time",
+        "mob_widgetext1": "Save 25% on your first order"
       }
     },
     "16931505586e383317": {
@@ -166,7 +176,15 @@
         "remove_margin": false,
         "seo_h_tag": "h2",
         "minprice": "$75",
-        "maxprice": "$125"
+        "maxprice": "$125",
+        "frequency_select_label1": "Every 15 days",
+        "frequency_select_label2": "Every 30 days",
+        "frequency_select_text": "Select Frequency",
+        "frequency_select_id1": "689131815193",
+        "frequency_select_id2": "689131847961",
+        "widgetlabel1": "Subscribe & Save",
+        "widgetlabel2": "One Time",
+        "widgetext1": "Save 25% on your first order"
       }
     },
     "1693439542cff73aec": {
