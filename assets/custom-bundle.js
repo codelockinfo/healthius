@@ -792,8 +792,8 @@ $(document).ready(function() {
         var $getremain_amount = Math.round($getremainAmount * 100) / 100;
 		
 		$continue_arrow = '';
-		var originalString_onetime = $(".subscription_mobile_container .subscribename.onetimeOption").text();
-		var originalString_subscribe = $(".subscription_mobile_container .subscribename.subscriptionOption").text();
+		var originalString_onetime = $(".subscribeMobileContainer .subscribename.onetimeOption").text();
+		var originalString_subscribe = $(".subscribeMobileContainer .subscribename.subscriptionOption").text();
 		var dollarAmountRegex = /\$\d+(\.\d{2})?/g;
 		var updatedString_onetime = originalString_onetime.replace(dollarAmountRegex, "");
 		var updatedString_subscribe_1 = originalString_subscribe.replace(dollarAmountRegex, "");
@@ -808,9 +808,9 @@ $(document).ready(function() {
 			var discountAmount =  $getproductPrices * 0.25;
 			var discount_subscribe = $getproductPrices - discountAmount;
 
-			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
+			$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
-			$(".subscription_mobile_container .subscribename.subscriptionOption").html($PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe);
+			$(".subscribeMobileContainer .subscribename.subscriptionOption").html($PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe);
 
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
@@ -850,7 +850,7 @@ $(document).ready(function() {
 			$(".MobileAddCart").attr("disabled", "disabled");
 			$(".MobileAddCart").css("cursor", "not-allowed");
 			$(".MobileAddCart").removeClass("up90");
-			$(".subscription_mobile_container .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
+			$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			if($reachargevalue != "one time"){
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}

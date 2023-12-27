@@ -482,6 +482,9 @@
     .box-summary .product-item__badges.bg_maroon{
        background: var(--color-maroon);
    }
+   .box-summary .product-item__badges.bg-green{
+        background: var(--color-green);
+    }
   /* NEW Figma */
     .for_desktop,.section-heading__title,.frequentlyflex{
         display: none;
@@ -496,8 +499,9 @@
         font-size: 20px;
         font-weight: 600;
     }
+    .mount-announcement-bar{
+        display: none;
+    }
   /* NEW Figma */
-    .box-summary .product-item__badges.bg-green{
-       background: var(--color-green);
-   }
+  
 }
