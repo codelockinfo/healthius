@@ -1,10 +1,21 @@
 .mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range,.for_mobile{
     display: none;
 }
-.for_desktop_range,.for_desktop{
+.for_desktop_range,.for_desktop_range,.for_desktop{
     display: block;
 }
 @media screen and (max-width: 1024px){
+    .product-container{
+        height: 530px;
+    }
+    .for_mobile_flex{
+        display: none;
+    }
+    .for_desktop_flex{
+        display: flex;
+    }
+}
+@media screen and (max-width: 700px){
     :root{
         --color-maroon: #862E1B;
         --color-green: #425B34;
@@ -51,6 +62,12 @@
     }
     .for_mobile_range{
         display: block;
+    }
+    .carttoplabel.for_mobile_flex{
+        display: flex;
+    }
+    .carttoplabel.for_desktop_flex{
+        display: none;
     }
     .for_mobile_range .range-labels li{
         left: 18%;
@@ -137,8 +154,10 @@
         flex-wrap: wrap;
         /* overflow-y: hidden;
         overflow-x: auto; */
-        height: 42%;
+        /* height: 42%; */
+        height: 55%;
         padding: 5px;
+        padding-bottom: 90px;
     }
     .box-summary .product-item,.box-summary .flexdirrow{
         flex-direction: column;
@@ -151,9 +170,15 @@
         box-shadow: 0px -3px 15px -5px #333;
         z-index: 999;
         position: relative;
+        position: fixed;
+        bottom: 0;
+    }
+    .cartcolumn .box-header{
+        top: 0;
     }
     .product-container{
-        height: 520px;
+        /* height: 520px; */
+        height: 100%;
         border: unset;
     }
     .box-summary {
@@ -163,13 +188,16 @@
     .box-summary .product-quantity{
         background: var(--color-green);
     }
+    .box-summary .bottom_product_container{
+        width: 100%;
+    }
     .box-summary .product-quantity__minus, .box-summary .product-quantity__plus{
         background:var(--color-green);
         color: var(--color-white);
         border-color: var(--color-green);
         height: 2rem;
         border-radius: unset;
-        width: 2rem;
+        width: 33.3%;
     }
     .box-summary .product-quantity__minus{
         border-bottom-left-radius: 10px;
@@ -189,6 +217,7 @@
         background:var(--color-off-white);
         height: 2rem;
         margin: 0;
+        width: 33.3%;
     }
     .product__cart-functions,.product-container .box-giftproduct,.labelretunshop,.cartfontcontainer,.box-summary::-webkit-scrollbar{
         display: none;
@@ -394,11 +423,11 @@
         transition: all 0.1s ease 0.05s;
    }
    .box-summary .productsimage img, .cartgiftproduct img, .box-summary .freeTurkey img,.box-summary .freeTurkey .promo-product img,.box-giftproduct_mobile img,.box-giftproduct_mobile{
-        width: 100px;
+        width: 100%;
    }
    .box-giftproduct_mobile img{
-        padding-top: 33px;
-        padding-bottom: 33px;
+        /* padding-top: 33px;
+        padding-bottom: 33px; */
    }
    .box-summary .freeTurkey .promo-product .flexdirrow .product-item__price{
     display: none;
@@ -419,6 +448,7 @@
    }
    .box-summary .freeTurkey .variant-title{
        font-size: 11px;
+       font-weight: 500;
    }
   .box-summary .box-giftproduct_mobile,
   .box-summary .freeTurkey,

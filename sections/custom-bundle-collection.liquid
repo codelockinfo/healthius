@@ -96,11 +96,13 @@
         <div class="cartcolumn">
           <div class="box-header">
             {%- unless section.settings.subtext2 == blank -%}
-              <div class="carttoplabel">
-                {% comment %} <div class="cartarrow containerCircle"><svg class="cartsvgarrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg></div>
-                <span class="section-heading__subheading text-size--large">{{ section.settings.subtext2 }}</span> {% endcomment %}
-                <span class="section-heading__subheading text-size--large">Add $75 to Unlock Order</span>
-                <div class="cartarrow containerCircle">Hide Cart</div>
+              <div class="carttoplabel for_desktop_flex">
+                  <div class="cartarrow containerCircle"><svg class="cartsvgarrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg></div>
+                  <span class="section-heading__subheading text-size--large">{{ section.settings.subtext2 }}</span> 
+                </div>
+                <div class="carttoplabel for_mobile_flex">
+                  <span class="section-heading__subheading text-size--large">Add $75 to Unlock Order</span>
+                  <div class="cartarrow containerCircle">Hide Cart</div>
               </div>
            
             {%- endunless -%}
@@ -225,12 +227,17 @@
                                   <select name="id" data-vid="{{ current_variant.id }}"  id="Variants-{{ section.id }}" class="product-variant-select productSelect" {% if productgift.has_only_default_variant %} style="display:none!important" {% endif %}
                                     form="{{ product_form_id }}" >
                                     {%- for variant in productgift.variants -%}
-                                      <option class="product-variant-value"
-                                        {% if variant == current_variant %}selected="selected"{% endif %}
-                                        {% if variant.available == false %}disabled{% endif %}
-                                        value="{{ variant.id }}" >
-                                        {{ variant.title }}
-                                      </option>
+                                      {% assign variant_metafield_image = '' %}
+                                      {% if variant.metafields.custom.mobile_cart_drawer_image %}
+                                        {% assign variant_metafield_image = variant.metafields.custom.mobile_cart_drawer_image.value %}
+                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="{{ variant_metafield_image |  img_url: 'medium' }}">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% else %}
+                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% endif %}
                                     {%- endfor -%}
                                   </select>
                                 </div>

@@ -13,6 +13,9 @@
     {% continue %}
   {%- endif -%}
   {% assign concatenated_tags = product.tags | join: ',' %}
+  {% if product.metafields.custom.cart_drawer_img.value %}
+    {%  assign product_metafiled_image = product.metafields.custom.cart_drawer_img.value %} 
+  {% endif %}
   <div
     class="productsimage"
     data-tags="{{ concatenated_tags }}"
@@ -85,7 +88,8 @@
     -%}
       </div>
       <div class="imageforcart">
-        <img src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}" />
+        <img class="for_desktop_range" src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}" />
+        <img class="for_mobile_range" src="{{ product_metafiled_image | img_url: 'medium' }}" alt="{{ product.featured_media.title }}"  />
       </div>
 
       <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}">
@@ -241,7 +245,7 @@
             {%- endcase %}
           {%- endfor -%}
         </div>
-        <div>
+        <div class="bottom_product_container">
           {%- for block in section_blocks -%}
             {%- case block.type %}
               {%- when 'add_button' -%}

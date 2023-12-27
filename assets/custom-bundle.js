@@ -254,7 +254,9 @@ $(document).ready(function() {
 		$giftVariantid = $(this).find(":selected").val();
 		setCookie("giftvariantid", $giftVariantid);
 		$giftVariantTitle = $.trim($(this).find(":selected").html());
+		$giftVariantImage = $.trim($(this).find(":selected").data("src"));
 		$(this).attr("data-vid", $giftVariantid);
+		$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
 
 		$("#filtered-products .productsimage").each( function( i ) {
 			$productTitle = $(this).find(".variant-title").html();
@@ -559,7 +561,7 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		if ($(window).width() > 1024) {
+		if ($(window).width() > 700) {
 			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			var productBadge = "";
 			var free_pro_title = "";
@@ -762,6 +764,9 @@ $(document).ready(function() {
 				$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
 				$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");
+			
+				$giftVariantImage = $.trim($(".box-giftproduct_mobile .productSelect").find(":selected").data("src"));
+				$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
 			}
 		}else{
 			$(".box-giftproduct").removeClass("show");
