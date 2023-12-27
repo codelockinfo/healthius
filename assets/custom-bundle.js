@@ -254,7 +254,9 @@ $(document).ready(function() {
 		$giftVariantid = $(this).find(":selected").val();
 		setCookie("giftvariantid", $giftVariantid);
 		$giftVariantTitle = $.trim($(this).find(":selected").html());
+		$giftVariantImage = $.trim($(this).find(":selected").data("src"));
 		$(this).attr("data-vid", $giftVariantid);
+		$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
 
 		$("#filtered-products .productsimage").each( function( i ) {
 			$productTitle = $(this).find(".variant-title").html();

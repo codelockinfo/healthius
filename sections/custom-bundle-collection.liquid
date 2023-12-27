@@ -225,12 +225,17 @@
                                   <select name="id" data-vid="{{ current_variant.id }}"  id="Variants-{{ section.id }}" class="product-variant-select productSelect" {% if productgift.has_only_default_variant %} style="display:none!important" {% endif %}
                                     form="{{ product_form_id }}" >
                                     {%- for variant in productgift.variants -%}
-                                      <option class="product-variant-value"
-                                        {% if variant == current_variant %}selected="selected"{% endif %}
-                                        {% if variant.available == false %}disabled{% endif %}
-                                        value="{{ variant.id }}" >
-                                        {{ variant.title }}
-                                      </option>
+                                      {% assign variant_metafield_image = '' %}
+                                      {% if variant.metafields.custom.mobile_cart_drawer_image %}
+                                        {% assign variant_metafield_image = variant.metafields.custom.mobile_cart_drawer_image.value %}
+                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="{{ variant_metafield_image | img_url}}">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% else %}
+                                        <option class="product-variant-value" {% if variant == current_variant %}selected="selected"{% endif %} {% if variant.available == false %}disabled{% endif %} value="{{ variant.id }}" data-src="">
+                                          {{ variant.title }}
+                                        </option>
+                                      {% endif %}
                                     {%- endfor -%}
                                   </select>
                                 </div>
