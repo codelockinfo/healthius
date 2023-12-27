@@ -511,6 +511,14 @@
     #main.backimage .shopify-section.subscription-widget .container--vertical-space{
         margin-top: 0;
     }
+    .textfilter{
+        margin: 0 auto;
+        font-size: 14px;
+        color: var(--color-black);
+    }
+    .display_mobile .selected-btn-color{
+        background-image: none;
+    }
   /* NEW Figma */
   
 }
