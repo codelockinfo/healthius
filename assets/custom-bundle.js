@@ -686,6 +686,8 @@ $(document).ready(function() {
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
 				$( "input[name='selling_plan']").val($subscriptionvalue);
+				$(".frequncy_select_btn").removeClass("active");
+				$(".frequncy_select_btn[data-value='"+ $subscriptionvalue +"']").addClass("active");
 			}
 		}
 		$.each($(".subscriptionlabel"), function(index) {
@@ -933,7 +935,7 @@ $(document).ready(function() {
 	$(document).on("click",".frequncy_select_btn ",function(event){
 		$(".frequncy_select_btn").removeClass("active");
 		$(this).addClass("active");
-		$frequency_val = $(this).val();
+		$frequency_val = $(this).attr("data-value");
 		setCookie("subscriptionvalue",$frequency_val);
 		$( "input[name='selling_plan']").val($frequency_val);
 	});
