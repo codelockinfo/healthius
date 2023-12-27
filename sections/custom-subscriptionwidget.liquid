@@ -1,7 +1,7 @@
 <div class="container--large {% unless section.settings.remove_margin %} container--vertical-space {% endunless %} {% if section.settings.section_background_color != "rgba(0,0,0,0)" %} container--has-background {% endif %} remove-empty-space">
   {%- render 'section-heading', heading: section.settings.heading, subheading: section.settings.subheading, heading_tag: section.settings.seo_h_tag, layout: section.settings.section_heading_layout -%}
   <div>
-    <div class="displayflex-subscription newcustomfilter for_desktop">
+    <div class="displayflex-subscription newcustomfilter desktop_flex">
       <div class="frequentlyflex">
         <div class="seconfsection">
           <span class="seconfsectiontext">1</span>
@@ -60,23 +60,20 @@
         {% endif %}
       </div>
     </div>
-    <div class="displayflex-subscription newcustomfilter for_mobile subscription_mobile_container">
+    <div class="displayflex-subscription newcustomfilter mobile_flex subscription_mobile_container">
       <div class="subscriptwidth">
-          {% if section.settings.widgetlabel1 != blank %}
-                {% if section.settings.widgetext1 != blank %} <span class="save_label active">{{ section.settings.widgetext1 }}</span>{% endif %}
-              <div class="subscriptionlabel active" data-value="{{ section.settings.widgetlabel1 | downcase }}">
+          {% if section.settings.mob_widgetlabel1 != blank %}
+                {% if section.settings.mob_widgetext1 != blank %} <span class="save_label active saveText">{{ section.settings.mob_widgetext1 }}</span>{% endif %}
+              <div class="subscriptionlabel active" data-value="{{ section.settings.mob_widgetlabel1 | downcase }}">
               <div class="subscribename subscriptionOption">
-                  <p></p>{{ section.settings.widgetlabel1 }}
+                  <p></p>{{ section.settings.mob_widgetlabel1 }}
               </div>
-              {% comment %} <select class="frequency_select">
-              <option value="{%- if section.settings.frequency_select_id1  != blank -%} {{- section.settings.frequency_select_id1 -}} {%- endif -%}">{% if section.settings.frequency_select_label1  != blank %} {{ section.settings.frequency_select_label1 }} {% endif %}</option>
-              <option value="{%- if section.settings.frequency_select_id2  != blank -%} {{- section.settings.frequency_select_id2 -}} {%- endif -%}">{% if section.settings.frequency_select_label2  != blank %} {{ section.settings.frequency_select_label2 }} {% endif %}</option>
-              </select> {% endcomment %}
               <div class="select_frequency_text_container">
                   <div class="select_frequency_container">
-                      <div class="select_freqncy_label">{{ section.settings.frequency_select_text }}</div>
-                      {% if section.settings.frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" value=" {{ section.settings.frequency_select_id1 }}">{{ section.settings.frequency_select_label1 }} </div> {% endif %}
-                      {% if section.settings.frequency_select_label2  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.frequency_select_id2 }}">{{ section.settings.frequency_select_label2 }} </div> {% endif %}
+                      <div class="select_freqncy_label">{{ section.settings.mob_frequency_select_text }}</div>
+                      {% if section.settings.mob_frequency_select_label3  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.mob_frequency_select_id3 }}">{{ section.settings.mob_frequency_select_label3 }} </div> {% endif %}
+                      {% if section.settings.mob_frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" value=" {{ section.settings.mob_frequency_select_id1 }}">{{ section.settings.mob_frequency_select_label1 }} </div> {% endif %}
+                      {% if section.settings.mob_frequency_select_label2  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.mob_frequency_select_id2 }}">{{ section.settings.mob_frequency_select_label2 }} </div> {% endif %}
                   </div>
                   <div class="disflex justify-between frequency_text">
                       <div class="distext">
@@ -91,24 +88,10 @@
               </div>
               </div>
           {% endif  %}
-          <div class="main-part">
-            <div class="image-icon">
-              <img src="https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Premium_Shipping_3x_c1d559c1-2656-4092-9e97-5650933183fe.png?v=1703319421"/></div>
-            <div class="text-sector">
-              <div class="text-part"> Shipping Protection</div>
-              <p>Protect your order against melting, theft, loss, and damage</p>
-            </div>
-            <div class="price-sign">
-              <div class="dollar">$1.95</div>
-              <div class="icon-btn">
-                <input type="checkbox" value="1" class="switch-icons" checked>
-              </div>
-            </div>
-          </div>
-          {% if section.settings.widgetlabel2 != blank %}
-              <div class="subscriptionlabel sub-align" data-value="{{ section.settings.widgetlabel2 | downcase }}">
+          {% if section.settings.mob_widgetlabel2 != blank %}
+              <div class="subscriptionlabel sub-align" data-value="{{ section.settings.mob_widgetlabel2 | downcase }}">
               <div class="subscribename onetimeOption">
-                  {{ section.settings.widgetlabel2 }}
+                  {{ section.settings.mob_widgetlabel2 }}
               </div>
               </div>
           {% endif %}
@@ -272,7 +255,67 @@
         "id": "remove_margin",
         "label": "t:sections.local-extra-words.sections.rich-text.settings.remove_margin.label",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Mobile Subscription Widget Settings"
+      },
+      {
+        "type": "text",
+        "id": "mob_frequency_select_label1",
+        "label": "Frequency select label first",
+        "default": "15 Days"
+      },
+      {
+        "type": "text",
+        "id": "mob_frequency_select_label2",
+        "label": "Frequency select label second",
+        "default": "30 Days"
+      }, 
+      {
+        "type": "text",
+        "id": "mob_frequency_select_label3",
+        "label": "Frequency select label third",
+        "default": "7 Days"
+      }, 
+      {
+        "type": "text",
+        "id": "mob_frequency_select_text",
+        "label": "Frequency select label",
+        "default": "Select Frequency"
+      },
+      {
+        "type": "text",
+        "id": "mob_frequency_select_id1",
+        "label": "Frequency select ID first",
+        "default": "689131815193"
+      },
+      {
+        "type": "text",
+        "id": "mob_frequency_select_id2",
+        "label": "Frequency select ID second",
+        "default": "689131847961"
+      }, {
+        "type": "text",
+        "id": "mob_frequency_select_id3",
+        "label": "Frequency select ID third"
+      }, {
+        "type": "text",
+        "id": "mob_widgetlabel1",
+        "label": "Label",
+        "default": "Subscribe & Save"
+      }, {
+        "type": "text",
+        "id": "mob_widgetlabel2",
+        "label": "Label",
+        "default": "One Time"
+      }, {
+        "type": "text",
+        "id": "mob_widgetext1",
+        "label": "Text1",
+        "default": "Save 25% on your first order "
       }
+
     ],
     "presets": [
       {

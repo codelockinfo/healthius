@@ -1,8 +1,11 @@
-.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range,.for_mobile{
+.mobile_cart_botoom_container,.box-giftproduct_mobile,.for_mobile_range,.for_mobile,.mobile_flex{
     display: none;
 }
 .for_desktop_range,.for_desktop_range,.for_desktop{
     display: block;
+}
+.desktop_flex{
+    display: flex;
 }
 @media screen and (max-width: 1024px){
     .product-container{
@@ -63,10 +66,10 @@
     .for_mobile_range{
         display: block;
     }
-    .carttoplabel.for_mobile_flex{
+    .carttoplabel.for_mobile_flex,.mobile_flex{
         display: flex;
     }
-    .carttoplabel.for_desktop_flex{
+    .carttoplabel.for_desktop_flex,.desktop_flex{
         display: none;
     }
     .for_mobile_range .range-labels li{
@@ -346,6 +349,9 @@
         border-color:  var(--color-gray);
         color: var(--color-white);
     }
+    .subscriptionlabel.active .frequncy_select_btn{
+        border-color:  var(--color-green);
+    }
     .subscriptionlabel.active .frequncy_select_btn.active{
         background: var(--color-green);
         border-color:  var(--color-green);
@@ -486,7 +492,7 @@
         background: var(--color-green);
     }
   /* NEW Figma */
-    .for_desktop,.section-heading__title,.frequentlyflex{
+    .for_desktop,.section-heading__title,.frequentlyflex,.productcontainerindex .bundleselectore_container .newcustomfilter,.buncleselectlabel,.overlaycustom{
         display: none;
     }
     .for_mobile{
@@ -501,6 +507,9 @@
     }
     .mount-announcement-bar{
         display: none;
+    }
+    #main.backimage .shopify-section.subscription-widget .container--vertical-space{
+        margin-top: 0;
     }
   /* NEW Figma */
   

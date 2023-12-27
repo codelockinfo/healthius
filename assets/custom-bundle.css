@@ -674,11 +674,12 @@
 .box-summary .cartfontcontainer{
     width: 65%;
 }
-.stickycart .add-to-cart, .stickycart .stickycartbtn{
-    background: #862E1B;
+.stickycart .add-to-cart, .stickycart .stickycartbtn{ 
+    background: #AAAAAA;
     color: #fff;
     border: none;
     padding: 0;
+    border-radius: 15px;
 }
 .totalPricepopup{
     width: 100%;
