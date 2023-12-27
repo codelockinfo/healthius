@@ -170,8 +170,8 @@
     .box-summary .product-quantity{
         background: var(--color-green);
     }
-    .box-summary .product-quantity  .visually-hidden{
-        width: 1.5px;
+    .box-summary .bottom_product_container{
+        width: 100%;
     }
     .box-summary .product-quantity__minus, .box-summary .product-quantity__plus{
         background:var(--color-green);
@@ -179,7 +179,7 @@
         border-color: var(--color-green);
         height: 2rem;
         border-radius: unset;
-        width: 2.2rem;
+        width: 33.3%;
     }
     .box-summary .product-quantity__minus{
         border-bottom-left-radius: 10px;
@@ -199,6 +199,7 @@
         background:var(--color-off-white);
         height: 2rem;
         margin: 0;
+        width: 33.3%;
     }
     .labelretunshop{
         display: none;
