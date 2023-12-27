@@ -761,8 +761,9 @@ $(document).ready(function() {
 						// $(".freeTurkey").find(".imageforcart img").attr("src",$allproductSrc);
 					}
 				});
-				$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
-				$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
+				$(".box-giftproduct_mobile .product-item__badges").text("Free");
+				$(".box-giftproduct_mobile .product-item__badges").addClass("bg-green");
+				$(".box-giftproduct_mobile .product-item__badges").removeClass("bg_maroon");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");
 				$(".box-giftproduct_mobile .freeproductimg").removeClass("freeimgpadding");
 			
@@ -777,7 +778,8 @@ $(document).ready(function() {
 			$(".mobile_gift_pro_info").removeClass("hide");
 			$(".freeTurkey").removeClass("show");
 			$(".box-giftproduct_mobile .product-item__badges").text("LOCKED");
-			$(".box-giftproduct_mobile .product-item__badges").removeClass("width_100");
+			$(".box-giftproduct_mobile .product-item__badges").removeClass("bg-green");
+			$(".box-giftproduct_mobile .product-item__badges").addClass("bg_maroon");
 			$(".box-giftproduct_mobile").addClass("lockproduct");
 			$(".box-giftproduct_mobile .freeproductimg").addClass("freeimgpadding");
 			$(".box-giftproduct_mobile .freeproductimg").attr("src","https://healthius-store.myshopify.com/cdn/shop/products/free-meat-unlocked-at-125-536967_medium.png?v=1697484259");

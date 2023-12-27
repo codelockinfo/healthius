@@ -493,5 +493,8 @@
     .box-summary .product-item__badges.bg_maroon{
        background: var(--color-maroon);
    }
+    .box-summary .product-item__badges.bg-green{
+       background: var(--color-green);
+   }
   
 }
