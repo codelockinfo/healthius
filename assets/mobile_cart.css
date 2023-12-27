@@ -407,8 +407,8 @@
         width: 100px;
    }
    .box-giftproduct_mobile img{
-        padding-top: 33px;
-        padding-bottom: 33px;
+        /* padding-top: 33px;
+        padding-bottom: 33px; */
    }
    .box-summary .freeTurkey .promo-product .flexdirrow .product-item__price{
     display: none;

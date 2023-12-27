@@ -764,6 +764,9 @@ $(document).ready(function() {
 				$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
 				$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");
+			
+				$giftVariantImage = $.trim($(".box-giftproduct_mobile .productSelect").find(":selected").data("src"));
+				$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
 			}
 		}else{
 			$(".box-giftproduct").removeClass("show");
