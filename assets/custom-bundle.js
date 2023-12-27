@@ -764,6 +764,7 @@ $(document).ready(function() {
 				$(".box-giftproduct_mobile .product-item__badges").text("Select Your Free Meat");
 				$(".box-giftproduct_mobile .product-item__badges").addClass("width_100");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");
+				$(".box-giftproduct_mobile .freeproductimg").removeClass("freeimgpadding");
 			
 				$giftVariantImage = $.trim($(".box-giftproduct_mobile .productSelect").find(":selected").data("src"));
 				$(".box-giftproduct_mobile").find(".imageforcart img").attr("src",$giftVariantImage);
@@ -778,6 +779,9 @@ $(document).ready(function() {
 			$(".box-giftproduct_mobile .product-item__badges").text("LOCKED");
 			$(".box-giftproduct_mobile .product-item__badges").removeClass("width_100");
 			$(".box-giftproduct_mobile").addClass("lockproduct");
+			$(".box-giftproduct_mobile .freeproductimg").addClass("freeimgpadding");
+			$(".box-giftproduct_mobile .freeproductimg").attr("src","https://healthius-store.myshopify.com/cdn/shop/products/free-meat-unlocked-at-125-536967_medium.png?v=1697484259");
+
 		}
 		console.log($remain_amount + "....remain_amount");
 		console.log($getproductPrices + "...getproductPrices");
@@ -848,7 +852,7 @@ $(document).ready(function() {
 			if($reachargevalue != "one time"){
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}
-			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +"(Add $75 to Unlock)");
+			$(".MobileAddCart").find("span").text("Checkout - $" + $getproductPrices +" (Add $75 to Unlock)");
 			$(".for_mobile_range .range-input input,.for_mobile_range .range-labels li.label90,.for_mobile_range .range-labels li.label130").removeClass("bg-green");
 			$(".sticky_svg_cart .StickyCartBtn").attr("src","https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_1_1.png?v=1702057156");
 			$remain_amount = "Add $"+ $finalremainamount + " to Unlock Cart ";
