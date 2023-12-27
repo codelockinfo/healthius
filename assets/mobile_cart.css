@@ -408,7 +408,7 @@
         transition: all 0.1s ease 0.05s;
    }
    .box-summary .productsimage img, .cartgiftproduct img, .box-summary .freeTurkey img,.box-summary .freeTurkey .promo-product img,.box-giftproduct_mobile img,.box-giftproduct_mobile{
-        width: 100px;
+        width: 100%;
    }
    .box-giftproduct_mobile img{
         /* padding-top: 33px;
