@@ -492,7 +492,7 @@
         background: var(--color-green);
     }
   /* NEW Figma */
-    .for_desktop,.section-heading__title,.frequentlyflex,.productcontainerindex .bundleselectore_container .newcustomfilter,.buncleselectlabel,.overlaycustom{
+  .mount-announcement-bar,.rc-widget,.remove-empty-space .custom-bundle-border,.sticky_svg_cart,.for_desktop,.section-heading__title,.frequentlyflex,.productcontainerindex .bundleselectore_container .newcustomfilter,.buncleselectlabel,.overlaycustom{
         display: none;
     }
     .for_mobile{
@@ -505,9 +505,6 @@
         font-size: 20px;
         font-weight: 600;
     }
-    .mount-announcement-bar{
-        display: none;
-    }
     #main.backimage .shopify-section.subscription-widget .container--vertical-space{
         margin-top: 0;
     }
@@ -518,6 +515,21 @@
     }
     .display_mobile .selected-btn-color{
         background-image: none;
+        border: 1.8px solid var(--color-green);
+        border-radius: 15px;
+        justify-content: center;
+    }
+  
+    .selected-btn-color.active .tablisting,.selected-btn-color.active {
+        background-image: none !important;
+        background: var(--color-green);
+        display: flex;
+    }
+    .tablisting {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-green);
+        font-weight: 700;
     }
   /* NEW Figma */
   

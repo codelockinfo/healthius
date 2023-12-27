@@ -71,9 +71,9 @@
               <div class="select_frequency_text_container">
                   <div class="select_frequency_container">
                       <div class="select_freqncy_label">{{ section.settings.mob_frequency_select_text }}</div>
-                      {% if section.settings.mob_frequency_select_label3  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.mob_frequency_select_id3 }}">{{ section.settings.mob_frequency_select_label3 }} </div> {% endif %}
-                      {% if section.settings.mob_frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" value=" {{ section.settings.mob_frequency_select_id1 }}">{{ section.settings.mob_frequency_select_label1 }} </div> {% endif %}
-                      {% if section.settings.mob_frequency_select_label2  != blank %} <div  class="frequncy_select_btn" value=" {{ section.settings.mob_frequency_select_id2 }}">{{ section.settings.mob_frequency_select_label2 }} </div> {% endif %}
+                      {% if section.settings.mob_frequency_select_label3  != blank %} <div  class="frequncy_select_btn" data-value="{{ section.settings.mob_frequency_select_id3 }}">{{ section.settings.mob_frequency_select_label3 }} </div> {% endif %}
+                      {% if section.settings.mob_frequency_select_label1  != blank %} <div  class="frequncy_select_btn active" data-value="{{ section.settings.mob_frequency_select_id1 }}">{{ section.settings.mob_frequency_select_label1 }} </div> {% endif %}
+                      {% if section.settings.mob_frequency_select_label2  != blank %} <div  class="frequncy_select_btn" data-value="{{ section.settings.mob_frequency_select_id2 }}">{{ section.settings.mob_frequency_select_label2 }} </div> {% endif %}
                   </div>
                   <div class="disflex justify-between frequency_text">
                       <div class="distext">

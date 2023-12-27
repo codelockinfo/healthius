@@ -652,6 +652,7 @@ $(document).ready(function() {
 		var inputtotalrangemax = $splitMaxPrice[1];
 		$reachargevalue = getCookie("reachargevalue");
 		$subscriptionvalue = getCookie("subscriptionvalue");
+		console.log($subscriptionvalue  + "vvvvvvvvvvvvv");
 		$(".subscriptionlabel").removeClass('active');
 		if($reachargevalue == "one time"){
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
@@ -683,7 +684,9 @@ $(document).ready(function() {
 			}
 			$('.subscriptionlabel[data-value="subscribe & save"]').addClass('active');
 			$(".save_label").addClass('active');
+			console.log($subscriptionvalue  + "vvvvvvvvvvvvv");
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
+				console.log("INNNNNNNNNNNNNNNNNN");
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
 				$( "input[name='selling_plan']").val($subscriptionvalue);
 				$(".frequncy_select_btn").removeClass("active");
@@ -934,6 +937,7 @@ $(document).ready(function() {
 		$(".frequncy_select_btn").removeClass("active");
 		$(this).addClass("active");
 		$frequency_val = $(this).attr("data-value");
+		$(".frequncy_select_btn[data-value='"+ $frequency_val +"']").addClass("active");
 		setCookie("subscriptionvalue",$frequency_val);
 		$( "input[name='selling_plan']").val($frequency_val);
 	});
@@ -955,7 +959,7 @@ $(document).ready(function() {
 					window.location.href = '/checkout';
 				}
 			 } 
-			 });
+		});
 
 	});
 });
