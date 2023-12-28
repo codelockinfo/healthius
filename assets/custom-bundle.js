@@ -762,7 +762,7 @@ $(document).ready(function() {
 						// $(".freeTurkey").find(".imageforcart img").attr("src",$allproductSrc);
 					}
 				});
-				$(".box-giftproduct_mobile .product-item__badges").text("Free");
+				$(".box-giftproduct_mobile .product-item__badges").text("FREE");
 				$(".box-giftproduct_mobile .product-item__badges").addClass("bg-green");
 				$(".box-giftproduct_mobile .product-item__badges").removeClass("bg_maroon");
 				$(".box-giftproduct_mobile").removeClass("lockproduct");

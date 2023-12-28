@@ -36,6 +36,7 @@
     }
     .box-header .product-item.card.container-box{
         border: 1px solid var(--color-green);
+        border-bottom: none;
     }
     .carttoplabel {
         display: flex;
@@ -478,6 +479,7 @@
         padding: 1px 5px;
         font-size: 11px;
         color: var(--color-white);
+        width: calc(100% - (var(--gutter-small) * 5));
     }
     .product-item__badges.width_100{
         width: 100%;
