@@ -577,13 +577,14 @@ $(document).ready(function() {
 		promo_class = 'promo-product';
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.25;
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$discount_amount_price = 0.50;
 				$('.saveText').text('Save 50% on your first order');
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				// $('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
@@ -806,7 +807,8 @@ $(document).ready(function() {
 			$subscribeBtnHtml = "$"+$getproductPrices + " " + updatedString_subscribe;                 
         }else{
 			var $getproductPrices = $getproductPrices.toFixed(2);  
-			var discountAmount =  $getproductPrices * 0.25;
+			console.log("PRICE +++++++++" + $discount_amount_price);
+			var discountAmount =  $getproductPrices * $discount_amount_price;
 			var discount_subscribe = $getproductPrices - discountAmount;
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
 			console.log(discount_subscribe + " .  discount_subscribe");
