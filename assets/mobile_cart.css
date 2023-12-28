@@ -533,6 +533,11 @@
         color: var(--color-green);
         font-weight: 700;
     }
+    .no-touchevents button.button:hover{
+        background-color:var(--color-gray);
+        border-color:var(--color-gray);
+        color:var(--color-white);
+    }
   /* NEW Figma */
   
 }

@@ -802,20 +802,28 @@ $(document).ready(function() {
 		var updatedString_subscribe = $.trim(updatedString_subscribe_1);
 
 		if($getproductPrices == 0){
-			var $getproductPrices = $getproductPrices;          
+			console.log("11111111111111");
+			var $getproductPrices = $getproductPrices.toFixed(2);          
 			var $finalremainamount = $getremain_amount;   
-			var discount_subscribe = 0.00;                 
+			var discount_subscribe = 0.00; 
+			$subscribeBtnHtml = "$"+$getproductPrices + " " + updatedString_subscribe;                 
         }else{
+			console.log("2222222222222222");
 			var $getproductPrices = $getproductPrices.toFixed(2);  
 			var discountAmount =  $getproductPrices * 0.25;
 			var discount_subscribe = $getproductPrices - discountAmount;
-
-			$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
-			$(".subscribeMobileContainer .subscribename.subscriptionOption").html($PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe);
-
+			console.log($PriceHtml + " pppppppppppppp");
+			console.log(discount_subscribe + " .  discount_subscribe");
+			console.log(discount_subscribe.toFixed(2) + " .  discount_subscribe");
+			console.log(updatedString_subscribe + "....updatedString_subscribe");
+			$subscribeBtnHtml = $PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe;
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
+		
+		$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
+		$(".subscribeMobileContainer .subscribename.subscriptionOption").html($subscribeBtnHtml );
+		console.log($remain_amount + "MMMMMMMMMMMMMMMM");
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
@@ -844,7 +852,6 @@ $(document).ready(function() {
 			$(".MobileAddCart").attr("disabled", "disabled");
 			$(".MobileAddCart").css("cursor", "not-allowed");
 			$(".MobileAddCart").removeClass("up90");
-			$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 			if($reachargevalue != "one time"){
 				$getproductPrices = discount_subscribe.toFixed(2);
 			}
@@ -857,27 +864,7 @@ $(document).ready(function() {
 		if ($getremainAmount < 1) {
           var $finalremainamount = "";  
         }
-
-        //   $(".addToCart").find("span").text($finalremainamount + " Checkout ($" + $getproductPrices + ")");
         $(".stickyAddtocart").find("span").html($remain_amount +"($" + $getproductPrices + ")"+ $continue_arrow);
-
-		// var selected_item_cookie = getCookie("variantids");
-		// if(selected_item_cookie){
-		// 	console.log("INIF");
-		// 	$(".addToCart").removeClass("hide");
-		// 	$(".only-continue").addClass("hide");
-		// }else{
-		// 	console.log("inelse");
-		// 	$(".addToCart").addClass("hide");
-		// 	$(".only-continue").removeClass("hide");
-		// 	$hasonlyContinue = $(".onlyContinue").html();
-		// 	console.log($hasonlyContinue + "FFFFFFFFFF");
-		// 	if($hasonlyContinue == undefined){
-		// 		$(".only_continue span").after('<button type="submit" name="add" class="onlyContinue only-continue add-to-cart button button--solid button--product button--loader" data-js-product-add-to-cart>'+
-		// 			'<span class="button__text" data-js-product-add-to-cart-text>Continue</span>'+
-		// 		'</button>');
-		// 	}
-		// }
       return cartTotQty;
 	}
 	$(document).on("click", ".StickyCartBtn", function() {
