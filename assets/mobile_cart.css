@@ -548,6 +548,10 @@
     .freeTurkey .promo-product img{
         padding: 10px 0;
     }
+    .box-giftproduct_mobile img{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
   /* NEW Figma */
   
 }
