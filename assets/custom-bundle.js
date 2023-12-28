@@ -564,7 +564,7 @@ $(document).ready(function() {
 			var free_pro_title = "";
 			bgcolor = "";
 		}else{
-			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/PRODUCTS_3x_f154f6cd-a7db-445f-8af4-494a00bde15f.png?v=1703329801';
+			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
 			var productBadge = "FREE";
 			bgcolor ="bg_green";
 			var free_pro_title = "Free Order Gift";
