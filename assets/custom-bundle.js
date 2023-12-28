@@ -652,8 +652,6 @@ $(document).ready(function() {
 		var inputtotalrangemax = $splitMaxPrice[1];
 		$reachargevalue = getCookie("reachargevalue");
 		$subscriptionvalue = getCookie("subscriptionvalue");
-		console.log($subscriptionvalue  + "vvvvvvvvvvvvv");
-		console.log($reachargevalue + "RRRRRRRRRRRRR" );
 		$(".subscriptionlabel").removeClass('active');
 		if($reachargevalue == "one time"){
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
@@ -685,14 +683,19 @@ $(document).ready(function() {
 			}
 			$('.subscriptionlabel[data-value="subscribe & save"]').addClass('active');
 			$(".save_label").addClass('active');
-			console.log($subscriptionvalue  + "vvvvvvvvvvvvv");
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
-				console.log("INNNNNNNNNNNNNNNNNN");
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
 				$(".frequncy_select_btn").removeClass("active");
 				$(".frequncy_select_btn[data-value='"+ $subscriptionvalue +"']").addClass("active");
-				console.log($("input[name='selling_plan']").val() + "IIIIIIIIIIIIIIIIII");
-				$("input[name='selling_plan']").val($subscriptionvalue);
+				var refresh_selling_plan_Id = setInterval(function() {
+					$seling_plan_id_value = $( "input[name='selling_plan']").val();
+					if($seling_plan_id_value != undefined){
+						clearInterval(refresh_selling_plan_Id);
+						$( "input[name='selling_plan']").val($subscriptionvalue);
+						console.log($( "input[name='selling_plan']").val());
+					}
+				}, 500);
+
 			}
 		}
 	
