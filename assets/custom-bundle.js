@@ -653,6 +653,7 @@ $(document).ready(function() {
 		$reachargevalue = getCookie("reachargevalue");
 		$subscriptionvalue = getCookie("subscriptionvalue");
 		console.log($subscriptionvalue  + "vvvvvvvvvvvvv");
+		console.log($reachargevalue + "RRRRRRRRRRRRR" );
 		$(".subscriptionlabel").removeClass('active');
 		if($reachargevalue == "one time"){
 			$('.productsimage[data-product="8948393378073"],.productsimage[data-product="8948391477529"]').addClass("hide");
@@ -688,19 +689,13 @@ $(document).ready(function() {
 			if($subscriptionvalue != undefined && $subscriptionvalue != ""){
 				console.log("INNNNNNNNNNNNNNNNNN");
 				$('.subscriptionlabel[data-value="subscribe & save"]').find(".frequency_select option[value='"+ $subscriptionvalue +"']").attr('selected','selected');
-				$( "input[name='selling_plan']").val($subscriptionvalue);
 				$(".frequncy_select_btn").removeClass("active");
 				$(".frequncy_select_btn[data-value='"+ $subscriptionvalue +"']").addClass("active");
+				console.log($("input[name='selling_plan']").val() + "IIIIIIIIIIIIIIIIII");
+				$("input[name='selling_plan']").val($subscriptionvalue);
 			}
 		}
-		$.each($(".subscriptionlabel"), function(index) {
-			if($(this).hasClass('active')){
-				$dataValue = $(this).data('value');
-				if($dataValue == "subscribe & save"){
-					// inputtotalrange = Math.round(inputtotalrangemax - (inputtotalrangemax*31)/100);
-				}
-			}
-		});
+	
 		$productPrices = 0;
 		$getproductPrices = 0;
 		$.each($("#cartSummary .productsimage .product-quantity__selector"), function(index) {
@@ -802,18 +797,15 @@ $(document).ready(function() {
 		var updatedString_subscribe = $.trim(updatedString_subscribe_1);
 
 		if($getproductPrices == 0){
-			console.log("11111111111111");
 			var $getproductPrices = $getproductPrices.toFixed(2);          
 			var $finalremainamount = $getremain_amount;   
 			var discount_subscribe = 0.00; 
 			$subscribeBtnHtml = "$"+$getproductPrices + " " + updatedString_subscribe;                 
         }else{
-			console.log("2222222222222222");
 			var $getproductPrices = $getproductPrices.toFixed(2);  
 			var discountAmount =  $getproductPrices * 0.25;
 			var discount_subscribe = $getproductPrices - discountAmount;
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
-			console.log($PriceHtml + " pppppppppppppp");
 			console.log(discount_subscribe + " .  discount_subscribe");
 			console.log(discount_subscribe.toFixed(2) + " .  discount_subscribe");
 			console.log(updatedString_subscribe + "....updatedString_subscribe");
@@ -823,7 +815,6 @@ $(document).ready(function() {
 		
 		$(".subscribeMobileContainer .subscribename.onetimeOption").text("$"+$getproductPrices+" "+updatedString_onetime);
 		$(".subscribeMobileContainer .subscribename.subscriptionOption").html($subscribeBtnHtml );
-		console.log($remain_amount + "MMMMMMMMMMMMMMMM");
 		if ($remain_amount < 0.1) {
 			console.log("GIFTPRODUCT ADD");
 			$remain_amount = '';
@@ -924,9 +915,10 @@ $(document).ready(function() {
 		$(".frequncy_select_btn").removeClass("active");
 		$(this).addClass("active");
 		$frequency_val = $(this).attr("data-value");
+		console.log($frequency_val + " CLICK ...");
 		$(".frequncy_select_btn[data-value='"+ $frequency_val +"']").addClass("active");
 		setCookie("subscriptionvalue",$frequency_val);
-		$( "input[name='selling_plan']").val($frequency_val);
+		$("input[name='selling_plan']").val($frequency_val);
 	});
 	$(document).on("click",".onlyContinue ",function(event){
 		event.preventDefault()
