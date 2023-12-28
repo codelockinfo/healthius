@@ -533,10 +533,14 @@
         color: var(--color-green);
         font-weight: 700;
     }
-    .no-touchevents button.button:hover{
+    .no-touchevents .stickycartbtn button.button:hover{
         background-color:var(--color-gray);
         border-color:var(--color-gray);
         color:var(--color-white);
+    }
+    .no-touchevents .stickycartbtn button.button.bg-green:hover{
+        background-color:var(--color-green);
+        border-color:var(--color-green);
     }
   /* NEW Figma */
   
