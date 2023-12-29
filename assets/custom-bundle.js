@@ -602,7 +602,6 @@ $(document).ready(function() {
 			turkey_product_padding = "turkey_product_padding";
 		}
 		
-		$(".subcarttitle").css("font-size","14px");
 		$('.saveText').text('Save 10% on your first order');
 		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 10% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var affiliate_cookie = getCookie("discount_code");
@@ -638,8 +637,11 @@ $(document).ready(function() {
 		  '</div>'+
 		  '</div><div class="product-item__badges text-size--xsmall '+bgcolor+'">'+productBadge+'</div></div>'+
 		  '</div>';
-
-		$("#cartSummary").append($staticGiftProduct);
+		  if ($(window).width() > 700) {
+			  $("#cartSummary").append($staticGiftProduct);
+		  }else{
+			  $("#cartSummary").prepend($staticGiftProduct);
+		  }
 		var selected_item = getCookie("variantids");
 		var variant_qty = getCookie("variant_qty");
 		if (selected_item) {
