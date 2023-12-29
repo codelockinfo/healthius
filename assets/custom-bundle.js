@@ -453,10 +453,14 @@ $(document).ready(function() {
 		
 		// Promo Product
 			var influencer_cookie = getCookie("discount_code");
+			var affiliate_cookie_backup = getCookie("50_Off_Discount");
 			var influencerdiscounts = ['julian50', 'claire50','cpt50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
-			if(influencer_cookie != undefined && influencerdiscounts != ''){
-				influencer_cookie = influencer_cookie.toLowerCase();
-				if ($.inArray(influencer_cookie, influencerdiscounts) !== -1) {
+			
+			if((affiliate_cookie_backup != undefined) || (influencer_cookie != undefined && influencer_cookie != '')){
+				if(influencer_cookie != undefined){
+					influencer_cookie = influencer_cookie.toLowerCase();
+				}
+				if ((affiliate_cookie_backup == 'True') || ($.inArray(influencer_cookie, influencerdiscounts) !== -1)) {
 					// Free 50% product
 					setCookie("50_Off_Discount", "True", 7); // Assuming a 7-day expiry for the cookie
 					var item_data = {
@@ -468,21 +472,32 @@ $(document).ready(function() {
 					}
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);
-				}
-			}	
-			
-			//Cranapple Rosemary Chicken Product
-			var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
-			var item_data = {
-				collectionId: '459204722969',
-				externalProductId: '8929832468761',  // GIFT PRODUCT ID
-				externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-				quantity: 1,  // Dynamic Quantity
-				sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
-			}
-			bundleObject.selections.push(item_data);
-			console.log(bundleObject);	
 
+					//Cranapple Rosemary Chicken Product
+					var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+					var item_data = {
+						collectionId: '459204722969',
+						externalProductId: '8929832468761',  // GIFT PRODUCT ID
+						externalVariantId: '47409726456089',  // THE SELECTED VARIANT
+						quantity: 1,  // Dynamic Quantity
+						sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+					}
+					bundleObject.selections.push(item_data);
+					console.log(bundleObject);	
+				}else{
+					console.log(" 6 FREE Meats Product");
+					// 6 FREE Meats Product
+					var item_data = {
+						collectionId: '459204722969',
+						externalProductId: '8923626340633',  
+						externalVariantId: '47395617669401',  
+						quantity: 1  
+					}
+					bundleObject.selections.push(item_data);
+					console.log(bundleObject);	
+				}
+			}
+			
 			//Free gift product
 			var item_data = {
 				collectionId: '459204722969',
@@ -558,23 +573,24 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
+		var turkey_product_padding = "";
 		if ($(window).width() > 700) {
-			var free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
 			var productBadge = "";
 			var free_pro_title = "";
 			bgcolor = "";
+			promo_class = 'promo-product';
 		}else{
-			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-			var productBadge = "FREE";
-			bgcolor ="bg_green";
-			var free_pro_title = "Free Order Gift";
+			var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
+			var productBadge = "PROMO";
+			bgcolor ="bg_blue";
+			promo_class = 'promo-product promo-product-color';
+			var free_pro_title = "6 FREE Meats Limited Quantities";
 		}
-
-		$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 25%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-		// var free_pro_title = 'CRANAPPLE ROSEMARY CHICKEN';
+		
 		$(".subcarttitle").css("font-size","14px");
-		$('.saveText').text('Save 25% on your first order');
-		promo_class = 'promo-product';
+		$('.saveText').text('Save 10% on your first order');
+		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 10% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
@@ -589,27 +605,31 @@ $(document).ready(function() {
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 				// $('.box-header-title').html('<div class="box-header-title"> <div><span class="subcarttitle">Free Meat of the Month with</span></div><div><span class="subcarttitle">Every Recurring Order!</span></div></div>');
 				// $('.announcement').text('EXCLUSIVE SALE: 6 FREE HOLIDAY MEATS');
-				// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/holiday-meats-6-pack-tier-1-802335_5d307892-10b5-47a3-a437-7fd74cd20308.jpg?v=1701759071';
-				// free_pro_title = 'Free Holiday Meats 6 Pack (Tier 1)';
+				if ($(window).width() > 700) {
+					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				}else{
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+				}
+				free_pro_title = 'Free Order Gift';
+				var productBadge = "FREE";
+				bgcolor ="bg-green";
+				promo_class = 'promo-product';
+				turkey_product_padding = "turkey_product_padding";
 			}
 		}
 		console.log(free_pro_img + ".....free_pro_img");
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
-			  '<img src="'+free_pro_img+'" alt="">'+
+			  '<img src="'+free_pro_img+'" alt="" class="'+ turkey_product_padding +'">'+
 		  '</div>'+
 			'<div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--center">'+
-			  '<div class="cartfontcontainer"><a class="product-item__title">'+
-						'<div class="remove-line-height-space--small marginbottomtitle">'+
-						  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">'+free_pro_title+'</span>'+
-						'</div>'+
-					  '</a>'+
+			  '<span  class="variant-title  text-size--large text-line-height--small text-weight--bold">'+free_pro_title+'</span>'+
 		  '<div class="product-item__price text-size--large equalize-white-space">'+
 						'<div class="remove-line-height-space">'+
 		  '<div class="product-price"><span class="product-price--original " data-js-product-price-original="" data-price="FREE">FREE</span>'+
 			  '<del class="product-price--compare" data-js-product-price-compare=""></del><span class="product-price--unit text-size--regular" data-js-product-price-unit=""></span>'+
-		  '</div></div>'+
+		  '</div>'+
 		  '</div>'+
 		  '</div>'+
 		  '</div><div class="product-item__badges text-size--xsmall '+bgcolor+'">'+productBadge+'</div></div>'+
