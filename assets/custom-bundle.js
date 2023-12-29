@@ -575,7 +575,7 @@ $(document).ready(function() {
 	function set_lineitems_onload() {
 		var turkey_product_padding = "";
 		$reachargevalue = getCookie("reachargevalue");
-		if($reachargevalue == "subscribe & save"){
+		if($reachargevalue == "subscribe & save" || $reachargevalue == ""){
 			if ($(window).width() > 700) {
 				var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
 				var productBadge = "";
