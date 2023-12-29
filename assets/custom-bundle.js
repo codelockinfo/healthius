@@ -573,35 +573,59 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
-		var turkey_product_padding = "";
+		console.log("CALL");
 		$reachargevalue = getCookie("reachargevalue");
+		$Temp_Var = $normal_user = "true";
+		var promo_class = bgcolor =  free_pro_title = productBadge = bgcolor = free_pro_img = turkey_product_padding = "";
 		if($reachargevalue == "subscribe & save" || $reachargevalue == ""){
-			if ($(window).width() > 700) {
-				var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
-				var productBadge = "";
-				var free_pro_title = "";
-				bgcolor = "";
-				promo_class = 'promo-product';
+			console.log("STEP1");
+			var affiliate_cookie = getCookie("discount_code");
+			var affiliate_cookie_backup = getCookie("50_Off_Discount");
+			var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+			$discount_amount_price = 0.10;
+			if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+				if(affiliate_cookie != undefined){
+					affiliate_cookie = affiliate_cookie.toLowerCase();
+				}
+				if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+					$Temp_Var = "false";
+					$normal_user = "false";
+				}
+			}
+			if($Temp_Var == "true"){
+				console.log("STEP2");
+				$normal_user = "false";
+				if ($(window).width() > 700) {
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
+					promo_class = 'promo-product';
+				}else{
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
+					productBadge = "PROMO";
+					bgcolor ="bg_blue";
+					promo_class = 'promo-product promo-product-color';
+					free_pro_title = "6 FREE Meats Limited Quantities";
+				}
 			}else{
-				var free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
-				var productBadge = "PROMO";
-				bgcolor ="bg_blue";
-				promo_class = 'promo-product promo-product-color';
-				var free_pro_title = "6 FREE Meats Limited Quantities";
+				$normal_user = "true";
 			}
 		}else{
+			$normal_user = "true";
+		}
+		
+		if($normal_user == "true"){
+			console.log("fdfde");
 			if ($(window).width() > 700) {
 				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			}else{
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
 			}
 			free_pro_title = 'Free Order Gift';
-			var productBadge = "FREE";
+			productBadge = "FREE";
 			bgcolor ="bg-green";
 			promo_class = 'promo-product';
 			turkey_product_padding = "turkey_product_padding";
 		}
-		
+		console.log(free_pro_img);
 		$('.saveText').text('Save 10% on your first order');
 		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 10% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var affiliate_cookie = getCookie("discount_code");
@@ -620,7 +644,6 @@ $(document).ready(function() {
 				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 			}
 		}
-		console.log(free_pro_img + ".....free_pro_img");
 		  $staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
@@ -903,7 +926,6 @@ $(document).ready(function() {
 		$(this).addClass("hoveractive");
 	});
 	$(document).on("click",".subscriptionOption",function(){
-		console.log("CLICK");
 		$dataValue = $(this).closest(".subscriptionlabel").data('value');
 		setCookie("reachargevalue",$dataValue);
 		$(this).closest(".subscriptionlabel").addClass("active");
@@ -911,7 +933,7 @@ $(document).ready(function() {
 		$(".deliverybox").removeClass("hide");
 		$(".rc-selling-plans").removeClass("hide");
 		$(".save_label").addClass('active');
-
+		var normal_user_sub = "true";
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affiliate_cookie = getCookie("discount_code");
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
@@ -919,20 +941,24 @@ $(document).ready(function() {
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
-			if ((affiliate_cookie_backup == 'False') || ($.inArray(affiliate_cookie, affuser_discounts) == -1)) {
-				if ($(window).width() > 700) {
-					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
-				}else{
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
-					$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
-					$(".freeTurkey .variant-title").html("6 FREE Meats Limited Quantities");
-					$(".freeTurkey .product-item").addClass("promo-product-color");
-					$(".freeTurkey .product-item__badges").addClass("bg_blue");
-					$(".freeTurkey .product-item__badges").removeClass("bg-green");
-					$(".freeTurkey .product-item__badges").html("PROMO");
-				}
-				$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				normal_user_sub = "false";				
 			}
+		}
+
+		if(normal_user_sub == "true"){
+			if ($(window).width() > 700) {
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
+			}else{
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
+				$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
+				$(".freeTurkey .variant-title").html("6 FREE Meats Limited Quantities");
+				$(".freeTurkey .product-item").addClass("promo-product-color");
+				$(".freeTurkey .product-item__badges").addClass("bg_blue");
+				$(".freeTurkey .product-item__badges").removeClass("bg-green");
+				$(".freeTurkey .product-item__badges").html("PROMO");
+			}
+			$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
 		}
 
 		getcartTotalQty();
