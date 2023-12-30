@@ -451,8 +451,8 @@
         width: 100%;
    }
    .box-giftproduct_mobile .freeproductimg.freeimgpadding{
-        padding-top: 33px;
-        padding-bottom: 33px;
+        padding-top: 34px;
+        padding-bottom: 34px;
    }
    .box-summary .freeTurkey .promo-product .flexdirrow .product-item__price{
     display: none;
@@ -566,7 +566,7 @@
         border-color:var(--color-green);
     }
     .freeTurkey .promo-product img.turkey_product_padding{
-        padding: 12px 0;
+        padding: 10px 0;
     }
     .box-giftproduct_mobile img{
         border-top-right-radius: 10px;
