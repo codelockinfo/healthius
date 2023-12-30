@@ -1013,6 +1013,7 @@ $(document).ready(function() {
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
 				$affiliate_user = "true";
+				$discount_amount_price = 0.50;
 			}
 		}
 		if($affiliate_user == "true"){
