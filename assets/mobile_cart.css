@@ -582,6 +582,9 @@
     .box-header .promo-product-color.product-item.card.container-box{
         border: 1px solid var(--color-blue);
     }
+    .distext{
+        width: 100%;
+    }
   /* NEW Figma */
   
 }

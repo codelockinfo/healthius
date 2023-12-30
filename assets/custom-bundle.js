@@ -627,6 +627,7 @@ $(document).ready(function() {
 					if ($(window).width() > 700) {
 						free_pro_img = $(".promoProduct").attr('data-desktopimg');
 						promo_class = 'promo-product';
+						$('.announcement').text('LIMITED TIME: GET '+  $(".promoProduct").data('title').toUpperCase());
 					}else{
 						free_pro_img = $(".promoProduct").attr('data-mobileimg');
 						promo_class = 'promo-product promo-product-color';
@@ -636,6 +637,7 @@ $(document).ready(function() {
 					if ($(window).width() > 700) {
 						free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 						promo_class = 'promo-product';
+						$('.announcement').text('LIMITED TIME: GET FREE CRANAPPLE ROSEMARY CHICKEN');
 					}else{
 						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
 						free_pro_title = 'Free Order Gift';
