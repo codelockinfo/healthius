@@ -213,6 +213,24 @@
                   </div>
                
                   <div class="product-container">
+                    {% for product in collections.all.products %}
+                      {% if product.handle == 'holiday-box-6' %}
+                        {% if product.available %}
+                          <input type="hidden" name="promo-product" class="promoProduct 1111111" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-desktopimg="{{ product.images[1] | img_url: 'master'  }}" data-mobileimg="{{ product.images[0] | img_url: 'master'  }}">
+                        {% else %}
+                          {% for product in collections.all.products %}
+                            {% if product.handle == 'holiday-box-3' %}
+                              {% if product.available %}
+                                <input type="hidden" name="promo-product" class="promoProduct 2222222" value="{{product.id}}" variant_id="{{ product.selected_or_first_available_variant.id  }}" data-title="{{product.title}}" data-desktopimg="{{ product.images[1] | img_url: 'master'  }}" data-mobileimg="{{ product.images[0]  | img_url: 'master'  }}">
+                              {% else %}
+                                <input type="hidden" name="promo-product" class="promoProduct 333333" value="NULL" data-img="NULL" aaa>  
+                              {% endif %}
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+
                     <div class="box-summary" id="cartSummary">
 
                         {% if section.settings.product_list != blank %}

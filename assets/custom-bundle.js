@@ -452,61 +452,87 @@ $(document).ready(function() {
 		});
 		
 		// Promo Product
-			var influencer_cookie = getCookie("discount_code");
-			var affiliate_cookie_backup = getCookie("50_Off_Discount");
-			var influencerdiscounts = ['julian50', 'claire50','cpt50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
-			
-			if((affiliate_cookie_backup != undefined) || (influencer_cookie != undefined && influencer_cookie != '')){
-				if(influencer_cookie != undefined){
-					influencer_cookie = influencer_cookie.toLowerCase();
-				}
-				if ((affiliate_cookie_backup == 'True') || ($.inArray(influencer_cookie, influencerdiscounts) !== -1)) {
-					// Free 50% product
-					setCookie("50_Off_Discount", "True", 7); // Assuming a 7-day expiry for the cookie
+
+
+		$affiliate_user = $normal_user = "false";
+		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.10;
+		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+			if(affiliate_cookie != undefined){
+				affiliate_cookie = affiliate_cookie.toLowerCase();
+			}
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$affiliate_user = "true";
+			}
+		}
+		if($affiliate_user == "true"){
+			// Free 50% product
+			setCookie("50_Off_Discount", "True", 7); // Assuming a 7-day expiry for the cookie
+			var item_data = {
+				collectionId: '459204722969',
+				externalProductId: '8981917401369',  
+				externalVariantId: '47575163896089',  
+				quantity: 1, 
+				sellingPlan: giftSellingPlanId 
+			}
+			bundleObject.selections.push(item_data);
+			console.log(bundleObject);
+
+			//Cranapple Rosemary Chicken Product
+			var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+			var item_data = {
+			collectionId: '459204722969',
+			externalProductId: '8929832468761',  // GIFT PRODUCT ID
+			externalVariantId: '47409726456089',  // THE SELECTED VARIANT
+			quantity: 1,  // Dynamic Quantity
+			sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+			}
+			bundleObject.selections.push(item_data);
+			console.log(bundleObject);	
+		}else{
+			$normal_user = "true";
+		}
+
+		if($normal_user == "true"){
+			// 6 FREE Meats Product
+			console.log(" 6 FREE Meats Product");
+			var promo_product = $(".promoProduct").val();
+			if(promo_product != undefined && promo_product != 'NULL'){
+				$promo_variant_id = $(".promoProduct").attr("variant_id");
 					var item_data = {
 						collectionId: '459204722969',
-						externalProductId: '8981917401369',  // GIFT PRODUCT ID
-						externalVariantId: '47575163896089',  // THE SELECTED VARIANT
+						externalProductId: promo_product,  // GIFT PRODUCT ID
+						externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
 						quantity: 1,  // Dynamic Quantity
 						sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
 					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);
-
-					//Cranapple Rosemary Chicken Product
-					var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8929832468761',  // GIFT PRODUCT ID
-						externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-						quantity: 1,  // Dynamic Quantity
-						sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
-					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);	
-				}else{
-					console.log(" 6 FREE Meats Product");
-					// 6 FREE Meats Product
-					var item_data = {
-						collectionId: '459204722969',
-						externalProductId: '8923626340633',  
-						externalVariantId: '47395617669401',  
-						quantity: 1  
-					}
-					bundleObject.selections.push(item_data);
-					console.log(bundleObject);	
-				}
-			}
-			
-			//Free gift product
-			var item_data = {
+				bundleObject.selections.push(item_data);
+			}else{
+				//Cranapple Rosemary Chicken Product
+				var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+				var item_data = {
 				collectionId: '459204722969',
-				externalProductId: '8930725921049',  // GIFT PRODUCT ID
-				externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+				externalProductId: '8929832468761',  // GIFT PRODUCT ID
+				externalVariantId: '47409726456089',  // THE SELECTED VARIANT
 				quantity: 1,  // Dynamic Quantity
-				sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
-			}
-			bundleObject.selections.push(item_data);
+				sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+				}
+				bundleObject.selections.push(item_data);
+				console.log(bundleObject);	
+			}	
+		}
+
+		//Free gift product
+		var item_data = {
+			collectionId: '459204722969',
+			externalProductId: '8930725921049',  // GIFT PRODUCT ID
+			externalVariantId: '47413484945689',  // THE SELECTED VARIANT
+			quantity: 1,  // Dynamic Quantity
+			sellingPlan: giftSellingPlanId // Dynamic Selling Plan ID
+		}
+		bundleObject.selections.push(item_data);
 
 		// Promo Product
         // var get_main_bundle_id = bundleItems[0]['properties']['_rc_bundle'];
@@ -573,6 +599,8 @@ $(document).ready(function() {
 	});
 
 	function set_lineitems_onload() {
+		var promo_product = $(".promoProduct").val();
+		console.log(promo_product + "...promo_product");
 		console.log("CALL");
 		$reachargevalue = getCookie("reachargevalue");
 		$Temp_Var = $normal_user = "true";
@@ -595,15 +623,26 @@ $(document).ready(function() {
 			if($Temp_Var == "true"){
 				console.log("STEP2");
 				$normal_user = "false";
-				if ($(window).width() > 700) {
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
-					promo_class = 'promo-product';
+				productBadge = "PROMO";
+				bgcolor ="bg_blue";
+				if(promo_product != undefined && promo_product != 'NULL'){
+					if ($(window).width() > 700) {
+						free_pro_img = $(".promoProduct").attr('data-desktopimg');
+						promo_class = 'promo-product';
+					}else{
+						free_pro_img = $(".promoProduct").attr('data-mobileimg');
+						promo_class = 'promo-product promo-product-color';
+						free_pro_title = $(".promoProduct").data('title') + " Limited Quantities";
+					}
 				}else{
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
-					productBadge = "PROMO";
-					bgcolor ="bg_blue";
-					promo_class = 'promo-product promo-product-color';
-					free_pro_title = "6 FREE Meats Limited Quantities";
+					if ($(window).width() > 700) {
+						free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+					}else{
+						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+						free_pro_title = 'Free Order Gift';
+						promo_class = 'promo-product promo-product-color';
+						turkey_product_padding = "turkey_product_padding";
+					}
 				}
 			}else{
 				$normal_user = "true";
@@ -613,7 +652,6 @@ $(document).ready(function() {
 		}
 		
 		if($normal_user == "true"){
-			console.log("fdfde");
 			if ($(window).width() > 700) {
 				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			}else{
@@ -637,6 +675,7 @@ $(document).ready(function() {
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
 				$discount_amount_price = 0.50;
 				$('.saveText').text('Save 50% on your first order');
 				$rightArrow = '<svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>';
@@ -860,9 +899,6 @@ $(document).ready(function() {
 			var discountAmount =  $getproductPrices * $discount_amount_price;
 			var discount_subscribe = $getproductPrices - discountAmount;
 			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
-			console.log(discount_subscribe + " .  discount_subscribe");
-			console.log(discount_subscribe.toFixed(2) + " .  discount_subscribe");
-			console.log(updatedString_subscribe + "....updatedString_subscribe");
 			$subscribeBtnHtml = $PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe;
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
@@ -933,34 +969,61 @@ $(document).ready(function() {
 		$(".deliverybox").removeClass("hide");
 		$(".rc-selling-plans").removeClass("hide");
 		$(".save_label").addClass('active');
-		var normal_user_sub = "true";
-		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+
+		$affiliate_user = $normal_user = "false";
 		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.10;
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-				normal_user_sub = "false";				
+				$affiliate_user = "true";
 			}
 		}
-
-		if(normal_user_sub == "true"){
+		if($affiliate_user == "true"){
 			if ($(window).width() > 700) {
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/image_2023_12_29T07_20_56_343Z.png?v=1703834484';
+				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Promo_Meat_2x_e9fc6863-9c4a-489c-800e-1c3f1e278b12.png?v=1703825421';
-				$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
-				$(".freeTurkey .variant-title").html("6 FREE Meats Limited Quantities");
-				$(".freeTurkey .product-item").addClass("promo-product-color");
-				$(".freeTurkey .product-item__badges").addClass("bg_blue");
-				$(".freeTurkey .product-item__badges").removeClass("bg-green");
-				$(".freeTurkey .product-item__badges").html("PROMO");
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+				$(".freeTurkey .imageforcart img").addClass("turkey_product_padding promo-product ");
+				$(".freeTurkey .variant-title").html("Free Order Gift");
+				$(".freeTurkey .product-item").removeClass("promo-product-color");
+				$(".freeTurkey .product-item__badges").html("FREE");
 			}
-			$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
+		}else{
+			$normal_user = "true";
 		}
 
+		if($normal_user == "true"){
+			var promo_product = $(".promoProduct").val();
+			$(".freeTurkey .product-item").addClass("promo-product promo-product-color");
+			$(".freeTurkey .product-item__badges").addClass("bg_blue");
+			$(".freeTurkey .product-item__badges").html("PROMO");
+
+			if(promo_product != undefined && promo_product != 'NULL'){
+				$promo_variant_id = $(".promoProduct").attr("variant_id");
+				if ($(window).width() > 700) {
+					free_pro_img = $(".promoProduct").attr('data-desktopimg');
+				}else{
+					free_pro_img = $(".promoProduct").attr('data-mobileimg');
+					$(".freeTurkey .variant-title").html($(".promoProduct").data('title') + " Limited Quantities");
+					free_pro_title = $(".promoProduct").data('title') + " Limited Quantities";
+					$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
+				}
+			}else{
+				if ($(window).width() > 700) {
+					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				}else{
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+					$(".freeTurkey .variant-title").html("Free Order Gift");
+					$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
+				}
+			}	
+		}
+		$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
 		getcartTotalQty();
 	});
 	$(document).on("click",".onetimeOption",function(){
@@ -973,28 +1036,18 @@ $(document).ready(function() {
 		$(".rc-selling-plans").addClass("hide");
 		$(".save_label").removeClass('active');
 
-		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affiliate_cookie = getCookie("discount_code");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
-		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
-			if(affiliate_cookie != undefined){
-				affiliate_cookie = affiliate_cookie.toLowerCase();
-			}
-			if ((affiliate_cookie_backup == 'False') || ($.inArray(affiliate_cookie, affuser_discounts) == -1)) {
-				if ($(window).width() > 700) {
-					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
-				}else{
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-					$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
-					$(".freeTurkey .variant-title").html("Free Order Gift");
-					$(".freeTurkey .product-item").removeClass("promo-product-color");
-					$(".freeTurkey .product-item__badges").removeClass("bg_blue");
-					$(".freeTurkey .product-item__badges").addClass("bg-green");
-					$(".freeTurkey .product-item__badges").html("FREE");
-				}
-				$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
-			}
+		if ($(window).width() > 700) {
+			free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+		}else{
+			free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+			$(".freeTurkey .imageforcart img").addClass("turkey_product_padding promo-product");
+			$(".freeTurkey .variant-title").html("Free Order Gift");
+			$(".freeTurkey .product-item").removeClass("promo-product-color");
+			$(".freeTurkey .product-item__badges").removeClass("bg_blue");
+			$(".freeTurkey .product-item__badges").addClass("bg-green");
+			$(".freeTurkey .product-item__badges").html("FREE");
 		}
+		$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
 
 		getcartTotalQty();
 	});
