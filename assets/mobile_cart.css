@@ -566,14 +566,14 @@
         border-color:var(--color-green);
     }
     .freeTurkey .promo-product img.turkey_product_padding{
-        padding: 10px 0;
+        /* padding: 10px 0; */
     }
     .box-giftproduct_mobile img{
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     }
-    .box-summary .freeTurkey .promo-product-color .flexdirrow{
-        margin-top: -7%;
+    .box-summary .freeTurkey .promo-product .flexdirrow{
+        margin-top: -5%;
     }
     .box-summary .freeTurkey .variant-title{
         margin-bottom: 0;

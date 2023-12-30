@@ -336,7 +336,30 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 			console.log(bundleObject);
 		}
-	
+
+		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.10;
+		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+			if(affiliate_cookie != undefined){
+				affiliate_cookie = affiliate_cookie.toLowerCase();
+			}
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$affiliate_user = "true";
+			}
+		}
+		if($affiliate_user == "true"){
+		//Lemon Pepper Chicken Product
+		var item_data = {
+			collectionId: '459204722969',
+			externalProductId: '8887761469721',  
+			externalVariantId: '47309007225113',  
+			quantity: 1 
+			}
+		bundleObject.selections.push(item_data);
+		console.log(bundleObject);	
+		}else{
 		//Cranapple Rosemary Chicken Product
 		var item_data = {
 			collectionId: '459204722969',
@@ -346,6 +369,7 @@ $(document).ready(function() {
 		}
 		bundleObject.selections.push(item_data);
 		console.log(bundleObject);	
+		}
 
 		const bundle = bundleObject;
 		console.log(bundle);
@@ -478,15 +502,13 @@ $(document).ready(function() {
 			bundleObject.selections.push(item_data);
 			console.log(bundleObject);
 
-			//Cranapple Rosemary Chicken Product
-			var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+			//Lemon Pepper Chicken Product
 			var item_data = {
-			collectionId: '459204722969',
-			externalProductId: '8929832468761',  // GIFT PRODUCT ID
-			externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-			quantity: 1,  // Dynamic Quantity
-			sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
-			}
+				collectionId: '459204722969',
+				externalProductId: '8887761469721',  
+				externalVariantId: '47309007225113',  
+				quantity: 1 
+				}
 			bundleObject.selections.push(item_data);
 			console.log(bundleObject);	
 		}else{
@@ -603,21 +625,21 @@ $(document).ready(function() {
 		$reachargevalue = getCookie("reachargevalue");
 		$Temp_Var = $normal_user = "true";
 		var promo_class = bgcolor =  free_pro_title = productBadge = bgcolor = free_pro_img = turkey_product_padding = "";
-		if($reachargevalue == "subscribe & save" || $reachargevalue == ""){
-			console.log("STEP1");
-			var affiliate_cookie = getCookie("discount_code");
-			var affiliate_cookie_backup = getCookie("50_Off_Discount");
-			var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
-			$discount_amount_price = 0.10;
-			if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
-				if(affiliate_cookie != undefined){
-					affiliate_cookie = affiliate_cookie.toLowerCase();
-				}
-				if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-					$Temp_Var = "false";
-					$normal_user = "false";
-				}
+		console.log("STEP1");
+		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.10;
+		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+			if(affiliate_cookie != undefined){
+				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$Temp_Var = "false";
+				$normal_user = "false";
+			}
+		}
+		if($reachargevalue == "subscribe & save" || $reachargevalue == ""){
 			if($Temp_Var == "true"){
 				console.log("STEP2");
 				$normal_user = "false";
@@ -653,10 +675,19 @@ $(document).ready(function() {
 		}
 		
 		if($normal_user == "true"){
+			console.log($Temp_Var);
 			if ($(window).width() > 700) {
-				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				if($Temp_Var == "false"){
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
+				}else{
+					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				}
 			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+				if($Temp_Var == "false"){
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664';
+				}else{
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+				}
 			}
 			free_pro_title = 'Free Order Gift';
 			productBadge = "FREE";
@@ -986,11 +1017,11 @@ $(document).ready(function() {
 		}
 		if($affiliate_user == "true"){
 			if ($(window).width() > 700) {
-				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
 			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-				$(".freeTurkey .imageforcart img").addClass("turkey_product_padding promo-product ");
-				$(".freeTurkey .variant-title").html("Free Order Gift");
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664'; // For mobile
+				$(".freeTurkey .product-item").addClass("promo-product");
+				$(".freeTurkey .variant-title").html("FREE LEMON PEPPER CHICKEN");
 				$(".freeTurkey .product-item").removeClass("promo-product-color");
 				$(".freeTurkey .product-item__badges").html("FREE");
 			}
@@ -1026,6 +1057,7 @@ $(document).ready(function() {
 		$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
 		getcartTotalQty();
 	});
+
 	$(document).on("click",".onetimeOption",function(){
 		console.log("CLICK");
 		$dataValue = $(this).closest(".subscriptionlabel").data('value');
@@ -1036,11 +1068,35 @@ $(document).ready(function() {
 		$(".rc-selling-plans").addClass("hide");
 		$(".save_label").removeClass('active');
 
+
+		$affiliate_user = $normal_user = "false";
+		var affiliate_cookie = getCookie("discount_code");
+		var affiliate_cookie_backup = getCookie("50_Off_Discount");
+		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		$discount_amount_price = 0.10;
+		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
+			if(affiliate_cookie != undefined){
+				affiliate_cookie = affiliate_cookie.toLowerCase();
+			}
+			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
+				$affiliate_user = "true";
+			}
+		}
+
 		if ($(window).width() > 700) {
-			free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			$(".freeTurkey .product-item").addClass(" promo-product");
+			if($affiliate_user == 'true'){
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
+			}else{
+				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+			}
 		}else{
-			free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+			if($affiliate_user == 'true'){
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664';
+			}else{
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+			}
+			
 			$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
 			$(".freeTurkey .variant-title").html("Free Order Gift");
 			$(".freeTurkey .product-item").removeClass("promo-product-color");
@@ -1053,6 +1109,7 @@ $(document).ready(function() {
 
 		getcartTotalQty();
 	});
+
 	$(document).on("change",".frequency_select",function(){
 		console.log("frequency_select");
 		$frequency_val = $(this).val();
