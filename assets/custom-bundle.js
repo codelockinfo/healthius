@@ -337,6 +337,7 @@ $(document).ready(function() {
 			console.log(bundleObject);
 		}
 
+		$affiliate_user_onetime = "false";
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
@@ -345,10 +346,10 @@ $(document).ready(function() {
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-				$affiliate_user = "true";
+				$affiliate_user_onetime = "true";
 			}
 		}
-		if($affiliate_user == "true"){
+		if($affiliate_user_onetime == "true"){
 		//Lemon Pepper Chicken Product
 		var item_data = {
 			collectionId: '459204722969',
