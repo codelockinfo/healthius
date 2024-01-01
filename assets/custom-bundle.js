@@ -340,7 +340,7 @@ $(document).ready(function() {
 		$affiliate_user_onetime = "false";
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
@@ -479,7 +479,7 @@ $(document).ready(function() {
 		$affiliate_user = $normal_user = "false";
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
@@ -627,7 +627,7 @@ $(document).ready(function() {
 		console.log("STEP1");
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		$discount_amount_price = 0.10;
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
@@ -701,7 +701,7 @@ $(document).ready(function() {
 		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 10% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
@@ -1004,7 +1004,7 @@ $(document).ready(function() {
 		$affiliate_user = $normal_user = "false";
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
@@ -1070,7 +1070,7 @@ $(document).ready(function() {
 		$affiliate_user = $normal_user = "false";
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['julian50', 'cpt50','claire50', 'hannah15', 'hanjam15', 'ashley15', 'kendra15', 'steve15', 'ryan15', 'ainsley15','dailypump50','save50'];
+		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
