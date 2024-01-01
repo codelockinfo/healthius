@@ -360,15 +360,30 @@ $(document).ready(function() {
 		bundleObject.selections.push(item_data);
 		console.log(bundleObject);	
 		}else{
-		//Cranapple Rosemary Chicken Product
-		var item_data = {
-			collectionId: '459204722969',
-			externalProductId: '8929832468761',  // GIFT PRODUCT ID
-			externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-			quantity: 1  // Dynamic Quantity
-		}
-		bundleObject.selections.push(item_data);
-		console.log(bundleObject);	
+				// 6 FREE Meats Product
+				console.log(" 6 FREE Meats Product");
+				var promo_product = $(".promoProduct").val();
+				if(promo_product != undefined && promo_product != 'NULL'){
+					$promo_variant_id = $(".promoProduct").attr("variant_id");
+						var item_data = {
+							collectionId: '459204722969',
+							externalProductId: promo_product,  // GIFT PRODUCT ID
+							externalVariantId: $promo_variant_id,  // THE SELECTED VARIANT
+							quantity: 1,  // Dynamic Quantity
+						}
+					bundleObject.selections.push(item_data);
+				}else{
+					//Cranapple Rosemary Chicken Product
+					
+					var item_data = {
+					collectionId: '459204722969',
+					externalProductId: '8929832468761',  // GIFT PRODUCT ID
+					externalVariantId: '47409726456089',  // THE SELECTED VARIANT
+					quantity: 1,  // Dynamic Quantity
+					}
+					bundleObject.selections.push(item_data);
+					console.log(bundleObject);	
+				}	
 		}
 
 		const bundle = bundleObject;
@@ -679,22 +694,31 @@ $(document).ready(function() {
 			if ($(window).width() > 700) {
 				if($Temp_Var == "false"){
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
+					promo_class = 'promo-product';
 				}else{
-					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
-					turkey_product_padding = "turkey_product_padding";
+					free_pro_img = $(".promoProduct").attr('data-desktopimg');
+					promo_class = 'promo-product';
+					// free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+					// turkey_product_padding = "turkey_product_padding";
 				}
 			}else{
 				if($Temp_Var == "false"){
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
+					free_pro_title = 'Free Order Gift';
+					productBadge = "FREE";
+					bgcolor ="bg-green";
+					promo_class = 'promo-product';
 				}else{
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-					turkey_product_padding = "turkey_product_padding";
+					// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+					free_pro_img = $(".promoProduct").attr('data-mobileimg');
+					promo_class = 'promo-product promo-product-color';
+					free_pro_title = $(".promoProduct").data('title') + "  Limited Quantities";
+					// turkey_product_padding = "turkey_product_padding";
+					productBadge = "PROMO";
+					bgcolor ="bg_blue";
 				}
 			}
-			free_pro_title = 'Free Order Gift';
-			productBadge = "FREE";
-			bgcolor ="bg-green";
-			promo_class = 'promo-product';
+		
 		}
 		console.log(free_pro_img);
 		$('.saveText').text('Save 10% on your first order');
@@ -1085,23 +1109,26 @@ $(document).ready(function() {
 			if($affiliate_user == 'true'){
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 			}else{
-				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+				free_pro_img = $(".promoProduct").attr('data-desktopimg');
+				// free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			}
 		}else{
 			if($affiliate_user == 'true'){
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
 				$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
-			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-				$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
+			}
+			else{
+				// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+				free_pro_img = $(".promoProduct").attr('data-mobileimg');
+				// $(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
 			}
 			
-			$(".freeTurkey .variant-title").html("Free Order Gift");
-			$(".freeTurkey .product-item").removeClass("promo-product-color");
-			$(".freeTurkey .product-item").addClass(" promo-product");
-			$(".freeTurkey .product-item__badges").removeClass("bg_blue");
-			$(".freeTurkey .product-item__badges").addClass("bg-green");
-			$(".freeTurkey .product-item__badges").html("FREE");
+			// $(".freeTurkey .variant-title").html("Free Order Gift");
+			// $(".freeTurkey .product-item").removeClass("promo-product-color");
+			// $(".freeTurkey .product-item").addClass(" promo-product");
+			// $(".freeTurkey .product-item__badges").removeClass("bg_blue");
+			// $(".freeTurkey .product-item__badges").addClass("bg-green");
+			// $(".freeTurkey .product-item__badges").html("FREE");
 		}
 		$(".freeTurkey .imageforcart img").attr("src",free_pro_img);
 
