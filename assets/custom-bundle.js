@@ -678,14 +678,14 @@ $(document).ready(function() {
 			console.log($Temp_Var);
 			if ($(window).width() > 700) {
 				if($Temp_Var == "false"){
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 				}else{
 					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 					turkey_product_padding = "turkey_product_padding";
 				}
 			}else{
 				if($Temp_Var == "false"){
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664';
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
 				}else{
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
 					turkey_product_padding = "turkey_product_padding";
@@ -1015,9 +1015,9 @@ $(document).ready(function() {
 		}
 		if($affiliate_user == "true"){
 			if ($(window).width() > 700) {
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664'; // For mobile
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946'; // For mobile
 				$(".freeTurkey .product-item").addClass("promo-product");
 				$(".freeTurkey .variant-title").html("FREE LEMON PEPPER CHICKEN");
 				$(".freeTurkey .product-item").removeClass("promo-product-color");
@@ -1083,13 +1083,13 @@ $(document).ready(function() {
 		if ($(window).width() > 700) {
 			$(".freeTurkey .product-item").addClass(" promo-product");
 			if($affiliate_user == 'true'){
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/free-lemon-pepper-chicken-77580322.png?v=1703939851';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 			}else{
 				free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
 			}
 		}else{
 			if($affiliate_user == 'true'){
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/products/free-lemon-pepper-chicken-775803.png?v=1699086664';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
 				$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
 			}else{
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
