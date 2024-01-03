@@ -507,6 +507,7 @@ $(document).ready(function() {
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
+				setCookie("Discount_Code_BKP", affiliate_cookie , 7);
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
 				$affiliate_user = "true";
