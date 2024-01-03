@@ -286,7 +286,12 @@ $(document).ready(function() {
 	});
 
 	function onetimeAddtocart(){
-		$giftVariantid = $(".product-variant-select").val();
+		// $giftVariantid = $(".product-variant-select").val();
+		if ($(window).width() > 700) {
+			$giftVariantid = $(".maingiftproductitem .product-variant-select").val();
+		}else{
+			$giftVariantid = $(".box-giftproduct_mobile .product-variant-select").val();
+		}
 		$giftProductid = $(".giftProduct").data("product");
 
 		var PRODUCT_ID = $(".product_variant_id").val();
@@ -429,7 +434,12 @@ $(document).ready(function() {
 	// TO DO NEED TO REMOVE
 	
 	function subscriptionAddtocart(){
-		$giftVariantid = $(".product-variant-select").val();
+		// $giftVariantid = $(".product-variant-select").val();
+		if ($(window).width() > 700) {
+			$giftVariantid = $(".maingiftproductitem .product-variant-select").val();
+		}else{
+			$giftVariantid = $(".box-giftproduct_mobile .product-variant-select").val();
+		}
 		$giftProductid = $(".giftProduct").data("product");
 		var PRODUCT_ID = $(".product_variant_id").val();
         console.log('giftVariantid');
