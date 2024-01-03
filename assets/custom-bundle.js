@@ -680,7 +680,7 @@ $(document).ready(function() {
 					}else{
 						free_pro_img = $(".promoProduct").attr('data-mobileimg');
 						promo_class = 'promo-product promo-product-color';
-						free_pro_title = $(".promoProduct").data('title') + "  Limited Quantities";
+						free_pro_title = $(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>';
 					}
 				}else{
 					if ($(window).width() > 700) {
@@ -724,7 +724,7 @@ $(document).ready(function() {
 					// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
 					free_pro_img = $(".promoProduct").attr('data-mobileimg');
 					promo_class = 'promo-product promo-product-color';
-					free_pro_title = $(".promoProduct").data('title') + "  Limited Quantities";
+					free_pro_title = $(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>';
 					// turkey_product_padding = "turkey_product_padding";
 					productBadge = "PROMO";
 					bgcolor ="bg_blue";
@@ -1075,7 +1075,7 @@ $(document).ready(function() {
 					free_pro_img = $(".promoProduct").attr('data-desktopimg');
 				}else{
 					free_pro_img = $(".promoProduct").attr('data-mobileimg');
-					$(".freeTurkey .variant-title").html($(".promoProduct").data('title') + "  Limited Quantities");
+					$(".freeTurkey .variant-title").html($(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>');
 					$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
 				}
 			}else{

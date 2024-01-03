@@ -46,9 +46,13 @@
     }
     .box-header .product-item.card.container-box{
         border: 1px solid var(--color-green);
+        border-radius: 18px;
         border-bottom: none;
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
+    }
+    .box-header .box-giftproduct_mobile.lockproduct .product-item.card.container-box{
+        border: 1px solid var(--color-white-2);
     }
     .box-header .box-giftproduct_mobile .product-item.card.container-box{
         border: 1px solid var(--color-green);
@@ -475,7 +479,12 @@
    .box-summary .freeTurkey .variant-title{
        font-size: 11px;
        font-weight: 500;
-   }
+       margin-bottom: 0;
+       line-height: 1.2;
+    }
+    .box-summary .freeTurkey .variant-title .varinattitlesub{
+        font-size: 10px;
+    }
   .box-summary .box-giftproduct_mobile,
   .box-summary .freeTurkey,
   .box-summary .productsimage{
@@ -490,17 +499,19 @@
         background: var(--color-white-2);
         color: var(--color-black);
         height: 2rem;
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
+        border-radius: 3px;
         margin-top: -3%;
    }
    .box-summary .product-item__badges{
         display: block;
         left: 0;
-        padding: 1px 5px;
+        padding: 2px 5px 0;
         font-size: 11px;
         color: var(--color-white);
         width: calc(100% - (var(--gutter-small) * 5));
+        max-width: max-content;
+        border-radius: 3px;
+        top: var(--gutter-regular);
     }
     .product-item__badges.width_100{
         width: 100%;
@@ -569,16 +580,12 @@
         padding: 10px 0;
     }
     .box-giftproduct_mobile img,.freeTurkey .promo-product img{
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
+        border-top-right-radius: 18px;
+        border-top-left-radius: 18px;
     }
     .box-summary .freeTurkey .promo-product .flexdirrow{
         margin-top: -5%;
     }
-    .box-summary .freeTurkey .variant-title{
-        margin-bottom: 0;
-    }
-   
     .box-header .promo-product-color.product-item.card.container-box{
         border: 1px solid var(--color-blue);
     }
