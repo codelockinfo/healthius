@@ -264,7 +264,7 @@
         border-top:  1px solid var(--color-green);
         border-radius: 2px;
     }
-    .box-giftproduct_mobile.lockproduct{
+    .box-giftproduct_mobile.lockproduct .freeproductimg {
         opacity: .22;
     }
     .mobile-add-cart{
@@ -568,7 +568,7 @@
     .freeTurkey .promo-product img.turkey_product_padding{
         padding: 10px 0;
     }
-    .box-giftproduct_mobile img{
+    .box-giftproduct_mobile img,.freeTurkey .promo-product img{
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     }

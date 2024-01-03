@@ -507,7 +507,6 @@ $(document).ready(function() {
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
-				setCookie("Discount_Code_BKP", affiliate_cookie , 7);
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
 				$affiliate_user = "true";
@@ -516,6 +515,9 @@ $(document).ready(function() {
 		if($affiliate_user == "true"){
 			// Free 50% product
 			setCookie("50_Off_Discount", "True", 7); // Assuming a 7-day expiry for the cookie
+			if(affiliate_cookie != undefined && affiliate_cookie != ''){
+				setCookie("Discount_Code_BKP", affiliate_cookie , 7);
+			}
 			var item_data = {
 				collectionId: '459204722969',
 				externalProductId: '8981917401369',  
