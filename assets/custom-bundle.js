@@ -286,7 +286,12 @@ $(document).ready(function() {
 	});
 
 	function onetimeAddtocart(){
-		$giftVariantid = $(".product-variant-select").val();
+		// $giftVariantid = $(".product-variant-select").val();
+		if ($(window).width() > 700) {
+			$giftVariantid = $(".maingiftproductitem .product-variant-select").val();
+		}else{
+			$giftVariantid = $(".box-giftproduct_mobile .product-variant-select").val();
+		}
 		$giftProductid = $(".giftProduct").data("product");
 
 		var PRODUCT_ID = $(".product_variant_id").val();
@@ -1047,7 +1052,7 @@ $(document).ready(function() {
 			}else{
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946'; // For mobile
 				$(".freeTurkey .product-item").addClass("promo-product");
-				$(".freeTurkey .variant-title").html("FREE LEMON PEPPER CHICKEN");
+				$(".freeTurkey .variant-title").html("Free Order Gift");
 				$(".freeTurkey .product-item").removeClass("promo-product-color");
 				$(".freeTurkey .product-item__badges").html("FREE");
 			}
