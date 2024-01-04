@@ -717,7 +717,7 @@ $(document).ready(function() {
 				}
 			}else{
 				if($Temp_Var == "false"){
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 					free_pro_title = 'Free Order Gift';
 					productBadge = "FREE";
 					bgcolor ="bg-green";
@@ -1055,7 +1055,7 @@ $(document).ready(function() {
 			if ($(window).width() > 700) {
 				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 			}else{
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946'; // For mobile
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918'; // For mobile
 				$(".freeTurkey .product-item").addClass("promo-product");
 				$(".freeTurkey .variant-title").html("Free Order Gift");
 				$(".freeTurkey .product-item").removeClass("promo-product-color");
@@ -1128,7 +1128,7 @@ $(document).ready(function() {
 			}
 		}else{
 			if($affiliate_user == 'true'){
-				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_3.png?v=1704133946';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 				$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
 			}
 			else{
