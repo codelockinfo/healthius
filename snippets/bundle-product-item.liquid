@@ -88,8 +88,8 @@
     -%}
       </div>
       <div class="imageforcart">
-        <img class="for_desktop_range" src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}" loading="lazy"/>
-        <img class="for_mobile_range" src="{{ product_metafiled_image | img_url: 'master' }}" alt="{{ product.featured_media.title }}"  loading="lazy"/>
+        <img class="for_desktop_range" src="{{ product.featured_media | img_url: 'medium' }}" alt="{{ product.featured_media.title }}"/>
+        <img class="for_mobile_range" src="{{ product_metafiled_image | img_url: 'master' }}" alt="{{ product.featured_media.title }}" />
       </div>
 
       <div class="flexdirrow card__text product-item__text gutter--regular spacing--xlarge remove-empty-space text-align--{{ settings.product_card_text_alignment }}">
