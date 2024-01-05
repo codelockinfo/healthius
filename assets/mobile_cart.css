@@ -508,7 +508,7 @@
    .box-summary .product-item__badges{
         display: block;
         left: 0;
-        padding: 3px 5px 0;
+        padding: 3px 5px 1px;
         font-size: 11px;
         font-weight: 700;
         color: var(--color-white);
