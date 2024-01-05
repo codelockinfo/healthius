@@ -965,8 +965,8 @@ $(document).ready(function() {
 			console.log("PRICE +++++++++" + $discount_amount_price);
 			var discountAmount =  $getproductPrices * $discount_amount_price;
 			var discount_subscribe = $getproductPrices - discountAmount;
-			$PriceHtml = "<p> $"+ $getproductPrices + "</p> &nbsp;"; 
-			$subscribeBtnHtml = $PriceHtml + "$" + discount_subscribe.toFixed(2) + " " + updatedString_subscribe;
+			$PriceHtml = "<p> $"+ Math.round($getproductPrices) + "</p> &nbsp;"; 
+			$subscribeBtnHtml = $PriceHtml + "$" + Math.round(discount_subscribe) + " " + updatedString_subscribe;
 			var $finalremainamount = $getremain_amount.toFixed(2);                    
         }
 		
