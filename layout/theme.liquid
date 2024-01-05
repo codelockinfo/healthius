@@ -151,7 +151,11 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 {% render 'reamaze-config' %}
 {% render 'reamaze-sso' %}
 <!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
-
+{% if  template.suffix == "new-custom-bundle" %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+{% endif %}
 </head>
 
 <body  id="{{ page_title | handle }}" class="no-touchevents 
