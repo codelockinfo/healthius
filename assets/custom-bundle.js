@@ -735,7 +735,7 @@ $(document).ready(function() {
 		
 		}
 		console.log(free_pro_img);
-		$('.saveText').text('Save 10% on your first order');
+		$('.saveText').text('Save 25% on your first order');
 		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 10% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
