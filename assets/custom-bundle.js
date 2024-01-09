@@ -690,7 +690,6 @@ $(document).ready(function() {
 						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 						free_pro_title = 'Free Order Gift';
 						promo_class = 'promo-product promo-product-color';
-						turkey_product_padding = "turkey_product_padding";
 					}
 				}
 			}else{
@@ -1083,7 +1082,6 @@ $(document).ready(function() {
 				}else{
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 					$(".freeTurkey .variant-title").html("Free Order Gift");
-					$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
 				}
 			}	
 		}
