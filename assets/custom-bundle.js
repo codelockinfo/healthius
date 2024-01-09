@@ -682,6 +682,8 @@ $(document).ready(function() {
 						free_pro_title = $(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>';
 					}
 				}else{
+					console.log("Promo null");
+					productBadge = "FREE";
 					if ($(window).width() > 700) {
 						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 						promo_class = 'promo-product';
@@ -1077,6 +1079,7 @@ $(document).ready(function() {
 					$(".freeTurkey .imageforcart img").removeClass("turkey_product_padding");
 				}
 			}else{
+				$(".freeTurkey .product-item__badges").html("FREE");
 				if ($(window).width() > 700) {
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 				}else{
