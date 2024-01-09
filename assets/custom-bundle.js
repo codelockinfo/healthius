@@ -648,7 +648,7 @@ $(document).ready(function() {
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
-		$discount_amount_price = 0.10;
+		$discount_amount_price = 0.25;
 		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
 			if(affiliate_cookie != undefined){
 				affiliate_cookie = affiliate_cookie.toLowerCase();
