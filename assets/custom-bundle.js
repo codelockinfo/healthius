@@ -378,13 +378,12 @@ $(document).ready(function() {
 						}
 					bundleObject.selections.push(item_data);
 				}else{
-					//Cranapple Rosemary Chicken Product
-					
+					//Lemon Pepper Chicken Product
 					var item_data = {
-					collectionId: '459204722969',
-					externalProductId: '8929832468761',  // GIFT PRODUCT ID
-					externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-					quantity: 1,  // Dynamic Quantity
+						collectionId: '459204722969',
+						externalProductId: '8887761469721',  
+						externalVariantId: '47309007225113',  
+						quantity: 1 
 					}
 					bundleObject.selections.push(item_data);
 					console.log(bundleObject);	
@@ -558,14 +557,12 @@ $(document).ready(function() {
 					}
 				bundleObject.selections.push(item_data);
 			}else{
-				//Cranapple Rosemary Chicken Product
-				var freeproduct_sellingplan_id = (selling_plan_id == '689312137497') ? '689500750105' : '689500782873' ;
+				//Lemon Pepper Chicken Product
 				var item_data = {
-				collectionId: '459204722969',
-				externalProductId: '8929832468761',  // GIFT PRODUCT ID
-				externalVariantId: '47409726456089',  // THE SELECTED VARIANT
-				quantity: 1,  // Dynamic Quantity
-				sellingPlan: freeproduct_sellingplan_id // Dynamic Selling Plan ID
+					collectionId: '459204722969',
+					externalProductId: '8887761469721',  
+					externalVariantId: '47309007225113',  
+					quantity: 1 
 				}
 				bundleObject.selections.push(item_data);
 				console.log(bundleObject);	
@@ -686,11 +683,11 @@ $(document).ready(function() {
 					}
 				}else{
 					if ($(window).width() > 700) {
-						free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 						promo_class = 'promo-product';
-						$('.announcement').text('LIMITED TIME: GET FREE CRANAPPLE ROSEMARY CHICKEN');
+						$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
 					}else{
-						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 						free_pro_title = 'Free Order Gift';
 						promo_class = 'promo-product promo-product-color';
 						turkey_product_padding = "turkey_product_padding";
@@ -1082,9 +1079,9 @@ $(document).ready(function() {
 				}
 			}else{
 				if ($(window).width() > 700) {
-					free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 				}else{
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
+					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
 					$(".freeTurkey .variant-title").html("Free Order Gift");
 					$(".freeTurkey .imageforcart img").addClass("turkey_product_padding");
 				}
