@@ -643,14 +643,8 @@ $(document).ready(function() {
 		getcartTotalQty();
 	});
 
-	function set_lineitems_onload() {
-		var promo_product = $(".promoProduct").val();
-		console.log(promo_product + "...promo_product");
-		console.log("CALL");
-		$reachargevalue = getCookie("reachargevalue");
-		$Temp_Var = $normal_user = "true";
-		var promo_class = bgcolor =  free_pro_title = productBadge = bgcolor = free_pro_img = turkey_product_padding = "";
-		console.log("STEP1");
+
+	function checkInfluncer_Cookie(){
 		var affiliate_cookie = getCookie("discount_code");
 		var affiliate_cookie_backup = getCookie("50_Off_Discount");
 		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
@@ -660,14 +654,26 @@ $(document).ready(function() {
 				affiliate_cookie = affiliate_cookie.toLowerCase();
 			}
 			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-				$Temp_Var = "false";
-				$normal_user = "false";
 				$discount_amount_price = 0.50;
+				return true;
 			}
 		}
+	}
+
+	function set_lineitems_onload() {
+		var promo_product = $(".promoProduct").val();
+		$reachargevalue = getCookie("reachargevalue");
+		$Temp_Var = $normal_user = "true";
+		$is_one_time = "false";
+		var promo_class = bgcolor =  free_pro_title = productBadge = bgcolor = free_pro_img = turkey_product_padding = "";
+		$is_has_influncer = checkInfluncer_Cookie();
+		console.log($is_has_influncer);
+		if($is_has_influncer == true){
+			$Temp_Var = $normal_user = "false";
+		}
+		
 		if($reachargevalue == "subscribe & save" || $reachargevalue == ""){
 			if($Temp_Var == "true"){
-				console.log("STEP2");
 				$normal_user = "false";
 				productBadge = "PROMO";
 				bgcolor ="bg_blue";
@@ -682,15 +688,14 @@ $(document).ready(function() {
 						free_pro_title = $(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>';
 					}
 				}else{
-					console.log("Promo null");
 					productBadge = "FREE";
+					$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
+					free_pro_title = 'Free Order Gift';
 					if ($(window).width() > 700) {
 						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
 						promo_class = 'promo-product';
-						$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
 					}else{
 						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
-						free_pro_title = 'Free Order Gift';
 						promo_class = 'promo-product promo-product-color';
 					}
 				}
@@ -698,59 +703,49 @@ $(document).ready(function() {
 				$normal_user = "true";
 			}
 		}else{
-			$normal_user = "true";
+			$is_one_time = "true";
 		}
 		
-		if($normal_user == "true"){
-			console.log($Temp_Var);
+
+		if($normal_user == "true" || $is_one_time == "true"){
+			console.log("INN");
 			if ($(window).width() > 700) {
-				if($Temp_Var == "false"){
-					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
-					promo_class = 'promo-product';
-				}else{
+				promo_class = 'promo-product';
+				free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/imgpsh_fullsize_anim_7.jpg?v=1704133940';
+				if(promo_product != undefined && promo_product != 'NULL'){
 					free_pro_img = $(".promoProduct").attr('data-desktopimg');
-					promo_class = 'promo-product';
-					// free_pro_img = 'https://res.cloudinary.com/meals/image/upload/v1701388042/Cranapple_Bundler_Image.jpg';
-					// turkey_product_padding = "turkey_product_padding";
 				}
 			}else{
+				productBadge = "FREE";
+				free_pro_title = 'Free Order Gift';
 				if($Temp_Var == "false"){
 					free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
-					free_pro_title = 'Free Order Gift';
-					productBadge = "FREE";
 					bgcolor ="bg-green";
 					promo_class = 'promo-product';
 				}else{
-					// free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Cranapple_Bundler_Image_mobile.jpg?v=1703781412';
-					free_pro_img = $(".promoProduct").attr('data-mobileimg');
 					promo_class = 'promo-product promo-product-color';
-					free_pro_title = $(".promoProduct").data('title') + '<div class="varinattitlesub"> Limited Quantities</div>';
-					// turkey_product_padding = "turkey_product_padding";
-					productBadge = "PROMO";
 					bgcolor ="bg_blue";
+					if(promo_product != undefined && promo_product != 'NULL'){
+						free_pro_img = $(".promoProduct").attr('data-mobileimg');
+					}else{
+						free_pro_img = 'https://cdn.shopify.com/s/files/1/0555/1751/1961/files/Lemon_paper_2x_55b5b40f-5c0c-491c-b918-16bb4a76ea66.png?v=1704345918';
+					}
 				}
 			}
-		
 		}
+		
 		console.log(free_pro_img);
 		$('.saveText').text('Save 25% on your first order');
 		$('.box-header-title').html('<div class="box-header-title">Subscribers Save 25% on Orders<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-		var affiliate_cookie = getCookie("discount_code");
-		var affiliate_cookie_backup = getCookie("50_Off_Discount");
-		var affuser_discounts = ['marcus15', 'jeremy15', 'aubrie15', 'ramses15', 'andrea15', 'horner15', 'jessica15', 'save50'];
-		if((affiliate_cookie_backup != undefined) || (affiliate_cookie != undefined && affiliate_cookie != '')){
-			if(affiliate_cookie != undefined){
-				affiliate_cookie = affiliate_cookie.toLowerCase();
-			}
-			if ((affiliate_cookie_backup == 'True') || ($.inArray(affiliate_cookie, affuser_discounts) !== -1)) {
-				$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
-				$('.saveText').text('Save 50% on your first order');
-				$rightArrow = '<svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>';
-				$('.25_savetext').html($rightArrow +"50% Off First Order");
-				$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
-			}
+		if($is_has_influncer == true){
+			$('.announcement').text('LIMITED TIME: GET FREE LEMON PEPPER CHICKEN');
+			$('.saveText').text('Save 50% on your first order');
+			$rightArrow = '<svg xmlns="http://www.w3.org/2000/svg" width="17.627" height="17.627" viewBox="0 0 17.627 17.627" aria-hidden="true" role="presentation" class="svgcolor w-3 h-3 mr-1 text-green-400"><g transform="translate(-16.457 -24.531)"><circle id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7.5" r="7.5" transform="translate(17.788 26.154)" fill="#fff"></circle><path id="noun_tick_684585" d="M15.413 6.6a8.813 8.813.0 1 0 8.813 8.813A8.805 8.805.0 0 0 15.413 6.6zm4.265 6.986-5.219 5.2a.8.8.0 0 1-.569.244.768.768.0 0 1-.569-.244l-2.579-2.559A.818.818.0 1 1 11.9 15.068l1.99 1.99 4.63-4.63a.809.809.0 0 1 1.158.0A.847.847.0 0 1 19.678 13.586z" transform="translate(9.857 17.931)" fill="currentColor"></path></g></svg>';
+			$('.25_savetext').html($rightArrow +"50% Off First Order");
+			$('.box-header-title').html('<div class="box-header-title">SUBSCRIBERS SAVE 50%<div><span class="subcarttitle">Applied at checkout</span></div></div>');
 		}
-		  $staticGiftProduct = '<div class="freeTurkey">'+
+
+		$staticGiftProduct = '<div class="freeTurkey">'+
 		  '<div class="product-item card container-box '+promo_class+'" data-summery-index="4">'+
 		  '<div class="imageforcart">'+
 			  '<img src="'+free_pro_img+'" alt="" class="'+ turkey_product_padding +'">'+
@@ -766,11 +761,13 @@ $(document).ready(function() {
 		  '</div>'+
 		  '</div><div class="product-item__badges text-size--xsmall '+bgcolor+'">'+productBadge+'</div></div>'+
 		  '</div>';
+
 		  if ($(window).width() > 700) {
 			  $("#cartSummary").append($staticGiftProduct);
 		  }else{
 			  $("#cartSummary").prepend($staticGiftProduct);
 		  }
+
 		var selected_item = getCookie("variantids");
 		var variant_qty = getCookie("variant_qty");
 		if (selected_item) {
